@@ -1,0 +1,1098 @@
+{
+  "onboarding": {
+    "hero": {
+      "title": "ANYMARK",
+      "subtitle": "無料オープンソースのブックマーク管理",
+      "description": "ローカルAI分析 + キーボード操作 + スマート検索",
+      "badge": "v1.0 リリース",
+      "explore": "機能を探索",
+      "scroll": "下にスクロール"
+    },
+    "buddies": {
+      "heading": "ピクセルバディを選ぶ",
+      "subtitle": "ブックマーク整理を手伝う5人のAIアシスタント",
+      "koda": {
+        "name": "Koda",
+        "role": "賢者",
+        "quote": "広大なリンクの海で、私があなたの最も頼りになる錨です。"
+      },
+      "vex": {
+        "name": "Vex",
+        "role": "サイバーハンター",
+        "quote": "ノイズをシャウトアウト、最も貴重なシグナルのみ捕捉します。"
+      },
+      "sprout": {
+        "name": "Sprout",
+        "role": "知識の庭師",
+        "quote": "すべてのブックマークは、芽吹くのを待つインスピレーションの種です。"
+      },
+      "flare": {
+        "name": "Flare",
+        "role": "インスピレーション探索者",
+        "quote": "人生はコレクションだけではありません。発見して輝きましょう！"
+      },
+      "null": {
+        "name": "Null",
+        "role": "バイナリーバトラー",
+        "quote": "余分なものを取り除き、情報の純粋な論理に戻ります。"
+      }
+    },
+    "agent": {
+      "heading": "会話型AIエージェント",
+      "subtitle": "自然言語でブックマーク管理、チャットのように簡単",
+      "search": {
+        "title": "ブックマーク検索",
+        "desc": "保存したブックマークを素早く検索"
+      },
+      "discover": {
+        "title": "リソース発見",
+        "desc": "オンラインで質の高い新しいリソースを見つける"
+      },
+      "trending": {
+        "title": "トレンドプロジェクト",
+        "desc": "GitHubで人気のあるオープンソースプロジェクトを見る"
+      },
+      "organize": {
+        "title": "スマート整理",
+        "desc": "AIがブックマークを自動的に分析・分類"
+      },
+      "chat": {
+        "title": "チャットモード",
+        "desc": "シンプルにチャット、何でも聞いてください"
+      }
+    },
+    "appName": "ANYMARK",
+    "agentDemo": {
+      "welcome": "👋 下のおすすめをクリックして試してください！",
+      "online": "オンライン",
+      "placeholder": "質問を入力してみて...",
+      "agentName": "AnyMark エージェント",
+      "action1": "検索",
+      "action2": "発見",
+      "action3": "トレンド",
+      "action4": "整理",
+      "action5": "チャット",
+      "demo1": {
+        "user": "Reactの学習資料を見つけて",
+        "assistant": "Reactのブックマーク8件を見つけました: React Docs、React Hooks Tutorial、Redux Guide... どれを開きますか？"
+      },
+      "demo2": {
+        "user": "Pythonのリソースおすすめ",
+        "assistant": "おすすめ: Real Python、Python Official Tutorial、Automate the Boring Stuff... 保存しますか？"
+      },
+      "demo3": {
+        "user": "今週何がトレンド？",
+        "assistant": "今週のトレンド: shadcn/ui、langchain、ollama... AIと開発ツール関連 🔥"
+      },
+      "demo4": {
+        "user": "すべてのテックブックマークを整理して",
+        "assistant": "完了！テックブックマーク23件を発見、Frontend、Backend、DevOpsに整理しました ✨"
+      },
+      "demo5": {
+        "user": "こんにちは",
+        "assistant": "こんにちは！AnyMarkのAIアシスタントです。今日は何をお手伝いしましょう？ 😊"
+      }
+    },
+    "shortcuts": {
+      "heading": "キーボードショートカット",
+      "subtitle": "効率のために設計、Vim操作でスムーズに",
+      "navigation": "ナビゲーション",
+      "actions": "アクション",
+      "global": "グローバル",
+      "updown": "上下移動",
+      "vimNav": "Vimスタイル操作",
+      "open": "ブックマーク開く",
+      "star": "スター/外す",
+      "delete": "削除",
+      "copy": "URLコピー",
+      "sidebar": "サイドバー開く",
+      "save": "クイックセーブ",
+      "note": "Windows/Linux: CmdをCtrlに置き換え"
+    },
+    "themes": {
+      "heading": "ピクセルバディテーマ",
+      "subtitle": "5つのテーマスタイルで気分に合わせて",
+      "koda": {
+        "name": "Koda",
+        "subtitle": "クラシックピクセル · 青",
+        "desc": "プロフェッショナルな青スタイル、穏やかで信頼できます。"
+      },
+      "vex": {
+        "name": "Vex",
+        "subtitle": "サイバーパンクネオン · 紫",
+        "desc": "未来的な紫のサイバーパンクスタイル。"
+      },
+      "sprout": {
+        "name": "Sprout",
+        "subtitle": "自然の芽 · 緑",
+        "desc": "生き生きとした自然の緑スタイル。"
+      },
+      "flare": {
+        "name": "Flare",
+        "subtitle": "夕暮れの探索者 · オレンジ",
+        "desc": "夕焼けの光のような温かいオレンジ。"
+      },
+      "null": {
+        "name": "Null",
+        "subtitle": "ギークターミナル · ハッカー",
+        "desc": "黒いハッカースタイル、绿色のターミナル輝き。"
+      }
+    },
+    "cta": {
+      "heading": "始める準備はできましたか？",
+      "text": "AnyMarkの力を体験 - 100%無料！",
+      "button": "始める",
+      "hint": "クリックしてサイドバーを開く"
+    },
+    "dotsNavigation": {
+      "goToSection": "{{section}}セクションへ"
+    },
+    "language": {
+      "english": "English",
+      "chinese": "简体中文",
+      "japanese": "日本語",
+      "german": "Deutsch",
+      "spanish": "Español",
+      "french": "Français"
+    }
+  },
+  "sidebar": {
+    "header": {
+      "title": "AnyMark",
+      "settings": "設定",
+      "expand": "展開",
+      "close": "閉じる",
+      "theme": "テーマ変更",
+      "aiAnalyze": "AI分析"
+    },
+    "search": {
+      "placeholder": "ブックマークを検索...",
+      "noResults": "見つかりません",
+      "searching": "検索中..."
+    },
+    "filters": {
+      "all": "すべて",
+      "uncategorized": "AIカテゴリー",
+      "favorites": "お気に入り",
+      "recent": "最近",
+      "popular": "人気",
+      "longTail": "ロングテール",
+      "trash": "ゴミ箱",
+      "descriptions": {
+        "chrome": "すべてのブックマーク",
+        "uncategorized": "AIで分類されたブックマーク",
+        "favorites": "スター付き",
+        "recent": "過去30日間",
+        "popular": "最も訪問 (Top 20)",
+        "longTail": "訪問少ない",
+        "trash": "削除されたブックマーク"
+      }
+    },
+    "bookmarks": {
+      "loading": "ブックマーク読み込み中...",
+      "empty": "まだありません",
+      "emptyHint": "最初を追加",
+      "count": "{{count}} ブックマーク",
+      "selected": "選択済み",
+      "delete": "削除",
+      "restore": "復元",
+      "favorite": "お気に入りに追加",
+      "unfavorite": "お気に入りから外す",
+      "edit": "編集",
+      "open": "開く",
+      "copyUrl": "URLコピー",
+      "moveToFolder": "移動"
+    },
+    "bookmarkList": {
+      "empty": {
+        "noBookmarks": "見つかりません",
+        "adjustFilters": "フィルターを調整",
+        "noSearchResults": "結果なし",
+        "tryDifferentKeywords": "別のキーワードを試す",
+        "noCategories": "カテゴリーなし",
+        "useAiAnalysis": "AIを使用",
+        "chromeTitle": "Chromeからインポート",
+        "chromeDesc": "ボタンでインポート",
+        "importButton": "Chromeをインポート",
+        "importing": "インポート中..."
+      },
+      "item": {
+        "visits": "{{count}} 回アクセス",
+        "items": "{{count}} アイテム",
+        "folders": "{{count}} フォルダー",
+        "analyzing": "AI分析中...",
+        "analyze": "AI分析",
+        "expandLabel": "展開",
+        "collapseLabel": "折りたたむ"
+      },
+      "actions": {
+        "reanalyze": "既に分析済み。再分析？",
+        "startAnalyzing": "分析開始中...",
+        "analyzeComplete": "分析完了！",
+        "analyzeFailed": "エラー: {{error}}",
+        "analyzeEmpty": "結果なし",
+        "noSummary": "生成できません"
+      },
+      "edit": {
+        "renaming": "名前変更 (ESCで取消)",
+        "editing": "編集中 (ESCで取消)",
+        "cancelled": "取消",
+        "emptyTitle": "タイトル必須",
+        "folderRenamed": "名前変更済み",
+        "bookmarkUpdated": "更新済み"
+      },
+      "delete": {
+        "confirmFolder": "「{{title}}」を削除？\n\nすべて削除されます！",
+        "folderDeleted": "削除済み",
+        "confirmPermanent": "「{{title}}」を完全に削除？\n\n⚠️ 元に戻せません！",
+        "permanentlyDeleted": "完全に削除",
+        "confirmDelete": "「{{title}}」を削除？\n\n復元可能",
+        "movedToTrash": "ゴミ箱へ",
+        "restored": "復元済み"
+      },
+      "drag": {
+        "cannotMoveToSelf": "自分へは移動不可",
+        "movedToFolder": "に移動: {{title}}",
+        "folderMoved": "フォルダー移動済み",
+        "folderReordered": "並び替え済み",
+        "bookmarkReordered": "並び替え済み"
+      },
+      "star": {
+        "added": "お気に入りに追加",
+        "removed": "お気に入りから除外",
+        "pinned": "ピン留め",
+        "unpinned": "ピン留め解除"
+      },
+      "copy": {
+        "success": "URLコピー済み",
+        "failed": "コピーエラー"
+      },
+      "open": {
+        "failed": "開けません",
+        "apiUnavailable": "API利用不可"
+      },
+      "import": {
+        "started": "インポート開始...",
+        "failed": "エラー: {{error}}"
+      }
+    },
+    "preview": {
+      "title": "プレビュー",
+      "noSelection": "選択",
+      "selectHint": "↑↓でナビゲーション",
+      "url": "URL",
+      "tags": "タグ",
+      "category": "カテゴリー",
+      "summary": "要約",
+      "confidence": "信頼度",
+      "createdAt": "作成日",
+      "updatedAt": "更新日",
+      "actions": {
+        "open": "開く",
+        "edit": "編集",
+        "star": "お気に入り",
+        "unstar": "外す",
+        "copyUrl": "URLコピー",
+        "delete": "削除",
+        "restore": "復元"
+      },
+      "sections": {
+        "aiAnalysis": "AI分析",
+        "statistics": "統計",
+        "tags": "タグ",
+        "notes": "メモ",
+        "summary": "要約"
+      },
+      "stats": {
+        "visits": "アクセス数",
+        "visitsTimes": "{{count}} 回",
+        "lastVisit": "最後",
+        "created": "作成",
+        "importance": "重要度",
+        "never": "なし"
+      },
+      "ai": {
+        "reanalyze": "再分析",
+        "analyzing": "分析中...",
+        "analyzeNow": "今",
+        "noAnalysis": "分析なし",
+        "category": "カテゴリー:",
+        "startAnalyzing": "開始中...",
+        "analyzeComplete": "完了！",
+        "analyzeFailed": "エラー: {{error}}",
+        "analyzeEmpty": "結果なし",
+        "generated": "AI生成"
+      },
+      "time": {
+        "justNow": "今",
+        "minutesAgo": "{{count}} 分前",
+        "hoursAgo": "{{count}} 時間前",
+        "daysAgo": "{{count}} 日前"
+      },
+      "shortcuts": {
+        "open": "開く",
+        "newTab": "新規タブ",
+        "edit": "編集",
+        "copyUrl": "URLコピー",
+        "star": "お気に入り",
+        "unstar": "外す",
+        "delete": "削除",
+        "restore": "復元"
+      },
+      "messages": {
+        "updated": "更新済み",
+        "urlCopied": "URLコピー済み",
+        "starred": "お気に入りに追加",
+        "unstarred": "お気に入りから除外",
+        "restored": "復元済み",
+        "deleted": "ゴミ箱へ",
+        "confirmDelete": "「{{title}}」を削除？",
+        "confirmRestore": "アクション:\n\nOK = 復元"
+      },
+      "breadcrumb": {
+        "root": "ルート"
+      }
+    },
+    "welcome": {
+      "title": "ようこそ！",
+      "subtitle": "あなたのスマート管理",
+      "feature1": "💡 ヒント",
+      "feature1Desc": "左端を40-50%にドラッグ",
+      "feature2": "✨ Chromeが記憶",
+      "feature2Desc": "幅が自動保存",
+      "close": "始める →",
+      "dontShowAgain": "二度と表示しない"
+    },
+    "analysis": {
+      "analyzing": "分析中...",
+      "progress": "進行: {{percent}}%",
+      "status": "📖 ブックマーク分析中...",
+      "complete": "✅ 完了！{{count}} 件分析",
+      "failed": "❌ エラー: {{error}}",
+      "noBookmarks": "分析するものなし",
+      "addFirst": "まず追加",
+      "reanalyzeConfirm": "{{count}} 件分析済み。再度？"
+    },
+    "toast": {
+      "bookmarkAdded": "追加済み",
+      "bookmarkDeleted": "削除済み",
+      "bookmarkRestored": "復元済み",
+      "bookmarkUpdated": "更新済み",
+      "importSuccess": "¡{{count}} 件インポート！",
+      "importFailed": "インポートエラー",
+      "copySuccess": "URLコピー済み",
+      "copyFailed": "コピーエラー",
+      "deleteConfirm": "「{{title}}」を完全に削除？ 元に戻せません！",
+      "permanentlyDeleted": "完全に削除",
+      "analysisComplete": "✅ 分析完了！成功: {{completed}}、失敗: {{failed}}",
+      "analysisStarted": "🚀 {{count}} 件ブックマークをバックグラウンド分析中。",
+      "analysisFailed": "❌ 開始エラー: {{error}}",
+      "analyzing": "分析中... {{progress}}%",
+      "deleteConfirmTitle": "「{{title}}」を削除？",
+      "noApiKey": "⚠️ 設定でAPI Keyを設定",
+      "configError": "設定を確認できません",
+      "allAnalyzed": "✅ すべて分析済み！",
+      "timeHintShort": "~1分",
+      "timeHintLong": "~{{minutes}} 分"
+    },
+    "errors": {
+      "loadBookmarks": "読み込みエラー"
+    },
+    "editDialog": {
+      "title": "編集",
+      "fields": {
+        "title": "タイトル",
+        "titlePlaceholder": "ブックマークタイトル",
+        "url": "URL",
+        "urlPlaceholder": "https://...",
+        "folder": "フォルダー",
+        "folderPlaceholder": "/カテゴリー/サブ",
+        "tags": "タグ",
+        "tagsPlaceholder": "追加...",
+        "notes": "メモ",
+        "notesPlaceholder": "メモ...",
+        "summary": "要約",
+        "summaryPlaceholder": "要約を編集..."
+      },
+      "badges": {
+        "aiGenerated": "AI"
+      },
+      "buttons": {
+        "add": "追加",
+        "cancel": "取消",
+        "save": "保存"
+      },
+      "hints": {
+        "aiSummary": "AI要約、編集可",
+        "userNotes": "メモ編集",
+        "summary": "編集するとAIを上書き"
+      },
+      "shortcuts": {
+        "cancel": "取消",
+        "save": "保存"
+      }
+    },
+    "contextMenu": {
+      "openNewTab": "新規タブ",
+      "copyLink": "リンクコピー",
+      "edit": "編集",
+      "rename": "名前変更",
+      "star": "お気に入り",
+      "unstar": "外す",
+      "moveTo": "移動先...",
+      "archive": "アーカイブ",
+      "delete": "削除",
+      "deleteFolder": "フォルダー削除"
+    },
+    "aiChat": {
+      "title": "AIアシスタント",
+      "archive": "チャットアーカイブ",
+      "newChat": "新規チャット",
+      "clearChat": "チャット消去",
+      "close": "閉じる",
+      "welcome": {
+        "greeting": "👋 こんにちは！アシスタントです",
+        "tryAsking": "聞いてみてください:",
+        "examples": {
+          "findTutorial": "Pythonチュートリアル",
+          "saveCurrentPage": "ページ保存",
+          "recommendResources": "フロントエンドリソース",
+          "whatCanYouDo": "何ができる？"
+        }
+      },
+      "input": {
+        "placeholder": "メッセージ... (Enterで送信)",
+        "placeholderWithAction": "{{description}}...",
+        "send": "送信"
+      },
+      "messages": {
+        "error": "❌ AI利用不可",
+        "regenerate": "再生成",
+        "feedback": "フィードバック"
+      },
+      "confirm": {
+        "clearChat": "チャットを消去？"
+      },
+      "status": {
+        "thinking": "思考中...",
+        "processing": "処理中...",
+        "autoSaved": "自動保存",
+        "archived": "閉じる時にアーカイブ"
+      }
+    },
+    "footer": {
+      "shortcuts": {
+        "newTab": "新規タブ",
+        "star": "お気に入り",
+        "more": "更多"
+      }
+    },
+    "keyboard": {
+      "title": "快捷キー",
+      "navigation": "ナビゲーション",
+      "actions": "アクション",
+      "panels": "パネル",
+      "filterTabs": "フィルター",
+      "close": "閉じる",
+      "shortcuts": {
+        "up": "上",
+        "down": "下",
+        "jk": "Vim",
+        "jumpFirst": "最初へ",
+        "jumpLast": "最後へ",
+        "pageUp": "ページ上",
+        "pageDown": "ページ下",
+        "enter": "開く",
+        "openNewTab": "新規タブ",
+        "star": "お気に入り/外す",
+        "space": "プレビュー",
+        "slash": "検索",
+        "focusSearch": "検索",
+        "openFirst": "最初を開く",
+        "escape": "閉じる",
+        "h": "ヘルプ",
+        "altA": "AIチャット",
+        "r": "復元",
+        "d": "削除",
+        "chrome": "Chrome",
+        "recent": "最近",
+        "popular": "人気",
+        "longTail": "ロングテール"
+      }
+    },
+    "keyboardHelp": {
+      "title": "⌨️ 快捷キー",
+      "closeHint": "HまたはEscで閉じる",
+      "or": "または",
+      "categories": {
+        "navigation": "ナビゲーション",
+        "bookmarkActions": "アクション",
+        "filters": "フィルター",
+        "search": "検索",
+        "trash": "ゴミ箱",
+        "other": "その他"
+      },
+      "items": {
+        "prevItem": "前へ",
+        "nextItem": "次へ",
+        "openBookmark": "開く",
+        "jumpTop": "先頭へ",
+        "jumpBottom": "末尾へ",
+        "pageUp": "ページ上",
+        "pageDown": "ページ下",
+        "openNewTab": "新規タブ",
+        "copyUrl": "URLコピー",
+        "toggleStar": "お気に入り",
+        "editBookmark": "編集",
+        "deleteToTrash": "削除",
+        "filterAll": "すべて",
+        "filterCategories": "カテゴリー順",
+        "filterStarred": "お気に入り",
+        "filterRecent": "最近",
+        "filterPopular": "人気",
+        "filterTrash": "ゴミ箱",
+        "focusSearch": "検索",
+        "openFirstMatch": "最初を開く",
+        "clearSearch": "クリア",
+        "restoreBookmark": "復元",
+        "permanentDelete": "完全に削除",
+        "togglePreview": "プレビュー",
+        "showHideHelp": "ヘルプ"
+      }
+    },
+    "settings": {
+      "title": "設定",
+      "tabs": {
+        "ai": "🤖 AI",
+        "sync": "☁️ 同期",
+        "ui": "🎨 UI",
+        "data": "💾 データ",
+        "advanced": "⚙️ 詳細"
+      },
+      "ai": {
+        "title": "🤖 AIモデル",
+        "description": "OpenAI API互換モデルをサポート。",
+        "provider": "プロバイダー",
+        "apiUrl": "API URL",
+        "apiUrlPlaceholder": "https://api.openai.com/v1/chat/completions",
+        "apiUrlDesc": "完全なアドレス",
+        "modelId": "モデルID",
+        "modelIdPlaceholder": "gpt-3.5-turbo",
+        "modelIdDesc": "例: gpt-4, deepseek-chat",
+        "currentConfig": "設定",
+        "currentConfigUrl": "URL:",
+        "currentConfigModel": "モデル:",
+        "defaultAddress": "デフォルト",
+        "defaultModel": "デフォルトモデル",
+        "keyManagement": "APIキー",
+        "keyCount": "キー",
+        "keyCountValue": "{{count}} keys",
+        "keyCountNone": "キーなし",
+        "keyCountOne": "複数推奨",
+        "keyCountMultiple": "ローテーション有効",
+        "manageKeys": "管理",
+        "noKeysAlert": "キーなし、AI利用不可",
+        "keyNumber": "🔑 Key #{{number}}",
+        "addNewKey": "新キー",
+        "addKeyPlaceholder": "APIキーを貼り付け",
+        "addButton": "追加",
+        "keySecurityNote": "🔒 ローカル暗号化",
+        "connectionTest": "テスト",
+        "testButton": "テスト",
+        "testing": "テスト中...",
+        "testSuccess": "✅",
+        "testFailed": "❌",
+        "testDesc": "確認",
+        "autoAnalyze": "自動分析",
+        "autoAnalyzeDesc": "新規は自動分析",
+        "searchConfig": "🔍 検索",
+        "searchConfigDesc": "GitHub Token設定",
+        "githubToken": "GitHub Token",
+        "githubTokenPlaceholder": "ghp_xxxxxxxxxxxx",
+        "githubTokenDesc": "API制限増加",
+        "getToken": "取得 →",
+        "searchServiceUrl": "カスタムサービス",
+        "searchServiceUrlPlaceholder": "https://...",
+        "searchServiceUrlDesc": "空=デフォルト"
+      },
+      "sync": {
+        "chromeSync": "🔗 Chrome同期",
+        "chromeSyncDesc": "Chromeと同期",
+        "syncStatus": "状態",
+        "enabled": "有効",
+        "disabled": "無効",
+        "statusEnabled": "✅ 同期中",
+        "statusDisabled": "❌ 独立",
+        "enableSync": "Chrome同期",
+        "enableSyncDesc": "有効: リアルタイム",
+        "refreshSync": "再読込",
+        "refreshButton": "再読込",
+        "syncing": "同期中...",
+        "refreshDesc": "マージ、重複排除",
+        "firstInstallAlert": "初回: Chromeからインポート",
+        "cloudSync": "☁️ クラウド",
+        "cloudSyncDesc": "デバイス間",
+        "lastSync": "最後:",
+        "toggleSync": "On/Off",
+        "enableButton": "On",
+        "disableButton": "Off",
+        "processing": "処理中...",
+        "syncContent": "AI、設定、ルール",
+        "manualSync": "手動",
+        "syncNow": "今すぐ",
+        "syncNowDesc": "今すぐ",
+        "storageQuota": "ストレージ",
+        "quotaUsed": "{{used}}KB / {{limit}}KB",
+        "quotaDesc": "上限100KB",
+        "advancedOps": "詳細",
+        "clearCloud": "クラウド消去",
+        "clearCloudDesc": "⚠️ すべて",
+        "syncEnabled": "Chrome sync on",
+        "syncDisabled": "Chrome sync off",
+        "confirmEnableSync": "Chrome双方向同期を有効にしますか？\n\n有効にすると：\n• ブックマークの変更がChromeネイティブブックマークに同期されます\n• Chromeブックマークの変更がこの拡張機能に同期されます\n• 初回同期で既存のブックマークがマージされます（和集合）\n\n続行しますか？",
+        "initialSyncComplete": "初回同期完了！マージ: {{merged}}件、Chromeに追加: {{addedToChrome}}件、ローカルに追加: {{addedToStorage}}件",
+        "toggleFailed": "同期の切り替えに失敗しました: {{error}}"
+      },
+      "ui": {
+        "language": "🌍 言語",
+        "languageLabel": "言語",
+        "languageDesc": "即時反映。",
+        "openMode": "開閉モード",
+        "openModeLabel": "クリック時",
+        "openModeSidebar": "サイドバー",
+        "openModeTab": "新規タブ",
+        "openModeDesc": "サイドバー: ナビゲート",
+        "viewMode": "ビュー",
+        "viewModeLabel": "デフォルト",
+        "viewModeList": "リスト",
+        "viewModeGrid": "グリッド",
+        "viewModeCompact": "コンパクト",
+        "previewPanel": "プレビュー表示",
+        "previewPanelWidth": "幅 ({{width}}%)",
+        "pixelBuddy": "ピクセルバディ",
+        "pixelTheme": "テーマ",
+        "pixelThemeDesc": "選択して保存",
+        "saveTheme": "保存",
+        "themeSelected": "選択済み"
+      },
+      "data": {
+        "exportAiTitle": "📤 AIカテゴリーをエクスポート",
+        "exportAiDesc": "AI分類されたブックマークをエクスポート、HTMLファイルまたはChromeブックマークバーへ直接",
+        "lastExport": "最終エクスポート",
+        "exportAsHtml": "HTMLファイルでエクスポート",
+        "exportAsHtmlDesc": "Chromeブックマーク形式のHTMLでエクスポート、任意のブラウザでインポート可能",
+        "exportToChrome": "Chromeブックマークへエクスポート",
+        "exportToChromeDesc": "タイムスタンプ付き「AnyMark AIカテゴリー」フォルダを作成、繰り返し実行可能",
+        "exporting": "エクスポート中...",
+        "importExport": "インポート/エクスポート",
+        "exportBookmarks": "エクスポート (JSON)",
+        "exportDesc": "JSON形式",
+        "importBookmarks": "インポート",
+        "importDesc": "JSONから",
+        "cleanup": "クリーンアップ",
+        "emptyTrash": "ゴミ箱を空に",
+        "emptyTrashDesc": "すべて削除",
+        "resetSettings": "すべてリセット",
+        "resetDesc": "デフォルト値"
+      },
+      "advanced": {
+        "deleteMode": "削除",
+        "softDelete": "ソフト削除 (ゴミ箱)",
+        "softDeleteDesc": "Off = 永久削除",
+        "autoCleanup": "自動クリーンアップ",
+        "autoArchiveDays": "自動アーカイブ日数",
+        "autoArchiveDaysDesc": "0 = off",
+        "autoDeleteDays": "自動削除日数",
+        "autoDeleteDaysDesc": "0 = off",
+        "storage": "ストレージ最適化",
+        "indexedDBEnabled": "IndexedDBを使用",
+        "indexedDBDesc": "IndexedDBはより多く保存、移行が必要。5000以上のブックマークに推奨。",
+        "advancedWarning": "⚠️ 注意"
+      },
+      "messages": {
+        "saved": "保存済み",
+        "saveFailed": "エラー",
+        "saving": "保存中...",
+        "saveSettings": "保存",
+        "keyAdded": "キー追加済み",
+        "keyRemoved": "キー削除済み",
+        "keyExists": "既に存在",
+        "enterKey": "キーを入力",
+        "testSuccess": "テストOK",
+        "testFailed": "テストエラー",
+        "testError": "テストエラー",
+        "connecting": "接続中...",
+        "noKeys": "まずキーを追加",
+        "connectionSuccess": "成功！モデル: {{model}}",
+        "connectionFailed": "エラー: {{error}}",
+        "connectionError": "エラー: {{error}}",
+        "languageChanged": "言語変更済み",
+        "themeChanged": "✅ キャラクター変更",
+        "themeSaved": "✅ 保存済み",
+        "themeSaveFailed": "❌ エラー",
+        "syncEnabled": "クラウドon",
+        "syncDisabled": "クラウドoff",
+        "syncFailed": "エラー: {{error}}",
+        "syncedToCloud": "クラウド同期",
+        "cloudCleared": "クラウド消去済み",
+        "clearFailed": "エラー: {{error}}",
+        "syncComplete": "完了！\nマージ: {{merged}}\n追加: {{added}}\n更新: {{updated}}",
+        "refreshFailed": "エラー: {{error}}",
+        "enableSyncFirst": "Chrome同期を有効に",
+        "bookmarksExported": "エクスポート済み",
+        "bookmarksImported": "{{count}} 件インポート",
+        "importFailed": "インポートエラー",
+        "invalidFile": "無効",
+        "trashEmptied": "ゴミ箱空",
+        "emptyFailed": "エラー",
+        "settingsReset": "リセット済み",
+        "resetFailed": "エラー",
+        "confirmEmpty": "空にする？ 元に戻せません！",
+        "confirmReset": "すべてリセット？",
+        "exportConfirm": "AIカテゴリーをChromeへエクスポート？\n\nタイムスタンプ付きフォルダを作成します。",
+        "exportSuccess": "✅ 成功！ {{folders}} フォルダ、{{bookmarks}} ブックマーク",
+        "exportFailed": "❌ エラー: {{error}}",
+        "aiSyncSuccess": "✅ 成功！\nフォルダー: {{folders}}\nブックマーク: {{bookmarks}}",
+        "aiSyncFailed": "❌ エラー: {{error}}",
+        "aiSyncConfirm1": "⚠️ 注意！\n\nChromeに書き込みます。\n\n• 元に戻せません\n• バックアップ！\n\n続けますか？",
+        "aiSyncConfirm2": "🔒 最後の機会\n\nバックアップしましたか？\n\nOK = 開始",
+        "exportedHtml": "エクスポート済み"
+      },
+      "providers": {
+        "custom": "カスタム",
+        "openai": "OpenAI",
+        "azure": "Azure OpenAI",
+        "anthropic": "Claude",
+        "google": "Gemini",
+        "groq": "Groq",
+        "xai": "xAI (Grok)",
+        "doubao": "Doubao",
+        "moonshot": "Kimi",
+        "aliyun": "Tongyi",
+        "yi": "01.AI",
+        "deepseek": "DeepSeek",
+        "siliconflow": "SiliconFlow",
+        "openrouter": "OpenRouter",
+        "ollama": "Ollama (ローカル)",
+        "huggingface": "HuggingFace"
+      },
+      "pixelThemes": {
+        "switchTo": "{{name}}に変更",
+        "classic": {
+          "name": "クラシックピクセル",
+          "desc": "プロフェッショナル、フレンドリー",
+          "persona": "Koda · 賢者",
+          "slogan": "広大なリンクの海で、私があなたの最も頼りになる錨です。"
+        },
+        "cyber": {
+          "name": "サイバーネオン",
+          "desc": "未来的、夜行性",
+          "persona": "Vex · ハンター",
+          "slogan": "ノイズをフィルタリングし、最も貴重なシグナルのみ捕捉します。"
+        },
+        "grow": {
+          "name": "自然の芽",
+          "desc": "癒し、有機的",
+          "persona": "Sprout · 庭師",
+          "slogan": "すべてのブックマークは、芽吹くのを待つインスピレーションの種です。"
+        },
+        "flare": {
+          "name": "夕暮れ",
+          "desc": "エネルギッシュ、発見",
+          "persona": "Zing · 探索者",
+          "slogan": "人生は收藏だけではない。発見して、輝こう！"
+        },
+        "noir": {
+          "name": "ギークターミナル",
+          "desc": "ハッカー、レトロ、ミニマル",
+          "persona": "Null · バトラー",
+          "slogan": "余分を削ぎ落とし、情報の本来の論理に戻る。"
+        }
+      }
+    }
+  },
+  "popup": {
+    "title": "AnyMark",
+    "quickActions": "クイックアクション",
+    "saveCurrentPage": "ページ保存",
+    "openSidebar": "サイドバー",
+    "searchBookmarks": "検索",
+    "menu": {
+      "quickSave": "クイックセーブ",
+      "detailedSave": "詳細...",
+      "openSidebar": "サイドバー",
+      "openInTab": "新規タブ",
+      "settings": "設定"
+    },
+    "stats": {
+      "total": "合計",
+      "today": "今日",
+      "thisWeek": "今週",
+      "categories": "カテゴリー"
+    },
+    "recentBookmarks": "最近",
+    "viewAll": "すべて見る",
+    "noBookmarks": "ブックマークなし",
+    "addFirst": "最初を保存",
+    "placeholders": {
+      "pageTitle": "タイトル",
+      "pageUrl": "https://...",
+      "tagName": "タグ..."
+    },
+    "labels": {
+      "difficulty": "難易度",
+      "techStack": "技術スタック",
+      "removeTag": "削除",
+      "addTag": "追加"
+    },
+    "hints": {
+      "cannotOpenSidebar": "開けません、右クリックで"
+    },
+    "aiUnavailable": "AI利用不可"
+  },
+  "chat": {
+    "title": "AIアシスタント",
+    "welcome": "👋 こんにちは！どう помочь?",
+    "inputPlaceholder": "質問を输入...",
+    "send": "送信",
+    "thinking": "考え中...",
+    "suggestions": {
+      "title": " sugestii",
+      "organize": "整理",
+      "find": "探す...",
+      "analyze": "分析",
+      "cleanup": "クリーンアップ"
+    },
+    "tools": {
+      "searching": "🔍 検索中...",
+      "organizing": "📁 整理中...",
+      "analyzing": "🤖 分析中...",
+      "creating": "✨ 作成中..."
+    },
+    "errors": {
+      "failed": "エラー。再試行して。",
+      "noBookmarks": "ブックマークなし。",
+      "networkError": "ネットワークエラー。"
+    },
+    "clear": "チャット消去",
+    "close": "閉じる",
+    "newChat": "新規チャット",
+    "user": "あなた",
+    "assistant": "AI"
+  },
+  "common": {
+    "buttons": {
+      "save": "保存",
+      "cancel": "取消",
+      "delete": "削除",
+      "edit": "編集",
+      "close": "閉じる",
+      "confirm": "確認",
+      "back": "戻る",
+      "next": "次へ",
+      "finish": "完了",
+      "retry": "再試行",
+      "refresh": "再読込"
+    },
+    "messages": {
+      "loading": "読み込み中...",
+      "saving": "保存中...",
+      "success": "成功！",
+      "error": "エラー",
+      "warning": "警告",
+      "info": "情報",
+      "confirm": "よろしいですか？",
+      "noData": "データなし",
+      "comingSoon": "近日公開"
+    },
+    "time": {
+      "justNow": "今",
+      "minutesAgo": "{{count}} 分前",
+      "hoursAgo": "{{count}} 時間前",
+      "daysAgo": "{{count}} 日前",
+      "weeksAgo": "{{count}} 週間前",
+      "monthsAgo": "{{count}} ヶ月前",
+      "yearsAgo": "{{count}} 年前"
+    }
+  },
+  "renderError": {
+    "title": "レンダリングエラー",
+    "description": "サイドバー表示エラー",
+    "reload": "再読込"
+  },
+  "importProgress": {
+    "title": "インポート完了！",
+    "importing": "ブックマークインポート中...",
+    "hint": "お待ちください、AIが各ブックマークを分析中"
+  },
+  "folderSelector": {
+    "newBadge": "新規",
+    "existingFolders": "既存フォルダー",
+    "createNew": "作成: {{name}}"
+  },
+  "floatingChat": {
+    "title": "アシスタント",
+    "buttonTitle": "アシスタント (Alt+A)",
+    "greeting": "👋 こんにちは！アシスタントです",
+    "welcomeDesc": "50件まで記憶に残ります。聞いてみて:",
+    "shortcutHint": "Alt + Aで開く · Enterで送信"
+  },
+  "saveConfirm": {
+    "title": "AI分析完了",
+    "confidence": "信頼度 {{value}}%",
+    "cancel": "取消",
+    "pageTitlePlaceholder": "タイトル",
+    "folderPathPlaceholder": "/パス",
+    "addTagPlaceholder": "タグ追加...",
+    "summaryPlaceholder": "要約...",
+    "cancelEdit": "取消",
+    "saveBookmark": "保存",
+    "edit": "編集",
+    "confirmSave": "確認",
+    "aiCategory": "AIカテゴリー",
+    "location": "場所",
+    "smartTags": "スマートタグ",
+    "contentSummary": "コンテンツ要約"
+  },
+  "chatArchive": {
+    "title": "チャットアーカイブ",
+    "new": "新規",
+    "newChat": "新規チャット",
+    "loading": "読み込み中...",
+    "empty": "アーカイブなし",
+    "emptyDesc": "保存された会話",
+    "messages": "{{count}} メッセージ",
+    "deleteConfirm": "このアーカイブを削除？",
+    "editTitle": "タイトル編集",
+    "restoreChat": "チャット復元",
+    "delete": "削除",
+    "storage": "ストレージ: {{used}} / {{total}}",
+    "yesterday": "昨日",
+    "daysAgo": "{{count}} 日前"
+  },
+  "notification": {
+    "saveSuccessTitle": "✅ 保存済み",
+    "saveSuccessMessage": "保存: {{title}}",
+    "saveFailTitle": "❌ 保存エラー",
+    "saveFailMessage": "エラー、再試行して",
+    "toastSaved": "✅ 保存済み"
+  },
+  "folder": {
+    "work": "仕事",
+    "personal": "個人",
+    "learning": "学習",
+    "uncategorized": "カテゴリーなし",
+    "bookmarks": "ブックマーク",
+    "development": "開発"
+  },
+  "progressIndicator": {
+    "thinking": "思考",
+    "toolCalling": "ツール準備",
+    "toolExecuting": "実行中",
+    "responding": "応答生成",
+    "processing": "処理中"
+  },
+  "quickAction": {
+    "search": "検索",
+    "organize": "整理",
+    "discover": "発見",
+    "recommend": "おすすめ",
+    "chat": "チャット",
+    "searchDesc": "ブックマーク検索",
+    "organizeDesc": "ブックマーク整理",
+    "discoverDesc": "リソース発見",
+    "recommendDesc": "コンテンツおすすめ",
+    "chatDesc": "自由会話"
+  },
+  "floatingChat": {
+    "operationComplete": "操作完了！変更を確認して。",
+    "errorOccurred": "すみません、エラーが発生。再試行して。",
+    "clearChatConfirm": "すべての履歴を消去？ 元に戻せません。",
+    "saveFailed": "保存エラー。再試行して。",
+    "saveCancelled": "保存取消",
+    "saveSuccess": "✅ 《{{title}}》保存\n\n📁 {{folderPath}}\n🏷️ {{tags}}",
+    "placeholder": "メッセージ... (Enter)",
+    "actions": {
+      "saveCurrentPage": "ページ保存",
+      "collectAI": "AIブックマーク収集",
+      "organize": "整理"
+    }
+  },
+  "messageBubble": {
+    "copied": "コピー済み",
+    "copy": "コピー",
+    "regenerate": "再生成",
+    "helpful": "役立つ",
+    "notHelpful": "役立たない"
+  },
+  "resizableDivider": {
+    "doubleClickExpand": "ダブルクリックで展開",
+    "dragResize": "ドラッグでリサイズ",
+    "dragResizeCollapse": "ドラッグ | ダブルクリックで閉じる",
+    "expandPanel": "展開",
+    "collapsePanel": "閉じる"
+  },
+  "thinkingCard": {
+    "thinkingProcess": "思考プロセス",
+    "thinking": "思考中..."
+  },
+  "conflict": {
+    "title": "{{count}} 件の競合が見つかりました",
+    "batchActions": "一括操作",
+    "batch": {
+      "useAllPlugin": "すべてプラグイン版を使用",
+      "useAllChrome": "すべて Chrome 版を使用",
+      "useAllNewer": "すべて新しい版を使用",
+      "keepAllBoth": "すべて両方を保持"
+    },
+    "pluginVersion": "プラグイン版",
+    "chromeVersion": "Chrome 版",
+    "newer": "新しい",
+    "field": {
+      "title": "タイトル",
+      "path": "パス",
+      "time": "更新日時"
+    },
+    "option": {
+      "usePlugin": "プラグイン版を使用",
+      "useChrome": "Chrome 版を使用",
+      "keepBoth": "両方を保持"
+    },
+    "type": {
+      "title": "タイトルが異なる",
+      "path": "パスが異なる",
+      "both": "両方が異なる"
+    },
+    "summary": {
+      "usePlugin": "{{count}} 件をプラグイン版に更新",
+      "useChrome": "{{count}} 件を Chrome 版に更新",
+      "keepBoth": "{{count}} 件の複製を作成",
+      "unresolved": "{{count}} 件が未解決",
+      "none": "変更なし"
+    },
+    "apply": "変更を適用",
+    "applying": "適用中",
+    "noConflicts": "競合は見つかりませんでした",
+    "unresolvedWarning": "適用する前にすべての {{count}} 件の競合を解決してください",
+    "result": {
+      "success": "{{count}} 件の競合を解決しました",
+      "partial": "{{resolved}} 件解決、{{failed}} 件失敗"
+    }
+  },
+  "sync": {
+    "status": {
+      "synced": "同期済み",
+      "syncing": "同期中",
+      "hasConflicts": "競合あり",
+      "error": "エラー",
+      "disabled": "無効"
+    },
+    "tooltip": {
+      "synced": "すべてのブックマークが同期されています",
+      "syncing": "ブックマークを同期中...",
+      "hasConflicts": "{{count}} 件の競合を解決する必要があります",
+      "error": "同期エラーが発生しました",
+      "disabled": "Chrome 同期が無効です"
+    }
+  }
+}

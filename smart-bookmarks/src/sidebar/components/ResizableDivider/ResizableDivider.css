@@ -1,0 +1,159 @@
+/**
+ * 可拖拽分隔线样式
+ */
+
+.resizable-divider {
+  position: relative;
+  width: 8px;
+  flex-shrink: 0;
+  background: transparent;
+  cursor: col-resize;
+  transition: background-color 0.2s ease;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 悬停效果 */
+.resizable-divider:hover,
+.resizable-divider.hovering {
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.resizable-divider:hover .divider-handle,
+.resizable-divider.hovering .divider-handle {
+  opacity: 1;
+}
+
+.resizable-divider:hover .divider-collapse-button,
+.resizable-divider.hovering .divider-collapse-button {
+  opacity: 1;
+}
+
+/* 拖拽时的效果 */
+.resizable-divider.dragging {
+  background: rgba(59, 130, 246, 0.2);
+}
+
+/* 拖拽手柄 */
+.divider-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  color: var(--text-secondary);
+}
+
+.grip-icon {
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+/* 折叠/展开按钮 */
+.divider-collapse-button {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.divider-collapse-button:hover {
+  background: var(--accent-primary);
+  color: white;
+  border-color: var(--accent-primary);
+  transform: translateX(-50%) scale(1.1);
+}
+
+.divider-collapse-button:active {
+  transform: translateX(-50%) scale(0.95);
+}
+
+/* 拖拽指示器 */
+.divider-indicator {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 8px 16px;
+  background: var(--accent-primary);
+  color: white;
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+  pointer-events: none;
+  z-index: 9999;
+  animation: fade-in 0.2s ease;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* 左侧面板特定样式 */
+.resizable-divider.left {
+  /* 边框在右侧 */
+  border-right: 1px solid transparent;
+}
+
+.resizable-divider.left:hover,
+.resizable-divider.left.hovering,
+.resizable-divider.left.dragging {
+  border-right-color: var(--accent-primary);
+}
+
+/* 右侧面板特定样式 */
+.resizable-divider.right {
+  /* 边框在左侧 */
+  border-left: 1px solid transparent;
+}
+
+.resizable-divider.right:hover,
+.resizable-divider.right.hovering,
+.resizable-divider.right.dragging {
+  border-left-color: var(--accent-primary);
+}
+
+/* 拖拽时禁止选择文本 */
+body.resizing {
+  user-select: none;
+  cursor: col-resize !important;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .resizable-divider {
+    width: 12px; /* 移动端更宽，更容易点击 */
+  }
+  
+  .divider-collapse-button {
+    width: 24px;
+    height: 36px;
+  }
+}

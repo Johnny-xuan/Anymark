@@ -1,0 +1,85 @@
+{
+  "manifest_version": 3,
+  "name": "AnyMark ✦ The First Bookmark Agent",
+  "version": "1.0.0",
+  "description": "⚡ World's first AI Agent for bookmarks ⌨️ Vim-style keyboard navigation 🔐 Privacy-first, use your own API keys 🆓 100% free & open-source",
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "AnyMark - Bookmark Freely",
+    "default_icon": {
+      "16": "icon-16.png",
+      "48": "icon-48.png",
+      "128": "icon-128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "bookmarks",
+    "storage",
+    "tabs",
+    "activeTab",
+    "sidePanel",
+    "notifications",
+    "scripting",
+    "contextMenus",
+    "alarms",
+    "history"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "https://search.j-o-x.tech/*",
+    "https://v1.j-o-x.tech/*",
+    "https://api.github.com/*",
+    "http://localhost:11434/*"
+  ],
+  "side_panel": {
+    "default_path": "sidebar.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-toast.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-pixel-buddy.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "commands": {
+    "quick_save": {
+      "suggested_key": {
+        "default": "Alt+Shift+S",
+        "mac": "Alt+Shift+S"
+      },
+      "description": "Quick save current page"
+    },
+    "open_popup": {
+      "suggested_key": {
+        "default": "Alt+Shift+D",
+        "mac": "Alt+Shift+D"
+      },
+      "description": "Open detailed save panel"
+    },
+    "open-sidebar-tab": {
+      "suggested_key": {
+        "default": "Alt+Shift+B",
+        "mac": "Alt+Shift+B"
+      },
+      "description": "Open bookmark manager"
+    }
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; connect-src 'self' http://localhost:11434 https://api.openai.com https://api.anthropic.com https://generativelanguage.googleapis.com https://api.x.ai https://api.groq.com https://ark.cn-beijing.volces.com https://api.moonshot.cn https://dashscope.aliyuncs.com https://api.yi.01.ai https://api.deepseek.com https://api.siliconflow.cn https://open.bigmodel.cn https://api.minimax.io https://api.minimaxi.com https://openrouter.ai https://api-inference.huggingface.co https://search.j-o-x.tech https://html.duckduckgo.com https://api.github.com https://api.ossinsight.io; object-src 'self'",
+    "content_scripts": "script-src 'self' https://* http://*; connect-src 'self' https://* http://*; object-src 'self'"
+  }
+}

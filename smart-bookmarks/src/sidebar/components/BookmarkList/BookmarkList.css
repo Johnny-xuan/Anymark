@@ -1,0 +1,876 @@
+/**
+ * 书签列表样式
+ */
+
+.bookmark-list {
+  position: relative;
+  height: 100%;
+  overflow: hidden; /* 外层容器隐藏溢出，滚动由内部 .bookmark-list-scroll 处理 */
+  background: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+/* 滚动容器 */
+.bookmark-list-scroll {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* ========== 选中指示器 ========== */
+.selection-indicator {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 48px; /* 与书签项高度一致 */
+  pointer-events: none;
+  z-index: 1;
+
+  /* 使用 top 定位，配合 transition 实现平滑移动 */
+  transition: top var(--duration-normal) var(--ease-back);
+  will-change: top;
+
+  /* 背景渐变 */
+  background: linear-gradient(
+    90deg,
+    rgba(59, 130, 246, 0.15) 0%,
+    rgba(59, 130, 246, 0.10) 50%,
+    rgba(59, 130, 246, 0.15) 100%
+  );
+
+  /* 左侧蓝条 */
+  border-left: 3px solid var(--accent-primary);
+  border-radius: var(--radius-md);
+
+  /* 光晕效果 */
+  box-shadow:
+    inset 0 0 0 1px rgba(59, 130, 246, 0.25),
+    0 0 20px rgba(59, 130, 246, 0.15),
+    0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 呼吸动画 */
+.selection-indicator::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-md);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(59, 130, 246, 0.2),
+    transparent 70%
+  );
+  animation: breath 2.5s ease-in-out infinite;
+}
+
+@keyframes breath {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+/* ========== 书签项 ========== */
+.bookmark-item {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-sm) var(--space-md); /* 减小内边距 */
+  height: 48px; /* 从 60px 减小到 48px */
+  cursor: move;
+  transition: all var(--duration-fast) ease;
+  color: var(--text-secondary);
+  overflow: hidden; /* 用于波纹效果 */
+}
+
+.bookmark-item:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.bookmark-item.selected {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* 波纹效果 */
+.bookmark-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at var(--ripple-x, 50%) var(--ripple-y, 50%),
+    rgba(59, 130, 246, 0.3) 0%,
+    transparent 60%
+  );
+  opacity: 0;
+  transform: scale(0);
+  pointer-events: none;
+}
+
+.bookmark-item.ripple::after {
+  animation: ripple-out 0.6s var(--ease-smooth);
+}
+
+@keyframes ripple-out {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+}
+
+/* 拖拽状态 */
+.bookmark-item[draggable="true"]:active {
+  opacity: 0.5;
+  cursor: grabbing;
+}
+
+.bookmark-item.drag-over {
+  background: rgba(59, 130, 246, 0.15);
+  border-top: 2px solid var(--accent-primary);
+  border-radius: var(--radius-sm);
+  transform: translateY(2px);
+}
+
+.bookmark-item.dragging {
+  opacity: 0.5;
+  cursor: grabbing;
+}
+
+/* 拖拽手柄 */
+.drag-handle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--icon-tertiary);
+  opacity: 0;
+  transition: opacity var(--duration-fast) ease;
+  cursor: grab;
+  flex-shrink: 0;
+}
+
+.bookmark-item:hover .drag-handle {
+  opacity: 0.6;
+}
+
+.drag-handle:hover {
+  opacity: 1 !important;
+  color: var(--icon-secondary);
+}
+
+.drag-handle:active {
+  cursor: grabbing;
+}
+
+/* 图标区域 */
+.item-icon {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--icon-secondary);
+  flex-shrink: 0;
+}
+
+/* Favicon 图片 */
+.bookmark-favicon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  border-radius: 3px;
+  background: var(--bg-tertiary);
+  padding: 2px;
+}
+
+/* Favicon 加载失败时的 fallback */
+.lucide-icon-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 图标悬停动画 */
+.item-icon > svg,
+.bookmark-favicon {
+  transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+.bookmark-item:hover .item-icon > svg,
+.bookmark-item:hover .bookmark-favicon {
+  transform: scale(1.15);
+  filter: drop-shadow(0 2px 4px rgba(59, 130, 246, 0.3));
+}
+
+.bookmark-item.selected .item-icon {
+  color: var(--accent-primary);
+}
+
+.bookmark-item.selected .item-icon > svg {
+  animation: icon-pulse 0.5s var(--ease-back);
+}
+
+@keyframes icon-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2) rotate(-5deg); }
+  100% { transform: scale(1); }
+}
+
+.expand-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+/* 图标旋转动画 */
+.expand-button svg {
+  transition: transform var(--duration-slow) var(--ease-back);
+}
+
+.expand-button.expanded svg {
+  transform: rotate(90deg);
+}
+
+.expand-button:hover {
+  background: var(--bg-tertiary);
+}
+
+.expand-button:active {
+  transform: scale(0.9);
+}
+
+/* 内容区域 */
+.item-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px; /* 减小间距 */
+}
+
+.item-title {
+  font-size: var(--font-size-sm); /* 减小字号 */
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.4; /* 紧凑行高 */
+}
+
+/* 编辑输入框 */
+.edit-input {
+  width: 100%;
+  padding: 4px 8px;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--text-primary);
+  background: var(--bg-tertiary);
+  border: 2px solid var(--accent-primary);
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+.edit-input:focus {
+  background: var(--bg-elevated);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.item-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm); /* 减小间距 */
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+  line-height: 1.2;
+}
+
+.item-url {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.item-visits,
+.folder-count {
+  flex-shrink: 0;
+  padding: 2px 6px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+}
+
+/* 操作区域 */
+.item-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-shrink: 0;
+}
+
+/* 数据源图标 */
+.source-icon {
+  opacity: 0.5;
+  transition: opacity var(--duration-fast) var(--ease-smooth);
+}
+
+.source-icon.chrome {
+  color: #4285f4;
+}
+
+.source-icon.ai {
+  color: #a855f7;
+}
+
+.bookmark-item:hover .source-icon {
+  opacity: 0.8;
+}
+
+.star-icon {
+  color: #f59e0b;
+  animation: star-pop 0.4s var(--ease-back);
+}
+
+@keyframes star-pop {
+  0% { transform: scale(0.8); }
+  50% { transform: scale(1.3) rotate(10deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+/* ========== 空状态 ========== */
+.bookmark-list-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: var(--space-2xl);
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.bookmark-list-empty p {
+  margin: 0;
+  font-size: var(--font-size-lg);
+}
+
+.empty-hint {
+  margin-top: var(--space-sm);
+  font-size: var(--font-size-sm) !important;
+  color: var(--text-tertiary) !important;
+}
+
+/* ========== 滚动优化 ========== */
+.bookmark-list ::-webkit-scrollbar {
+  width: 6px;
+}
+
+.bookmark-list ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.bookmark-list ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.bookmark-list ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ========== 性能优化 ========== */
+.bookmark-item {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* ========== 搜索高亮 ========== */
+.search-highlight {
+  background: rgba(59, 130, 246, 0.25);
+  color: #60a5fa;
+  border-radius: 2px;
+  padding: 1px 2px;
+  font-weight: 600;
+  animation: highlight-pulse 0.4s var(--ease-smooth);
+}
+
+@keyframes highlight-pulse {
+  0% {
+    background: rgba(59, 130, 246, 0.4);
+    transform: scale(1.02);
+  }
+  50% {
+    background: rgba(59, 130, 246, 0.3);
+  }
+  100% {
+    background: rgba(59, 130, 246, 0.25);
+    transform: scale(1);
+  }
+}
+
+/* ========== 入场动画 ========== */
+.bookmark-item {
+  animation: slide-in var(--duration-normal) var(--ease-smooth) backwards;
+}
+
+/* 逐个延迟入场 */
+.bookmark-item:nth-child(1) { animation-delay: 0ms; }
+.bookmark-item:nth-child(2) { animation-delay: 30ms; }
+.bookmark-item:nth-child(3) { animation-delay: 60ms; }
+.bookmark-item:nth-child(4) { animation-delay: 90ms; }
+.bookmark-item:nth-child(5) { animation-delay: 120ms; }
+.bookmark-item:nth-child(6) { animation-delay: 150ms; }
+.bookmark-item:nth-child(7) { animation-delay: 180ms; }
+.bookmark-item:nth-child(8) { animation-delay: 210ms; }
+.bookmark-item:nth-child(9) { animation-delay: 240ms; }
+.bookmark-item:nth-child(10) { animation-delay: 270ms; }
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 目录展开波浪动画 */
+.bookmark-item.folder-child {
+  animation: wave-in var(--duration-normal) var(--ease-back) backwards;
+}
+
+@keyframes wave-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ========== AI分析按钮 ========== */
+.analyze-button {
+  appearance: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 4px;
+  margin-left: 4px;
+  border-radius: 4px;
+  color: var(--text-secondary);
+  transition: all var(--duration-fast) var(--ease-back);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.bookmark-item:hover .analyze-button {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.analyze-button:hover {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--accent-primary);
+}
+
+.analyze-button:active {
+  transform: scale(0.95);
+}
+
+.analyze-button.analyzing {
+  opacity: 1;
+  cursor: wait;
+}
+
+.analyze-button .spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ========== AI 分类分组视图 ========== */
+.bookmark-list.category-grouped {
+  overflow: auto;
+}
+
+.category-group {
+  margin-bottom: 4px;
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  margin: 4px 8px;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.category-header:hover {
+  background: var(--bg-hover);
+}
+
+.category-header.expanded {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.05));
+  border-left: 3px solid var(--accent-primary);
+}
+
+.category-chevron {
+  color: var(--text-tertiary);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.category-chevron.expanded {
+  transform: rotate(90deg);
+}
+
+.category-icon {
+  color: var(--accent-primary);
+  flex-shrink: 0;
+}
+
+.category-name {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.category-count {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  background: var(--bg-tertiary);
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.category-bookmarks {
+  padding-left: 8px;
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ========== 拖拽目标文件夹高亮 ========== */
+.bookmark-item.drag-target-folder {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(59, 130, 246, 0.1));
+  border: 2px dashed var(--accent-primary);
+  border-radius: var(--radius-md);
+  transform: scale(1.02);
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.3);
+  transition: all 0.2s var(--ease-back);
+}
+
+.bookmark-item.drag-target-folder .item-icon {
+  color: var(--accent-primary);
+  transform: scale(1.1);
+}
+
+.bookmark-item.drag-target-folder .item-title {
+  color: var(--accent-primary);
+  font-weight: 600;
+}
+
+/* 拖拽时的文件夹图标动画 */
+.bookmark-item.drag-target-folder .item-icon > svg {
+  animation: folder-bounce 0.5s var(--ease-back) infinite;
+}
+
+@keyframes folder-bounce {
+  0%, 100% {
+    transform: scale(1.1) translateY(0);
+  }
+  50% {
+    transform: scale(1.15) translateY(-2px);
+  }
+}
+
+/* 拖拽排序指示线 */
+.bookmark-item.drag-over:not(.drag-target-folder) {
+  border-top: 3px solid var(--accent-primary);
+  margin-top: -1px;
+  padding-top: calc(var(--space-sm) - 2px);
+}
+
+.bookmark-item.drag-over:not(.drag-target-folder)::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -2px;
+  width: 8px;
+  height: 8px;
+  background: var(--accent-primary);
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+/* 拖拽位置指示 - 上边缘（排序到上方） */
+.bookmark-item.drag-position-top {
+  border-top: 3px solid var(--accent-primary) !important;
+  border-bottom: none !important;
+  background: transparent !important;
+}
+
+.bookmark-item.drag-position-top::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -2px;
+  width: 8px;
+  height: 8px;
+  background: var(--accent-primary);
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+/* 拖拽位置指示 - 下边缘（排序到下方） */
+.bookmark-item.drag-position-bottom {
+  border-top: none !important;
+  border-bottom: 3px solid var(--accent-primary) !important;
+  background: transparent !important;
+}
+
+.bookmark-item.drag-position-bottom::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 8px;
+  height: 8px;
+  background: var(--accent-primary);
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+/* 拖拽位置指示 - 中心（移动到文件夹内） */
+.bookmark-item.drag-position-center {
+  border-top: none !important;
+  border-bottom: none !important;
+  background: rgba(59, 130, 246, 0.2) !important;
+  box-shadow: inset 0 0 0 2px var(--accent-primary);
+}
+
+/* ========== Chrome 导入按钮 ========== */
+.bookmark-list-empty .empty-icon {
+  margin-bottom: var(--space-lg);
+  color: var(--accent-primary);
+}
+
+.bookmark-list-empty h3 {
+  margin: 0 0 var(--space-md) 0;
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.bookmark-list-empty .import-chrome-btn {
+  margin-top: var(--space-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-xl);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+}
+
+.bookmark-list-empty .import-chrome-btn .spinning {
+  animation: spin 1s linear infinite;
+}
+
+
+/* ========== Compact 视图模式 ========== */
+.bookmark-list.view-compact .bookmark-item {
+  height: 36px;
+  padding: var(--space-xs) var(--space-md);
+}
+
+.bookmark-list.view-compact .selection-indicator {
+  height: 36px;
+}
+
+/* Compact 模式隐藏元信息（URL、访问次数） */
+.bookmark-list.view-compact .item-meta {
+  display: none;
+}
+
+/* Compact 模式调整内容区域 */
+.bookmark-list.view-compact .item-content {
+  justify-content: center;
+}
+
+/* Compact 模式调整标题样式 */
+.bookmark-list.view-compact .item-title {
+  font-size: var(--font-size-sm);
+  line-height: 1.2;
+}
+
+/* Compact 模式调整图标大小 */
+.bookmark-list.view-compact .item-icon > svg,
+.bookmark-list.view-compact .bookmark-favicon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Compact 模式调整拖拽手柄 */
+.bookmark-list.view-compact .drag-handle {
+  margin-right: -4px;
+}
+
+/* Compact 模式调整操作按钮 */
+.bookmark-list.view-compact .item-actions {
+  gap: var(--space-xs);
+}
+
+.bookmark-list.view-compact .analyze-button {
+  padding: 2px;
+}
+
+/* Compact 模式调整展开按钮 */
+.bookmark-list.view-compact .expand-button {
+  width: 18px;
+  height: 18px;
+}
+
+.bookmark-list.view-compact .expand-button svg {
+  width: 12px;
+  height: 12px;
+}
+
+
+/* ========== 多选状态 ========== */
+.bookmark-item.multi-selected {
+  background: rgba(59, 130, 246, 0.12);
+  border-left: 3px solid var(--accent-primary);
+}
+
+.bookmark-item.multi-selected::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--accent-primary);
+}
+
+.bookmark-item.multi-selected .item-icon {
+  color: var(--accent-primary);
+}
+
+/* 多选时的复选框指示器 */
+.bookmark-item.multi-selected .drag-handle::before {
+  content: '✓';
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: var(--accent-primary);
+  font-weight: bold;
+}
+
+/* 多选工具栏 */
+.multi-select-toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.08));
+  border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+  animation: slideDown 0.2s ease;
+}
+
+.multi-select-toolbar .select-count {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.multi-select-toolbar .select-count strong {
+  color: var(--accent-primary);
+}
+
+.multi-select-toolbar .toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-left: auto;
+}
+
+.multi-select-toolbar button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  font-size: var(--font-size-xs);
+  cursor: pointer;
+  transition: all var(--duration-fast) ease;
+}
+
+.multi-select-toolbar button:hover {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+}
+
+.multi-select-toolbar button.danger:hover {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+
+.multi-select-toolbar button.star:hover {
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
+}

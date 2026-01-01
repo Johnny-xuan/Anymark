@@ -1,0 +1,219 @@
+/* Toast 提示样式 */
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-default);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 300px;
+  max-width: 500px;
+  animation: toast-slide-in 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes toast-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.toast-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toast-message {
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+.toast-close {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+}
+
+.toast-close:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+/* Toast 类型样式 */
+.toast-success {
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.toast-success .toast-icon {
+  color: #10b981;
+}
+
+.toast-error {
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.toast-error .toast-icon {
+  color: #ef4444;
+}
+
+.toast-warning {
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.toast-warning .toast-icon {
+  color: #f59e0b;
+}
+
+.toast-info {
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.toast-info .toast-icon {
+  color: var(--accent-primary);
+}
+
+
+/* 撤销按钮样式 */
+.toast-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.toast-undo-button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  background: var(--accent-primary, #6366f1);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.toast-undo-button:hover:not(:disabled) {
+  background: var(--accent-hover, #5558e3);
+  transform: scale(1.02);
+}
+
+.toast-undo-button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.toast-undo-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.undo-loading {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* 进度条样式 */
+.toast-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--bg-tertiary, #2a2a2a);
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+}
+
+.toast-progress-bar {
+  height: 100%;
+  background: var(--accent-primary, #6366f1);
+  transition: width 0.05s linear;
+}
+
+/* 撤销成功状态 */
+.toast-undo-success {
+  border-color: var(--success-color, #4caf50) !important;
+  background: rgba(76, 175, 80, 0.1);
+}
+
+.toast-undo-success .toast-icon {
+  color: var(--success-color, #4caf50) !important;
+}
+
+/* 确保 toast 有相对定位以支持进度条 */
+.toast {
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* 重试按钮样式 */
+.toast-retry-button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  background: var(--warning-color, #f59e0b);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.toast-retry-button:hover:not(:disabled) {
+  background: var(--warning-hover, #d97706);
+  transform: scale(1.02);
+}
+
+.toast-retry-button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.toast-retry-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.retry-loading {
+  animation: pulse 1s infinite;
+}
+
+/* 重试成功状态 - 复用撤销成功样式 */
+.toast-retry-success {
+  border-color: var(--success-color, #4caf50) !important;
+  background: rgba(76, 175, 80, 0.1);
+}
+
+.toast-retry-success .toast-icon {
+  color: var(--success-color, #4caf50) !important;
+}

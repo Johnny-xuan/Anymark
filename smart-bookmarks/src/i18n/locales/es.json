@@ -1,0 +1,1059 @@
+{
+  "onboarding": {
+    "hero": {
+      "title": "ANYMARK",
+      "subtitle": "Tu Asistente de Marcadores Inteligente",
+      "description": "Agente IA Conversacional · Navegación Vim · API Personalizable · Gratis y Open Source",
+      "badge": "v1.0 Lanzamiento",
+      "explore": "Explorar Funciones",
+      "scroll": "Desplazar hacia abajo"
+    },
+    "buddies": {
+      "heading": "Elige tu Pixel Buddy",
+      "subtitle": "Cinco asistentes IA únicos para ayudar a organizar tu mundo de marcadores",
+      "koda": {
+        "name": "Koda",
+        "role": "El Erudito",
+        "quote": "En el vasto océano de enlaces, soy tu ancla firme."
+      },
+      "vex": {
+        "name": "Vex",
+        "role": "Cazador Cyber",
+        "quote": "Filtrando el ruido, capturo solo las señales más valiosas."
+      },
+      "sprout": {
+        "name": "Sprout",
+        "role": "Jardinero del Conocimiento",
+        "quote": "Cada marcador es una semilla de inspiración esperando florecer."
+      },
+      "flare": {
+        "name": "Flare",
+        "role": "Explorador de Inspiración",
+        "quote": "La vida no es solo coleccionar - ¡descubre y brilla!"
+      },
+      "null": {
+        "name": "Null",
+        "role": "Mayordomo Binario",
+        "quote": "Elimina el exceso, regresa a la lógica pura de información."
+      }
+    },
+    "agent": {
+      "heading": "Agente IA Conversacional",
+      "subtitle": "Gestiona marcadores con lenguaje natural, tan fácil como chatear con un amigo",
+      "search": {
+        "title": "Buscar Marcadores",
+        "desc": "Busca rápidamente tus marcadores guardados"
+      },
+      "discover": {
+        "title": "Descubrir Recursos",
+        "desc": "Encuentra nuevos recursos de calidad en línea"
+      },
+      "trending": {
+        "title": "Proyectos en Tendencia",
+        "desc": "Ve proyectos open source populares de GitHub"
+      },
+      "organize": {
+        "title": "Organizar Inteligentemente",
+        "desc": "La IA analiza y categoriza automáticamente los marcadores"
+      },
+      "chat": {
+        "title": "Modo Chat",
+        "desc": "Solo chatea, pregunta lo que quieras"
+      }
+    },
+    "appName": "ANYMARK",
+    "agentDemo": {
+      "welcome": "👋 ¡Haz clic en los botones de abajo para probar!",
+      "online": "En línea",
+      "placeholder": "Prueba escribiendo tu pregunta...",
+      "agentName": "AnyMark Agente",
+      "action1": "Buscar",
+      "action2": "Descubrir",
+      "action3": "Tendencias",
+      "action4": "Organizar",
+      "action5": "Chatear",
+      "demo1": {
+        "user": "Encuentra mis materiales de aprendizaje de React",
+        "assistant": "Encontré 8 marcadores React: React Docs, React Hooks Tutorial, Redux Guide... ¿Cuál abrir?"
+      },
+      "demo2": {
+        "user": "Recomienda algunos recursos de Python",
+        "assistant": "Recomendado: Real Python, Python Official Tutorial, Automate the Boring Stuff... ¿Quieres que los guarde?"
+      },
+      "demo3": {
+        "user": "Qué hay de tendencia esta semana",
+        "assistant": "Lo热门 de esta semana: shadcn/ui, langchain, ollama... Todo relacionado con IA y herramientas de desarrollo 🔥"
+      },
+      "demo4": {
+        "user": "Organiza todos mis marcadores de tecnología",
+        "assistant": "¡Listo! Encontré 23 marcadores de tecnología, organizados en Frontend, Backend y DevOps ✨"
+      },
+      "demo5": {
+        "user": "Hola allí",
+        "assistant": "¡Hola! Soy el asistente IA de AnyMark. ¿Cómo puedo ayudarte hoy? 😊"
+      }
+    },
+    "shortcuts": {
+      "heading": "ATAJOS DE TECLADO",
+      "subtitle": "Diseñado para eficiencia, navegación estilo Vim para operación fluida",
+      "navigation": "Navegación",
+      "actions": "Acciones",
+      "global": "Global",
+      "updown": "Navegar arriba/abajo",
+      "vimNav": "Navegación estilo Vim",
+      "open": "Abrir marcador",
+      "star": "Destacar/Quitar destacado",
+      "delete": "Eliminar",
+      "copy": "Copiar URL",
+      "sidebar": "Abrir barra lateral",
+      "save": "Guardado rápido",
+      "note": "Windows/Linux: Usa Ctrl en lugar de ⌘"
+    },
+    "cta": {
+      "heading": "¿Listo para Comenzar?",
+      "text": "Experimenta la gestión inteligente de marcadores con IA - 100% Gratis y Open Source",
+      "button": "Comenzar",
+      "hint": "Haz clic para abrir la barra lateral"
+    },
+    "themes": {
+      "heading": "TEMAS PIXEL BUDDY",
+      "subtitle": "5 Estilos de Tema para tu Estado de Ánimo",
+      "koda": {
+        "name": "Koda",
+        "subtitle": "Píxel Clásico · Azul",
+        "desc": "Azul profesional, tranquilo y confiable"
+      },
+      "vex": {
+        "name": "Vex",
+        "subtitle": "Neón Cyberpunk · Púrpura",
+        "desc": "Púrpura cyberpunk, vibras futuristas"
+      },
+      "sprout": {
+        "name": "Sprout",
+        "subtitle": "Brote Natural · Verde",
+        "desc": "Verde natural, experiencia curativa"
+      },
+      "flare": {
+        "name": "Flare",
+        "subtitle": "Explorador del Atardecer · Naranja",
+        "desc": "Naranja cálido, explorar inspiración"
+      },
+      "null": {
+        "name": "Null",
+        "subtitle": "Terminal Geek · Hacker",
+        "desc": "Estilo hacker, hecho para geeks"
+      }
+    },
+    "dotsNavigation": {
+      "goToSection": "Ir a la sección {{section}}"
+    },
+    "language": {
+      "english": "English",
+      "chinese": "简体中文",
+      "japanese": "日本語",
+      "german": "Deutsch",
+      "spanish": "Español",
+      "french": "Français"
+    }
+  },
+  "sidebar": {
+    "header": {
+      "title": "AnyMark",
+      "settings": "Configuración",
+      "expand": "Expandir",
+      "close": "Cerrar",
+      "theme": "Cambiar Tema",
+      "aiAnalyze": "Análisis IA"
+    },
+    "search": {
+      "placeholder": "Buscar marcadores...",
+      "noResults": "No se encontraron marcadores",
+      "searching": "Buscando..."
+    },
+    "filters": {
+      "all": "Todos",
+      "uncategorized": "Categorías IA",
+      "favorites": "Favoritos",
+      "recent": "Recientes",
+      "popular": "Populares",
+      "longTail": "Cola Larga",
+      "trash": "Papelera",
+      "descriptions": {
+        "chrome": "Todos los marcadores",
+        "uncategorized": "Marcadores categorizados por IA",
+        "favorites": "Marcadores marcados",
+        "recent": "Últimos 30 días",
+        "popular": "Más visitados (Top 20)",
+        "longTail": "Cola larga - menos visitados",
+        "trash": "Marcadores eliminados"
+      }
+    },
+    "bookmarks": {
+      "loading": "Cargando marcadores...",
+      "empty": "Aún no hay marcadores",
+      "emptyHint": "Añade tu primer marcador para comenzar",
+      "count": "{{count}} marcadores",
+      "selected": "Seleccionado",
+      "delete": "Eliminar",
+      "restore": "Restaurar",
+      "favorite": "Añadir a Favoritos",
+      "unfavorite": "Quitar de Favoritos",
+      "edit": "Editar",
+      "open": "Abrir",
+      "copyUrl": "Copiar URL",
+      "moveToFolder": "Mover a Carpeta"
+    },
+    "bookmarkList": {
+      "empty": {
+        "noBookmarks": "No se encontraron marcadores",
+        "adjustFilters": "Intenta ajustar tus filtros o búsqueda",
+        "noCategories": "No hay marcadores categorizados",
+        "useAiAnalysis": "Usa el análisis IA para categorizar marcadores"
+      },
+      "item": {
+        "visits": "{{count}} visitas",
+        "items": "{{count}} elementos",
+        "folders": "{{count}} carpetas",
+        "analyzing": "Analizando IA...",
+        "analyze": "Análisis IA inteligente",
+        "expandLabel": "Expandir",
+        "collapseLabel": "Contraer"
+      },
+      "actions": {
+        "reanalyze": "Este marcador ya fue analizado. ¿Reanalizar?",
+        "startAnalyzing": "Iniciando análisis IA...",
+        "analyzeComplete": "¡Análisis IA completado!",
+        "analyzeFailed": "Análisis IA fallido: {{error}}",
+        "analyzeEmpty": "Resultado del análisis vacío",
+        "noSummary": "No se puede generar resumen"
+      },
+      "edit": {
+        "renaming": "Renombrando carpeta (ESC para cancelar, Enter para guardar)",
+        "editing": "Modo edición (ESC para cancelar, Enter para guardar)",
+        "cancelled": "Edición cancelada",
+        "emptyTitle": "El título no puede estar vacío",
+        "folderRenamed": "Carpeta renombrada",
+        "bookmarkUpdated": "Marcador actualizado"
+      },
+      "delete": {
+        "confirmFolder": "¿Eliminar carpeta: \"{{title}}\"?\n\n¡Esto eliminará todos los marcadores de la carpeta!",
+        "folderDeleted": "Carpeta \"{{title}}\" eliminada",
+        "confirmPermanent": "¿Eliminar permanentemente el marcador: \"{{title}}\"?\n\n⚠️ ¡Esta acción no se puede deshacer!",
+        "permanentlyDeleted": "Marcador eliminado permanentemente",
+        "confirmDelete": "¿Eliminar marcador: \"{{title}}\"?\n\nSe puede restaurar desde la papelera",
+        "movedToTrash": "Movido a la papelera",
+        "restored": "Marcador restaurado"
+      },
+      "drag": {
+        "cannotMoveToSelf": "No se puede mover la carpeta a sí misma o sus subcarpetas",
+        "movedToFolder": "Movido a carpeta: {{title}}",
+        "folderMoved": "Carpeta movida a: {{title}}",
+        "folderReordered": "Carpeta reordenada",
+        "bookmarkReordered": "Marcador reordenado"
+      },
+      "star": {
+        "added": "Añadido a favoritos",
+        "removed": "Quitado de favoritos",
+        "pinned": "Marcador fijado",
+        "unpinned": "Marcador desenfijado"
+      },
+      "copy": {
+        "success": "URL copiada al portapapeles",
+        "failed": "Error al copiar URL"
+      },
+      "open": {
+        "failed": "No se puede abrir el enlace",
+        "apiUnavailable": "No se puede abrir el enlace: API del navegador no disponible"
+      }
+    },
+    "preview": {
+      "title": "Vista Previa",
+      "noSelection": "Selecciona un marcador para previsualizar",
+      "selectHint": "Usa las teclas ↑↓ para navegar",
+      "url": "URL",
+      "tags": "Etiquetas",
+      "category": "Categoría",
+      "summary": "Resumen",
+      "confidence": "Confianza",
+      "createdAt": "Creado",
+      "updatedAt": "Actualizado",
+      "actions": {
+        "open": "Abrir",
+        "edit": "Editar",
+        "star": "Favorito",
+        "unstar": "Quitar Favorito",
+        "copyUrl": "Copiar URL",
+        "delete": "Eliminar",
+        "restore": "Restaurar"
+      },
+      "sections": {
+        "aiAnalysis": "Análisis IA",
+        "statistics": "Estadísticas",
+        "tags": "Etiquetas",
+        "notes": "Notas"
+      },
+      "stats": {
+        "visits": "Visitas",
+        "visitsTimes": "{{count}} veces",
+        "lastVisit": "Última Visita",
+        "created": "Creado",
+        "importance": "Importancia",
+        "never": "Nunca"
+      },
+      "ai": {
+        "reanalyze": "Reanalizar",
+        "analyzing": "Analizando...",
+        "analyzeNow": "Analizar Ahora",
+        "noAnalysis": "Sin análisis IA aún",
+        "category": "Categoría:",
+        "startAnalyzing": "Iniciando análisis IA...",
+        "analyzeComplete": "¡Análisis IA completado!",
+        "analyzeFailed": "Análisis IA fallido: {{error}}",
+        "analyzeEmpty": "Resultado del análisis vacío"
+      },
+      "time": {
+        "justNow": "Ahora mismo",
+        "minutesAgo": "{{count}} min",
+        "hoursAgo": "{{count}} h",
+        "daysAgo": "{{count}} d"
+      },
+      "shortcuts": {
+        "open": "Abrir",
+        "newTab": "Nueva Pestaña",
+        "edit": "Editar",
+        "copyUrl": "Copiar URL",
+        "star": "Favorito",
+        "unstar": "Quitar Favorito",
+        "delete": "Eliminar",
+        "restore": "Restaurar"
+      },
+      "messages": {
+        "updated": "Marcador actualizado",
+        "urlCopied": "URL copiada al portapapeles",
+        "starred": "Añadido a favoritos",
+        "unstarred": "Quitado de favoritos",
+        "restored": "Marcador restaurado",
+        "deleted": "Movido a la papelera",
+        "confirmDelete": "¿Eliminar marcador: \"{{title}}\"?\n\nSe puede restaurar desde la papelera",
+        "confirmRestore": "Elegir acción:\n\nOK = Restaurar marcador\nCancelar = Volver"
+      },
+      "breadcrumb": {
+        "root": "Raíz"
+      }
+    },
+    "welcome": {
+      "title": "¡Bienvenido a AnyMark!",
+      "subtitle": "Tu Gestor de Marcadores Inteligente",
+      "feature1": "💡 Consejo Rápido",
+      "feature1Desc": "Arrastra el borde izquierdo de la barra lateral para ajustar al 40-50% de la pantalla",
+      "feature2": "✨ Chrome Recuerdas",
+      "feature2Desc": "Tu preferencia de ancho de barra lateral se guardará automáticamente",
+      "close": "Comenzar →",
+      "dontShowAgain": "No mostrar más"
+    },
+    "analysis": {
+      "analyzing": "Analizando...",
+      "progress": "Progreso: {{percent}}%",
+      "status": "📖 Analizando marcadores...",
+      "complete": "✅ ¡Análisis completado! {{count}} marcadores analizados",
+      "failed": "❌ Análisis fallido: {{error}}",
+      "noBookmarks": "No hay marcadores para analizar",
+      "addFirst": "Por favor añade o importa marcadores primero"
+    },
+    "toast": {
+      "bookmarkAdded": "Marcador añadido",
+      "bookmarkDeleted": "Marcador eliminado",
+      "bookmarkRestored": "Marcador restaurado",
+      "bookmarkUpdated": "Marcador actualizado",
+      "importSuccess": "¡{{count}} marcadores de Chrome importados!",
+      "importFailed": "Error al importar marcadores",
+      "copySuccess": "URL copiada al portapapeles",
+      "copyFailed": "Error al copiar URL",
+      "deleteConfirm": "¿Eliminar permanentemente \"{{title}}\"? ¡Esta acción no se puede deshacer!",
+      "permanentlyDeleted": "Eliminado permanentemente",
+      "analysisComplete": "✅ ¡Análisis en segundo plano completado! Éxito: {{completed}}, Fallos: {{failed}}",
+      "analysisStarted": "🚀 El análisis procesará {{count}} marcadores en segundo plano. Espera. El análisis continuará aunque cierres la barra lateral.",
+      "analysisFailed": "❌ Error al iniciar análisis: {{error}}",
+      "analyzing": "Analizando... {{progress}}%",
+      "deleteConfirmTitle": "¿Estás seguro de eliminar \"{{title}}\"?"
+    },
+    "errors": {
+      "loadBookmarks": "Error al cargar marcadores"
+    },
+    "editDialog": {
+      "title": "Editar Marcador",
+      "fields": {
+        "title": "Título",
+        "titlePlaceholder": "Título del marcador",
+        "url": "URL",
+        "urlPlaceholder": "https://...",
+        "folder": "Carpeta",
+        "folderPlaceholder": "/Categoría/Subcategoría",
+        "tags": "Etiquetas",
+        "tagsPlaceholder": "Añadir etiqueta...",
+        "notes": "Notas",
+        "notesPlaceholder": "Añadir notas..."
+      },
+      "badges": {
+        "aiGenerated": "Generado por IA"
+      },
+      "buttons": {
+        "add": "Añadir",
+        "cancel": "Cancelar",
+        "save": "Guardar"
+      },
+      "hints": {
+        "aiSummary": "Mostrando resumen generado por IA, puedes editarlo directamente",
+        "userNotes": "Puedes editar o añadir a tus notas"
+      },
+      "shortcuts": {
+        "cancel": "Cancelar",
+        "save": "Guardar"
+      }
+    },
+    "contextMenu": {
+      "openNewTab": "Abrir en Nueva Pestaña",
+      "copyLink": "Copiar Enlace",
+      "edit": "Editar",
+      "rename": "Renombrar",
+      "star": "Favorito",
+      "unstar": "Quitar Favorito",
+      "moveTo": "Mover a...",
+      "archive": "Archivar",
+      "delete": "Eliminar",
+      "deleteFolder": "Eliminar Carpeta"
+    },
+    "aiChat": {
+      "title": "Asistente de Marcadores IA",
+      "archive": "Archivo de Chat",
+      "newChat": "Nuevo Chat",
+      "clearChat": "Borrar Chat",
+      "close": "Cerrar",
+      "welcome": {
+        "greeting": "👋 ¡Hola! Soy tu Asistente de Marcadores IA",
+        "tryAsking": "Intenta preguntarme:",
+        "examples": {
+          "findTutorial": "Encontrar un tutorial de Python",
+          "saveCurrentPage": "Guardar página actual",
+          "recommendResources": "Recomendar recursos de frontend",
+          "whatCanYouDo": "¿Qué puedes hacer?"
+        }
+      },
+      "input": {
+        "placeholder": "Escribe un mensaje... (Enter para enviar, ↑↓ para historial)",
+        "placeholderWithAction": "{{description}}...",
+        "send": "Enviar"
+      },
+      "messages": {
+        "error": "❌ Lo siento, el servicio IA no está disponible temporalmente. Inténtalo de nuevo.",
+        "regenerate": "Regenerar",
+        "feedback": "Comentarios"
+      },
+      "confirm": {
+        "clearChat": "¿Borrar la conversación actual?"
+      },
+      "status": {
+        "thinking": "Pensando...",
+        "processing": "Procesando...",
+        "autoSaved": "Conversación guardada automáticamente",
+        "archived": "Conversación archivada al cerrar"
+      }
+    },
+    "footer": {
+      "shortcuts": {
+        "newTab": "Nueva Pestaña",
+        "star": "Favorito",
+        "more": "Más"
+      }
+    },
+    "keyboard": {
+      "title": "Atajos de Teclado",
+      "navigation": "Navegación",
+      "actions": "Acciones",
+      "panels": "Paneles",
+      "filterTabs": "Filtros",
+      "close": "Cerrar",
+      "shortcuts": {
+        "up": "Navegar arriba",
+        "down": "Navegar abajo",
+        "jk": "Navegación estilo Vim",
+        "jumpFirst": "Ir al primero",
+        "jumpLast": "Ir al último",
+        "pageUp": "Página arriba",
+        "pageDown": "Página abajo",
+        "enter": "Abrir marcador",
+        "openNewTab": "Abrir en nueva pestaña",
+        "star": "Favorito/Quitar",
+        "space": "Alternar panel de vista previa",
+        "slash": "Enfocar búsqueda",
+        "focusSearch": "Enfocar búsqueda",
+        "openFirst": "Abrir primera coincidencia",
+        "escape": "Cerrar paneles / Quitar foco",
+        "h": "Mostrar ayuda",
+        "altA": "Alternar chat IA",
+        "r": "Restaurar (en papelera)",
+        "d": "Eliminar permanentemente (en papelera)",
+        "chrome": "Chrome",
+        "recent": "Recientes",
+        "popular": "Populares",
+        "longTail": "Cola Larga"
+      }
+    },
+    "keyboardHelp": {
+      "title": "⌨️ Atajos de Teclado",
+      "closeHint": "Presiona H o Esc para cerrar",
+      "or": "o",
+      "categories": {
+        "navigation": "Navegación",
+        "bookmarkActions": "Acciones Marcador",
+        "filters": "Filtros",
+        "search": "Búsqueda",
+        "trash": "Papelera",
+        "other": "Otros"
+      },
+      "items": {
+        "prevItem": "Elemento anterior",
+        "nextItem": "Elemento siguiente",
+        "openBookmark": "Abrir marcador",
+        "jumpTop": "Ir al inicio",
+        "jumpBottom": "Ir al final",
+        "pageUp": "Página arriba",
+        "pageDown": "Página abajo",
+        "openNewTab": "Abrir en nueva pestaña",
+        "copyUrl": "Copiar URL",
+        "toggleStar": "Alternar favorito",
+        "editBookmark": "Editar marcador",
+        "deleteToTrash": "Eliminar a papelera",
+        "filterAll": "Todos marcadores",
+        "filterCategories": "Por categoría",
+        "filterStarred": "Favoritos",
+        "filterRecent": "Recientes",
+        "filterPopular": "Populares",
+        "filterTrash": "Papelera",
+        "focusSearch": "Enfocar búsqueda",
+        "openFirstMatch": "Abrir primera coincidencia",
+        "clearSearch": "Limpiar búsqueda / Salir",
+        "restoreBookmark": "Restaurar marcador",
+        "permanentDelete": "Eliminar permanentemente",
+        "togglePreview": "Alternar panel vista previa",
+        "showHideHelp": "Mostrar/ocultar ayuda"
+      }
+    },
+    "settings": {
+      "title": "Configuración",
+      "tabs": {
+        "ai": "🤖 Configuración IA",
+        "sync": "☁️ Sincronización",
+        "ui": "🎨 Configuración UI",
+        "data": "💾 Gestión de Datos",
+        "advanced": "⚙️ Avanzado"
+      },
+      "ai": {
+        "title": "🤖 Configuración Modelo IA",
+        "description": "Soporta todos los modelos grandes compatibles con formato OpenAI API.",
+        "provider": "Proveedor de Servicio",
+        "apiUrl": "URL API",
+        "apiUrlPlaceholder": "https://api.openai.com/v1/chat/completions",
+        "apiUrlDesc": "Dirección completa de solicitud API",
+        "modelId": "ID Modelo",
+        "modelIdPlaceholder": "gpt-3.5-turbo",
+        "modelIdDesc": "Ejemplo: gpt-4, deepseek-chat, qwen-turbo",
+        "currentConfig": "Configuración Actual",
+        "currentConfigUrl": "URL API:",
+        "currentConfigModel": "ID Modelo:",
+        "defaultAddress": "Dirección por defecto",
+        "defaultModel": "Modelo por defecto",
+        "keyManagement": "Gestión Claves API",
+        "keyCount": "Claves Configuradas",
+        "keyCountValue": "{{count}} Claves API",
+        "keyCountNone": "Sin clave API configurada",
+        "keyCountOne": "Recomiendo añadir múltiples claves para rotación",
+        "keyCountMultiple": "Rotación habilitada, múltiples claves previenen fallos",
+        "manageKeys": "Gestionar Claves API",
+        "noKeysAlert": "Sin clave API, funciones IA no disponibles",
+        "keyNumber": "🔑 Clave API #{{number}}",
+        "addNewKey": "Añadir Nueva Clave API",
+        "addKeyPlaceholder": "Pega tu clave API",
+        "addButton": "Añadir",
+        "keySecurityNote": "🔒 Claves cifradas localmente, nunca subidas",
+        "connectionTest": "Prueba de Conexión",
+        "testButton": "Probar Conexión",
+        "testing": "Probando...",
+        "testSuccess": "✅",
+        "testFailed": "❌",
+        "testDesc": "Verificar configuración API",
+        "autoAnalyze": "Auto analizar nuevos marcadores",
+        "autoAnalyzeDesc": "Nuevos marcadores serán analizados automáticamente",
+        "searchConfig": "🔍 Configuración Servicio Búsqueda",
+        "searchConfigDesc": "Configurar GitHub Token y servicio personalizado",
+        "githubToken": "GitHub Personal Access Token",
+        "githubTokenPlaceholder": "ghp_xxxxxxxxxxxx",
+        "githubTokenDesc": "Incrementa límite de GitHub API",
+        "getToken": "Obtener Token →",
+        "searchServiceUrl": "URL Servicio Búsqueda Personalizado",
+        "searchServiceUrlPlaceholder": "https://your-search-service.com/search?q=",
+        "searchServiceUrlDesc": "Vacío usa servicio por defecto"
+      },
+      "sync": {
+        "chromeSync": "🔗 Sincronización Chrome",
+        "chromeSyncDesc": "Operaciones sincronizadas con marcadores Chrome nativos",
+        "syncStatus": "Estado Sincronización",
+        "enabled": "Activado",
+        "disabled": "Desactivado",
+        "statusEnabled": "✅ Cambios sincronizados a Chrome",
+        "statusDisabled": "❌ Cambios independientes de Chrome",
+        "enableSync": "Sincronizar con Chrome",
+        "enableSyncDesc": "Activado: Sincronización en tiempo real",
+        "refreshSync": "Refrescar Sincronización",
+        "refreshButton": "Refrescar",
+        "syncing": "Sincronizando...",
+        "refreshDesc": "Fusionar marcadores, eliminar duplicados",
+        "firstInstallAlert": "Primera instalación: importados desde Chrome",
+        "cloudSync": "☁️ Sincronización Nube",
+        "cloudSyncDesc": "Sincronizar configuración entre dispositivos",
+        "lastSync": "Última sincronización:",
+        "toggleSync": "Interruptor Sincronización",
+        "enableButton": "Activar",
+        "disableButton": "Desactivar",
+        "processing": "Procesando...",
+        "syncContent": "Contenido: Configuración IA, preferencias, reglas",
+        "manualSync": "Sincronización Manual",
+        "syncNow": "Sincronizar Ahora",
+        "syncNowDesc": "Sincronizar configuración actual",
+        "storageQuota": "Cuota Almacenamiento",
+        "quotaUsed": "Usado: {{used}}KB / {{limit}}KB",
+        "quotaDesc": "Límite 100KB para extensiones Chrome",
+        "advancedOps": "Operaciones Avanzadas",
+        "clearCloud": "Borrar Configuración Nube",
+        "clearCloudDesc": "⚠️ Elimina todos los datos sincronizados",
+        "syncEnabled": "Sincronización Chrome activada",
+        "syncDisabled": "Sincronización Chrome desactivada",
+        "confirmEnableSync": "¿Activar sincronización bidireccional de Chrome?\n\nCuando está activado:\n• Los cambios de marcadores se sincronizarán con los marcadores nativos de Chrome\n• Los cambios de marcadores de Chrome se sincronizarán con esta extensión\n• La primera sincronización fusionará los marcadores existentes (unión)\n\n¿Continuar?",
+        "initialSyncComplete": "¡Sincronización inicial completada! Fusionados: {{merged}}, Añadidos a Chrome: {{addedToChrome}}, Añadidos localmente: {{addedToStorage}}",
+        "toggleFailed": "Error al cambiar sincronización: {{error}}"
+      },
+      "ui": {
+        "language": "🌍 Idioma",
+        "languageLabel": "Idioma de Interfaz",
+        "languageDesc": "Seleccionar idioma. Cambio inmediato.",
+        "openMode": "Modo Apertura",
+        "openModeLabel": "Al hacer clic en Pixel Buddy",
+        "openModeSidebar": "Modo Barra Lateral",
+        "openModeTab": "Modo Nueva Pestaña",
+        "openModeDesc": "Barra lateral: gestión mientras navegas",
+        "viewMode": "Modo Vista",
+        "viewModeLabel": "Vista por Defecto",
+        "viewModeList": "Vista Lista",
+        "viewModeGrid": "Vista Cuadrícula",
+        "viewModeCompact": "Vista Compacta",
+        "previewPanel": "Mostrar panel de vista previa",
+        "previewPanelWidth": "Ancho Panel ({{width}}%)",
+        "pixelBuddy": "Pixel Buddy",
+        "pixelTheme": "Estilo Tema",
+        "pixelThemeDesc": "Seleccionar personaje y guardar",
+        "saveTheme": "Guardar Personaje",
+        "themeSelected": "Seleccionado"
+      },
+      "data": {
+        "aiSyncTitle": "🔄 Sincronizar Categorías IA a Chrome",
+        "aiSyncDesc": "Escribir estructura de carpetas a Chrome",
+        "aiSyncStatus": "Estado Sincronización",
+        "aiSynced": "Sincronizado",
+        "aiNotSynced": "No Sincronizado",
+        "aiSyncWarning": "⚠️ Operación irreversible. Exportar respaldo primero.",
+        "exportBackup": "Exportar Respaldo (HTML)",
+        "exportBackupDesc": "Exportar formato Chrome",
+        "syncToChrome": "Sincronizar IA a Chrome",
+        "syncToChromeDesc": "Creará carpeta en barra de Chrome",
+        "aiSyncComplete": "✅ IA sincronizado a Chrome",
+        "importExport": "Importar/Exportar",
+        "exportBookmarks": "Exportar Marcadores",
+        "exportDesc": "Exportar como JSON",
+        "importBookmarks": "Importar Marcadores",
+        "importDesc": "Importar desde JSON",
+        "cleanup": "Limpieza",
+        "emptyTrash": "Vaciar Papelera",
+        "emptyTrashDesc": "Eliminar permanentemente",
+        "resetSettings": "Restablecer Todo",
+        "resetDesc": "Volver a configuración por defecto"
+      },
+      "advanced": {
+        "deleteMode": "Comportamiento Eliminación",
+        "softDelete": "Habilitar eliminación suave (papelera)",
+        "softDeleteDesc": "Deshabilitado = eliminación permanente",
+        "autoCleanup": "Limpieza Automática",
+        "autoArchiveDays": "Días Auto Archivo",
+        "autoArchiveDaysDesc": "0 = deshabilitado",
+        "autoDeleteDays": "Días Auto Eliminación",
+        "autoDeleteDaysDesc": "Para papelera, 0 = deshabilitado",
+        "advancedWarning": "⚠️ Modificar con cuidado"
+      },
+      "messages": {
+        "saved": "Configuración guardada",
+        "saveFailed": "Error al guardar",
+        "saving": "Guardando...",
+        "saveSettings": "Guardar",
+        "keyAdded": "Clave API añadida",
+        "keyRemoved": "Clave API eliminada",
+        "keyExists": "Clave API ya existe",
+        "enterKey": "Introduce clave API",
+        "testSuccess": "Prueba exitosa",
+        "testFailed": "Prueba fallida",
+        "testError": "Error en prueba",
+        "connecting": "Conectando...",
+        "noKeys": "Añade clave API primero",
+        "connectionSuccess": "¡Conexión exitosa! Modelo: {{model}}",
+        "connectionFailed": "Conexión fallida: {{error}}",
+        "connectionError": "Error: {{error}}",
+        "languageChanged": "Idioma cambiado",
+        "themeChanged": "✅ Personaje cambiado",
+        "themeSaved": "✅ Guardado y refrescado",
+        "themeSaveFailed": "❌ Error al guardar",
+        "syncEnabled": "Sincronización nube activada",
+        "syncDisabled": "Sincronización nube desactivada",
+        "syncFailed": "Error: {{error}}",
+        "syncedToCloud": "Sincronizado a la nube",
+        "cloudCleared": "Configuración nube borrada",
+        "clearFailed": "Error: {{error}}",
+        "syncComplete": "¡Completo!\nFusión: {{merged}}\nAñadido: {{added}}\nActualizado: {{updated}}",
+        "refreshFailed": "Error: {{error}}",
+        "enableSyncFirst": "Activa sincronización Chrome primero",
+        "bookmarksExported": "Marcadores exportados",
+        "exportFailed": "Error exportación",
+        "bookmarksImported": "{{count}} importados",
+        "importFailed": "Error importación",
+        "invalidFile": "Archivo inválido",
+        "trashEmptied": "Papelera vaciada",
+        "emptyFailed": "Error al vaciar",
+        "settingsReset": "Configuración restablecida",
+        "resetFailed": "Error al restablecer",
+        "confirmEmpty": "¿Vaciar papelera? ¡Irreversible!",
+        "confirmReset": "¿Restablecer todo?",
+        "aiSyncSuccess": "✅ ¡Éxito!\nCarpetas: {{folders}}\nMarcadores: {{bookmarks}}",
+        "aiSyncFailed": "❌ Error: {{error}}",
+        "aiSyncConfirm1": "⚠️ ¡Advertencia!\n\nEscribirá estructura a Chrome.\n\n• Irreversible\n• Respaldar primero\n\n¿Continuar?",
+        "aiSyncConfirm2": "🔒 Confirmación Final\n\n¿Respaldaste?\n\nOK = Iniciar sincronización",
+        "exportedHtml": "Exportado como HTML"
+      },
+      "providers": {
+        "custom": "Personalizado",
+        "openai": "OpenAI",
+        "azure": "Azure OpenAI",
+        "anthropic": "Anthropic Claude",
+        "google": "Google Gemini",
+        "groq": "Groq",
+        "xai": "xAI (Grok)",
+        "doubao": "Doubao (Volcano)",
+        "moonshot": "Kimi (Moonshot)",
+        "aliyun": "Tongyi Qianwen (Alibaba)",
+        "yi": "01.AI",
+        "deepseek": "DeepSeek",
+        "siliconflow": "SiliconFlow",
+        "openrouter": "OpenRouter",
+        "ollama": "Ollama (Local)",
+        "huggingface": "HuggingFace"
+      },
+      "pixelThemes": {
+        "switchTo": "Cambiar a {{name}}",
+        "classic": {
+          "name": "Píxel Clásico",
+          "desc": "Profesional, amigable",
+          "persona": "Koda · Erudito",
+          "slogan": "En el vasto océano de enlaces, soy tu ancla firme e inquebrantable."
+        },
+        "cyber": {
+          "name": "Neón Cyber",
+          "desc": "Futurista, modo nocturno",
+          "persona": "Vex · Cazador Cyber",
+          "slogan": "Filtrando el ruido, solo capturo las señales más valiosas."
+        },
+        "grow": {
+          "name": "Brote Natural",
+          "desc": "Curativo, orgánico",
+          "persona": "Sprout · Jardinero",
+          "slogan": "Cada marcador es una semilla de inspiración esperando florecer."
+        },
+        "flare": {
+          "name": "Explorador Atardecer",
+          "desc": "Energético, descubrimiento",
+          "persona": "Zing · Explorador",
+          "slogan": "¡La vida no es solo coleccionar - descubre y brilla!"
+        },
+        "noir": {
+          "name": "Terminal Geek",
+          "desc": "Hacker, retro, minimalista",
+          "persona": "Null · Mayordomo Binario",
+          "slogan": "Elimina lo superfluo, regresa a la lógica pura de la información."
+        }
+      }
+    }
+  },
+  "popup": {
+    "title": "AnyMark",
+    "quickActions": "Acciones Rápidas",
+    "saveCurrentPage": "Guardar Página Actual",
+    "openSidebar": "Abrir Barra Lateral",
+    "searchBookmarks": "Buscar Marcadores",
+    "stats": {
+      "total": "Total Marcadores",
+      "today": "Añadidos Hoy",
+      "thisWeek": "Esta Semana",
+      "categories": "Categorías"
+    },
+    "recentBookmarks": "Marcadores Recientes",
+    "viewAll": "Ver Todos",
+    "noBookmarks": "Sin marcadores aún",
+    "addFirst": "Guarda tu primer marcador",
+    "placeholders": {
+      "pageTitle": "Título página",
+      "pageUrl": "https://...",
+      "tagName": "Nombre etiqueta..."
+    },
+    "labels": {
+      "difficulty": "Dificultad",
+      "techStack": "Stack Tecnológico",
+      "removeTag": "Quitar etiqueta",
+      "addTag": "Añadir etiqueta"
+    },
+    "hints": {
+      "cannotOpenSidebar": "No se puede abrir, haz clic derecho en el icono"
+    }
+  },
+  "chat": {
+    "title": "Asistente IA",
+    "welcome": "👋 ¡Hola! ¿Cómo organizo tus marcadores hoy?",
+    "inputPlaceholder": "Pregunta sobre tus marcadores...",
+    "send": "Enviar",
+    "thinking": "Pensando...",
+    "suggestions": {
+      "title": "Sugerencias",
+      "organize": "Organizar marcadores",
+      "find": "Buscar sobre...",
+      "analyze": "Analizar colección",
+      "cleanup": "Limpiar duplicados"
+    },
+    "tools": {
+      "searching": "🔍 Buscando marcadores...",
+      "organizing": "📁 Organizando...",
+      "analyzing": "🤖 Analizando...",
+      "creating": "✨ Creando carpetas..."
+    },
+    "errors": {
+      "failed": "Algo salió mal. Inténtalo de nuevo.",
+      "noBookmarks": "Sin marcadores aún.",
+      "networkError": "Error de red. Revisa tu conexión."
+    },
+    "clear": "Borrar Chat",
+    "close": "Cerrar",
+    "newChat": "Nuevo Chat",
+    "user": "Tú",
+    "assistant": "AI"
+  },
+  "common": {
+    "buttons": {
+      "save": "Guardar",
+      "cancel": "Cancelar",
+      "delete": "Eliminar",
+      "edit": "Editar",
+      "close": "Cerrar",
+      "confirm": "Confirmar",
+      "back": "Atrás",
+      "next": "Siguiente",
+      "finish": "Finalizar",
+      "retry": "Reintentar",
+      "refresh": "Refrescar"
+    },
+    "messages": {
+      "loading": "Cargando...",
+      "saving": "Guardando...",
+      "success": "¡Éxito!",
+      "error": "Error",
+      "warning": "Advertencia",
+      "info": "Info",
+      "confirm": "¿Estás seguro?",
+      "noData": "Sin datos",
+      "comingSoon": "Próximamente"
+    },
+    "time": {
+      "justNow": "Ahora",
+      "minutesAgo": "{{count}} min",
+      "hoursAgo": "{{count}} h",
+      "daysAgo": "{{count}} d",
+      "weeksAgo": "{{count}} sem",
+      "monthsAgo": "{{count}} mes",
+      "yearsAgo": "{{count}} a"
+    }
+  },
+  "renderError": {
+    "title": "Error de Renderizado",
+    "rootNotFound": "Elemento raíz no encontrado"
+  },
+  "importProgress": {
+    "title": "¡Importación Completa!",
+    "importing": "Importando marcadores de Chrome...",
+    "hint": "Por favor espere, IA está analizando cada marcador"
+  },
+  "folderSelector": {
+    "newBadge": "Nuevo",
+    "existingFolders": "Carpetas Existentes",
+    "createNew": "Crear nueva carpeta: {{name}}"
+  },
+  "floatingChat": {
+    "operationComplete": "¡Operación completada! Por favor revise la lista de marcadores para ver los cambios.",
+    "errorOccurred": "Lo sentimos, ocurrió un error. Por favor intente de nuevo.",
+    "clearChatConfirm": "¿Está seguro de que desea borrar todo el historial de conversación? Esta acción no se puede deshacer.",
+    "saveFailed": "Error al guardar el marcador, por favor intente de nuevo",
+    "saveCancelled": "Guardado cancelado",
+    "saveSuccess": "✅ 《{{title}}》 guardado correctamente\n\n📁 Ubicación: {{folderPath}}\n🏷️ Etiquetas: {{tags}}",
+    "placeholder": "Escriba un mensaje... (Enter para enviar)",
+    "actions": {
+      "saveCurrentPage": "Guardar página actual",
+      "collectAI": "Recopilar marcadores relacionados con IA en carpeta",
+      "organize": "Organizar marcadores inteligentemente"
+    }
+  },
+  "saveConfirm": {
+    "title": "Análisis IA Completado",
+    "confidence": "Confianza {{value}}%",
+    "cancel": "Cancelar",
+    "pageTitlePlaceholder": "Título de página",
+    "folderPathPlaceholder": "/Ruta de carpeta",
+    "addTagPlaceholder": "Agregar etiqueta...",
+    "summaryPlaceholder": "Resumen del contenido...",
+    "cancelEdit": "Cancelar Edición",
+    "saveBookmark": "Guardar Marcador",
+    "edit": "Editar",
+    "confirmSave": "Confirmar Guardado",
+    "aiCategory": "Categoría IA",
+    "location": "Ubicación",
+    "smartTags": "Etiquetas Inteligentes",
+    "contentSummary": "Resumen de Contenido"
+  },
+  "chatArchive": {
+    "title": "Archivo de Chat",
+    "new": "Nuevo",
+    "newChat": "Nueva Conversación",
+    "loading": "Cargando...",
+    "empty": "Sin archivos de chat",
+    "emptyDesc": "Las conversaciones se guardan aquí automáticamente",
+    "messages": "{{count}} mensajes",
+    "deleteConfirm": "¿Estás seguro de que quieres eliminar este archivo de chat?",
+    "editTitle": "Editar Título",
+    "restoreChat": "Restaurar Chat",
+    "delete": "Eliminar",
+    "storage": "Almacenamiento: {{used}} / {{total}}",
+    "yesterday": "Ayer",
+    "daysAgo": "Hace {{count}} días"
+  },
+  "notification": {
+    "saveSuccessTitle": "✅ Marcador Guardado",
+    "saveSuccessMessage": "Guardado: {{title}}",
+    "saveFailTitle": "❌ Error al Guardar",
+    "saveFailMessage": "Error al guardar el marcador, por favor intente de nuevo",
+    "toastSaved": "✅ Marcador guardado"
+  },
+  "folder": {
+    "work": "Trabajo",
+    "personal": "Personal",
+    "learning": "Aprendizaje",
+    "uncategorized": "Sin Categorizar",
+    "bookmarks": "Marcadores",
+    "development": "Desarrollo"
+  },
+  "progressIndicator": {
+    "thinking": "Pensando",
+    "toolCalling": "Preparando Herramientas",
+    "toolExecuting": "Ejecutando",
+    "responding": "Generando Respuesta",
+    "processing": "Procesando"
+  },
+  "quickAction": {
+    "search": "Buscar",
+    "organize": "Organizar",
+    "discover": "Descubrir",
+    "recommend": "Recomendar",
+    "chat": "Chat",
+    "searchDesc": "Buscar mis marcadores",
+    "organizeDesc": "Organizar marcadores",
+    "discoverDesc": "Descubrir recursos web",
+    "recommendDesc": "Recomendar contenido relacionado",
+    "chatDesc": "Conversación libre"
+  },
+  "messageBubble": {
+    "copied": "Copiado",
+    "copy": "Copiar",
+    "regenerate": "Regenerar",
+    "helpful": "Útil",
+    "notHelpful": "No útil"
+  },
+  "resizableDivider": {
+    "doubleClickExpand": "Doble clic para expandir",
+    "dragResize": "Arrastrar para redimensionar",
+    "dragResizeCollapse": "Arrastrar para redimensionar | Doble clic para colapsar",
+    "expandPanel": "Expandir panel",
+    "collapsePanel": "Colapsar panel"
+  },
+  "thinkingCard": {
+    "thinkingProcess": "Proceso de Pensamiento",
+    "thinking": "Pensando..."
+  },
+  "conflict": {
+    "title": "{{count}} conflictos encontrados",
+    "batchActions": "Acciones en lote",
+    "batch": {
+      "useAllPlugin": "Usar todos del plugin",
+      "useAllChrome": "Usar todos de Chrome",
+      "useAllNewer": "Usar todos más nuevos",
+      "keepAllBoth": "Mantener todos ambos"
+    },
+    "pluginVersion": "Versión del plugin",
+    "chromeVersion": "Versión de Chrome",
+    "newer": "Más nuevo",
+    "field": {
+      "title": "Título",
+      "path": "Ruta",
+      "time": "Modificado"
+    },
+    "option": {
+      "usePlugin": "Usar plugin",
+      "useChrome": "Usar Chrome",
+      "keepBoth": "Mantener ambos"
+    },
+    "type": {
+      "title": "Título diferente",
+      "path": "Ruta diferente",
+      "both": "Ambos diferentes"
+    },
+    "summary": {
+      "usePlugin": "Actualizar {{count}} a versión del plugin",
+      "useChrome": "Actualizar {{count}} a versión de Chrome",
+      "keepBoth": "Crear {{count}} duplicados",
+      "unresolved": "{{count}} sin resolver",
+      "none": "Sin cambios"
+    },
+    "apply": "Aplicar cambios",
+    "applying": "Aplicando",
+    "noConflicts": "No se encontraron conflictos",
+    "unresolvedWarning": "Por favor resuelva todos los {{count}} conflictos antes de aplicar",
+    "result": {
+      "success": "{{count}} conflictos resueltos exitosamente",
+      "partial": "{{resolved}} resueltos, {{failed}} fallidos"
+    }
+  },
+  "sync": {
+    "status": {
+      "synced": "Sincronizado",
+      "syncing": "Sincronizando",
+      "hasConflicts": "Conflictos",
+      "error": "Error",
+      "disabled": "Desactivado"
+    },
+    "tooltip": {
+      "synced": "Todos los marcadores están sincronizados",
+      "syncing": "Sincronizando marcadores...",
+      "hasConflicts": "{{count}} conflictos necesitan resolución",
+      "error": "Ocurrió un error de sincronización",
+      "disabled": "La sincronización de Chrome está desactivada"
+    }
+  }
+}

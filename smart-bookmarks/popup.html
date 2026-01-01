@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick Save Bookmark</title>
+    <style>
+      /* Chrome 扩展 popup 基础样式 */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      html, body {
+        height: auto !important;
+        min-height: auto !important;
+        overflow: visible !important;
+        background: #1a1a1a;
+      }
+      
+      #root {
+        height: auto !important;
+        min-height: auto !important;
+        overflow: visible !important;
+        background: #1a1a1a;
+      }
+
+      /* 菜单模式：260px（默认） */
+      html[data-mode="menu"], html[data-mode="menu"] body,
+      html:not([data-mode]), html:not([data-mode]) body {
+        width: 260px;
+        min-width: 260px;
+        max-width: 260px;
+      }
+      
+      html[data-mode="menu"] #root,
+      html:not([data-mode]) #root {
+        width: 260px;
+        min-width: 260px;
+        max-width: 260px;
+      }
+
+      /* 详细模式：420px */
+      html[data-mode="detailed"], html[data-mode="detailed"] body {
+        width: 420px;
+        min-width: 420px;
+        max-width: 420px;
+      }
+      
+      html[data-mode="detailed"] #root {
+        width: 420px;
+        min-width: 420px;
+        max-width: 420px;
+      }
+    </style>
+  </head>
+  <body class="popup-body">
+    <div id="root"></div>
+    <script type="module" src="/src/popup/index.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,1105 @@
+{
+  "onboarding": {
+    "hero": {
+      "title": "AnyMark",
+      "subtitle": "你的智能书签助手",
+      "description": "对话式 AI Agent · Vim 键盘导航 · 自定义 API · 完全免费开源",
+      "badge": "v1.0 正式发布",
+      "explore": "探索功能",
+      "scroll": "向下滚动"
+    },
+    "buddies": {
+      "heading": "选择你的 Pixel Buddy",
+      "subtitle": "五位个性鲜明的 AI 助手，陪你整理书签世界",
+      "koda": {
+        "name": "库达 Koda",
+        "role": "博学者",
+        "quote": "在浩瀚的链接海洋，我是你最稳的锚。"
+      },
+      "vex": {
+        "name": "维克斯 Vex",
+        "role": "赛博猎人",
+        "quote": "过滤杂讯，我只捕获最有价值的信号。"
+      },
+      "sprout": {
+        "name": "小芽 Sprout",
+        "role": "知识园丁",
+        "quote": "每一个书签，都是一颗待萌发的灵感种子。"
+      },
+      "flare": {
+        "name": "劲哥 Flare",
+        "role": "灵感探险家",
+        "quote": "生活不该只有收藏，去发现，去闪耀！"
+      },
+      "null": {
+        "name": "纳尔 Null",
+        "role": "二进制管家",
+        "quote": "剥离冗余，回归信息的原始逻辑。"
+      }
+    },
+    "agent": {
+      "heading": "对话式 AI Agent",
+      "subtitle": "用自然语言管理你的书签，就像和朋友聊天一样简单",
+      "search": {
+        "title": "搜书签",
+        "desc": "在已保存的书签中快速搜索"
+      },
+      "discover": {
+        "title": "找资源",
+        "desc": "在网上发现新的优质资源"
+      },
+      "trending": {
+        "title": "看热门",
+        "desc": "查看 GitHub 热门开源项目"
+      },
+      "organize": {
+        "title": "智能整理",
+        "desc": "AI 分析并自动分类书签"
+      },
+      "chat": {
+        "title": "闲聊模式",
+        "desc": "随便聊聊，问问题都可以"
+      }
+    },
+    "appName": "ANYMARK",
+    "agentDemo": {
+      "welcome": "👋 点击下方按钮试试看！",
+      "online": "在线",
+      "placeholder": "试着输入你的问题...",
+      "agentName": "AnyMark Agent",
+      "action1": "搜书签",
+      "action2": "找资源",
+      "action3": "看热门",
+      "action4": "整理",
+      "action5": "聊天",
+      "demo1": {
+        "user": "找我的 React 学习资料",
+        "assistant": "找到 8 个 React 相关书签：React 官方文档、React Hooks 教程、Redux 入门... 需要我打开哪个？"
+      },
+      "demo2": {
+        "user": "推荐一些 Python 学习资源",
+        "assistant": "为你推荐：Real Python、Python 官方教程、Automate the Boring Stuff... 要我帮你收藏吗？"
+      },
+      "demo3": {
+        "user": "最近有什么热门项目",
+        "assistant": "本周热门：shadcn/ui、langchain、ollama... 都是 AI 和开发工具相关的项目 🔥"
+      },
+      "demo4": {
+        "user": "帮我整理所有技术书签",
+        "assistant": "好的！我找到了 23 个技术相关书签，已按 Frontend、Backend、DevOps 分类整理完成 ✨"
+      },
+      "demo5": {
+        "user": "你好呀",
+        "assistant": "你好！我是 AnyMark 的 AI 助手，有什么可以帮你的吗？😊"
+      }
+    },
+    "shortcuts": {
+      "heading": "键盘快捷键",
+      "subtitle": "为效率而生，Vim 风格导航让操作行云流水",
+      "navigation": "导航",
+      "actions": "操作",
+      "global": "全局",
+      "updown": "上下导航",
+      "vimNav": "Vim 风格导航",
+      "open": "打开书签",
+      "star": "收藏/取消",
+      "delete": "删除",
+      "copy": "复制链接",
+      "sidebar": "打开侧边栏",
+      "save": "快速保存",
+      "note": "Windows/Linux 用户请使用 Ctrl 代替 ⌘"
+    },
+    "cta": {
+      "heading": "准备好了吗？",
+      "text": "选择你喜欢的 Pixel Buddy，开始智能书签之旅",
+      "button": "开始使用",
+      "hint": "点击按钮打开侧边栏"
+    },
+    "themes": {
+      "heading": "PIXEL BUDDY 主题",
+      "subtitle": "5 种主题风格，陪你收藏整理",
+      "koda": {
+        "name": "库达",
+        "subtitle": "经典像素 · 蓝色",
+        "desc": "清爽专业的蓝色风格，安静可靠"
+      },
+      "vex": {
+        "name": "维克斯",
+        "subtitle": "赛博霓虹 · 紫色",
+        "desc": "紫色赛博朋克，未来感十足"
+      },
+      "sprout": {
+        "name": "小芽",
+        "subtitle": "森系萌芽 · 绿色",
+        "desc": "绿色自然风格，治愈系体验"
+      },
+      "flare": {
+        "name": "劲哥",
+        "subtitle": "余晖探索 · 橙色",
+        "desc": "橙色温暖风格，探索灵感"
+      },
+      "null": {
+        "name": "纳尔",
+        "subtitle": "极客终端 · 黑客",
+        "desc": "黑客风格，为极客而生"
+      }
+    },
+    "cta": {
+      "heading": "准备好开始了吗？",
+      "text": "立即体验 AI 驱动的智能书签管理 - 完全免费开源！",
+      "button": "开始使用",
+      "hint": "点击按钮打开侧边栏，开始你的智能书签之旅"
+    },
+    "dotsNavigation": {
+      "goToSection": "跳转到第 {{section}} 部分"
+    },
+    "language": {
+      "english": "English",
+      "chinese": "简体中文",
+      "japanese": "日本語",
+      "german": "Deutsch",
+      "spanish": "Español",
+      "french": "Français"
+    }
+  },
+  "sidebar": {
+    "header": {
+      "title": "AnyMark",
+      "settings": "设置",
+      "expand": "展开",
+      "close": "关闭",
+      "theme": "切换主题",
+      "aiAnalyze": "AI 分析"
+    },
+    "search": {
+      "placeholder": "搜索书签...",
+      "noResults": "未找到书签",
+      "searching": "搜索中..."
+    },
+    "filters": {
+      "all": "全部",
+      "uncategorized": "AI分类",
+      "favorites": "收藏夹",
+      "recent": "最近",
+      "popular": "热门",
+      "longTail": "长尾",
+      "trash": "回收站",
+      "descriptions": {
+        "chrome": "所有书签",
+        "uncategorized": "AI 分类的书签",
+        "favorites": "星标书签",
+        "recent": "最近打开的浏览器标签页",
+        "popular": "访问最多 (前 20)",
+        "longTail": "长尾 - 访问最少",
+        "trash": "已删除的书签"
+      }
+    },
+    "bookmarks": {
+      "loading": "加载书签中...",
+      "empty": "还没有书签",
+      "emptyHint": "添加你的第一个书签开始使用",
+      "count": "{{count}} 个书签",
+      "selected": "已选中",
+      "delete": "删除",
+      "restore": "恢复",
+      "favorite": "添加到收藏夹",
+      "unfavorite": "从收藏夹移除",
+      "edit": "编辑",
+      "open": "打开",
+      "copyUrl": "复制链接",
+      "moveToFolder": "移动到文件夹"
+    },
+    "bookmarkList": {
+      "empty": {
+        "noBookmarks": "未找到书签",
+        "adjustFilters": "尝试调整过滤器或搜索关键词",
+        "noSearchResults": "未找到匹配的书签",
+        "tryDifferentKeywords": "尝试使用不同的关键词搜索",
+        "noCategories": "没有已分类的书签",
+        "useAiAnalysis": "使用 AI 分析功能为书签添加分类",
+        "chromeTitle": "从 Chrome 导入书签",
+        "chromeDesc": "点击下方按钮将您的 Chrome 书签导入到 AnyMark",
+        "importButton": "导入 Chrome 书签",
+        "importing": "正在导入..."
+      },
+      "item": {
+        "visits": "{{count}} 次访问",
+        "items": "{{count}} 项",
+        "folders": "{{count}} 个文件夹",
+        "analyzing": "AI分析中...",
+        "analyze": "AI智能分析",
+        "expandLabel": "展开",
+        "collapseLabel": "折叠"
+      },
+      "actions": {
+        "reanalyze": "该书签已分析过，是否重新分析？",
+        "startAnalyzing": "开始AI分析...",
+        "analyzeComplete": "AI分析完成！",
+        "analyzeFailed": "AI分析失败: {{error}}",
+        "analyzeEmpty": "分析结果为空",
+        "noSummary": "无法生成摘要"
+      },
+      "edit": {
+        "renaming": "重命名文件夹（ESC 取消，Enter 保存）",
+        "editing": "编辑模式（ESC 取消，Enter 保存）",
+        "cancelled": "编辑已取消",
+        "emptyTitle": "标题不能为空",
+        "folderRenamed": "文件夹已重命名",
+        "bookmarkUpdated": "书签已更新"
+      },
+      "delete": {
+        "confirmFolder": "删除文件夹：\"{{title}}\"？\n\n此操作将删除文件夹下的所有书签！",
+        "folderDeleted": "文件夹\"{{title}}\"已删除",
+        "confirmPermanent": "永久删除书签：\"{{title}}\"？\n\n⚠️ 此操作不可恢复！",
+        "confirmPermanentFolder": "永久删除文件夹\"{{title}}\"及其 {{count}} 个书签？\n\n⚠️ 此操作不可恢复！",
+        "permanentlyDeleted": "书签已永久删除",
+        "folderPermanentlyDeleted": "文件夹\"{{title}}\"及 {{count}} 个书签已永久删除",
+        "confirmDelete": "删除书签：\"{{title}}\"？\n\n可在回收站中恢复",
+        "movedToTrash": "已移入回收站",
+        "restored": "书签已恢复",
+        "folderRestored": "已恢复文件夹\"{{title}}\"及其 {{count}} 个书签"
+      },
+      "drag": {
+        "cannotMoveToSelf": "无法将文件夹移动到自身或其子文件夹",
+        "movedToFolder": "已移动到文件夹：{{title}}",
+        "folderMoved": "文件夹已移动到：{{title}}",
+        "folderReordered": "文件夹已重新排序",
+        "bookmarkReordered": "书签已重新排序"
+      },
+      "star": {
+        "added": "已添加到星标",
+        "removed": "已移出星标",
+        "pinned": "书签已固定",
+        "unpinned": "书签已取消固定"
+      },
+      "copy": {
+        "success": "链接已复制到剪贴板",
+        "failed": "复制链接失败"
+      },
+      "open": {
+        "failed": "无法打开链接",
+        "apiUnavailable": "无法打开链接：浏览器 API 不可用"
+      },
+      "import": {
+        "starting": "正在从 Chrome 导入书签，请稍候...",
+        "started": "开始导入 Chrome 书签...",
+        "completed": "导入完成！",
+        "failed": "导入失败: {{error}}"
+      },
+      "multiSelect": {
+        "selected": "已选择 {{count}} 项",
+        "selectAll": "全选所有书签",
+        "selectAllBtn": "全选",
+        "star": "收藏选中项",
+        "delete": "删除选中项",
+        "clear": "清除选择",
+        "confirmDelete": "删除 {{count}} 个书签？\n\n它们将被移至回收站。",
+        "deleted": "{{count}} 个书签已移至回收站"
+      }
+    },
+    "tagCloud": {
+      "title": "标签云",
+      "empty": "暂无标签",
+      "filtering": "正在筛选:"
+    },
+    "preview": {
+      "title": "预览",
+      "noSelection": "选择一个书签进行预览",
+      "selectHint": "使用 ↑↓ 键浏览书签",
+      "url": "链接",
+      "tags": "标签",
+      "category": "分类",
+      "summary": "摘要",
+      "confidence": "置信度",
+      "createdAt": "创建时间",
+      "updatedAt": "更新时间",
+      "actions": {
+        "open": "打开",
+        "edit": "编辑",
+        "star": "星标",
+        "unstar": "取消星标",
+        "copyUrl": "复制链接",
+        "delete": "删除",
+        "restore": "恢复"
+      },
+      "sections": {
+        "aiAnalysis": "AI 分析",
+        "statistics": "统计信息",
+        "tags": "标签",
+        "notes": "备注",
+        "summary": "摘要"
+      },
+      "stats": {
+        "visits": "访问次数",
+        "visitsTimes": "{{count}} 次",
+        "lastVisit": "最后访问",
+        "created": "创建时间",
+        "importance": "重要性",
+        "never": "从未"
+      },
+      "ai": {
+        "reanalyze": "重新分析",
+        "analyzing": "分析中...",
+        "analyzeNow": "立即分析",
+        "noAnalysis": "暂无摘要，点击分析或手动编辑",
+        "category": "分类:",
+        "startAnalyzing": "开始 AI 分析...",
+        "analyzeComplete": "AI 分析完成！",
+        "analyzeFailed": "AI 分析失败: {{error}}",
+        "analyzeEmpty": "分析结果为空",
+        "generated": "AI 生成"
+      },
+      "time": {
+        "justNow": "刚刚",
+        "minutesAgo": "{{count}}分钟前",
+        "hoursAgo": "{{count}}小时前",
+        "daysAgo": "{{count}}天前"
+      },
+      "shortcuts": {
+        "open": "打开",
+        "newTab": "新标签页",
+        "edit": "编辑",
+        "copyUrl": "复制链接",
+        "star": "星标",
+        "unstar": "取消星标",
+        "delete": "删除",
+        "restore": "恢复"
+      },
+      "messages": {
+        "updated": "书签已更新",
+        "urlCopied": "链接已复制到剪贴板",
+        "starred": "已添加到星标",
+        "unstarred": "已移出星标",
+        "restored": "书签已恢复",
+        "deleted": "已移入回收站",
+        "confirmDelete": "删除书签：\"{{title}}\"？\n\n可在回收站中恢复",
+        "confirmRestore": "选择操作：\n\n确定 = 恢复书签\n取消 = 返回"
+      },
+      "breadcrumb": {
+        "root": "根目录"
+      }
+    },
+    "welcome": {
+      "title": "欢迎使用 AnyMark！",
+      "subtitle": "你的智能书签管理器",
+      "feature1": "💡 小提示",
+      "feature1Desc": "请拖动侧边栏左边缘，调整宽度到屏幕的 40-50% 以获得最佳体验",
+      "feature2": "✨ Chrome 会记住",
+      "feature2Desc": "您的侧边栏宽度偏好将自动保存",
+      "close": "开始使用 →",
+      "dontShowAgain": "不再显示"
+    },
+    "analysis": {
+      "analyzing": "分析中...",
+      "progress": "进度：{{percent}}%",
+      "status": "📖 智能分析中...",
+      "complete": "✅ 智能分析完成！成功分析 {{count}} 个书签",
+      "failed": "❌ AI分析失败：{{error}}",
+      "noBookmarks": "没有可分析的书签",
+      "addFirst": "请先添加或导入书签",
+      "reanalyzeConfirm": "所有 {{count}} 个书签都已分析完成。是否重新分析全部书签？"
+    },
+    "toast": {
+      "bookmarkAdded": "书签已添加",
+      "bookmarkDeleted": "书签已删除",
+      "bookmarkRestored": "书签已恢复",
+      "bookmarkUpdated": "书签已更新",
+      "importSuccess": "成功导入 {{count}} 个 Chrome 书签！",
+      "importFailed": "导入书签失败",
+      "copySuccess": "链接已复制到剪贴板",
+      "copyFailed": "复制链接失败",
+      "deleteConfirm": "确定要永久删除「{{title}}」吗？此操作无法撤销！",
+      "permanentlyDeleted": "已永久删除",
+      "analysisComplete": "✅ 后台分析完成！成功: {{completed}}, 失败: {{failed}}",
+      "analysisStarted": "🚀 智能分析将在后台处理 {{count}} 个书签",
+      "analysisFailed": "❌ 启动分析失败: {{error}}",
+      "analyzing": "分析中... {{progress}}%",
+      "deleteConfirmTitle": "确定要删除「{{title}}」吗？",
+      "noApiKey": "⚠️ 请先在设置中配置 AI API Key",
+      "configError": "无法检查 API 配置",
+      "allAnalyzed": "✅ 所有书签都已分析完成！",
+      "timeHintShort": "约 1 分钟",
+      "timeHintLong": "约 {{minutes}} 分钟",
+      "undo": "撤销",
+      "undoSuccess": "已撤销",
+      "noUndoOperation": "没有可撤销的操作",
+      "undoFailed": "撤销失败",
+      "retry": "重试",
+      "retrySuccess": "重试成功"
+    },
+    "errors": {
+      "loadBookmarks": "加载书签失败"
+    },
+    "editDialog": {
+      "title": "编辑书签",
+      "fields": {
+        "title": "标题",
+        "titlePlaceholder": "书签标题",
+        "url": "网址",
+        "urlPlaceholder": "https://...",
+        "folder": "文件夹",
+        "folderPlaceholder": "/分类/子分类",
+        "tags": "标签",
+        "tagsPlaceholder": "添加标签...",
+        "notes": "备注",
+        "notesPlaceholder": "添加你的备注...",
+        "summary": "摘要",
+        "summaryPlaceholder": "编辑摘要内容..."
+      },
+      "badges": {
+        "aiGenerated": "AI生成"
+      },
+      "buttons": {
+        "add": "添加",
+        "cancel": "取消",
+        "save": "保存"
+      },
+      "hints": {
+        "aiSummary": "当前显示AI生成的摘要，可直接编辑",
+        "userNotes": "你可以编辑或补充备注内容",
+        "summary": "编辑后将覆盖 AI 生成的摘要"
+      },
+      "shortcuts": {
+        "cancel": "取消",
+        "save": "保存"
+      }
+    },
+    "contextMenu": {
+      "openNewTab": "在新标签页打开",
+      "copyLink": "复制链接",
+      "edit": "编辑",
+      "rename": "重命名",
+      "star": "星标",
+      "unstar": "取消星标",
+      "moveTo": "移动到...",
+      "archive": "归档",
+      "delete": "删除",
+      "deleteFolder": "删除文件夹"
+    },
+    "aiChat": {
+      "title": "AnyMark 助手",
+      "archive": "对话存档",
+      "newChat": "新建对话",
+      "clearChat": "清空对话",
+      "close": "关闭",
+      "welcome": {
+        "greeting": "👋 你好！我是 AnyMark 助手",
+        "tryAsking": "试试问我：",
+        "examples": {
+          "findTutorial": "找一个 Python 教程",
+          "saveCurrentPage": "把当前网页收藏",
+          "recommendResources": "推荐一些前端资源",
+          "whatCanYouDo": "你能做什么"
+        }
+      },
+      "input": {
+        "placeholder": "输入消息... (Enter 发送，↑↓ 浏览历史)",
+        "placeholderWithAction": "{{description}}...",
+        "send": "发送"
+      },
+      "messages": {
+        "error": "❌ 抱歉，AI 服务暂时不可用，请稍后重试。",
+        "regenerate": "重新生成",
+        "feedback": "反馈"
+      },
+      "confirm": {
+        "clearChat": "确定要清空当前对话吗？"
+      },
+      "status": {
+        "thinking": "思考中...",
+        "processing": "处理中...",
+        "autoSaved": "自动保存对话",
+        "archived": "对话已存档"
+      }
+    },
+    "footer": {
+      "shortcuts": {
+        "newTab": "新标签页",
+        "star": "星标",
+        "more": "更多"
+      }
+    },
+    "keyboard": {
+      "title": "键盘快捷键",
+      "navigation": "导航",
+      "actions": "操作",
+      "panels": "面板",
+      "filterTabs": "过滤标签",
+      "close": "关闭",
+      "shortcuts": {
+        "up": "向上导航",
+        "down": "向下导航",
+        "jk": "Vim 风格导航",
+        "jumpFirst": "跳到第一个",
+        "jumpLast": "跳到最后一个",
+        "pageUp": "向上翻页",
+        "pageDown": "向下翻页",
+        "enter": "打开书签",
+        "openNewTab": "在新标签页打开",
+        "star": "星标/取消星标",
+        "space": "切换预览面板",
+        "slash": "聚焦搜索",
+        "focusSearch": "聚焦搜索",
+        "openFirst": "打开第一个匹配",
+        "escape": "关闭面板 / 取消聚焦",
+        "h": "显示此帮助",
+        "altA": "切换 AI 聊天",
+        "r": "恢复（回收站中）",
+        "d": "永久删除（回收站中）",
+        "chrome": "Chrome",
+        "recent": "最近",
+        "popular": "热门",
+        "longTail": "长尾"
+      }
+    },
+    "settings": {
+      "title": "设置",
+      "tabs": {
+        "ai": "🤖 AI 设置",
+        "sync": "☁️ 云端同步",
+        "ui": "🎨 界面设置",
+        "data": "💾 数据管理",
+        "advanced": "⚙️ 高级设置"
+      },
+      "ai": {
+        "title": "🤖 AI 模型配置",
+        "description": "支持所有兼容 OpenAI API 格式的大模型。选择预设或自定义配置。",
+        "provider": "服务提供商",
+        "apiUrl": "API URL",
+        "apiUrlPlaceholder": "https://api.openai.com/v1/chat/completions",
+        "apiUrlDesc": "API 请求完整地址 (包含 /chat/completions)",
+        "modelId": "模型 ID",
+        "modelIdPlaceholder": "gpt-3.5-turbo",
+        "modelIdDesc": "例如: gpt-4, deepseek-chat, qwen-turbo",
+        "currentConfig": "当前配置",
+        "currentConfigUrl": "API URL:",
+        "currentConfigModel": "模型 ID:",
+        "defaultAddress": "默认地址",
+        "defaultModel": "默认模型",
+        "keyManagement": "API Key 管理",
+        "keyCount": "已配置数量",
+        "keyCountValue": "{{count}} 个 API Key",
+        "keyCountNone": "未配置 API Key，请添加至少一个",
+        "keyCountOne": "建议添加多个 API Key 实现轮换，防止单个 Key 被限流",
+        "keyCountMultiple": "已启用轮换机制，多个 Key 可防止单个 Key 被限流导致完全失败",
+        "manageKeys": "管理 API Keys",
+        "noKeysAlert": "未配置 API Key，AI 功能将不可用",
+        "keyNumber": "🔑 API Key #{{number}}",
+        "addNewKey": "添加新的 API Key",
+        "addKeyPlaceholder": "粘贴您的 API Key",
+        "addButton": "添加",
+        "keySecurityNote": "🔒 API Key 加密存储在本地，不会上传到任何服务器",
+        "connectionTest": "连接测试",
+        "testButton": "测试连接",
+        "testing": "测试中...",
+        "testSuccess": "✅",
+        "testFailed": "❌",
+        "testDesc": "验证 API URL、模型 ID 和 API Key 是否配置正确",
+        "autoAnalyze": "自动 AI 分析新书签",
+        "autoAnalyzeDesc": "新添加的书签将自动进行智能分析",
+        "searchConfig": "🔍 搜索服务配置",
+        "searchConfigDesc": "配置 GitHub Token 和自定义搜索服务，提升搜索体验",
+        "githubToken": "GitHub Personal Access Token",
+        "githubTokenPlaceholder": "ghp_xxxxxxxxxxxx",
+        "githubTokenDesc": "配置后可将 GitHub API 请求限制从 10次/分钟 提升到 30次/分钟。",
+        "getToken": "获取 Token →",
+        "searchServiceUrl": "自定义搜索服务 URL",
+        "searchServiceUrlPlaceholder": "https://your-search-service.com/search?q=",
+        "searchServiceUrlDesc": "留空使用默认搜索服务。支持 Whoogle、SearXNG 等自托管搜索引擎。URL 格式：搜索服务地址 + 查询参数（如 ?q=）"
+      },
+      "sync": {
+        "chromeSync": "🔗 Chrome 书签同步",
+        "chromeSyncDesc": "开启后，在书签管理器中的增删改操作将实时同步到 Chrome 原生书签",
+        "syncStatus": "同步状态",
+        "enabled": "已开启",
+        "disabled": "已关闭",
+        "statusEnabled": "✅ 书签更改将同步到 Chrome 原生书签管理器",
+        "statusDisabled": "❌ 书签更改不影响 Chrome 原生书签（独立管理）",
+        "enableSync": "与 Chrome 原生书签同步",
+        "enableSyncDesc": "开启：在书签管理器中的增删改操作会实时同步到 Chrome<br />关闭：书签管理器与 Chrome 书签独立管理，互不影响",
+        "refreshSync": "刷新同步",
+        "refreshButton": "刷新同步",
+        "syncing": "同步中...",
+        "refreshDesc": "合并管理器和Chrome书签（取并集），去除重复项。<br />相同书签（URL相同）+ 相同目录 → 只保留一个<br />相同书签（URL相同）+ 不同目录 → 保留两者",
+        "firstInstallAlert": "首次安装时会从 Chrome 导入书签，但不会自动同步。请在此开启同步功能。",
+        "cloudSync": "☁️ 云端配置同步",
+        "cloudSyncDesc": "使用 Chrome 账号同步核心设置到云端，支持多设备同步",
+        "lastSync": "上次同步:",
+        "toggleSync": "同步开关",
+        "enableButton": "启用同步",
+        "disableButton": "禁用同步",
+        "processing": "处理中...",
+        "syncContent": "同步内容：AI配置、用户偏好、自定义规则等核心设置",
+        "manualSync": "手动同步",
+        "syncNow": "立即同步",
+        "syncNowDesc": "将当前配置立即同步到云端",
+        "storageQuota": "存储配额",
+        "quotaUsed": "已使用: {{used}}KB / {{limit}}KB",
+        "quotaDesc": "Chrome 扩展存储限制为 100KB",
+        "advancedOps": "高级操作",
+        "clearCloud": "清除云端配置",
+        "clearCloudDesc": "⚠️ 此操作将删除云端所有同步的配置数据",
+        "syncEnabled": "Chrome 同步已开启，书签更改将同步到 Chrome",
+        "syncDisabled": "Chrome 同步已关闭，书签更改不影响 Chrome",
+        "confirmEnableSync": "开启 Chrome 双向同步？\n\n开启后：\n• 书签更改将同步到 Chrome 原生书签\n• Chrome 书签更改将同步到本扩展\n• 首次同步将合并现有书签（取并集）\n\n是否继续？",
+        "initialSyncComplete": "首次同步完成！合并: {{merged}} 个，添加到Chrome: {{addedToChrome}} 个，添加到本地: {{addedToStorage}} 个",
+        "toggleFailed": "切换同步失败: {{error}}"
+      },
+      "ui": {
+        "language": "🌍 语言设置",
+        "languageLabel": "界面语言",
+        "languageDesc": "选择界面显示语言。更改后将立即生效。",
+        "openMode": "打开方式",
+        "openModeLabel": "点击 Pixel Buddy 或扩展图标时",
+        "openModeSidebar": "侧边栏模式",
+        "openModeTab": "新标签页模式",
+        "openModeDesc": "侧边栏：在浏览器侧边打开，可边浏览边管理书签<br />新标签页：在完整页面中打开，获得更大的操作空间",
+        "viewMode": "视图模式",
+        "viewModeLabel": "默认视图",
+        "viewModeList": "列表视图",
+        "viewModeGrid": "网格视图",
+        "viewModeCompact": "紧凑视图",
+        "previewPanel": "默认显示预览面板",
+        "previewPanelWidth": "预览面板宽度 ({{width}}%)",
+        "pixelBuddy": "Pixel 小助手",
+        "pixelTheme": "主题风格",
+        "pixelThemeDesc": "选择角色后点击\"保存角色\"，即可强制刷新 Pixel Buddy 形象",
+        "saveTheme": "保存角色",
+        "themeSelected": "已选"
+      },
+      "data": {
+        "exportAiTitle": "📤 导出 AI 分类",
+        "exportAiDesc": "将 AI 智能分类的书签结构导出，可选择导出为 HTML 文件或直接导出到 Chrome 书签栏",
+        "lastExport": "上次导出时间",
+        "exportAsHtml": "导出为 HTML 文件",
+        "exportAsHtmlDesc": "导出为 Chrome 书签格式的 HTML 文件，可手动导入到任何浏览器",
+        "exportToChrome": "导出到 Chrome 书签栏",
+        "exportToChromeDesc": "在 Chrome 书签栏创建带时间戳的「AnyMark AI 分类」文件夹，可重复执行",
+        "exporting": "导出中...",
+        "chromeReimport": "从 Chrome 重新导入",
+        "chromeReimportDesc": "⚠️ 此操作将清空 AnyMark 文件夹中的所有现有书签，然后重新导入 Chrome 浏览器的所有书签（除 AnyMark 文件夹外）。",
+        "reimportFromChrome": "从 Chrome 重新导入",
+        "reimporting": "重新导入中...",
+        "backupRestore": "备份与恢复",
+        "importExport": "数据备份",
+        "exportBookmarks": "导出备份",
+        "exportBackup": "导出备份 (JSON)",
+        "exportDesc": "将书签导出为 JSON 文件，包含所有数据",
+        "importBookmarks": "导入备份",
+        "importBackup": "导入备份 (JSON)",
+        "importDesc": "从 JSON 文件导入书签备份",
+        "cleanup": "清理",
+        "emptyTrash": "清空回收站",
+        "emptyTrashDesc": "永久删除回收站中的所有书签（不可恢复）",
+        "resetSettings": "重置所有设置",
+        "resetDesc": "恢复到默认设置"
+      },
+      "advanced": {
+        "deleteMode": "删除行为",
+        "softDelete": "启用软删除（移到回收站）",
+        "softDeleteDesc": "关闭后，删除书签将直接永久删除",
+        "autoCleanup": "自动清理",
+        "autoArchiveDays": "自动归档天数",
+        "autoArchiveDaysDesc": "超过此天数未访问的书签将自动归档（0 = 禁用）",
+        "autoDeleteDays": "自动删除天数",
+        "autoDeleteDaysDesc": "回收站中超过此天数的书签将自动删除（0 = 禁用）",
+        "storage": "存储优化",
+        "indexedDBEnabled": "使用 IndexedDB 存储",
+        "indexedDBDesc": "IndexedDB 可以存储更多书签，但首次使用需要迁移数据。适合有大量书签的用户（5000+）。",
+        "advancedWarning": "修改高级设置可能影响扩展功能，请谨慎操作"
+      },
+      "messages": {
+        "saved": "设置已保存",
+        "saveFailed": "保存失败",
+        "saving": "保存中...",
+        "saveSettings": "保存设置",
+        "keyAdded": "API Key 已添加",
+        "keyRemoved": "API Key 已删除",
+        "keyExists": "API Key 已存在",
+        "enterKey": "请输入 API Key",
+        "testSuccess": "API 连接测试成功",
+        "testFailed": "API 连接测试失败",
+        "testError": "API 连接测试出错",
+        "connecting": "正在连接...",
+        "noKeys": "请先添加 API Key",
+        "connectionSuccess": "连接成功！模型: {{model}}",
+        "connectionFailed": "连接失败 ({{status}}): {{error}}",
+        "connectionError": "连接错误: {{error}}",
+        "languageChanged": "语言已切换",
+        "themeChanged": "✅ 角色已切换",
+        "themeSaved": "✅ 角色已保存并刷新",
+        "themeSaveFailed": "❌ 保存角色失败",
+        "syncEnabled": "云端同步已启用",
+        "syncDisabled": "云端同步已禁用",
+        "syncFailed": "操作失败: {{error}}",
+        "syncedToCloud": "配置已同步到云端",
+        "cloudCleared": "云端配置已清除",
+        "clearFailed": "清除失败: {{error}}",
+        "syncComplete": "同步完成！\\n合并: {{merged}} 个\\n添加: {{added}} 个\\n更新: {{updated}} 个",
+        "refreshFailed": "刷新同步失败: {{error}}",
+        "enableSyncFirst": "请先开启Chrome书签同步",
+        "bookmarksExported": "书签已导出",
+        "exportFailed": "导出失败",
+        "bookmarksImported": "已导入 {{count}} 个书签",
+        "importFailed": "导入失败",
+        "invalidFile": "无效的书签文件",
+        "trashEmptied": "回收站已清空",
+        "emptyFailed": "清空失败",
+        "settingsReset": "设置已重置",
+        "resetFailed": "重置失败",
+        "confirmEmpty": "确定要清空回收站吗？此操作不可撤销！",
+        "confirmReset": "确定要重置所有设置吗？",
+        "exportConfirm": "确定要将 AI 分类导出到 Chrome 书签栏吗？\\n\\n将在书签栏创建一个带时间戳的「AnyMark AI 分类」文件夹。",
+        "exportSuccess": "✅ 导出成功！创建了 {{folders}} 个文件夹，导出了 {{bookmarks}} 个书签",
+        "exportFailed": "❌ 导出失败: {{error}}",
+        "exportedHtml": "书签已导出为 HTML 格式",
+        "reimportChromeConfirm": "⚠️ 重新导入将清空 AnyMark 文件夹中的所有现有书签！\\n\\n然后将 Chrome 浏览器的所有书签（除 AnyMark 文件夹外）重新导入到 AnyMark。\\n\\n此操作不可撤销。是否继续？",
+        "reimportChromeStarting": "正在重新导入书签，请稍候...",
+        "reimportChromeSuccess": "✅ 重新导入完成！导入了 {{bookmarks}} 个书签和 {{folders}} 个文件夹。",
+        "reimportChromeFailed": "❌ 重新导入失败: {{error}}"
+      },
+      "providers": {
+        "custom": "自定义 (Custom)",
+        "openai": "OpenAI",
+        "azure": "Azure OpenAI",
+        "anthropic": "Anthropic Claude",
+        "google": "Google Gemini",
+        "groq": "Groq (高速推理)",
+        "xai": "xAI (Grok)",
+        "doubao": "豆包 (火山引擎)",
+        "moonshot": "Kimi (月之暗面)",
+        "aliyun": "通义千问 (阿里云)",
+        "yi": "零一万物",
+        "deepseek": "DeepSeek (深度求索)",
+        "siliconflow": "硅基流动 (SiliconFlow)",
+        "zhipu": "智谱 GLM (ChatGLM)",
+        "minimax": "MiniMax (国内)",
+        "minimaxIntl": "MiniMax (国际)",
+        "openrouter": "OpenRouter",
+        "ollama": "Ollama (本地)",
+        "huggingface": "HuggingFace"
+      },
+      "pixelThemes": {
+        "switchTo": "切换为 {{name}}",
+        "classic": {
+          "name": "经典像素",
+          "desc": "清爽、专业、亲和",
+          "persona": "Koda (库达) · 博学者",
+          "slogan": "在浩瀚的链接海洋，我是你最稳的锚。"
+        },
+        "cyber": {
+          "name": "赛博霓虹",
+          "desc": "未来感、深夜模式、电子脉冲",
+          "persona": "Vex (维克斯) · 赛博猎人",
+          "slogan": "过滤杂讯，我只捕获最有价值的信号。"
+        },
+        "grow": {
+          "name": "森系萌芽",
+          "desc": "治愈、成长、有机感",
+          "persona": "Sprout (小芽) · 知识园丁",
+          "slogan": "每一个书签，都是一颗待萌发的灵感种子。"
+        },
+        "flare": {
+          "name": "余晖探索",
+          "desc": "高能、发现、金币感",
+          "persona": "Zing (劲哥) · 灵感探险家",
+          "slogan": "生活不该只有收藏，去发现，去闪耀！"
+        },
+        "noir": {
+          "name": "极客终端",
+          "desc": "黑客、复古、极简",
+          "persona": "Null (纳尔) · 二进制管家",
+          "slogan": "剥离冗余，回归信息的原始逻辑。"
+        }
+      }
+    }
+  },
+  "popup": {
+    "title": "AnyMark",
+    "quickActions": "快速操作",
+    "saveCurrentPage": "保存当前页面",
+    "openSidebar": "打开侧边栏",
+    "searchBookmarks": "搜索书签",
+    "menu": {
+      "quickSave": "快速保存当前页",
+      "detailedSave": "详细保存...",
+      "openSidebar": "打开侧边栏",
+      "openInTab": "在新标签页打开",
+      "settings": "设置"
+    },
+    "stats": {
+      "total": "总书签数",
+      "today": "今日新增",
+      "thisWeek": "本周新增",
+      "categories": "分类数"
+    },
+    "recentBookmarks": "最近书签",
+    "viewAll": "查看全部",
+    "noBookmarks": "还没有书签",
+    "addFirst": "点击上方按钮保存你的第一个书签",
+    "placeholders": {
+      "pageTitle": "页面标题",
+      "pageUrl": "https://...",
+      "tagName": "输入标签名..."
+    },
+    "labels": {
+      "difficulty": "难度",
+      "techStack": "技术栈",
+      "removeTag": "移除标签",
+      "addTag": "添加标签"
+    },
+    "hints": {
+      "cannotOpenSidebar": "无法打开侧边栏，请右键点击扩展图标手动打开"
+    },
+    "aiUnavailable": "AI 分析暂不可用"
+  },
+  "chat": {
+    "title": "AI 助手",
+    "welcome": "👋 你好！我是你的 AI 助手。今天我能帮你整理书签吗？",
+    "inputPlaceholder": "问我任何关于书签的问题...",
+    "send": "发送",
+    "thinking": "思考中...",
+    "suggestions": {
+      "title": "建议",
+      "organize": "整理我的书签",
+      "find": "查找关于...的书签",
+      "analyze": "分析我的收藏",
+      "cleanup": "清理重复项"
+    },
+    "tools": {
+      "searching": "🔍 搜索书签中...",
+      "organizing": "📁 整理书签中...",
+      "analyzing": "🤖 分析内容中...",
+      "creating": "✨ 创建文件夹中..."
+    },
+    "errors": {
+      "failed": "抱歉，出了点问题。请重试。",
+      "noBookmarks": "你还没有任何书签。",
+      "networkError": "网络错误。请检查你的连接。"
+    },
+    "clear": "清空聊天",
+    "close": "关闭",
+    "newChat": "新对话",
+    "user": "你",
+    "assistant": "AI"
+  },
+  "common": {
+    "buttons": {
+      "save": "保存",
+      "cancel": "取消",
+      "delete": "删除",
+      "edit": "编辑",
+      "close": "关闭",
+      "confirm": "确认",
+      "back": "返回",
+      "next": "下一步",
+      "finish": "完成",
+      "retry": "重试",
+      "refresh": "刷新"
+    },
+    "messages": {
+      "loading": "加载中...",
+      "saving": "保存中...",
+      "success": "成功！",
+      "error": "错误",
+      "warning": "警告",
+      "info": "信息",
+      "confirm": "确定吗？",
+      "noData": "暂无数据",
+      "comingSoon": "即将推出"
+    },
+    "time": {
+      "justNow": "刚刚",
+      "minutesAgo": "{{count}} 分钟前",
+      "hoursAgo": "{{count}} 小时前",
+      "daysAgo": "{{count}} 天前",
+      "weeksAgo": "{{count}} 周前",
+      "monthsAgo": "{{count}} 个月前",
+      "yearsAgo": "{{count}} 年前"
+    }
+  },
+  "renderError": {
+    "title": "渲染失败",
+    "description": "侧边栏渲染时发生错误",
+    "reload": "重新加载"
+  },
+  "importProgress": {
+    "title": "导入完成！",
+    "importing": "正在导入 Chrome 书签...",
+    "hint": "请稍候，AI 正在分析每个书签的内容"
+  },
+  "folderSelector": {
+    "newBadge": "新建",
+    "existingFolders": "现有文件夹",
+    "createNew": "创建新文件夹: {{name}}"
+  },
+  "floatingChat": {
+    "title": "AnyMark 助手",
+    "buttonTitle": "AnyMark 助手 (Alt+A)",
+    "greeting": "👋 你好！我是 AnyMark 助手",
+    "welcomeDesc": "我会记住我们的对话历史（最多50条），试试问我：",
+    "shortcutHint": "Alt + A 快速打开 · Enter 发送"
+  },
+  "saveConfirm": {
+    "title": "AI 智能分析完成",
+    "confidence": "置信度 {{value}}%",
+    "cancel": "取消",
+    "pageTitlePlaceholder": "页面标题",
+    "folderPathPlaceholder": "/文件夹路径",
+    "addTagPlaceholder": "添加标签...",
+    "summaryPlaceholder": "内容摘要...",
+    "cancelEdit": "取消编辑",
+    "saveBookmark": "保存书签",
+    "edit": "编辑",
+    "confirmSave": "确认保存",
+    "aiCategory": "AI 分类",
+    "location": "存放位置",
+    "smartTags": "智能标签",
+    "contentSummary": "内容摘要"
+  },
+  "chatArchive": {
+    "title": "对话存档",
+    "new": "新建",
+    "newChat": "新建对话",
+    "loading": "加载中...",
+    "empty": "暂无对话存档",
+    "emptyDesc": "对话会自动保存到这里",
+    "messages": "{{count}} 条",
+    "deleteConfirm": "确定要删除这个对话存档吗？",
+    "editTitle": "编辑标题",
+    "restoreChat": "恢复对话",
+    "delete": "删除",
+    "storage": "存储: {{used}} / {{total}}",
+    "yesterday": "昨天",
+    "daysAgo": "{{count}}天前"
+  },
+  "renderError": {
+    "title": "渲染失败",
+    "rootNotFound": "根元素未找到"
+  },
+  "notification": {
+    "saveSuccessTitle": "✅ 书签已保存",
+    "saveSuccessMessage": "已保存：{{title}}",
+    "saveFailTitle": "❌ 保存失败",
+    "saveFailMessage": "书签保存失败，请重试",
+    "toastSaved": "✅ 已保存书签"
+  },
+  "folder": {
+    "work": "工作",
+    "personal": "个人",
+    "learning": "学习",
+    "uncategorized": "未分类",
+    "bookmarks": "收藏夹",
+    "development": "开发"
+  },
+  "progressIndicator": {
+    "thinking": "思考中",
+    "toolCalling": "准备工具",
+    "toolExecuting": "执行中",
+    "responding": "生成回复",
+    "processing": "处理中"
+  },
+  "quickAction": {
+    "search": "搜索",
+    "organize": "整理",
+    "discover": "找资源",
+    "recommend": "推荐",
+    "chat": "聊天",
+    "searchDesc": "搜索我的书签",
+    "organizeDesc": "整理书签分类",
+    "discoverDesc": "搜索网络资源",
+    "recommendDesc": "推荐相关内容",
+    "chatDesc": "自由对话"
+  },
+  "floatingChat": {
+    "operationComplete": "✨ 操作已完成！请查看书签列表确认变化。",
+    "errorOccurred": "❌ 抱歉，出现了一些问题，请重试",
+    "clearChatConfirm": "确定要清空所有对话历史吗？此操作不可恢复。",
+    "saveFailed": "❌ 保存书签失败，请重试",
+    "saveCancelled": "❌ 已取消保存",
+    "saveSuccess": "✅ 已成功保存《{{title}}》\n\n📁 位置: {{folderPath}}\n🏷️ 标签: {{tags}}",
+    "placeholder": "输入消息... (Enter 发送)",
+    "actions": {
+      "saveCurrentPage": "把当前网页收藏",
+      "collectAI": "把所有AI相关书签收集到文件夹",
+      "organize": "智能整理书签"
+    }
+  },
+  "messageBubble": {
+    "copied": "已复制",
+    "copy": "复制",
+    "regenerate": "重新生成",
+    "helpful": "有帮助",
+    "notHelpful": "没帮助"
+  },
+  "resizableDivider": {
+    "doubleClickExpand": "双击展开",
+    "dragResize": "拖拽调整宽度",
+    "dragResizeCollapse": "拖拽调整宽度 | 双击折叠",
+    "expandPanel": "展开面板",
+    "collapsePanel": "折叠面板"
+  },
+  "thinkingCard": {
+    "thinkingProcess": "思考过程",
+    "thinking": "思考中..."
+  },
+  "conflict": {
+    "title": "发现 {{count}} 个冲突",
+    "batchActions": "批量操作",
+    "batch": {
+      "useAllPlugin": "全部用插件版本",
+      "useAllChrome": "全部用 Chrome 版本",
+      "useAllNewer": "全部用较新版本",
+      "keepAllBoth": "全部保留两个"
+    },
+    "pluginVersion": "插件版本",
+    "chromeVersion": "Chrome 版本",
+    "newer": "较新",
+    "field": {
+      "title": "标题",
+      "path": "路径",
+      "time": "修改时间"
+    },
+    "option": {
+      "usePlugin": "用插件版本",
+      "useChrome": "用 Chrome 版本",
+      "keepBoth": "保留两个"
+    },
+    "type": {
+      "title": "标题不同",
+      "path": "路径不同",
+      "both": "标题和路径都不同"
+    },
+    "summary": {
+      "usePlugin": "更新 {{count}} 个为插件版本",
+      "useChrome": "更新 {{count}} 个为 Chrome 版本",
+      "keepBoth": "创建 {{count}} 个副本",
+      "unresolved": "{{count}} 个未解决",
+      "none": "无更改"
+    },
+    "apply": "应用更改",
+    "applying": "应用中",
+    "noConflicts": "没有发现冲突",
+    "unresolvedWarning": "请先解决全部 {{count}} 个冲突再应用",
+    "result": {
+      "success": "成功解决 {{count}} 个冲突",
+      "partial": "已解决 {{resolved}} 个，失败 {{failed}} 个"
+    }
+  },
+  "sync": {
+    "status": {
+      "synced": "已同步",
+      "syncing": "同步中",
+      "hasConflicts": "有冲突",
+      "error": "错误",
+      "disabled": "已禁用"
+    },
+    "tooltip": {
+      "synced": "所有书签已同步",
+      "syncing": "正在同步书签...",
+      "hasConflicts": "{{count}} 个冲突需要解决",
+      "error": "同步出错",
+      "disabled": "Chrome 同步已禁用"
+    }
+  }
+}

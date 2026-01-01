@@ -1,0 +1,139 @@
+/* 同步状态指示器样式 */
+
+.sync-status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 16px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.sync-status-indicator:hover {
+  opacity: 0.85;
+}
+
+/* 状态样式 */
+.sync-status-indicator.synced {
+  background: var(--success-bg, #d4edda);
+  color: var(--success-color, #155724);
+}
+
+.sync-status-indicator.syncing {
+  background: var(--info-bg, #cce5ff);
+  color: var(--info-color, #004085);
+}
+
+.sync-status-indicator.has_conflicts {
+  background: var(--warning-bg, #fff3cd);
+  color: var(--warning-color, #856404);
+}
+
+.sync-status-indicator.error {
+  background: var(--danger-bg, #f8d7da);
+  color: var(--danger-color, #721c24);
+}
+
+.sync-status-indicator.disabled {
+  background: var(--bg-secondary, #f0f0f0);
+  color: var(--text-secondary, #666);
+  cursor: default;
+}
+
+/* 图标 */
+.sync-status-icon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.sync-status-icon.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* 文本 */
+.sync-status-text {
+  font-weight: 500;
+}
+
+/* 冲突数量徽章 */
+.sync-conflict-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 9px;
+  background: var(--warning-color, #856404);
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* 紧凑模式 */
+.sync-status-indicator.compact {
+  padding: 4px 8px;
+  font-size: 11px;
+}
+
+.sync-status-indicator.compact .sync-status-icon {
+  font-size: 12px;
+}
+
+.sync-status-indicator.compact .sync-conflict-badge {
+  min-width: 16px;
+  height: 16px;
+  font-size: 10px;
+}
+
+/* 仅图标模式 */
+.sync-status-indicator.icon-only {
+  padding: 6px;
+  border-radius: 50%;
+}
+
+.sync-status-indicator.icon-only .sync-status-text,
+.sync-status-indicator.icon-only .sync-conflict-badge {
+  display: none;
+}
+
+/* 工具提示 */
+.sync-status-indicator[title] {
+  position: relative;
+}
+
+/* 暗色主题 */
+@media (prefers-color-scheme: dark) {
+  .sync-status-indicator.synced {
+    --success-bg: #1e3a2f;
+    --success-color: #75d99a;
+  }
+  
+  .sync-status-indicator.syncing {
+    --info-bg: #1e3a4f;
+    --info-color: #7ab8e8;
+  }
+  
+  .sync-status-indicator.has_conflicts {
+    --warning-bg: #3a3520;
+    --warning-color: #e8c547;
+  }
+  
+  .sync-status-indicator.error {
+    --danger-bg: #3a2020;
+    --danger-color: #e87575;
+  }
+  
+  .sync-status-indicator.disabled {
+    --bg-secondary: #2d2d2d;
+    --text-secondary: #888;
+  }
+}

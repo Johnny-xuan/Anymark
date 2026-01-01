@@ -1,0 +1,1153 @@
+{
+  "onboarding": {
+    "hero": {
+      "title": "AnyMark",
+      "subtitle": "Your Smart Bookmark Assistant",
+      "description": "Conversational AI Agent · Vim Navigation · Custom API · Free & Open Source",
+      "badge": "v1.0 Launch",
+      "explore": "Explore Features",
+      "scroll": "Scroll Down"
+    },
+    "buddies": {
+      "heading": "Choose Your Pixel Buddy",
+      "subtitle": "Five unique AI assistants to help organize your bookmark world",
+      "koda": {
+        "name": "Koda",
+        "role": "The Scholar",
+        "quote": "In the vast ocean of links, I am your steadfast anchor."
+      },
+      "vex": {
+        "name": "Vex",
+        "role": "Cyber Hunter",
+        "quote": "Filtering noise, I capture only the most valuable signals."
+      },
+      "sprout": {
+        "name": "Sprout",
+        "role": "Knowledge Gardener",
+        "quote": "Every bookmark is a seed of inspiration waiting to bloom."
+      },
+      "flare": {
+        "name": "Flare",
+        "role": "Inspiration Explorer",
+        "quote": "Life isn't just about collecting - discover and shine!"
+      },
+      "null": {
+        "name": "Null",
+        "role": "Binary Butler",
+        "quote": "Strip away the excess, return to pure information logic."
+      }
+    },
+    "agent": {
+      "heading": "Conversational AI Agent",
+      "subtitle": "Manage bookmarks with natural language, as easy as chatting with a friend",
+      "search": {
+        "title": "Search Bookmarks",
+        "desc": "Quickly search your saved bookmarks"
+      },
+      "discover": {
+        "title": "Discover Resources",
+        "desc": "Find new quality resources online"
+      },
+      "trending": {
+        "title": "Trending Projects",
+        "desc": "See hot GitHub open source projects"
+      },
+      "organize": {
+        "title": "Smart Organize",
+        "desc": "AI analyzes and auto-categorizes bookmarks"
+      },
+      "chat": {
+        "title": "Chat Mode",
+        "desc": "Just chat, ask anything you want"
+      }
+    },
+    "appName": "ANYMARK",
+    "agentDemo": {
+      "welcome": "👋 Click the buttons below to try!",
+      "online": "Online",
+      "placeholder": "Try typing your question...",
+      "agentName": "AnyMark Agent",
+      "action1": "Search",
+      "action2": "Discover",
+      "action3": "Trending",
+      "action4": "Organize",
+      "action5": "Chat",
+      "demo1": {
+        "user": "Find my React learning materials",
+        "assistant": "Found 8 React bookmarks: React Docs, React Hooks Tutorial, Redux Guide... Which one to open?"
+      },
+      "demo2": {
+        "user": "Recommend some Python resources",
+        "assistant": "Recommended: Real Python, Python Official Tutorial, Automate the Boring Stuff... Want me to save them?"
+      },
+      "demo3": {
+        "user": "What's trending this week",
+        "assistant": "This week's hot: shadcn/ui, langchain, ollama... All AI and dev tools related 🔥"
+      },
+      "demo4": {
+        "user": "Organize all my tech bookmarks",
+        "assistant": "Done! Found 23 tech bookmarks, organized into Frontend, Backend, and DevOps ✨"
+      },
+      "demo5": {
+        "user": "Hey there",
+        "assistant": "Hello! I'm AnyMark's AI assistant. How can I help you today? 😊"
+      }
+    },
+    "shortcuts": {
+      "heading": "Keyboard Shortcuts",
+      "subtitle": "Built for efficiency, Vim-style navigation for smooth operation",
+      "navigation": "Navigation",
+      "actions": "Actions",
+      "global": "Global",
+      "updown": "Navigate up/down",
+      "vimNav": "Vim-style navigation",
+      "open": "Open bookmark",
+      "star": "Star/Unstar",
+      "delete": "Delete",
+      "copy": "Copy URL",
+      "sidebar": "Open sidebar",
+      "save": "Quick save",
+      "note": "Windows/Linux users: Use Ctrl instead of ⌘"
+    },
+    "cta": {
+      "heading": "Ready to Start?",
+      "text": "Choose your favorite Pixel Buddy and begin your smart bookmark journey",
+      "button": "Get Started",
+      "hint": "Click to open the sidebar"
+    },
+    "themes": {
+      "heading": "PIXEL BUDDY THEMES",
+      "subtitle": "5 Theme Styles to Match Your Mood",
+      "koda": {
+        "name": "Koda",
+        "subtitle": "Classic Pixel · Blue",
+        "desc": "Professional blue, calm and reliable"
+      },
+      "vex": {
+        "name": "Vex",
+        "subtitle": "Cyberpunk Neon · Purple",
+        "desc": "Purple cyberpunk, futuristic vibes"
+      },
+      "sprout": {
+        "name": "Sprout",
+        "subtitle": "Nature Sprout · Green",
+        "desc": "Green natural, healing experience"
+      },
+      "flare": {
+        "name": "Flare",
+        "subtitle": "Sunset Explorer · Orange",
+        "desc": "Warm orange, explore inspiration"
+      },
+      "null": {
+        "name": "Null",
+        "subtitle": "Geek Terminal · Hacker",
+        "desc": "Hacker style, built for geeks"
+      }
+    },
+    "cta": {
+      "heading": "Ready to Get Started?",
+      "text": "Experience AI-powered smart bookmark management - 100% Free & Open Source!",
+      "button": "Get Started",
+      "hint": "Click to open sidebar and start your smart bookmark journey"
+    },
+    "dotsNavigation": {
+      "goToSection": "Go to section {{section}}"
+    },
+    "language": {
+      "english": "English",
+      "chinese": "简体中文",
+      "japanese": "日本語",
+      "german": "Deutsch",
+      "spanish": "Español",
+      "french": "Français"
+    }
+  },
+  "sidebar": {
+    "header": {
+      "title": "AnyMark",
+      "settings": "Settings",
+      "expand": "Expand",
+      "close": "Close",
+      "theme": "Toggle Theme",
+      "aiAnalyze": "AI Analysis"
+    },
+    "search": {
+      "placeholder": "Search bookmarks...",
+      "noResults": "No bookmarks found",
+      "searching": "Searching..."
+    },
+    "filters": {
+      "all": "All",
+      "uncategorized": "AI Categories",
+      "favorites": "Favorites",
+      "recent": "Recent",
+      "popular": "Popular",
+      "longTail": "Long Tail",
+      "trash": "Trash",
+      "descriptions": {
+        "chrome": "All bookmarks",
+        "uncategorized": "AI categorized bookmarks",
+        "favorites": "Starred bookmarks",
+        "recent": "Recent browser tabs",
+        "popular": "Most visited (Top 20)",
+        "longTail": "Long tail - least visited",
+        "trash": "Deleted bookmarks"
+      }
+    },
+    "bookmarks": {
+      "loading": "Loading bookmarks...",
+      "empty": "No bookmarks yet",
+      "emptyHint": "Add your first bookmark to get started",
+      "count": "{{count}} bookmarks",
+      "selected": "Selected",
+      "delete": "Delete",
+      "restore": "Restore",
+      "favorite": "Add to Favorites",
+      "unfavorite": "Remove from Favorites",
+      "edit": "Edit",
+      "open": "Open",
+      "copyUrl": "Copy URL",
+      "moveToFolder": "Move to Folder"
+    },
+    "bookmarkList": {
+      "empty": {
+        "noBookmarks": "No bookmarks found",
+        "adjustFilters": "Try adjusting your filters or search query",
+        "noSearchResults": "No matching bookmarks found",
+        "tryDifferentKeywords": "Try searching with different keywords",
+        "noCategories": "No categorized bookmarks",
+        "useAiAnalysis": "Use AI analysis to categorize bookmarks",
+        "chromeTitle": "Import from Chrome Bookmarks",
+        "chromeDesc": "Click the button below to import your Chrome bookmarks into AnyMark",
+        "importButton": "Import Chrome Bookmarks",
+        "importing": "Importing..."
+      },
+      "item": {
+        "visits": "{{count}} visits",
+        "items": "{{count}} items",
+        "folders": "{{count}} folders",
+        "analyzing": "AI analyzing...",
+        "analyze": "AI smart analysis",
+        "expandLabel": "Expand",
+        "collapseLabel": "Collapse"
+      },
+      "actions": {
+        "reanalyze": "This bookmark has been analyzed. Re-analyze?",
+        "startAnalyzing": "Starting AI analysis...",
+        "analyzeComplete": "AI analysis complete!",
+        "analyzeFailed": "AI analysis failed: {{error}}",
+        "analyzeEmpty": "Analysis result is empty",
+        "noSummary": "Unable to generate summary"
+      },
+      "edit": {
+        "renaming": "Renaming folder (ESC to cancel, Enter to save)",
+        "editing": "Editing mode (ESC to cancel, Enter to save)",
+        "cancelled": "Editing cancelled",
+        "emptyTitle": "Title cannot be empty",
+        "folderRenamed": "Folder renamed",
+        "bookmarkUpdated": "Bookmark updated"
+      },
+      "delete": {
+        "confirmFolder": "Delete folder: \"{{title}}\"?\n\nThis will delete all bookmarks in the folder!",
+        "folderDeleted": "Folder \"{{title}}\" deleted",
+        "confirmPermanent": "Permanently delete bookmark: \"{{title}}\"?\n\n⚠️ This action cannot be undone!",
+        "confirmPermanentFolder": "Permanently delete folder \"{{title}}\" and its {{count}} bookmarks?\n\n⚠️ This action cannot be undone!",
+        "permanentlyDeleted": "Bookmark permanently deleted",
+        "folderPermanentlyDeleted": "Folder \"{{title}}\" and {{count}} bookmarks permanently deleted",
+        "confirmDelete": "Delete bookmark: \"{{title}}\"?\n\nCan be restored from trash",
+        "movedToTrash": "Moved to trash",
+        "restored": "Bookmark restored",
+        "folderRestored": "Restored folder \"{{title}}\" with {{count}} bookmarks"
+      },
+      "drag": {
+        "cannotMoveToSelf": "Cannot move folder into itself or its subfolder",
+        "movedToFolder": "Moved to folder: {{title}}",
+        "folderMoved": "Folder moved to: {{title}}",
+        "folderReordered": "Folder reordered",
+        "bookmarkReordered": "Bookmark reordered"
+      },
+      "star": {
+        "added": "Added to starred",
+        "removed": "Removed from starred",
+        "pinned": "Bookmark pinned",
+        "unpinned": "Bookmark unpinned"
+      },
+      "copy": {
+        "success": "URL copied to clipboard",
+        "failed": "Failed to copy URL"
+      },
+      "open": {
+        "failed": "Unable to open link",
+        "apiUnavailable": "Unable to open link: Browser API unavailable"
+      },
+      "import": {
+        "starting": "Importing from Chrome bookmarks, please wait...",
+        "started": "Starting import from Chrome bookmarks...",
+        "completed": "Import completed!",
+        "failed": "Import failed: {{error}}"
+      },
+      "multiSelect": {
+        "selected": "{{count}} selected",
+        "selectAll": "Select all bookmarks",
+        "selectAllBtn": "Select All",
+        "star": "Star selected",
+        "delete": "Delete selected",
+        "clear": "Clear selection",
+        "confirmDelete": "Delete {{count}} bookmarks?\n\nThey will be moved to trash.",
+        "deleted": "{{count}} bookmarks moved to trash"
+      }
+    },
+    "tagCloud": {
+      "title": "Tag Cloud",
+      "empty": "No tags yet",
+      "filtering": "Filtering by:"
+    },
+    "preview": {
+      "title": "Preview",
+      "noSelection": "Select a bookmark to preview",
+      "selectHint": "Use ↑↓ keys to navigate through bookmarks",
+      "url": "URL",
+      "tags": "Tags",
+      "category": "Category",
+      "summary": "Summary",
+      "confidence": "Confidence",
+      "createdAt": "Created",
+      "updatedAt": "Updated",
+      "actions": {
+        "open": "Open",
+        "edit": "Edit",
+        "star": "Star",
+        "unstar": "Unstar",
+        "copyUrl": "Copy URL",
+        "delete": "Delete",
+        "restore": "Restore"
+      },
+      "sections": {
+        "aiAnalysis": "AI Analysis",
+        "statistics": "Statistics",
+        "tags": "Tags",
+        "notes": "Notes",
+        "summary": "Summary"
+      },
+      "stats": {
+        "visits": "Visits",
+        "visitsTimes": "{{count}} times",
+        "lastVisit": "Last Visit",
+        "created": "Created",
+        "importance": "Importance",
+        "never": "Never"
+      },
+      "ai": {
+        "reanalyze": "Reanalyze",
+        "analyzing": "Analyzing...",
+        "analyzeNow": "Analyze Now",
+        "noAnalysis": "No summary yet, click to analyze or edit manually",
+        "category": "Category:",
+        "startAnalyzing": "Starting AI analysis...",
+        "analyzeComplete": "AI analysis complete!",
+        "analyzeFailed": "AI analysis failed: {{error}}",
+        "analyzeEmpty": "Analysis result is empty",
+        "generated": "AI Generated"
+      },
+      "time": {
+        "justNow": "Just now",
+        "minutesAgo": "{{count}}m ago",
+        "hoursAgo": "{{count}}h ago",
+        "daysAgo": "{{count}}d ago"
+      },
+      "shortcuts": {
+        "open": "Open",
+        "newTab": "New Tab",
+        "edit": "Edit",
+        "copyUrl": "Copy URL",
+        "star": "Star",
+        "unstar": "Unstar",
+        "delete": "Delete",
+        "restore": "Restore"
+      },
+      "messages": {
+        "updated": "Bookmark updated",
+        "urlCopied": "URL copied to clipboard",
+        "starred": "Added to favorites",
+        "unstarred": "Removed from favorites",
+        "restored": "Bookmark restored",
+        "deleted": "Moved to trash",
+        "confirmDelete": "Delete bookmark: \"{{title}}\"?\n\nCan be restored from trash",
+        "confirmRestore": "Choose action:\n\nOK = Restore bookmark\nCancel = Go back"
+      },
+      "breadcrumb": {
+        "root": "Root"
+      }
+    },
+    "welcome": {
+      "title": "Welcome to AnyMark!",
+      "subtitle": "Your Smart Bookmark Manager",
+      "feature1": "💡 Quick Tip",
+      "feature1Desc": "Drag the left edge of the sidebar to adjust width to 40-50% of screen for best experience",
+      "feature2": "✨ Chrome Remembers",
+      "feature2Desc": "Your sidebar width preference will be saved automatically",
+      "close": "Get Started →",
+      "dontShowAgain": "Don't show again"
+    },
+    "analysis": {
+      "analyzing": "Analyzing...",
+      "progress": "Progress: {{percent}}%",
+      "status": "📖 Analyzing bookmarks...",
+      "complete": "✅ Analysis complete! {{count}} bookmarks analyzed",
+      "failed": "❌ Analysis failed: {{error}}",
+      "noBookmarks": "No bookmarks to analyze",
+      "addFirst": "Please add or import bookmarks first",
+      "reanalyzeConfirm": "All {{count}} bookmarks have been analyzed. Re-analyze all bookmarks?"
+    },
+    "toast": {
+      "bookmarkAdded": "Bookmark added",
+      "bookmarkDeleted": "Bookmark deleted",
+      "bookmarkRestored": "Bookmark restored",
+      "bookmarkUpdated": "Bookmark updated",
+      "importSuccess": "Successfully imported {{count}} Chrome bookmarks!",
+      "importFailed": "Failed to import bookmarks",
+      "copySuccess": "URL copied to clipboard",
+      "copyFailed": "Failed to copy URL",
+      "deleteConfirm": "Are you sure you want to permanently delete \"{{title}}\"? This action cannot be undone!",
+      "permanentlyDeleted": "Permanently deleted",
+      "analysisComplete": "✅ Background analysis complete! Success: {{completed}}, Failed: {{failed}}",
+      "analysisStarted": "🚀 Smart analysis will process {{count}} bookmarks in the background",
+      "analysisFailed": "❌ Failed to start analysis: {{error}}",
+      "analyzing": "Analyzing... {{progress}}%",
+      "deleteConfirmTitle": "Are you sure you want to delete \"{{title}}\"?",
+      "noApiKey": "⚠️ Please configure AI API Key in Settings first",
+      "configError": "Unable to check API configuration",
+      "allAnalyzed": "✅ All bookmarks have been analyzed!",
+      "timeHintShort": "~1 minute",
+      "timeHintLong": "~{{minutes}} minutes",
+      "undo": "Undo",
+      "undoSuccess": "Undone",
+      "noUndoOperation": "No operation to undo",
+      "undoFailed": "Undo failed",
+      "retry": "Retry",
+      "retrySuccess": "Retry successful"
+    },
+    "errors": {
+      "loadBookmarks": "Failed to load bookmarks"
+    },
+    "editDialog": {
+      "title": "Edit Bookmark",
+      "fields": {
+        "title": "Title",
+        "titlePlaceholder": "Bookmark title",
+        "url": "URL",
+        "urlPlaceholder": "https://...",
+        "folder": "Folder",
+        "folderPlaceholder": "/Category/Subcategory",
+        "tags": "Tags",
+        "tagsPlaceholder": "Add tag...",
+        "notes": "Notes",
+        "notesPlaceholder": "Add your notes...",
+        "summary": "Summary",
+        "summaryPlaceholder": "Edit summary content..."
+      },
+      "badges": {
+        "aiGenerated": "AI Generated"
+      },
+      "buttons": {
+        "add": "Add",
+        "cancel": "Cancel",
+        "save": "Save"
+      },
+      "hints": {
+        "aiSummary": "Currently showing AI-generated summary, you can edit it directly",
+        "userNotes": "You can edit or add to your notes",
+        "summary": "Editing will override AI-generated summary"
+      },
+      "shortcuts": {
+        "cancel": "Cancel",
+        "save": "Save"
+      }
+    },
+    "contextMenu": {
+      "openNewTab": "Open in New Tab",
+      "copyLink": "Copy Link",
+      "edit": "Edit",
+      "rename": "Rename",
+      "star": "Star",
+      "unstar": "Unstar",
+      "moveTo": "Move to...",
+      "archive": "Archive",
+      "delete": "Delete",
+      "deleteFolder": "Delete Folder"
+    },
+    "aiChat": {
+      "title": "AnyMark Assistant",
+      "archive": "Chat Archive",
+      "newChat": "New Chat",
+      "clearChat": "Clear Chat",
+      "close": "Close",
+      "welcome": {
+        "greeting": "👋 Hi! I'm your AnyMark Assistant",
+        "tryAsking": "Try asking me:",
+        "examples": {
+          "findTutorial": "Find a Python tutorial",
+          "saveCurrentPage": "Save current page",
+          "recommendResources": "Recommend some frontend resources",
+          "whatCanYouDo": "What can you do"
+        }
+      },
+      "input": {
+        "placeholder": "Type a message... (Enter to send, ↑↓ to browse history)",
+        "placeholderWithAction": "{{description}}...",
+        "send": "Send"
+      },
+      "messages": {
+        "error": "❌ Sorry, AI service is temporarily unavailable. Please try again later.",
+        "regenerate": "Regenerate",
+        "feedback": "Feedback"
+      },
+      "confirm": {
+        "clearChat": "Are you sure you want to clear the current conversation?"
+      },
+      "status": {
+        "thinking": "Thinking...",
+        "processing": "Processing...",
+        "autoSaved": "Auto-saved conversation",
+        "archived": "Conversation archived on close"
+      }
+    },
+    "footer": {
+      "shortcuts": {
+        "newTab": "New Tab",
+        "star": "Star",
+        "more": "More"
+      }
+    },
+    "keyboard": {
+      "title": "Keyboard Shortcuts",
+      "navigation": "Navigation",
+      "actions": "Actions",
+      "panels": "Panels",
+      "filterTabs": "Filter Tabs",
+      "close": "Close",
+      "shortcuts": {
+        "up": "Navigate up",
+        "down": "Navigate down",
+        "jk": "Vim-style navigation",
+        "jumpFirst": "Jump to first",
+        "jumpLast": "Jump to last",
+        "pageUp": "Page up",
+        "pageDown": "Page down",
+        "enter": "Open bookmark",
+        "openNewTab": "Open in new tab",
+        "star": "Star/Unstar",
+        "space": "Toggle preview panel",
+        "slash": "Focus search",
+        "focusSearch": "Focus search",
+        "openFirst": "Open first match",
+        "escape": "Close panels / Clear focus",
+        "h": "Show this help",
+        "altA": "Toggle AI chat",
+        "r": "Restore (in trash)",
+        "d": "Delete permanently (in trash)",
+        "chrome": "Chrome",
+        "recent": "Recent",
+        "popular": "Popular",
+        "longTail": "Long Tail"
+      }
+    },
+    "keyboardHelp": {
+      "title": "⌨️ Keyboard Shortcuts",
+      "closeHint": "Press H or Esc to close",
+      "or": "or",
+      "categories": {
+        "navigation": "Navigation",
+        "bookmarkActions": "Bookmark Actions",
+        "filters": "Filters",
+        "search": "Search",
+        "trash": "Trash",
+        "other": "Other"
+      },
+      "items": {
+        "prevItem": "Previous item",
+        "nextItem": "Next item",
+        "openBookmark": "Open bookmark",
+        "jumpTop": "Jump to top",
+        "jumpBottom": "Jump to bottom",
+        "pageUp": "Page up",
+        "pageDown": "Page down",
+        "openNewTab": "Open in new tab",
+        "copyUrl": "Copy URL",
+        "toggleStar": "Toggle star",
+        "editBookmark": "Edit bookmark",
+        "deleteToTrash": "Delete to trash",
+        "filterAll": "All bookmarks",
+        "filterCategories": "By category",
+        "filterStarred": "Starred",
+        "filterRecent": "Recent",
+        "filterPopular": "Popular",
+        "filterTrash": "Trash",
+        "focusSearch": "Focus search",
+        "openFirstMatch": "Open first match",
+        "clearSearch": "Clear search / Exit edit",
+        "restoreBookmark": "Restore bookmark",
+        "permanentDelete": "Permanent delete",
+        "togglePreview": "Toggle preview panel",
+        "showHideHelp": "Show/hide help"
+      }
+    },
+    "settings": {
+      "title": "Settings",
+      "tabs": {
+        "ai": "🤖 AI Settings",
+        "sync": "☁️ Cloud Sync",
+        "ui": "🎨 UI Settings",
+        "data": "💾 Data Management",
+        "advanced": "⚙️ Advanced"
+      },
+      "ai": {
+        "title": "🤖 AI Model Configuration",
+        "description": "Supports all large models compatible with OpenAI API format. Choose a preset or custom configuration.",
+        "provider": "Service Provider",
+        "apiUrl": "API URL",
+        "apiUrlPlaceholder": "https://api.openai.com/v1/chat/completions",
+        "apiUrlDesc": "Full API request address (including /chat/completions)",
+        "modelId": "Model ID",
+        "modelIdPlaceholder": "gpt-3.5-turbo",
+        "modelIdDesc": "For example: gpt-4, deepseek-chat, qwen-turbo",
+        "currentConfig": "Current Configuration",
+        "currentConfigUrl": "API URL:",
+        "currentConfigModel": "Model ID:",
+        "defaultAddress": "Default address",
+        "defaultModel": "Default model",
+        "keyManagement": "API Key Management",
+        "keyCount": "Configured Keys",
+        "keyCountValue": "{{count}} API Keys",
+        "keyCountNone": "No API Key configured, please add at least one",
+        "keyCountOne": "Recommend adding multiple API Keys for rotation to prevent single key rate limiting",
+        "keyCountMultiple": "Rotation enabled, multiple keys prevent complete failure from single key rate limiting",
+        "manageKeys": "Manage API Keys",
+        "noKeysAlert": "No API Key configured, AI features will be unavailable",
+        "keyNumber": "🔑 API Key #{{number}}",
+        "addNewKey": "Add New API Key",
+        "addKeyPlaceholder": "Paste your API Key",
+        "addButton": "Add",
+        "keySecurityNote": "🔒 API Keys are encrypted and stored locally, never uploaded to any server",
+        "connectionTest": "Connection Test",
+        "testButton": "Test Connection",
+        "testing": "Testing...",
+        "testSuccess": "✅",
+        "testFailed": "❌",
+        "testDesc": "Verify that API URL, Model ID, and API Key are configured correctly",
+        "autoAnalyze": "Auto AI analyze new bookmarks",
+        "autoAnalyzeDesc": "Newly added bookmarks will be automatically analyzed",
+        "searchConfig": "🔍 Search Service Configuration",
+        "searchConfigDesc": "Configure GitHub Token and custom search service to enhance search experience",
+        "githubToken": "GitHub Personal Access Token",
+        "githubTokenPlaceholder": "ghp_xxxxxxxxxxxx",
+        "githubTokenDesc": "After configuration, GitHub API request limit increases from 10/min to 30/min.",
+        "getToken": "Get Token →",
+        "searchServiceUrl": "Custom Search Service URL",
+        "searchServiceUrlPlaceholder": "https://your-search-service.com/search?q=",
+        "searchServiceUrlDesc": "Leave empty to use default search service. Supports self-hosted search engines like Whoogle, SearXNG. URL format: search service address + query parameter (e.g., ?q=)"
+      },
+      "sync": {
+        "chromeSync": "🔗 Chrome Bookmark Sync",
+        "chromeSyncDesc": "When enabled, add/edit/delete operations in bookmark manager will sync to Chrome native bookmarks in real-time",
+        "syncStatus": "Sync Status",
+        "enabled": "Enabled",
+        "disabled": "Disabled",
+        "statusEnabled": "✅ Bookmark changes will sync to Chrome native bookmark manager",
+        "statusDisabled": "❌ Bookmark changes don't affect Chrome native bookmarks (independent management)",
+        "enableSync": "Sync with Chrome native bookmarks",
+        "enableSyncDesc": "Enabled: Add/edit/delete operations in bookmark manager sync to Chrome in real-time<br />Disabled: Bookmark manager and Chrome bookmarks are managed independently",
+        "refreshSync": "Refresh Sync",
+        "refreshButton": "Refresh Sync",
+        "syncing": "Syncing...",
+        "refreshDesc": "Merge manager and Chrome bookmarks (union), remove duplicates.<br />Same bookmark (same URL) + same folder → keep only one<br />Same bookmark (same URL) + different folder → keep both",
+        "firstInstallAlert": "On first installation, bookmarks are imported from Chrome but won't auto-sync. Please enable sync here.",
+        "cloudSync": "☁️ Cloud Config Sync",
+        "cloudSyncDesc": "Use Chrome account to sync core settings to cloud, supports multi-device sync",
+        "lastSync": "Last sync:",
+        "toggleSync": "Sync Toggle",
+        "enableButton": "Enable Sync",
+        "disableButton": "Disable Sync",
+        "processing": "Processing...",
+        "syncContent": "Sync content: AI config, user preferences, custom rules, and other core settings",
+        "manualSync": "Manual Sync",
+        "syncNow": "Sync Now",
+        "syncNowDesc": "Immediately sync current configuration to cloud",
+        "storageQuota": "Storage Quota",
+        "quotaUsed": "Used: {{used}}KB / {{limit}}KB",
+        "quotaDesc": "Chrome extension storage limit is 100KB",
+        "advancedOps": "Advanced Operations",
+        "clearCloud": "Clear Cloud Config",
+        "clearCloudDesc": "⚠️ This operation will delete all synced configuration data in the cloud",
+        "syncEnabled": "Chrome sync enabled, bookmark changes will sync to Chrome",
+        "syncDisabled": "Chrome sync disabled, bookmark changes don't affect Chrome",
+        "confirmEnableSync": "Enable Chrome bidirectional sync?\n\nWhen enabled:\n• Bookmark changes will sync to Chrome native bookmarks\n• Chrome bookmark changes will sync to this extension\n• First sync will merge existing bookmarks (union)\n\nContinue?",
+        "initialSyncComplete": "Initial sync complete! Merged: {{merged}}, Added to Chrome: {{addedToChrome}}, Added to local: {{addedToStorage}}",
+        "toggleFailed": "Failed to toggle sync: {{error}}"
+      },
+      "ui": {
+        "language": "🌍 Language Settings",
+        "languageLabel": "Interface Language",
+        "languageDesc": "Select interface display language. Changes take effect immediately.",
+        "openMode": "🚪 Open Mode",
+        "openModeLabel": "When clicking Pixel Buddy or extension icon",
+        "openModeSidebar": "Sidebar Mode",
+        "openModeTab": "New Tab Mode",
+        "openModeDesc": "Sidebar: Opens in browser sidebar, manage bookmarks while browsing<br />New Tab: Opens in full page for more operating space",
+        "viewMode": "📐 View Mode",
+        "viewModeLabel": "Default View",
+        "viewModeList": "List View",
+        "viewModeGrid": "Grid View",
+        "viewModeCompact": "Compact View",
+        "previewPanel": "Default show preview panel",
+        "previewPanelWidth": "Preview panel width ({{width}}%)",
+        "pixelBuddy": "Pixel Buddy",
+        "pixelTheme": "Theme Style",
+        "pixelThemeDesc": "After selecting a character, click 'Save Character' to force refresh Pixel Buddy appearance",
+        "saveTheme": "Save Character",
+        "themeSelected": "Selected"
+      },
+      "data": {
+        "exportAiTitle": "📤 Export AI Categories",
+        "exportAiDesc": "Export AI smart categorized bookmarks, choose to export as HTML file or directly to Chrome bookmarks bar",
+        "lastExport": "Last Export",
+        "exportAsHtml": "Export as HTML File",
+        "exportAsHtmlDesc": "Export as Chrome bookmark format HTML file, can be manually imported to any browser",
+        "exportToChrome": "Export to Chrome Bookmarks",
+        "exportToChromeDesc": "Create a timestamped 'AnyMark AI Categories' folder in Chrome bookmarks bar, can be repeated",
+        "exporting": "Exporting...",
+        "chromeReimport": "Reimport from Chrome",
+        "chromeReimportDesc": "⚠️ This will clear all existing bookmarks in AnyMark folder, then reimport all Chrome bookmarks (except AnyMark folder itself).",
+        "reimportFromChrome": "Reimport from Chrome",
+        "reimporting": "Reimporting...",
+        "backupRestore": "Backup & Restore",
+        "importExport": "Data Backup",
+        "exportBookmarks": "Export Backup",
+        "exportBackup": "Export Backup (JSON)",
+        "exportDesc": "Export bookmarks as JSON file with all data",
+        "importBookmarks": "Import Backup",
+        "importBackup": "Import Backup (JSON)",
+        "importDesc": "Import bookmarks from JSON backup file",
+        "cleanup": "Cleanup",
+        "emptyTrash": "Empty Trash",
+        "emptyTrashDesc": "Permanently delete all bookmarks in trash (cannot be recovered)",
+        "resetSettings": "Reset All Settings",
+        "resetDesc": "Restore to default settings"
+      },
+      "advanced": {
+        "deleteMode": "Delete Behavior",
+        "softDelete": "Enable soft delete (move to trash)",
+        "softDeleteDesc": "When disabled, deleting bookmarks will permanently delete them",
+        "autoCleanup": "Auto Cleanup",
+        "autoArchiveDays": "Auto archive days",
+        "autoArchiveDaysDesc": "Bookmarks not accessed for more than this many days will be automatically archived (0 = disabled)",
+        "autoDeleteDays": "Auto delete days",
+        "autoDeleteDaysDesc": "Bookmarks in trash for more than this many days will be automatically deleted (0 = disabled)",
+        "storage": "Storage Optimization",
+        "indexedDBEnabled": "Use IndexedDB Storage",
+        "indexedDBDesc": "IndexedDB can store more bookmarks, but requires initial data migration. Recommended for users with many bookmarks (5000+).",
+        "advancedWarning": "Modifying advanced settings may affect extension functionality, please proceed with caution"
+      },
+      "messages": {
+        "saved": "Settings saved",
+        "saveFailed": "Save failed",
+        "saving": "Saving...",
+        "saveSettings": "Save Settings",
+        "keyAdded": "API Key added",
+        "keyRemoved": "API Key deleted",
+        "keyExists": "API Key already exists",
+        "enterKey": "Please enter API Key",
+        "testSuccess": "API connection test successful",
+        "testFailed": "API connection test failed",
+        "testError": "API connection test error",
+        "connecting": "Connecting...",
+        "noKeys": "Please add API Key first",
+        "connectionSuccess": "Connection successful! Model: {{model}}",
+        "connectionFailed": "Connection failed ({{status}}): {{error}}",
+        "connectionError": "Connection error: {{error}}",
+        "languageChanged": "Language changed",
+        "themeChanged": "✅ Character switched",
+        "themeSaved": "✅ Character saved and refreshed",
+        "themeSaveFailed": "❌ Failed to save character",
+        "syncEnabled": "Cloud sync enabled",
+        "syncDisabled": "Cloud sync disabled",
+        "syncFailed": "Operation failed: {{error}}",
+        "syncedToCloud": "Configuration synced to cloud",
+        "cloudCleared": "Cloud configuration cleared",
+        "clearFailed": "Clear failed: {{error}}",
+        "syncComplete": "Sync complete!\nMerged: {{merged}}\nAdded: {{added}}\nUpdated: {{updated}}",
+        "refreshFailed": "Refresh sync failed: {{error}}",
+        "enableSyncFirst": "Please enable Chrome bookmark sync first",
+        "bookmarksExported": "Bookmarks exported",
+        "exportFailed": "Export failed",
+        "bookmarksImported": "Imported {{count}} bookmarks",
+        "importFailed": "Import failed",
+        "invalidFile": "Invalid bookmark file",
+        "trashEmptied": "Trash emptied",
+        "emptyFailed": "Empty failed",
+        "settingsReset": "Settings reset",
+        "resetFailed": "Reset failed",
+        "confirmEmpty": "Are you sure you want to empty the trash? This action cannot be undone!",
+        "confirmReset": "Are you sure you want to reset all settings?",
+        "exportConfirm": "Export AI categories to Chrome bookmarks bar?\n\nA timestamped 'AnyMark AI Categories' folder will be created.",
+        "exportSuccess": "✅ Export successful! Created {{folders}} folders, exported {{bookmarks}} bookmarks",
+        "exportFailed": "❌ Export failed: {{error}}",
+        "exportedHtml": "Bookmarks exported as HTML format",
+        "reimportChromeConfirm": "⚠️ Reimport will clear all existing bookmarks in AnyMark folder!\n\nThen reimport all Chrome bookmarks (except AnyMark folder itself) to AnyMark.\n\nThis action cannot be undone. Continue?",
+        "reimportChromeStarting": "Reimporting bookmarks, please wait...",
+        "reimportChromeSuccess": "✅ Reimport complete! Imported {{bookmarks}} bookmarks and {{folders}} folders.",
+        "reimportChromeFailed": "❌ Reimport failed: {{error}}"
+      },
+      "providers": {
+        "custom": "Custom",
+        "openai": "OpenAI",
+        "azure": "Azure OpenAI",
+        "anthropic": "Anthropic Claude",
+        "google": "Google Gemini",
+        "groq": "Groq",
+        "xai": "xAI (Grok)",
+        "doubao": "Doubao (Volcano Engine)",
+        "moonshot": "Kimi (Moonshot)",
+        "aliyun": "Tongyi Qianwen (Alibaba Cloud)",
+        "yi": "01.AI",
+        "deepseek": "DeepSeek",
+        "siliconflow": "SiliconFlow",
+        "zhipu": "Zhipu GLM (ChatGLM)",
+        "minimax": "MiniMax (China)",
+        "minimaxIntl": "MiniMax (International)",
+        "openrouter": "OpenRouter",
+        "ollama": "Ollama (Local)",
+        "huggingface": "HuggingFace"
+      },
+      "pixelThemes": {
+        "switchTo": "Switch to {{name}}",
+        "classic": {
+          "name": "Classic Pixel",
+          "desc": "Fresh, professional, friendly",
+          "persona": "Koda · Scholar",
+          "slogan": "In the vast ocean of links, I'm your most reliable anchor."
+        },
+        "cyber": {
+          "name": "Cyber Neon",
+          "desc": "Futuristic, night mode, electronic pulse",
+          "persona": "Vex · Cyber Hunter",
+          "slogan": "Filter the noise, I only capture the most valuable signals."
+        },
+        "grow": {
+          "name": "Nature Sprout",
+          "desc": "Healing, growth, organic",
+          "persona": "Sprout · Knowledge Gardener",
+          "slogan": "Every bookmark is a seed of inspiration waiting to sprout."
+        },
+        "flare": {
+          "name": "Sunset Explorer",
+          "desc": "High energy, discovery, golden",
+          "persona": "Zing · Inspiration Explorer",
+          "slogan": "Life shouldn't just be about collecting, go discover, go shine!"
+        },
+        "noir": {
+          "name": "Geek Terminal",
+          "desc": "Hacker, retro, minimalist",
+          "persona": "Null · Binary Butler",
+          "slogan": "Strip away redundancy, return to the original logic of information."
+        }
+      }
+    }
+  },
+  "popup": {
+    "title": "AnyMark",
+    "quickActions": "Quick Actions",
+    "saveCurrentPage": "Save Current Page",
+    "openSidebar": "Open Sidebar",
+    "searchBookmarks": "Search Bookmarks",
+    "menu": {
+      "quickSave": "Quick Save Current Page",
+      "detailedSave": "Detailed Save...",
+      "openSidebar": "Open Sidebar",
+      "openInTab": "Open in New Tab",
+      "settings": "Settings"
+    },
+    "stats": {
+      "total": "Total Bookmarks",
+      "today": "Added Today",
+      "thisWeek": "This Week",
+      "categories": "Categories"
+    },
+    "recentBookmarks": "Recent Bookmarks",
+    "viewAll": "View All",
+    "noBookmarks": "No bookmarks yet",
+    "addFirst": "Click the button above to save your first bookmark",
+    "placeholders": {
+      "pageTitle": "Page title",
+      "pageUrl": "https://...",
+      "tagName": "Type tag name..."
+    },
+    "labels": {
+      "difficulty": "Difficulty",
+      "techStack": "Tech Stack",
+      "removeTag": "Remove tag",
+      "addTag": "Add tag"
+    },
+    "hints": {
+      "cannotOpenSidebar": "Cannot open sidebar, please right-click the extension icon to open manually"
+    },
+    "aiUnavailable": "AI analysis unavailable"
+  },
+  "chat": {
+    "title": "AI Assistant",
+    "welcome": "👋 Hi! I'm your AI assistant. How can I help you organize your bookmarks today?",
+    "inputPlaceholder": "Ask me anything about your bookmarks...",
+    "send": "Send",
+    "thinking": "Thinking...",
+    "suggestions": {
+      "title": "Suggestions",
+      "organize": "Organize my bookmarks",
+      "find": "Find bookmarks about...",
+      "analyze": "Analyze my collection",
+      "cleanup": "Clean up duplicates"
+    },
+    "tools": {
+      "searching": "🔍 Searching bookmarks...",
+      "organizing": "📁 Organizing bookmarks...",
+      "analyzing": "🤖 Analyzing content...",
+      "creating": "✨ Creating folders..."
+    },
+    "errors": {
+      "failed": "Sorry, something went wrong. Please try again.",
+      "noBookmarks": "You don't have any bookmarks yet.",
+      "networkError": "Network error. Please check your connection."
+    },
+    "clear": "Clear Chat",
+    "close": "Close",
+    "newChat": "New Chat",
+    "user": "You",
+    "assistant": "AI"
+  },
+  "common": {
+    "buttons": {
+      "save": "Save",
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "edit": "Edit",
+      "close": "Close",
+      "confirm": "Confirm",
+      "back": "Back",
+      "next": "Next",
+      "finish": "Finish",
+      "retry": "Retry",
+      "refresh": "Refresh"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "saving": "Saving...",
+      "success": "Success!",
+      "error": "Error",
+      "warning": "Warning",
+      "info": "Info",
+      "confirm": "Are you sure?",
+      "noData": "No data available",
+      "comingSoon": "Coming soon"
+    },
+    "time": {
+      "justNow": "Just now",
+      "minutesAgo": "{{count}} minutes ago",
+      "hoursAgo": "{{count}} hours ago",
+      "daysAgo": "{{count}} days ago",
+      "weeksAgo": "{{count}} weeks ago",
+      "monthsAgo": "{{count}} months ago",
+      "yearsAgo": "{{count}} years ago"
+    }
+  },
+  "renderError": {
+    "title": "Render Failed",
+    "description": "An error occurred while rendering the sidebar",
+    "reload": "Reload"
+  },
+  "importProgress": {
+    "title": "Import Complete!",
+    "importing": "Importing Chrome bookmarks...",
+    "hint": "Please wait, AI is analyzing each bookmark"
+  },
+  "folderSelector": {
+    "newBadge": "New",
+    "existingFolders": "Existing Folders",
+    "createNew": "Create new folder: {{name}}"
+  },
+  "floatingChat": {
+    "title": "AnyMark Assistant",
+    "buttonTitle": "AnyMark Assistant (Alt+A)",
+    "greeting": "👋 Hello! I'm your AnyMark Assistant",
+    "welcomeDesc": "I remember our conversation history (up to 50 messages), try asking me:",
+    "shortcutHint": "Alt + A to open quickly · Enter to send"
+  },
+  "saveConfirm": {
+    "title": "AI Smart Analysis Complete",
+    "confidence": "Confidence {{value}}%",
+    "cancel": "Cancel",
+    "pageTitlePlaceholder": "Page title",
+    "folderPathPlaceholder": "/Folder path",
+    "addTagPlaceholder": "Add tag...",
+    "summaryPlaceholder": "Content summary...",
+    "cancelEdit": "Cancel Edit",
+    "saveBookmark": "Save Bookmark",
+    "edit": "Edit",
+    "confirmSave": "Confirm Save",
+    "aiCategory": "AI Category",
+    "location": "Location",
+    "smartTags": "Smart Tags",
+    "contentSummary": "Content Summary"
+  },
+  "chatArchive": {
+    "title": "Chat Archive",
+    "new": "New",
+    "newChat": "New Chat",
+    "loading": "Loading...",
+    "empty": "No chat archives yet",
+    "emptyDesc": "Conversations are automatically saved here",
+    "messages": "{{count}} messages",
+    "deleteConfirm": "Are you sure you want to delete this chat archive?",
+    "editTitle": "Edit Title",
+    "restoreChat": "Restore Chat",
+    "delete": "Delete",
+    "storage": "Storage: {{used}} / {{total}}",
+    "yesterday": "Yesterday",
+    "daysAgo": "{{count}} days ago"
+  },
+  "renderError": {
+    "title": "Render Failed",
+    "rootNotFound": "Root element not found"
+  },
+  "notification": {
+    "saveSuccessTitle": "Bookmark Saved",
+    "saveSuccessMessage": "Saved: {{title}}",
+    "saveFailTitle": "Save Failed",
+    "saveFailMessage": "Failed to save bookmark, please try again",
+    "toastSaved": "Bookmark saved"
+  },
+  "folder": {
+    "work": "Work",
+    "personal": "Personal",
+    "learning": "Learning",
+    "uncategorized": "Uncategorized",
+    "bookmarks": "Bookmarks",
+    "development": "Development"
+  },
+  "progressIndicator": {
+    "thinking": "Thinking",
+    "toolCalling": "Preparing Tools",
+    "toolExecuting": "Executing",
+    "responding": "Generating Response",
+    "processing": "Processing"
+  },
+  "quickAction": {
+    "search": "Search",
+    "organize": "Organize",
+    "discover": "Discover",
+    "recommend": "Recommend",
+    "chat": "Chat",
+    "searchDesc": "Search my bookmarks",
+    "organizeDesc": "Organize bookmarks",
+    "discoverDesc": "Discover web resources",
+    "recommendDesc": "Recommend related content",
+    "chatDesc": "Free conversation"
+  },
+  "floatingChat": {
+    "operationComplete": "Operation completed! Please check the bookmark list for changes.",
+    "errorOccurred": "Sorry, something went wrong. Please try again.",
+    "clearChatConfirm": "Are you sure you want to clear all conversation history? This cannot be undone.",
+    "saveFailed": "Failed to save bookmark, please try again",
+    "saveCancelled": "Save cancelled",
+    "saveSuccess": "✅ Successfully saved 《{{title}}》\n\n📁 Location: {{folderPath}}\n🏷️ Tags: {{tags}}",
+    "placeholder": "Type a message... (Enter to send)",
+    "actions": {
+      "saveCurrentPage": "Save current page",
+      "collectAI": "Collect all AI-related bookmarks to folder",
+      "organize": "Smart organize bookmarks"
+    }
+  },
+  "messageBubble": {
+    "copied": "Copied",
+    "copy": "Copy",
+    "regenerate": "Regenerate",
+    "helpful": "Helpful",
+    "notHelpful": "Not helpful"
+  },
+  "resizableDivider": {
+    "doubleClickExpand": "Double-click to expand",
+    "dragResize": "Drag to resize",
+    "dragResizeCollapse": "Drag to resize | Double-click to collapse",
+    "expandPanel": "Expand panel",
+    "collapsePanel": "Collapse panel"
+  },
+  "thinkingCard": {
+    "thinkingProcess": "Thinking Process",
+    "thinking": "Thinking..."
+  },
+  "conflict": {
+    "title": "{{count}} Conflicts Found",
+    "batchActions": "Batch Actions",
+    "batch": {
+      "useAllPlugin": "Use All Plugin",
+      "useAllChrome": "Use All Chrome",
+      "useAllNewer": "Use All Newer",
+      "keepAllBoth": "Keep All Both"
+    },
+    "pluginVersion": "Plugin Version",
+    "chromeVersion": "Chrome Version",
+    "newer": "Newer",
+    "field": {
+      "title": "Title",
+      "path": "Path",
+      "time": "Modified"
+    },
+    "option": {
+      "usePlugin": "Use Plugin",
+      "useChrome": "Use Chrome",
+      "keepBoth": "Keep Both"
+    },
+    "type": {
+      "title": "Title Diff",
+      "path": "Path Diff",
+      "both": "Both Diff"
+    },
+    "summary": {
+      "usePlugin": "Update {{count}} to plugin version",
+      "useChrome": "Update {{count}} to Chrome version",
+      "keepBoth": "Create {{count}} duplicates",
+      "unresolved": "{{count}} unresolved",
+      "none": "No changes"
+    },
+    "apply": "Apply Changes",
+    "applying": "Applying",
+    "noConflicts": "No conflicts found",
+    "unresolvedWarning": "Please resolve all {{count}} conflicts before applying",
+    "result": {
+      "success": "Successfully resolved {{count}} conflicts",
+      "partial": "Resolved {{resolved}}, failed {{failed}}"
+    }
+  },
+  "sync": {
+    "status": {
+      "synced": "Synced",
+      "syncing": "Syncing",
+      "hasConflicts": "Conflicts",
+      "error": "Error",
+      "disabled": "Disabled"
+    },
+    "tooltip": {
+      "synced": "All bookmarks are synced",
+      "syncing": "Syncing bookmarks...",
+      "hasConflicts": "{{count}} conflicts need resolution",
+      "error": "Sync error occurred",
+      "disabled": "Chrome sync is disabled"
+    }
+  },
+  "common": {
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close"
+  }
+}

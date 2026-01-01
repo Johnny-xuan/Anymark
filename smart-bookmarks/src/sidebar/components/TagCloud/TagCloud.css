@@ -1,0 +1,199 @@
+/**
+ * 标签云样式
+ */
+
+.tag-cloud-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-primary);
+}
+
+.tag-cloud-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tag-cloud-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.tag-cloud-title .tag-count {
+  font-weight: 400;
+  color: var(--text-tertiary);
+  font-size: var(--font-size-sm);
+}
+
+.tag-cloud-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: all var(--duration-fast) ease;
+}
+
+.tag-cloud-close:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+  min-height: 100px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.tag-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-smooth);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+/* 用户标签 */
+.tag-item.user-tag {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+}
+
+.tag-item.user-tag:hover {
+  background: rgba(59, 130, 246, 0.25);
+  transform: scale(1.05);
+}
+
+/* AI 标签 */
+.tag-item.ai-tag {
+  background: rgba(168, 85, 247, 0.15);
+  color: #c084fc;
+}
+
+.tag-item.ai-tag:hover {
+  background: rgba(168, 85, 247, 0.25);
+  transform: scale(1.05);
+}
+
+/* 选中状态 */
+.tag-item.selected {
+  box-shadow: 0 0 0 2px var(--accent-primary);
+  transform: scale(1.1);
+}
+
+.tag-item.selected.user-tag {
+  background: rgba(59, 130, 246, 0.35);
+}
+
+.tag-item.selected.ai-tag {
+  background: rgba(168, 85, 247, 0.35);
+}
+
+.tag-name {
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tag-badge {
+  font-size: 10px;
+  padding: 1px 5px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.15);
+  font-weight: 600;
+}
+
+/* 过滤提示 */
+.tag-cloud-filter-hint {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.tag-cloud-filter-hint strong {
+  color: var(--accent-primary);
+}
+
+.tag-cloud-filter-hint button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: transparent;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  margin-left: auto;
+}
+
+.tag-cloud-filter-hint button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+/* 空状态 */
+.tag-cloud-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: var(--space-2xl);
+  color: var(--text-tertiary);
+  text-align: center;
+}
+
+.tag-cloud-empty p {
+  margin: 0;
+  font-size: var(--font-size-sm);
+}
+
+/* 滚动条 */
+.tag-cloud::-webkit-scrollbar {
+  width: 4px;
+}
+
+.tag-cloud::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.tag-cloud::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+.tag-cloud::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}

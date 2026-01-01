@@ -1,0 +1,139 @@
+/**
+ * Popup 菜单样式 - 与侧边栏风格一致
+ * 注意：Chrome 扩展 popup 有默认的 1px 边框，无法完全移除
+ */
+
+.popup-menu {
+  margin: 0;
+  padding: 0;
+  width: 260px;
+  min-width: 260px;
+  max-width: 260px;
+  background: var(--bg-primary, #1a1a1a);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========== 头部 ========== */
+.menu-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-secondary);
+}
+
+.menu-logo {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-sm);
+}
+
+.menu-title {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* ========== 菜单项 ========== */
+.menu-items {
+  padding: var(--space-xs);
+  padding-bottom: var(--space-xs);
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-smooth);
+  text-align: left;
+}
+
+.menu-item:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.menu-item:active {
+  transform: scale(0.98);
+}
+
+.menu-item svg {
+  flex-shrink: 0;
+  color: var(--text-tertiary);
+  transition: color var(--duration-fast) var(--ease-smooth);
+}
+
+.menu-item:hover svg {
+  color: var(--text-secondary);
+}
+
+.menu-item span {
+  flex: 1;
+}
+
+.menu-item kbd {
+  display: inline-block;
+  padding: 2px 5px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--text-tertiary);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+}
+
+/* 主要操作按钮 */
+.menu-item.primary {
+  background: var(--selection);
+  color: var(--accent-primary);
+}
+
+.menu-item.primary svg {
+  color: var(--accent-primary);
+}
+
+.menu-item.primary:hover {
+  background: var(--selection-hover);
+}
+
+.menu-item.primary kbd {
+  background: var(--accent-primary);
+  color: white;
+  border-color: var(--accent-primary);
+}
+
+/* ========== 分隔线 ========== */
+.menu-divider {
+  height: 1px;
+  margin: var(--space-xs) var(--space-md);
+  background: var(--border-subtle);
+}
+
+/* ========== 动画 ========== */
+.popup-menu {
+  animation: menu-appear var(--duration-fast) var(--ease-smooth);
+}
+
+@keyframes menu-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}

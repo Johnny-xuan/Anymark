@@ -1,0 +1,664 @@
+/**
+ * 侧边栏主界面样式
+ */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  overflow: hidden;
+}
+
+/* ========== 顶部标题栏 ========== */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) var(--space-lg); /* 减少垂直内边距 */
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-secondary);
+  flex-shrink: 0; /* 防止压缩 */
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.sidebar-title {
+  font-size: var(--font-size-base); /* 减小标题字号 */
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+.icon-button:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.icon-button:active {
+  transform: scale(0.95);
+}
+
+/* AI 分析按钮 */
+.ai-analyze-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+.ai-analyze-button:hover:not(:disabled) {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--accent-primary);
+}
+
+.ai-analyze-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.ai-analyze-button.analyzing {
+  color: var(--accent-primary);
+  background: rgba(59, 130, 246, 0.15);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.ai-analyze-button.analyzing svg {
+  animation: sparkle-rotate 3s linear infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+  }
+}
+
+@keyframes sparkle-rotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(90deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1);
+  }
+  75% {
+    transform: rotate(270deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+/* ========== 搜索栏 ========== */
+.sidebar-search {
+  padding: var(--space-md) var(--space-lg); /* 减少内边距 */
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+/* ========== 过滤器标签 ========== */
+.sidebar-filters {
+  padding: var(--space-sm) var(--space-lg); /* 减小内边距 */
+  flex-shrink: 0;
+}
+
+/* ========== 主内容区域 ========== */
+.sidebar-content {
+  display: flex;
+  flex-direction: row;  /* 左右布局 */
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.sidebar-list {
+  flex: 1;  /* 占据剩余空间（65%） */
+  height: 100%;
+  min-width: 0;
+  overflow: hidden;
+  transition: width var(--duration-normal) var(--ease-smooth);
+  display: flex;
+  flex-direction: column;
+}
+
+/* BookmarkList 容器需要占满高度 */
+.sidebar-list > div {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.sidebar-list.with-preview {
+  /* flex: 1 已经自动占据 65% */
+}
+
+.sidebar-list.full-width {
+  /* 隐藏预览时占 100% */
+}
+
+.sidebar-preview {
+  /* 宽度由 style 属性控制 */
+  flex-shrink: 0;
+  height: 100%;
+  border-right: 1px solid var(--border-subtle);  /* 右边框 */
+  overflow: hidden;
+  animation: slide-in-left var(--duration-normal) var(--ease-smooth);
+}
+
+/* AI聊天面板 */
+.sidebar-ai-chat {
+  /* 宽度由 style 属性控制 */
+  flex-shrink: 0;
+  height: 100%;
+  border-right: 1px solid var(--border-subtle);
+  overflow: hidden;
+  animation: slide-in-left var(--duration-normal) var(--ease-smooth);
+}
+
+/* ========== 底部状态栏 ========== */
+.sidebar-footer {
+  padding: var(--space-sm) var(--space-lg); /* 减小内边距 */
+  border-top: 1px solid var(--border-subtle);
+  background: var(--bg-secondary);
+  flex-shrink: 0;
+}
+
+.footer-shortcuts {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.shortcut {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.shortcut kbd {
+  display: inline-block;
+  padding: 2px 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--text-primary);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 1px 0 var(--border-default);
+}
+
+/* 高亮提示（最后一个） */
+.shortcut.highlight {
+  color: var(--accent-primary);
+  font-weight: 500;
+}
+
+.shortcut.highlight kbd {
+  background: var(--accent-primary);
+  color: white;
+  border-color: var(--accent-primary);
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
+}
+
+/* 可点击的快捷键提示 */
+.shortcut.clickable {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-smooth);
+  padding: 0;
+  margin: 0;
+}
+
+.shortcut.clickable:hover {
+  transform: translateY(-1px);
+}
+
+.shortcut.clickable:hover kbd {
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.4);
+  transform: scale(1.05);
+}
+
+.shortcut.clickable:active {
+  transform: translateY(0);
+}
+
+/* ========== 响应式 - 已移除，始终保持左右布局 ========== */
+
+/* ========== 加载状态 ========== */
+.sidebar-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.sidebar-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: var(--space-xl);
+  text-align: center;
+  color: var(--error);
+}
+
+/* ========== 欢迎引导 ========== */
+.welcome-guide-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fade-in var(--duration-normal) var(--ease-smooth);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.welcome-guide {
+  background: var(--bg-elevated);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--border-default);
+  text-align: center;
+  animation: slide-up var(--duration-normal) var(--ease-back);
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.welcome-icon {
+  font-size: 64px;
+  margin-bottom: var(--space-lg);
+  animation: wave 1.5s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
+}
+
+.welcome-guide h2 {
+  margin: 0 0 var(--space-xl) 0;
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.welcome-content {
+  margin-bottom: var(--space-2xl);
+  line-height: var(--line-height-loose);
+}
+
+.welcome-content p {
+  margin: var(--space-md) 0;
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+}
+
+.welcome-content strong {
+  color: var(--accent-primary);
+  font-weight: 600;
+}
+
+.drag-hint {
+  display: inline-block;
+  font-size: var(--font-size-lg);
+  color: var(--accent-primary);
+  animation: slide-left 1.5s ease-in-out infinite;
+}
+
+@keyframes slide-left {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-8px);
+  }
+}
+
+.sub-hint {
+  font-size: var(--font-size-sm) !important;
+  color: var(--text-tertiary) !important;
+  margin-top: var(--space-lg) !important;
+}
+
+.welcome-button {
+  padding: var(--space-md) var(--space-2xl);
+  background: var(--accent-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-smooth);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.welcome-button:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+.welcome-button:active {
+  transform: translateY(0);
+}
+
+/* ========== AI 聊天面板容器 ========== */
+.sidebar-ai-chat {
+  width: 380px;
+  height: 100%;
+  border-right: 1px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+/* AI 聊天按钮激活状态 */
+.icon-button.ai-chat-button.active {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.icon-button.ai-chat-button:hover {
+  background: var(--bg-hover);
+}
+
+/* ========== AI 引导提示 ========== */
+.ai-guide-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  animation: fadeIn var(--duration-normal) var(--ease-smooth);
+}
+
+.ai-guide {
+  background: var(--bg-primary);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  max-width: 420px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp var(--duration-normal) var(--ease-out);
+}
+
+.ai-guide-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+  border-radius: 50%;
+  margin: 0 auto var(--space-lg);
+  color: white;
+}
+
+.ai-guide h2 {
+  text-align: center;
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-lg);
+}
+
+.ai-guide-content {
+  margin-bottom: var(--space-xl);
+}
+
+.ai-guide-content p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+}
+
+.ai-guide-content ul {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-md) 0;
+}
+
+.ai-guide-content li {
+  padding: var(--space-xs) 0;
+  color: var(--text-secondary);
+  font-size: var(--font-size-base);
+}
+
+.ai-guide-content .highlight {
+  margin-top: var(--space-lg);
+  padding: var(--space-md);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.ai-guide-button {
+  width: 100%;
+  padding: var(--space-md) var(--space-xl);
+  background: var(--accent-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-smooth);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.ai-guide-button:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+.ai-guide-button:active {
+  transform: translateY(0);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ========== 引导光圈动画 ========== */
+
+/* 外层脉冲光圈 */
+.guide-ring-pulse {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border: 3px solid var(--accent-primary);
+  border-radius: 50%;
+  animation: guide-pulse 2s ease-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* 内层核心光圈 */
+.guide-ring-core {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border: 2px solid var(--accent-primary);
+  border-radius: 50%;
+  animation: guide-core 2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* 脉冲动画 - 逐渐扩散消失 */
+@keyframes guide-pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+
+/* 核心动画 - 轻微缩放 */
+@keyframes guide-core {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+/* 按钮引导状态 */
+.ai-analyze-button.show-guide-ring {
+  animation: guide-button-glow 2s ease-in-out infinite;
+}
+
+/* 按钮发光效果 */
+@keyframes guide-button-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+  }
+}
+
+/* ========== 标签云面板 ========== */
+.sidebar-tagcloud-toggle {
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-secondary);
+}
+
+.tagcloud-toggle-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tagcloud-toggle-btn:hover {
+  background: var(--hover-bg);
+  border-color: var(--primary-color);
+  color: var(--text-primary);
+}
+
+.tagcloud-toggle-btn.active {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+.sidebar-tagcloud {
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-secondary);
+}

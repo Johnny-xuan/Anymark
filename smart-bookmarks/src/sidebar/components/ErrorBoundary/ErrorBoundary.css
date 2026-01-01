@@ -1,0 +1,110 @@
+.error-boundary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  padding: 20px;
+  background-color: var(--error-bg, rgba(239, 68, 68, 0.1));
+  border-radius: 8px;
+  border: 1px solid var(--error-border, rgba(239, 68, 68, 0.3));
+}
+
+.error-boundary-content {
+  text-align: center;
+  max-width: 400px;
+}
+
+.error-icon {
+  color: var(--error-color, #ef4444);
+  margin-bottom: 16px;
+}
+
+.error-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary, #e5e7eb);
+  margin: 0 0 8px 0;
+}
+
+.error-message {
+  font-size: 14px;
+  color: var(--text-secondary, #9ca3af);
+  margin: 0 0 8px 0;
+  word-break: break-word;
+}
+
+.error-hint {
+  font-size: 13px;
+  color: var(--text-muted, #6b7280);
+  margin: 0 0 20px 0;
+}
+
+.error-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.error-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary, #e5e7eb);
+  background-color: var(--bg-secondary, #374151);
+  border: 1px solid var(--border-color, #4b5563);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.error-button:hover {
+  background-color: var(--bg-tertiary, #4b5563);
+  border-color: var(--border-color-hover, #6b7280);
+}
+
+.error-button.primary {
+  background-color: var(--primary-color, #3b82f6);
+  border-color: var(--primary-color, #3b82f6);
+}
+
+.error-button.primary:hover {
+  background-color: var(--primary-color-hover, #2563eb);
+  border-color: var(--primary-color-hover, #2563eb);
+}
+
+.error-button:active {
+  transform: scale(0.98);
+}
+
+.error-details {
+  margin-top: 16px;
+  text-align: left;
+}
+
+.error-details summary {
+  font-size: 13px;
+  color: var(--text-muted, #6b7280);
+  cursor: pointer;
+  user-select: none;
+  padding: 4px 0;
+}
+
+.error-details summary:hover {
+  color: var(--text-secondary, #9ca3af);
+}
+
+.error-details pre {
+  margin: 8px 0 0 0;
+  padding: 12px;
+  background-color: var(--bg-tertiary, #1f2937);
+  border-radius: 6px;
+  font-size: 11px;
+  color: var(--text-muted, #6b7280);
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}

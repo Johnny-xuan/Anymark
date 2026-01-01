@@ -1,0 +1,215 @@
+/**
+ * 思考过程卡片样式
+ * 参考 ChatGPT 风格
+ */
+
+.thinking-card {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin: 12px 0;
+  border: 1px solid var(--border-default);
+  transition: all var(--duration-normal) var(--ease-smooth);
+}
+
+.thinking-card.active {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 1px var(--accent-primary);
+}
+
+.thinking-card.complete {
+  opacity: 0.85;
+}
+
+.thinking-card.complete:hover {
+  opacity: 1;
+}
+
+/* 头部 */
+.thinking-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--ease-smooth);
+  color: var(--text-primary);
+}
+
+.thinking-card-header:hover {
+  background: var(--bg-hover);
+}
+
+.thinking-card-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 6px;
+  color: var(--accent-primary);
+}
+
+.thinking-card.active .thinking-card-icon {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.thinking-card-title {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  font-family: 
+    'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.thinking-card-toggle {
+  flex-shrink: 0;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  transition: transform var(--duration-fast) var(--ease-smooth);
+}
+
+/* 内容区域 */
+.thinking-card-content {
+  padding: 0 16px 16px 16px;
+  animation: slideDown var(--duration-normal) var(--ease-smooth);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 思考步骤 */
+.thinking-step {
+  display: flex;
+  gap: 12px;
+  padding: 8px 0;
+  animation: fadeIn var(--duration-normal) var(--ease-smooth);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.step-number {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-tertiary);
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+.thinking-step.tool .step-number {
+  background: rgba(59, 130, 246, 0.15);
+  color: var(--accent-primary);
+}
+
+.thinking-step.result .step-number {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--success);
+}
+
+.thinking-step.error .step-number {
+  background: rgba(239, 68, 68, 0.15);
+  color: var(--error);
+}
+
+.step-message {
+  flex: 1;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  font-family: 
+    'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.thinking-step.tool .step-message {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent-primary);
+}
+
+/* 进度条 */
+.thinking-card-progress {
+  height: 2px;
+  background: var(--bg-tertiary);
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: var(--accent-primary);
+  animation: progressMove 1.5s ease-in-out infinite;
+  width: 30%;
+}
+
+@keyframes progressMove {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(400%);
+  }
+}
+
+/* 响应式 */
+@media (max-width: 480px) {
+  .thinking-card-header {
+    padding: 10px 12px;
+  }
+
+  .thinking-card-content {
+    padding: 0 12px 12px 12px;
+  }
+
+  .thinking-step {
+    gap: 10px;
+  }
+
+  .step-number {
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+  }
+
+  .step-message {
+    font-size: 12px;
+  }
+}

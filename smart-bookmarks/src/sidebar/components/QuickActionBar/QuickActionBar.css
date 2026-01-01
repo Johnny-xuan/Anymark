@@ -1,0 +1,157 @@
+/**
+ * QuickActionBar 样式 - 优化版
+ * 更紧凑、更现代的设计
+ */
+
+.quick-action-bar {
+  display: flex;
+  gap: 6px;
+  padding: 8px 12px;
+  background: transparent;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  justify-content: center;
+}
+
+.quick-action-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.quick-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
+  border-radius: 20px;
+  background: var(--bg-secondary, rgba(255, 255, 255, 0.05));
+  color: var(--text-secondary, #999);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.quick-action-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--action-color-light, transparent);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.quick-action-btn:hover:not(:disabled) {
+  border-color: var(--action-color, #4a90d9);
+  color: var(--action-color, #4a90d9);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px var(--action-color-light, rgba(74, 144, 217, 0.2));
+}
+
+.quick-action-btn:hover:not(:disabled)::before {
+  opacity: 1;
+}
+
+.quick-action-btn.active {
+  background: var(--action-color, #4a90d9);
+  border-color: var(--action-color, #4a90d9);
+  color: white;
+  box-shadow: 0 2px 12px var(--action-color-light, rgba(74, 144, 217, 0.3));
+}
+
+.quick-action-btn.active::before {
+  opacity: 0;
+}
+
+.quick-action-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.quick-action-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.quick-action-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.quick-action-label {
+  position: relative;
+  z-index: 1;
+}
+
+/* 深色模式 */
+[data-theme="dark"] .quick-action-bar,
+.dark .quick-action-bar {
+  background: transparent;
+}
+
+[data-theme="dark"] .quick-action-btn,
+.dark .quick-action-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+[data-theme="dark"] .quick-action-btn:hover:not(:disabled),
+.dark .quick-action-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--action-color, #60a5fa);
+}
+
+[data-theme="dark"] .quick-action-btn.active,
+.dark .quick-action-btn.active {
+  background: var(--action-color, #3b82f6);
+  border-color: var(--action-color, #3b82f6);
+  color: white;
+}
+
+/* 浅色模式 */
+[data-theme="light"] .quick-action-btn,
+.light .quick-action-btn {
+  background: rgba(0, 0, 0, 0.02);
+  border-color: rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="light"] .quick-action-btn:hover:not(:disabled),
+.light .quick-action-btn:hover:not(:disabled) {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+/* 响应式：小屏幕时只显示图标 */
+@media (max-width: 400px) {
+  .quick-action-btn {
+    padding: 8px;
+  }
+  
+  .quick-action-label {
+    display: none;
+  }
+}
+
+/* 动画效果 */
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 var(--action-color-light, rgba(74, 144, 217, 0.4));
+  }
+  50% {
+    box-shadow: 0 0 0 4px var(--action-color-light, rgba(74, 144, 217, 0));
+  }
+}
+
+.quick-action-btn.active {
+  animation: pulse 2s infinite;
+}

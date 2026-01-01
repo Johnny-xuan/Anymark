@@ -1,0 +1,179 @@
+/**
+ * 增强的进度指示器样式
+ * 参考 ChatGPT 风格：柔和、优雅、低饱和度
+ */
+
+.progress-indicator-enhanced {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  /* ChatGPT 风格：非常淡的背景，几乎透明 */
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 12px;
+  /* 去掉边框，使用更柔和的阴影 */
+  border: none;
+  margin: 8px 0;
+  animation: slideIn 0.3s ease;
+  /* 柔和的阴影 */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 图标容器 - 使用主题色 */
+.progress-icon-wrapper {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 使用柔和的背景色 */
+  background: var(--icon-bg, rgba(59, 130, 246, 0.1));
+  border-radius: 8px;
+  /* 图标颜色使用主题色 */
+  color: var(--icon-color, var(--accent-primary, #3b82f6));
+  /* 去掉脉冲动画，保持静态 */
+  animation: none;
+  /* 去掉强烈的阴影 */
+  box-shadow: none;
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* 内容区域 */
+.progress-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.progress-stage {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-family: 
+    'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.progress-message {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  font-family: 
+    'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* 工具信息 */
+.progress-tool {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.tool-badge {
+  /* 使用主题色 */
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--accent-primary, #3b82f6);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: 'SF Mono', 'Monaco', 'Consolas', monospace;
+  /* 去掉边框 */
+  border: none;
+}
+
+.tool-count {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 加载动画 - ChatGPT 风格：简洁的点动画 */
+.progress-spinner {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+/* 三个点的加载动画 */
+.spinner {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+
+.spinner::before,
+.spinner::after {
+  content: '';
+  width: 4px;
+  height: 4px;
+  background: var(--text-tertiary);
+  border-radius: 50%;
+  animation: dotPulse 1.4s infinite ease-in-out;
+}
+
+.spinner::before {
+  animation-delay: -0.32s;
+}
+
+.spinner::after {
+  animation-delay: 0.16s;
+}
+
+@keyframes dotPulse {
+  0%, 80%, 100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 响应式 */
+@media (max-width: 480px) {
+  .progress-indicator-enhanced {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .progress-icon-wrapper {
+    width: 36px;
+    height: 36px;
+  }
+
+  .progress-stage,
+  .progress-message {
+    font-size: 12px;
+  }
+}

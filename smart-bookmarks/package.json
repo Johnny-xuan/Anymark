@@ -1,0 +1,60 @@
+{
+  "name": "smart-bookmarks-free",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@mozilla/readability": "^0.6.0",
+    "fuse.js": "^7.1.0",
+    "i18next": "^25.7.3",
+    "i18next-browser-languagedetector": "^8.2.0",
+    "lucide-react": "^0.344.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^16.5.0",
+    "react-markdown": "^10.1.0",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.1",
+    "search-engine-tool": "^1.0.4",
+    "zustand": "^4.4.1"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.1.32",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@typescript-eslint/eslint-plugin": "^8.50.0",
+    "@typescript-eslint/parser": "^8.50.0",
+    "@vitejs/plugin-react": "^5.1.2",
+    "@vitest/coverage-v8": "^4.0.16",
+    "eslint": "^9.39.2",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.26",
+    "fast-check": "^4.5.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vitest": "^4.0.16"
+  },
+  "scripts": {
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "dev": "vite",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "type-check": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "description": "Free and open-source bookmark manager with local AI analysis, keyboard navigation, search and management",
+  "keywords": [
+    "chrome-extension",
+    "chrome",
+    "bookmarks",
+    "free",
+    "open-source",
+    "local-ai",
+    "side-panel",
+    "browser",
+    "typescript",
+    "react"
+  ]
+}
