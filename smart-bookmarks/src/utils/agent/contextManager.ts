@@ -154,8 +154,8 @@ export class ContextManager {
 
   /**
    * 压缩历史消息
-   * 新策略：保留关键消息（user/assistant），删除冗余消息（tool）
-   * 这样既减少消息数，又保留完整对话上下文
+   * 优化策略：保留关键消息（user/assistant）+ 关键工具结果（压缩后）
+   * 这样既减少消息数，又保留重要的工具执行结果
    */
   compress(): void {
     if (this.messages.length <= this.config.keepRecentCount) {
@@ -165,22 +165,77 @@ export class ContextManager {
     const recentMessages = this.messages.slice(-this.config.keepRecentCount);
     const oldMessages = this.messages.slice(0, -this.config.keepRecentCount);
 
+    // 关键工具列表（需要保留结果的工具）
+    const importantTools = ['search', 'organize', 'context'];
+
     // 从旧消息中保留关键消息：
     // 1. 所有 user 消息（用户意图）
     // 2. 所有 assistant 消息（AI 回复）
-    // 3. 跳过 tool 消息（因为结果已经体现在 assistant 回复中）
+    // 3. 关键工具的结果（压缩后）
     const importantMessages: Message[] = [];
     oldMessages.forEach(msg => {
       if (msg.role === 'user' || msg.role === 'assistant') {
         importantMessages.push(msg);
+      } else if (msg.role === 'tool' && msg.name && importantTools.includes(msg.name)) {
+        // 保留关键工具结果，但压缩内容
+        const compressed = this.compressToolResult(msg);
+        importantMessages.push(compressed);
       }
-      // tool 消息被跳过，减少消息数量
+      // 其他 tool 消息被跳过
     });
 
     // 重组消息列表
     this.messages = [...importantMessages, ...recentMessages];
 
     console.log(`[ContextManager] Compressed: ${oldMessages.length} → ${importantMessages.length} (kept ${recentMessages.length} recent)`);
+  }
+
+  /**
+   * 压缩工具结果
+   * 只保留关键信息，删除详细数据
+   */
+  private compressToolResult(msg: Message): Message {
+    try {
+      const content = typeof msg.content === 'string' 
+        ? JSON.parse(msg.content) 
+        : msg.content;
+
+      // 构建压缩后的内容
+      const compressed: any = {
+        success: content.success,
+      };
+
+      // 根据工具类型保留不同的信息
+      if (msg.name === 'search') {
+        compressed.summary = `找到 ${content.data?.count || 0} 个结果`;
+        if (content.data?.results?.length > 0) {
+          compressed.topResults = content.data.results.slice(0, 3).map((r: any) => r.title);
+        }
+      } else if (msg.name === 'organize') {
+        if (content.data?.analyzedCount !== undefined) {
+          compressed.summary = `分析了 ${content.data.analyzedCount} 个书签`;
+        } else if (content.data?.successCount !== undefined) {
+          compressed.summary = `移动了 ${content.data.successCount} 个书签`;
+        } else {
+          compressed.summary = content.data?.message || '操作完成';
+        }
+      } else if (msg.name === 'context') {
+        compressed.summary = `获取了 ${content.data?.total || content.data?.count || 0} 个书签的上下文`;
+      } else {
+        compressed.summary = content.message || '操作成功';
+      }
+
+      return {
+        ...msg,
+        content: JSON.stringify(compressed),
+      };
+    } catch (error) {
+      // 解析失败，返回简化版本
+      return {
+        ...msg,
+        content: JSON.stringify({ success: true, summary: '操作完成' }),
+      };
+    }
   }
 
   /**
