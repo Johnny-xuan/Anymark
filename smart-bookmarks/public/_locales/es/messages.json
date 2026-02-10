@@ -1,0 +1,14 @@
+{
+  "extensionName": {
+    "message": "AnyMark - Gestor de Marcadores Inteligente",
+    "description": "El nombre de la extensión"
+  },
+  "extensionDescription": {
+    "message": "Gestor de marcadores inteligente con IA, agente conversacional, navegación Vim y soporte de API personalizada. Gratis y de código abierto.",
+    "description": "La descripción de la extensión"
+  },
+  "actionTitle": {
+    "message": "Abrir AnyMark",
+    "description": "El título del botón de acción del navegador"
+  }
+}

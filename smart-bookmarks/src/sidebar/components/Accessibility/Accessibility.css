@@ -1,0 +1,203 @@
+/**
+ * 可访问性增强样式
+ * 符合 WCAG 2.1 AA 级别标准
+ */
+
+/* ========== 焦点指示器 ========== */
+/* 强制所有可交互元素显示焦点 */
+:focus-visible {
+  outline: 2px solid var(--accent-primary, #6366f1);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* 避免仅在鼠标悬停时显示的元素 */
+/* 确保键盘用户可以访问所有交互功能 */
+
+/* ========== 高对比度模式支持 ========== */
+@media (prefers-contrast: high) {
+  :root {
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --bg-primary: #000000;
+    --bg-secondary: #1a1a1a;
+    --border-color: #ffffff;
+  }
+}
+
+/* ========== 减少动画模式支持 ========== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ========== 屏幕阅读器专用内容 ========== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* 跳过导航链接（键盘用户可快速跳到主内容） */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--accent-primary, #6366f1);
+  color: white;
+  padding: 8px 16px;
+  z-index: 9999;
+  transition: top 0.3s;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* ========== 消息操作按钮可访问性 ========== */
+/* 按钮样式由 MessageBubble.css 控制
+ * 使用 opacity: 0.3 实现淡可见效果
+ * focus-within 时提升到 opacity: 1
+ */
+
+/* 焦点指示器增强 */
+.action-btn:focus-visible,
+.chat-action-btn:focus-visible,
+.ai-chat-action-btn:focus-visible,
+.mode-toggle-btn:focus-visible {
+  outline: 2px solid var(--accent-primary, #6366f1);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+}
+
+/* ========== 输入框标签关联 ========== */
+/* 确保所有输入框都有对应的 label */
+input[aria-label],
+input[aria-labelledby] {
+  /* 通过 aria 属性关联的输入框 */
+}
+
+/* ========== 加载状态可访问性 ========== */
+/* 屏幕阅读器公告区域 */
+.sr-announcer {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ========== 颜色对比度修复 ========== */
+/* 确保所有文本至少达到 4.5:1 对比度 */
+
+/* Thinking 组件文字对比度修复 */
+.thinking-text {
+  color: #d4d4d4; /* 从 #ccc 提高到符合 WCAG AA */
+}
+
+.thinking-header-count {
+  color: #999; /* 从 #666 提高 */
+}
+
+/* 消息气泡对比度确保 */
+.message-bubble-content {
+  color: #ececec; /* 已符合标准 */
+}
+
+/* ========== 按钮最小触摸区域 ========== */
+/* WCAG 建议至少 44x44 像素 */
+button,
+.action-btn,
+.chat-action-btn {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+/* 小图标按钮例外，但需要额外的内边距 */
+button svg,
+.action-btn svg {
+  pointer-events: none;
+}
+
+/* ========== 列表和语义结构 ========== */
+/* 确保消息列表使用正确的语义 */
+.message-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.message-list-item {
+  display: block;
+}
+
+/* ========== 表单验证样式 ========== */
+input:invalid:not(:placeholder-shown) {
+  border-color: #ef4444;
+}
+
+input:invalid:not(:placeholder-shown):focus {
+  outline-color: #ef4444;
+}
+
+/* ========== 实时区域标记 ========== */
+/* 动态更新内容区域 */
+[aria-live="polite"] {
+  /* 礼貌更新 - 不会打断用户 */
+}
+
+[aria-live="assertive"] {
+  /* 重要更新 - 立即通知用户 */
+}
+
+[aria-atomic="true"] {
+  /* 完整更新内容一起阅读 */
+}
+
+/* ========== 对话状态 ========== */
+[aria-busy="true"] {
+  cursor: progress;
+}
+
+/* ========== 焦点陷阱（模态框） ========== */
+.focus-trap {
+  position: relative;
+}
+
+.focus-trap::before,
+.focus-trap::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.focus-trap::before {
+  top: 0;
+}
+
+.focus-trap::after {
+  bottom: 0;
+}

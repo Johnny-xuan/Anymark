@@ -1,0 +1,551 @@
+/**
+ * MessageBubble - ChatGPT 风格
+ * 视觉平衡改进：用户消息和助手消息都有适当视觉权重
+ */
+
+.message-bubble {
+  padding: 16px 20px; /* 统一 padding，更协调 */
+  position: relative;
+}
+
+.message-bubble.user {
+  /* 用户消息：更柔和的背景，更好的圆角 */
+  background: #2a2a2a; /* 从 #2f2f2f 调整，略微柔和 */
+  border-radius: 12px; /* 从 16px 调整，更现代 */
+  margin: 12px 0; /* 统一 12px 间距 */
+  max-width: 80%; /* 限制最大宽度，避免过长 */
+  margin-left: auto; /* 右对齐，模拟聊天应用 */
+}
+
+.message-bubble.assistant {
+  /* 助手消息：保持透明但添加左边框作为视觉锚点 */
+  background: transparent;
+  border-left: 3px solid #3a3a3a; /* 添加左边框 */
+  padding-left: 16px; /* 给左边框留空间 */
+  margin: 12px 0; /* 统一 12px 间距 */
+}
+
+/* ========== 内容 ========== */
+.message-bubble-content {
+  font-family: ui-sans-serif, -apple-system, system-ui, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 15px;
+  line-height: 1.75;
+  color: #ececec;
+  word-wrap: break-word;
+}
+
+.message-text {
+  white-space: pre-wrap;
+}
+
+/* ========== 段落 ========== */
+.message-bubble-content p {
+  margin: 0 0 16px 0;
+  color: #ececec;
+}
+
+.message-bubble-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* ========== 标题 ========== */
+.message-heading {
+  font-weight: 600;
+  margin: 20px 0 8px 0;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+.message-heading:first-child {
+  margin-top: 0;
+}
+
+.message-heading.h1 { font-size: 18px; font-weight: 700; }
+.message-heading.h2 { font-size: 16px; font-weight: 600; }
+.message-heading.h3 { font-size: 15px; font-weight: 600; }
+.message-heading.h4 { font-size: 14px; font-weight: 600; }
+.message-heading.h5,
+.message-heading.h6 { font-size: 14px; font-weight: 500; color: #d0d0d0; }
+
+/* ========== 列表 ========== */
+.message-list {
+  margin: 12px 0;
+  padding-left: 24px;
+}
+
+.message-list:first-child {
+  margin-top: 0;
+}
+
+.message-list:last-child {
+  margin-bottom: 0;
+}
+
+.message-list-item {
+  margin: 6px 0;
+  line-height: 1.7;
+  color: #ececec;
+}
+
+.message-list-item::marker {
+  color: #8e8e8e;
+}
+
+.message-list.ordered {
+  list-style-type: decimal;
+}
+
+.message-list.ordered .message-list-item::marker {
+  color: #999;
+  font-size: 14px;
+}
+
+/* 嵌套列表 */
+.message-list .message-list {
+  margin: 4px 0;
+}
+
+.message-list .message-list .message-list-item {
+  margin: 4px 0;
+}
+
+/* ========== 行内代码 ========== */
+.inline-code {
+  font-family: "Söhne Mono", Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: 14px;
+  background: #424242;
+  color: #f5f5f5;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* ========== 代码块包装器 ========== */
+.code-block-wrapper {
+  position: relative;
+  margin: 16px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #1e1e1e;
+}
+
+.code-block-lang {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 4px 12px;
+  font-size: 11px;
+  font-family: ui-sans-serif, -apple-system, system-ui, sans-serif;
+  color: #808080;
+  background: #2d2d2d;
+  border-bottom-right-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 1;
+  user-select: none;
+}
+
+.code-copy-btn {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.15s, background 0.15s, color 0.15s;
+  z-index: 1;
+}
+
+.code-block-wrapper:hover .code-copy-btn {
+  opacity: 1;
+}
+
+.code-copy-btn:hover {
+  background: #3d3d3d;
+  color: #d4d4d4;
+}
+
+/* ========== 代码块 ========== */
+.code-block {
+  font-family: "Söhne Mono", Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 16px;
+  padding-top: 12px;
+  border-radius: 0;
+  overflow-x: auto;
+  margin: 0;
+}
+
+/* 有语言标签时给顶部留空间 */
+.code-block-lang + .code-copy-btn + .code-block {
+  padding-top: 32px;
+}
+
+.code-block code {
+  font-family: inherit;
+  background: none;
+  padding: 0;
+}
+
+/* highlight.js 覆盖：确保背景透明 */
+.code-block code.hljs {
+  background: transparent;
+  padding: 0;
+}
+
+.code-block::-webkit-scrollbar {
+  height: 6px;
+}
+
+.code-block::-webkit-scrollbar-track {
+  background: #2d2d2d;
+}
+
+.code-block::-webkit-scrollbar-thumb {
+  background: #4a4a4a;
+  border-radius: 3px;
+}
+
+/* ========== 引用块 ========== */
+.message-quote,
+.message-bubble-content blockquote {
+  border-left: 3px solid #565656;
+  padding: 12px 16px;
+  margin: 16px 0;
+  background: #2a2a2a;
+  border-radius: 0 8px 8px 0;
+  color: #d9d9d9;
+}
+
+.message-quote p,
+.message-bubble-content blockquote p {
+  margin: 8px 0;
+  color: #d9d9d9;
+}
+
+.message-quote p:first-child,
+.message-bubble-content blockquote p:first-child {
+  margin-top: 0;
+}
+
+.message-quote p:last-child,
+.message-bubble-content blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* ========== 链接 ========== */
+.message-link {
+  color: #7ab7ff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.message-link:hover {
+  color: #a8d1ff;
+}
+
+/* ========== 表格 ========== */
+.table-wrapper {
+  overflow-x: auto;
+  margin: 16px 0;
+  border: 1px solid #3d3d3d;
+  border-radius: 8px;
+}
+
+.table-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+  background: #4a4a4a;
+  border-radius: 3px;
+}
+
+.message-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  border: none;
+}
+
+.message-table th {
+  background: #2d2d2d;
+  padding: 10px 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 13px;
+  color: #ffffff;
+  border-bottom: 1px solid #3d3d3d;
+  white-space: nowrap;
+}
+
+.message-table td {
+  padding: 10px 16px;
+  border-bottom: 1px solid #2a2a2a;
+  color: #ececec;
+}
+
+.message-table tr:last-child td {
+  border-bottom: none;
+}
+
+.message-table tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.message-table tr:hover td {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* ========== 分隔线 ========== */
+.message-hr,
+.message-bubble-content hr {
+  border: none;
+  border-top: 1px solid #3d3d3d;
+  margin: 24px 0;
+}
+
+/* ========== 加粗/斜体 ========== */
+.message-bubble-content strong {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.message-bubble-content em {
+  font-style: italic;
+}
+
+/* ========== 操作按钮 ========== */
+/* 默认淡可见（键盘可访问），悬停时完全不透明 */
+.message-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  opacity: 0.3;
+  transition: opacity 0.2s ease;
+}
+
+/* 悬停或内部元素获得焦点时完全不透明 */
+.message-bubble:hover .message-actions,
+.message-actions:focus-within {
+  opacity: 1;
+}
+
+/* .sr-only 类由 Accessibility.css 统一定义 */
+
+.action-btn {
+  background: transparent;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  color: #8e8e8e;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+}
+
+.action-btn:hover {
+  background: #3d3d3d;
+  color: #ffffff;
+}
+
+/* ========== 复制提示 ========== */
+.copy-toast {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: #10a37f;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  animation: slideUp 0.2s ease;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ========== Light 主题 (data-theme="light") ========== */
+[data-theme="light"] .message-bubble.user {
+  background: #f4f4f4;
+}
+
+[data-theme="light"] .message-bubble.assistant {
+  background: transparent;
+}
+
+[data-theme="light"] .message-bubble-content {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .message-bubble-content p {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .message-heading {
+  color: #0d0d0d;
+}
+
+[data-theme="light"] .message-heading.h5,
+[data-theme="light"] .message-heading.h6 {
+  color: #666666;
+}
+
+[data-theme="light"] .message-list-item {
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .message-list-item::marker {
+  color: #666666;
+}
+
+[data-theme="light"] .inline-code {
+  background: #e8e8e8;
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .code-block-wrapper {
+  background: #f6f8fa;
+}
+
+[data-theme="light"] .code-block-lang {
+  color: #888;
+  background: #eef0f3;
+}
+
+[data-theme="light"] .code-copy-btn {
+  color: #999;
+}
+
+[data-theme="light"] .code-copy-btn:hover {
+  background: #dfe2e6;
+  color: #333;
+}
+
+[data-theme="light"] .code-block {
+  background: #f6f8fa;
+  color: #24292e;
+}
+
+[data-theme="light"] .code-block code.hljs {
+  background: transparent;
+}
+
+[data-theme="light"] .code-block::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+[data-theme="light"] .code-block::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+
+[data-theme="light"] .message-quote,
+[data-theme="light"] .message-bubble-content blockquote {
+  border-left-color: #d0d0d0;
+  background: #f7f7f7;
+  color: #444444;
+}
+
+[data-theme="light"] .message-quote p,
+[data-theme="light"] .message-bubble-content blockquote p {
+  color: #444444;
+}
+
+[data-theme="light"] .message-link {
+  color: #0066cc;
+}
+
+[data-theme="light"] .message-link:hover {
+  color: #0052a3;
+}
+
+[data-theme="light"] .table-wrapper {
+  border-color: #e0e0e0;
+}
+
+[data-theme="light"] .table-wrapper::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+[data-theme="light"] .table-wrapper::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+
+[data-theme="light"] .message-table th {
+  background: #f5f5f5;
+  color: #0d0d0d;
+  border-bottom-color: #e0e0e0;
+}
+
+[data-theme="light"] .message-table td {
+  border-bottom-color: #f0f0f0;
+  color: #1a1a1a;
+}
+
+[data-theme="light"] .message-table tr:nth-child(even) td {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+[data-theme="light"] .message-table tr:hover td {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .message-hr,
+[data-theme="light"] .message-bubble-content hr {
+  border-top-color: #e0e0e0;
+}
+
+[data-theme="light"] .message-bubble-content strong {
+  color: #0d0d0d;
+}
+
+[data-theme="light"] .action-btn {
+  color: #666666;
+}
+
+[data-theme="light"] .action-btn:hover {
+  background: #e8e8e8;
+  color: #1a1a1a;
+}
+
+
+/* ========== Light 主题 hljs 覆盖 ========== */
+[data-theme="light"] .hljs-keyword,
+[data-theme="light"] .hljs-selector-tag,
+[data-theme="light"] .hljs-literal { color: #d73a49; }
+
+[data-theme="light"] .hljs-string,
+[data-theme="light"] .hljs-title.function_ { color: #032f62; }
+
+[data-theme="light"] .hljs-comment,
+[data-theme="light"] .hljs-quote { color: #6a737d; }
+
+[data-theme="light"] .hljs-number,
+[data-theme="light"] .hljs-built_in { color: #005cc5; }
+
+[data-theme="light"] .hljs-attr,
+[data-theme="light"] .hljs-variable { color: #e36209; }
+
+[data-theme="light"] .hljs-type,
+[data-theme="light"] .hljs-title.class_ { color: #6f42c1; }
+
+/* Dark 主题：默认样式即为暗色，无需额外覆盖 */

@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+*.local
+
+# Logs
+*.log
+
+# Editor directories and files
+.vscode/
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment variables
+.env
+.env.*
+
+# API Keys and secrets
+**/api-key*
+**/secret*
+
+# Temp files
+*.tmp
+*.temp
+.cache/
+
+# Chrome Extension artifacts
+*.crx
+*.pem
+*.zip
+web-ext-artifacts/
+
+# Development tools config
+.kiro/
+.claude/
+.roo/

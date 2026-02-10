@@ -1,0 +1,145 @@
+/**
+ * 过滤器标签样式
+ */
+
+/* 包装器 - 包含过滤器和标签云 */
+.filter-tabs-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.filter-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.tabs-list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 4px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-sm) var(--space-md);
+  border: none;
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-smooth);
+  white-space: nowrap;
+}
+
+.tab-button:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.tab-button.active {
+  background: var(--accent-primary);
+  color: white;
+  box-shadow: var(--shadow-sm);
+}
+
+.tab-icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.tab-label {
+  display: inline-block;
+}
+
+/* 激活动画 */
+.tab-button.active {
+  animation: tab-activate var(--duration-normal) var(--ease-back);
+}
+
+@keyframes tab-activate {
+  0% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* 书签计数 */
+.tabs-count {
+  font-size: var(--font-size-sm);
+  color: var(--text-tertiary);
+  white-space: nowrap;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .tab-label {
+    display: none;
+  }
+
+  .tab-button {
+    padding: var(--space-sm);
+  }
+
+  .tabs-count {
+    font-size: var(--font-size-xs);
+  }
+}
+
+/* 标签云按钮 */
+.tab-button.tag-cloud-btn {
+  margin-left: auto;
+  padding: var(--space-sm);
+  gap: 2px;
+}
+
+.tab-button.tag-cloud-btn .tab-icon {
+  color: var(--text-tertiary);
+}
+
+.tab-button.tag-cloud-btn .toggle-icon {
+  opacity: 0.6;
+}
+
+.tab-button.tag-cloud-btn:hover .tab-icon,
+.tab-button.tag-cloud-btn.active .tab-icon {
+  color: var(--accent-primary);
+}
+
+.tab-button.tag-cloud-btn.active {
+  background: rgba(59, 130, 246, 0.15);
+  color: var(--accent-primary);
+}
+
+/* 标签云面板 - 内联显示 */
+.tag-cloud-panel-inline {
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

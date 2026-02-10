@@ -1,0 +1,1032 @@
+{
+  "onboarding": {
+    "hero": {
+      "title": "AnyMark",
+      "subtitle": "Dein KI-gestützter Lesezeichen-Assistent",
+      "description": "Konversations-KI-Agent · Intelligentes Speichern · Multi-Anbieter · Kostenlos & Open Source",
+      "badge": "Open Source · Kostenlos",
+      "explore": "Funktionen Entdecken",
+      "scroll": "Nach Unten Scrollen"
+    },
+    "features": {
+      "heading": "Kernfunktionen",
+      "subtitle": "Alles was du für smartes Lesezeichen-Management brauchst",
+      "agent": {
+        "title": "KI-Agent",
+        "desc": "Chatte mit deinen Lesezeichen in natürlicher Sprache. Suchen, organisieren und entdecken — alles per Konversation."
+      },
+      "smartSave": {
+        "title": "Intelligentes Speichern",
+        "desc": "Mit einem Klick speichern. KI erstellt automatisch Tags, Kategorien und Ordnervorschläge."
+      },
+      "multiProvider": {
+        "title": "Multi-Anbieter",
+        "desc": "Verwende deinen eigenen API-Schlüssel. Unterstützt OpenAI, Google Gemini, DeepSeek und mehr."
+      }
+    },
+    "buddies": {
+      "heading": "Triff deine Pixel Buddies",
+      "subtitle": "Fünf einzigartige Charaktere — wähle deinen Favoriten in den Einstellungen",
+      "koda": { "name": "Koda", "role": "Gelehrter", "quote": "Im weiten Ozean der Links bin ich dein zuverlässigster Anker." },
+      "vex": { "name": "Vex", "role": "Cyber-Jäger", "quote": "Rauschen filtern — ich fange nur die wertvollsten Signale ein." },
+      "sprout": { "name": "Sprout", "role": "Wissensgärtner", "quote": "Jedes Lesezeichen ist ein Samen der Inspiration, bereit zu sprießen." },
+      "flare": { "name": "Zing", "role": "Inspirations-Entdecker", "quote": "Das Leben besteht nicht nur aus Sammeln — entdecke, strahle!" },
+      "null": { "name": "Null", "role": "Binärer Butler", "quote": "Redundanz entfernen, zur ursprünglichen Logik der Information zurückkehren." }
+    },
+    "agent": {
+      "heading": "Konversations-KI-Agent",
+      "subtitle": "Verwalte Lesezeichen mit natürlicher Sprache — so einfach wie ein Chat mit Freunden",
+      "search": { "title": "Intelligente Suche", "desc": "Finde jedes Lesezeichen sofort mit /find und natürlicher Sprache" },
+      "discover": { "title": "Dateisystem-Navigation", "desc": "Durchsuche Lesezeichen wie Ordner mit /ls, /tree und /cd" },
+      "trending": { "title": "Statistiken & Einblicke", "desc": "Zeige Lesezeichen-Statistiken, Favoriten und Nutzungsmuster mit /stats" },
+      "organize": { "title": "KI-Organisation", "desc": "Lass die KI deine Lesezeichen analysieren und bessere Ordnerstrukturen vorschlagen" },
+      "chat": { "title": "Natürliche Konversation", "desc": "Beschreibe einfach was du brauchst — der Agent versteht den Kontext" }
+    },
+    "shortcuts": {
+      "heading": "Tastaturkürzel",
+      "subtitle": "Navigiere und verwalte Lesezeichen in Gedankengeschwindigkeit",
+      "navigation": "Navigation",
+      "updown": "Hoch/Runter navigieren",
+      "vimNav": "Vim-Stil Navigation",
+      "open": "Lesezeichen öffnen",
+      "actions": "Aktionen",
+      "star": "Stern ein/aus",
+      "delete": "Lesezeichen löschen",
+      "copy": "URL kopieren",
+      "global": "Global",
+      "sidebar": "Seitenleiste umschalten",
+      "save": "Seite schnell speichern",
+      "note": "Drücke H jederzeit für alle Tastaturkürzel"
+    },
+    "appName": "ANYMARK",
+    "agentDemo": {
+      "heading": "Konversations-KI-Agent",
+      "subtitle": "Verwalte Lesezeichen mit natürlicher Sprache, so einfach wie ein Chat mit Freunden",
+      "welcome": "Tippe / im Eingabefeld unten, um verfügbare Befehle zu sehen!",
+      "online": "Online",
+      "placeholder": "Tippe / für Befehle...",
+      "agentName": "AnyMark Agent",
+      "commands": "Befehle",
+      "navigate": "Navigieren",
+      "select": "Auswählen",
+      "cmd": {
+        "find": { "label": "Suchen", "desc": "Lesezeichen und Ordner durchsuchen" },
+        "ls": { "label": "Liste", "desc": "Aktuellen Ordnerinhalt anzeigen" },
+        "tree": { "label": "Baum", "desc": "Verzeichnisbaumstruktur anzeigen" },
+        "stats": { "label": "Statistik", "desc": "Lesezeichen-Statistiken" }
+      },
+      "demo1": {
+        "user": "find React-Lernmaterialien",
+        "assistant": "8 React-Lesezeichen gefunden: React Docs, React Hooks Tutorial, Redux Guide... Welches öffnen?"
+      },
+      "demo2": {
+        "user": "ls",
+        "assistant": "📁 Frontend (12)\n📁 Backend (8)\n📁 DevOps (5)\n📁 Design (3)\n⭐ React Docs\n⭐ GitHub"
+      },
+      "demo3": {
+        "user": "tree",
+        "assistant": "📂 Lesezeichen\n├── 📁 Frontend (12)\n│   ├── React Docs\n│   └── Vue Guide\n├── 📁 Backend (8)\n└── 📁 DevOps (5)"
+      },
+      "demo4": {
+        "user": "stats",
+        "assistant": "📊 Gesamt: 128 Lesezeichen, 15 Ordner\n⭐ Markiert: 12 | 🏷️ Getaggt: 89\n🔥 Meistbesucht: GitHub, Stack Overflow"
+      }
+    },
+    "videoQuickStart": {
+      "heading": "Schnellstart",
+      "videoPlaceholder": "Demo-Video Kommt Bald",
+      "step1": {
+        "title": "Erweiterung Installieren",
+        "desc": "Füge AnyMark über den Chrome Web Store hinzu oder lade es als entpackte Erweiterung."
+      },
+      "step2": {
+        "title": "API-Schlüssel Einrichten",
+        "desc": "Öffne die Einstellungen und gib deinen API-Schlüssel ein. Unterstützt OpenAI, Gemini, DeepSeek und mehr."
+      },
+      "step3": {
+        "title": "Starte den Chat",
+        "desc": "Öffne die Seitenleiste und sprich mit deinem KI-Agenten. Suche, organisiere und entdecke Lesezeichen natürlich."
+      }
+    },
+    "cta": {
+      "heading": "Bereit Loszulegen?",
+      "text": "Erlebe KI-gestütztes smartes Lesezeichen-Management — 100% kostenlos und open source.",
+      "button": "AnyMark Öffnen",
+      "hint": "Öffnet die Seitenleiste zum sofortigen Start",
+      "openSource": "Open Source",
+      "license": "MIT-Lizenz"
+    },
+    "dotsNavigation": {
+      "goToSection": "Zu Abschnitt {{section}} gehen"
+    },
+    "language": {
+      "english": "English",
+      "chinese": "简体中文",
+      "japanese": "日本語",
+      "german": "Deutsch",
+      "spanish": "Español",
+      "french": "Français"
+    }
+  },
+  "sidebar": {
+    "header": {
+      "title": "AnyMark",
+      "settings": "Einstellungen",
+      "expand": "Erweitern",
+      "close": "Schließen",
+      "theme": "Thema wechseln",
+      "aiAnalyze": "KI-Analyse"
+    },
+    "tabs": {
+      "bookmarks": "Lesezeichen",
+      "chat": "KI-Assistent"
+    },
+    "search": {
+      "placeholder": "Lesezeichen suchen...",
+      "noResults": "Keine gefunden",
+      "searching": "Suche..."
+    },
+    "filters": {
+      "all": "Alle",
+      "uncategorized": "KI-Kategorien",
+      "favorites": "Favoriten",
+      "recent": "Kürzlich",
+      "popular": "Beliebt",
+      "longTail": "Langzeit",
+      "trash": "Papierkorb",
+      "descriptions": {
+        "chrome": "Alle Lesezeichen",
+        "uncategorized": "KI-kategorisierte Lesezeichen",
+        "favorites": "Mit Stern markiert",
+        "recent": "Letzte 30 Tage",
+        "popular": "Meistbesucht (Top 20)",
+        "longTail": "Wenig besucht",
+        "trash": "Gelöschte Lesezeichen"
+      }
+    },
+    "bookmarks": {
+      "loading": "Lade Lesezeichen...",
+      "empty": "Noch keine",
+      "emptyHint": "Erstes hinzufügen",
+      "count": "{{count}} Lesezeichen",
+      "selected": "Ausgewählt",
+      "delete": "Löschen",
+      "restore": "Wiederherstellen",
+      "favorite": "Zu Favoriten",
+      "unfavorite": "Aus Favoriten",
+      "edit": "Bearbeiten",
+      "open": "Öffnen",
+      "copyUrl": "URL kopieren",
+      "moveToFolder": "Verschieben"
+    },
+    "bookmarkList": {
+      "empty": {
+        "noBookmarks": "Keine gefunden",
+        "adjustFilters": "Filter anpassen",
+        "noCategories": "Keine kategorisierten",
+        "useAiAnalysis": "KI-Analyse verwenden"
+      },
+      "item": {
+        "visits": "{{count}} Besuche",
+        "items": "{{count}} Elemente",
+        "folders": "{{count}} Ordner",
+        "analyzing": "KI-Analyse...",
+        "analyze": "Intelligente Analyse",
+        "expandLabel": "Erweitern",
+        "collapseLabel": "Reduzieren"
+      },
+      "actions": {
+        "reanalyze": "Bereits analysiert. Neu?",
+        "startAnalyzing": "Starte Analyse...",
+        "analyzeComplete": "Analyse abgeschlossen!",
+        "analyzeFailed": "Fehler: {{error}}",
+        "analyzeEmpty": "Kein Ergebnis",
+        "noSummary": "Zusammenfassung nicht möglich"
+      },
+      "edit": {
+        "renaming": "Ordner umbenennen (ESC abbrechen)",
+        "editing": "Bearbeitungsmodus (ESC abbrechen)",
+        "cancelled": "Abgebrochen",
+        "emptyTitle": "Titel erforderlich",
+        "folderRenamed": "Umbenannt",
+        "bookmarkUpdated": "Aktualisiert"
+      },
+      "delete": {
+        "confirmFolder": "Ordner \"{{title}}\" löschen?\n\nAlle werden gelöscht!",
+        "folderDeleted": "Gelöscht",
+        "confirmPermanent": "Dauerhaft löschen \"{{title}}\"?\n\n⚠️ Unwiderruflich!",
+        "permanentlyDeleted": "Dauerhaft gelöscht",
+        "confirmDelete": "Löschen \"{{title}}\"?\n\nAus Papierkorb wiederherstellbar",
+        "movedToTrash": "In Papierkorb",
+        "restored": "Wiederhergestellt"
+      },
+      "drag": {
+        "cannotMoveToSelf": "Nicht in sich selbst verschieben",
+        "movedToFolder": "Verschoben nach: {{title}}",
+        "folderMoved": "Ordner verschoben",
+        "folderReordered": "Neu sortiert",
+        "bookmarkReordered": "Neu sortiert"
+      },
+      "star": {
+        "added": "Zu Favoriten",
+        "removed": "Aus Favoriten",
+        "pinned": "Angeheftet",
+        "unpinned": "Gelöst"
+      },
+      "copy": {
+        "success": "URL kopiert",
+        "failed": "Fehler beim Kopieren"
+      },
+      "import": {
+        "started": "Starte Import von Chrome-Lesezeichen...",
+        "failed": "Importfehler: {{error}}"
+      }
+    },
+    "preview": {
+      "title": "Vorschau",
+      "noSelection": "Auswählen",
+      "selectHint": "↑↓ zum Navigieren",
+      "url": "URL",
+      "tags": "Tags",
+      "category": "Kategorie",
+      "summary": "Zusammenfassung",
+      "confidence": "Konfidenz",
+      "createdAt": "Erstellt",
+      "updatedAt": "Aktualisiert",
+      "actions": {
+        "open": "Öffnen",
+        "edit": "Bearbeiten",
+        "star": "Favorit",
+        "unstar": "Entfernen",
+        "copyUrl": "URL kopieren",
+        "delete": "Löschen",
+        "restore": "Wiederherstellen"
+      },
+      "sections": {
+        "aiAnalysis": "KI-Analyse",
+        "statistics": "Statistiken",
+        "tags": "Tags",
+        "notes": "Notizen",
+        "summary": "Zusammenfassung"
+      },
+      "stats": {
+        "visits": "Besuche",
+        "visitsTimes": "{{count}}x",
+        "lastVisit": "Letzter Besuch",
+        "created": "Erstellt",
+        "importance": "Wichtigkeit",
+        "never": "Nie"
+      },
+      "ai": {
+        "reanalyze": "Neu analysieren",
+        "analyzing": "Analysiert...",
+        "analyzeNow": "Jetzt analysieren",
+        "noAnalysis": "Keine Analyse",
+        "category": "Kategorie:",
+        "startAnalyzing": "Starte...",
+        "analyzeComplete": "Abgeschlossen!",
+        "analyzeFailed": "Fehler: {{error}}",
+        "analyzeEmpty": "Kein Ergebnis",
+        "generated": "KI-generiert"
+      },
+      "time": {
+        "justNow": "Jetzt",
+        "minutesAgo": "{{count}} Min",
+        "hoursAgo": "{{count}} Std",
+        "daysAgo": "{{count}} Tg"
+      },
+      "shortcuts": {
+        "open": "Öffnen",
+        "newTab": "Neuer Tab",
+        "edit": "Bearbeiten",
+        "copyUrl": "URL kopieren",
+        "star": "Favorit",
+        "unstar": "Entfernen",
+        "delete": "Löschen",
+        "restore": "Wiederherstellen"
+      },
+      "messages": {
+        "updated": "Aktualisiert",
+        "urlCopied": "URL kopiert",
+        "starred": "Zu Favoriten",
+        "unstarred": "Aus Favoriten",
+        "restored": "Wiederhergestellt",
+        "deleted": "In Papierkorb",
+        "confirmDelete": "Löschen \"{{title}}\"?",
+        "confirmRestore": "Aktion wählen:\n\nOK = Wiederherstellen"
+      },
+      "breadcrumb": {
+        "root": "Stamm"
+      }
+    },
+    "welcome": {
+      "title": "Willkommen!",
+      "subtitle": "Ihr intelligenter Lesezeichen-Manager",
+      "feature1": "💡 Tipp",
+      "feature1Desc": "Linken Rand ziehen für 40-50%",
+      "feature2": "✨ Chrome merkt sich",
+      "feature2Desc": "Breite automatisch gespeichert",
+      "close": "Starten →",
+      "dontShowAgain": "Nicht mehr zeigen"
+    },
+    "analysis": {
+      "analyzing": "Analysiere...",
+      "progress": "Fortschritt: {{percent}}%",
+      "status": "📖 Analysiere Lesezeichen...",
+      "complete": "✅ Fertig! {{count}} analysiert",
+      "failed": "❌ Fehler: {{error}}",
+      "noBookmarks": "Nichts zu analysieren",
+      "addFirst": "Erst hinzufügen oder importieren",
+      "reanalyzeConfirm": "Alle {{count}} Lesezeichen wurden analysiert. Alle erneut analysieren?"
+    },
+    "toast": {
+      "bookmarkAdded": "Hinzugefügt",
+      "bookmarkDeleted": "Gelöscht",
+      "bookmarkRestored": "Wiederhergestellt",
+      "bookmarkUpdated": "Aktualisiert",
+      "importSuccess": "{{count}} Chrome-Lesezeichen importiert!",
+      "importFailed": "Importfehler",
+      "copySuccess": "URL kopiert",
+      "copyFailed": "Kopierfehler",
+      "deleteConfirm": "Dauerhaft löschen \"{{title}}\"? Unwiderruflich!",
+      "permanentlyDeleted": "Dauerhaft gelöscht",
+      "analysisComplete": "✅ Hintergrundanalyse abgeschlossen! Erfolg: {{completed}}, Fehler: {{failed}}",
+      "analysisStarted": "🚀 Analyse verarbeitet {{count}} Lesezeichen im Hintergrund. Analyse wird fortgesetzt auch wenn Sie die Seitenleiste schließen.",
+      "analysisFailed": "❌ Startfehler: {{error}}",
+      "analyzing": "Analysiere... {{progress}}%",
+      "deleteConfirmTitle": "Möchten Sie wirklich \"{{title}}\" löschen?"
+    },
+    "errors": {
+      "loadBookmarks": "Fehler beim Laden"
+    },
+    "editDialog": {
+      "title": "Bearbeiten",
+      "fields": {
+        "title": "Titel",
+        "titlePlaceholder": "Lesezeichentitel",
+        "url": "URL",
+        "urlPlaceholder": "https://...",
+        "folder": "Ordner",
+        "folderPlaceholder": "/Kategorie/Unterordner",
+        "tags": "Tags",
+        "tagsPlaceholder": "Tag hinzufügen...",
+        "notes": "Notizen",
+        "notesPlaceholder": "Notizen hinzufügen..."
+      },
+      "badges": {
+        "aiGenerated": "KI-generiert"
+      },
+      "buttons": {
+        "add": "Hinzufügen",
+        "cancel": "Abbrechen",
+        "save": "Speichern"
+      },
+      "hints": {
+        "aiSummary": "KI-Zusammenfassung, bearbeitbar",
+        "userNotes": "Notizen bearbeiten",
+        "summary": "Bearbeiten überschreibt KI-Zusammenfassung"
+      },
+      "shortcuts": {
+        "cancel": "Abbrechen",
+        "save": "Speichern"
+      }
+    },
+    "contextMenu": {
+      "openNewTab": "In neuem Tab öffnen",
+      "copyLink": "Link kopieren",
+      "edit": "Bearbeiten",
+      "rename": "Umbenennen",
+      "star": "Favorit",
+      "unstar": "Entfernen",
+      "moveTo": "Verschieben nach...",
+      "archive": "Archivieren",
+      "delete": "Löschen",
+      "deleteFolder": "Ordner löschen"
+    },
+    "aiChat": {
+      "title": "KI-Assistent",
+      "archive": "Chat-Archiv",
+      "newChat": "Neuer Chat",
+      "clearChat": "Chat löschen",
+      "close": "Schließen",
+      "welcome": {
+        "greeting": "👋 Hallo! Ihr KI-Assistent",
+        "tryAsking": "Fragen Sie mich:",
+        "examples": {
+          "searchBookmarks": "Meine React-Lesezeichen finden",
+          "organizeBookmarks": "Lesezeichen in Ordner sortieren",
+          "browseAll": "Alle Lesezeichen anzeigen",
+          "cleanupDuplicates": "Doppelte Lesezeichen finden und aufräumen"
+        }
+      },
+      "input": {
+        "placeholder": "Nachricht... (Enter senden)",
+        "placeholderWithAction": "{{description}}...",
+        "send": "Senden"
+      },
+      "messages": {
+        "error": "❌ KI-Dienst vorübergehend nicht verfügbar",
+        "regenerate": "Neu generieren",
+        "feedback": "Feedback"
+      },
+      "confirm": {
+        "clearChat": "Chat löschen?"
+      },
+      "status": {
+        "thinking": "Denkt...",
+        "processing": "Verarbeitet...",
+        "autoSaved": "Automatisch gespeichert",
+        "archived": "Beim Schließen archiviert"
+      }
+    },
+    "footer": {
+      "shortcuts": {
+        "newTab": "Neuer Tab",
+        "star": "Favorit",
+        "more": "Mehr"
+      }
+    },
+    "keyboard": {
+      "title": "Tastenkürzel",
+      "navigation": "Navigation",
+      "actions": "Aktionen",
+      "panels": "Panels",
+      "filterTabs": "Filter",
+      "close": "Schließen",
+      "shortcuts": {
+        "up": "Nach oben",
+        "down": "Nach unten",
+        "jk": "Vim-Navigation",
+        "jumpFirst": "Zum ersten",
+        "jumpLast": "Zum letzten",
+        "pageUp": "Seite auf",
+        "pageDown": "Seite ab",
+        "enter": "Öffnen",
+        "openNewTab": "Neuer Tab",
+        "star": "Favorit/Entfernen",
+        "space": "Vorschau umschalten",
+        "slash": "Suche fokussieren",
+        "focusSearch": "Suche fokussieren",
+        "openFirst": "Erste öffnen",
+        "escape": "Schließen / Fokus",
+        "h": "Hilfe",
+        "altA": "KI-Chat",
+        "r": "Wiederherstellen",
+        "d": "Dauerhaft löschen",
+        "chrome": "Chrome",
+        "recent": "Kürzlich",
+        "popular": "Beliebt",
+        "longTail": "Langzeit"
+      }
+    },
+    "keyboardHelp": {
+      "title": "⌨️ Tastenkürzel",
+      "closeHint": "H oder Esc zum Schließen",
+      "or": "oder",
+      "categories": {
+        "navigation": "Navigation",
+        "bookmarkActions": "Lesezeichen-Aktionen",
+        "filters": "Filter",
+        "search": "Suche",
+        "trash": "Papierkorb",
+        "other": "Andere"
+      },
+      "items": {
+        "prevItem": "Vorheriges",
+        "nextItem": "Nächstes",
+        "openBookmark": "Öffnen",
+        "jumpTop": "Zum Anfang",
+        "jumpBottom": "Zum Ende",
+        "pageUp": "Seite auf",
+        "pageDown": "Seite ab",
+        "openNewTab": "Neuer Tab",
+        "copyUrl": "URL kopieren",
+        "toggleStar": "Favorit",
+        "editBookmark": "Bearbeiten",
+        "deleteToTrash": "Löschen",
+        "filterAll": "Alle",
+        "filterCategories": "Nach Kategorie",
+        "filterStarred": "Favoriten",
+        "filterRecent": "Kürzlich",
+        "filterPopular": "Beliebt",
+        "filterTrash": "Papierkorb",
+        "focusSearch": "Suche",
+        "openFirstMatch": "Erste öffnen",
+        "clearSearch": "Suche löschen",
+        "restoreBookmark": "Wiederherstellen",
+        "permanentDelete": "Dauerhaft löschen",
+        "togglePreview": "Vorschau",
+        "showHideHelp": "Hilfe"
+      }
+    },
+    "settings": {
+      "title": "Einstellungen",
+      "tabs": {
+        "ai": "🤖 KI",
+        "sync": "☁️ Sync",
+        "ui": "🎨 UI",
+        "data": "💾 Daten"
+      },
+      "ai": {
+        "title": "🤖 KI-Modell",
+        "description": "Unterstützt alle OpenAI-kompatiblen Modelle.",
+        "provider": "Anbieter",
+        "apiUrl": "API URL",
+        "apiUrlPlaceholder": "https://api.openai.com/v1/chat/completions",
+        "apiUrlDesc": "Vollständige Adresse",
+        "modelId": "Modell-ID",
+        "modelIdPlaceholder": "gpt-3.5-turbo",
+        "modelIdDesc": "Bsp: gpt-4, deepseek-chat",
+        "currentConfig": "Konfiguration",
+        "currentConfigUrl": "URL:",
+        "currentConfigModel": "Modell:",
+        "defaultAddress": "Standard",
+        "defaultModel": "Standardmodell",
+        "keyManagement": "API-Schlüssel",
+        "keyCount": "Schlüssel",
+        "keyCountValue": "{{count}} Schlüssel",
+        "keyCountNone": "Kein Schlüssel",
+        "keyCountOne": "Mehrere empfohlen",
+        "keyCountMultiple": "Rotation aktiviert",
+        "manageKeys": "Verwalten",
+        "noKeysAlert": "Kein Schlüssel, KI nicht verfügbar",
+        "keyNumber": "🔑 Schlüssel #{{number}}",
+        "addNewKey": "Neuer Schlüssel",
+        "addKeyPlaceholder": "API-Schlüssel einfügen",
+        "addButton": "Hinzufügen",
+        "keySecurityNote": "🔒 Lokal verschlüsselt",
+        "connectionTest": "Verbindungstest",
+        "testButton": "Testen",
+        "testing": "Teste...",
+        "testSuccess": "✅",
+        "testFailed": "❌",
+        "testDesc": "Konfiguration prüfen",
+        "autoAnalyze": "Auto-Analyse",
+        "autoAnalyzeDesc": "Neue automatisch analysieren"
+      },
+      "sync": {
+        "chromeSync": "🔗 Chrome-Sync",
+        "chromeSyncDesc": "Mit Chrome-Lesezeichen synchronisiert",
+        "syncStatus": "Status",
+        "enabled": "An",
+        "disabled": "Aus",
+        "statusEnabled": "✅ Synchronisiert",
+        "statusDisabled": "❌ Unabhängig",
+        "enableSync": "Mit Chrome sync",
+        "enableSyncDesc": "An: Echtzeit",
+        "refreshSync": "Aktualisieren",
+        "refreshButton": "Aktualisieren",
+        "syncing": "Sync...",
+        "refreshDesc": "Zusammenführen, Duplikate entfernen",
+        "firstInstallAlert": "Erst: von Chrome importiert",
+        "cloudSync": "☁️ Cloud-Sync",
+        "cloudSyncDesc": "Zwischen Geräten",
+        "lastSync": "Letzte:",
+        "toggleSync": "An/Aus",
+        "enableButton": "An",
+        "disableButton": "Aus",
+        "processing": "Verarbeitet...",
+        "syncContent": "KI, Präferenzen, Regeln",
+        "manualSync": "Manuell sync",
+        "syncNow": "Jetzt sync",
+        "syncNowDesc": "Jetzt synchronisieren",
+        "storageQuota": "Speicher",
+        "quotaUsed": "{{used}}KB / {{limit}}KB",
+        "quotaDesc": "Limit 100KB",
+        "advancedOps": "Erweitert",
+        "clearCloud": "Cloud löschen",
+        "clearCloudDesc": "⚠️ Alles löschen",
+        "syncEnabled": "Chrome-Sync an",
+        "syncDisabled": "Chrome-Sync aus",
+        "confirmEnableSync": "Chrome-Synchronisierung aktivieren?\n\nWenn aktiviert:\n• Lesezeichen-Änderungen werden mit Chrome synchronisiert\n• Chrome-Lesezeichen-Änderungen werden mit dieser Erweiterung synchronisiert\n• Erste Synchronisierung führt vorhandene Lesezeichen zusammen\n\nFortfahren?",
+        "initialSyncComplete": "Erste Synchronisierung abgeschlossen! Zusammengeführt: {{merged}}, Zu Chrome hinzugefügt: {{addedToChrome}}, Lokal hinzugefügt: {{addedToStorage}}",
+        "toggleFailed": "Synchronisierung konnte nicht umgeschaltet werden: {{error}}"
+      },
+      "ui": {
+        "language": "🌍 Sprache",
+        "languageLabel": "Sprache",
+        "languageDesc": "Sofort.",
+        "openMode": "Öffnungsmodus",
+        "openModeLabel": "Bei Klick auf Pixel Buddy",
+        "openModeSidebar": "Seitenleiste",
+        "openModeTab": "Neuer Tab",
+        "openModeDesc": "Seitenleiste: beim Browsen",
+        "previewPanel": "Vorschau zeigen",
+        "previewPanelWidth": "Breite ({{width}}%)",
+        "pixelBuddy": "Pixel Buddy",
+        "pixelTheme": "Thema",
+        "pixelThemeDesc": "Auswählen und speichern",
+        "saveTheme": "Speichern",
+        "themeSelected": "Ausgewählt"
+      },
+      "data": {
+        "aiSyncTitle": "🔄 KI → Chrome sync",
+        "aiSyncDesc": "Struktur nach Chrome schreiben",
+        "aiSyncStatus": "Status",
+        "aiSynced": "Synced",
+        "aiNotSynced": "Nicht synced",
+        "aiSyncWarning": "⚠️ Unwiderruflich. Backup!",
+        "exportBackup": "Backup exportieren (HTML)",
+        "exportBackupDesc": "Chrome-Format",
+        "syncToChrome": "KI → Chrome",
+        "syncToChromeDesc": "Ordner in Chrome erstellen",
+        "aiSyncComplete": "✅ Nach Chrome",
+        "importExport": "Import/Export",
+        "exportBookmarks": "Exportieren",
+        "exportDesc": "JSON",
+        "importBookmarks": "Importieren",
+        "importDesc": "Von JSON",
+        "cleanup": "Aufräumen",
+        "emptyTrash": "Papierkorb leeren",
+        "emptyTrashDesc": "Dauerhaft löschen",
+        "resetSettings": "Alles zurücksetzen",
+        "resetDesc": "Standardwerte"
+      },
+      "messages": {
+        "saved": "Gespeichert",
+        "saveFailed": "Fehler",
+        "saving": "Speichert...",
+        "saveSettings": "Speichern",
+        "keyAdded": "Schlüssel hinzugefügt",
+        "keyRemoved": "Schlüssel entfernt",
+        "keyExists": "Existiert bereits",
+        "enterKey": "API-Schlüssel eingeben",
+        "testSuccess": "Test erfolgreich",
+        "testFailed": "Test fehlgeschlagen",
+        "testError": "Testfehler",
+        "connecting": "Verbindet...",
+        "noKeys": "Erst Schlüssel",
+        "connectionSuccess": "Erfolg! Modell: {{model}}",
+        "connectionFailed": "Fehler: {{error}}",
+        "connectionError": "Fehler: {{error}}",
+        "languageChanged": "Sprache geändert",
+        "themeChanged": "✅ Figur geändert",
+        "themeSaved": "✅ Gespeichert",
+        "themeSaveFailed": "❌ Fehler",
+        "syncEnabled": "Cloud an",
+        "syncDisabled": "Cloud aus",
+        "syncFailed": "Fehler: {{error}}",
+        "syncedToCloud": "Cloud sync",
+        "cloudCleared": "Cloud gelöscht",
+        "clearFailed": "Fehler: {{error}}",
+        "syncComplete": "Fertig!\nFusion: {{merged}}\nNeu: {{added}}\nAkt: {{updated}}",
+        "refreshFailed": "Fehler: {{error}}",
+        "enableSyncFirst": "Chrome-Sync erst an",
+        "bookmarksExported": "Exportiert",
+        "exportFailed": "Exportfehler",
+        "bookmarksImported": "{{count}} importiert",
+        "importFailed": "Importfehler",
+        "invalidFile": "Ungültig",
+        "trashEmptied": "Papierkorb leer",
+        "emptyFailed": "Fehler",
+        "settingsReset": "Zurückgesetzt",
+        "resetFailed": "Fehler",
+        "confirmEmpty": "Leeren? Unwiderruflich!",
+        "confirmReset": "Alles zurücksetzen?",
+        "aiSyncSuccess": "✅ Erfolg!\nOrdner: {{folders}}\nLesezeichen: {{bookmarks}}",
+        "aiSyncFailed": "❌ Fehler: {{error}}",
+        "aiSyncConfirm1": "⚠️ Warnung!\n\nSchreibt nach Chrome.\n\n• Unwiderruflich\n• Backup!\n\nWeiter?",
+        "aiSyncConfirm2": "🔒 Letzte Chance\n\nBackup gemacht?\n\nOK = Starten",
+        "exportedHtml": "Exportiert"
+      },
+      "providers": {
+        "custom": "Benutzerdefiniert",
+        "openai": "OpenAI",
+        "azure": "Azure OpenAI",
+        "anthropic": "Claude",
+        "google": "Gemini",
+        "groq": "Groq",
+        "xai": "xAI (Grok)",
+        "doubao": "Doubao",
+        "moonshot": "Kimi",
+        "aliyun": "Tongyi",
+        "yi": "01.AI",
+        "deepseek": "DeepSeek",
+        "siliconflow": "SiliconFlow",
+        "openrouter": "OpenRouter",
+        "ollama": "Ollama (Lokal)",
+        "huggingface": "HuggingFace"
+      },
+      "pixelThemes": {
+        "switchTo": "Wechseln zu {{name}}",
+        "classic": {
+          "name": "Klassisch Pixel",
+          "desc": "Professionell, freundlich",
+          "persona": "Koda · Gelehrter",
+          "slogan": "Im weiten Ozean der Links bin ich Ihr zuverlässiger Anker."
+        },
+        "cyber": {
+          "name": "Cyber Neon",
+          "desc": "Futuristisch, Nachtmodus",
+          "persona": "Vex · Cyber-Jäger",
+          "slogan": "Ich filtere das Rauschen und fange nur die wertvollsten Signale ein."
+        },
+        "grow": {
+          "name": "Natur-Spross",
+          "desc": "Heilend, organisch",
+          "persona": "Sprout · Gärtner",
+          "slogan": "Jedes Lesezeichen ist ein Samen der Inspiration, der darauf wartet zu blühen."
+        },
+        "flare": {
+          "name": "Sonnenuntergang",
+          "desc": "Energetisch, Entdeckung",
+          "persona": "Zing · Entdecker",
+          "slogan": "Entdecke, sammle nicht - lebe und strahle!"
+        },
+        "noir": {
+          "name": "Geek Terminal",
+          "desc": "Hacker, Retro, Minimal",
+          "persona": "Null · Binär-Butler",
+          "slogan": "Entferne das Überflüssige, kehre zur reinen Informationslogik zurück."
+        }
+      }
+    }
+  },
+  "popup": {
+    "title": "AnyMark",
+    "toggleLightMode": "Zu hellem Modus wechseln",
+    "toggleDarkMode": "Zu dunklem Modus wechseln",
+    "quickActions": "Schnellaktionen",
+    "saveCurrentPage": "Seite speichern",
+    "openSidebar": "Seitenleiste",
+    "searchBookmarks": "Suchen",
+    "menu": {
+      "saveCurrentTab": "Aktuellen Tab speichern",
+      "searchPlaceholder": "Lesezeichen suchen...",
+      "noResults": "Keine Ergebnisse",
+      "openSidebar": "Seitenleiste öffnen",
+      "openInTab": "In neuem Tab öffnen",
+      "settings": "Einstellungen"
+    },
+    "stats": {
+      "total": "Gesamt",
+      "today": "Heute",
+      "thisWeek": "Diese Woche",
+      "categories": "Kategorien"
+    },
+    "recentBookmarks": "Kürzlich",
+    "viewAll": "Alle",
+    "noBookmarks": "Noch keine",
+    "addFirst": "Erstes speichern",
+    "placeholders": {
+      "pageTitle": "Seitentitel",
+      "pageUrl": "https://...",
+      "tagName": "Tag..."
+    },
+    "labels": {
+      "difficulty": "Schwierigkeit",
+      "techStack": "Tech-Stack",
+      "removeTag": "Tag entfernen",
+      "addTag": "Tag hinzufügen"
+    },
+    "hints": {
+      "cannotOpenSidebar": "Nicht möglich, Rechtsklick"
+    },
+    "aiUnavailable": "KI-Analyse nicht verfügbar",
+    "folder": {
+      "createNew": "Ordner erstellen"
+    },
+    "analysis": {
+      "step1": "Inhalt wird extrahiert...",
+      "step2": "KI analysiert...",
+      "step3": "Bereit zum Speichern"
+    }
+  },
+  "chat": {
+    "title": "KI-Assistent",
+    "welcome": "👋 Hallo! Wie helfen?",
+    "inputPlaceholder": "Fragen Sie...",
+    "send": "Senden",
+    "thinking": "Denkt...",
+    "suggestions": {
+      "title": "Vorschläge",
+      "organize": "Organisieren",
+      "find": "Suchen...",
+      "analyze": "Analysieren",
+      "cleanup": "Bereinigen"
+    },
+    "tools": {
+      "searching": "🔍 Suche...",
+      "organizing": "📁 Organisiert...",
+      "analyzing": "🤖 Analysiert...",
+      "creating": "✨ Erstellt..."
+    },
+    "errors": {
+      "failed": "Fehler. Nochmal.",
+      "noBookmarks": "Noch keine.",
+      "networkError": "Netzwerkfehler."
+    },
+    "clear": "Chat löschen",
+    "close": "Schließen",
+    "newChat": "Neuer Chat",
+    "user": "Du",
+    "assistant": "KI"
+  },
+  "common": {
+    "buttons": {
+      "save": "Speichern",
+      "cancel": "Abbrechen",
+      "delete": "Löschen",
+      "edit": "Bearbeiten",
+      "close": "Schließen",
+      "confirm": "Bestätigen",
+      "back": "Zurück",
+      "next": "Weiter",
+      "finish": "Fertig",
+      "retry": "Wiederholen",
+      "refresh": "Aktualisieren"
+    },
+    "messages": {
+      "loading": "Lädt...",
+      "saving": "Speichert...",
+      "success": "Erfolg!",
+      "error": "Fehler",
+      "warning": "Warnung",
+      "info": "Info",
+      "confirm": "Sicher?",
+      "noData": "Keine Daten",
+      "comingSoon": "Demnächst"
+    },
+    "time": {
+      "justNow": "Jetzt",
+      "minutesAgo": "{{count}} Min",
+      "hoursAgo": "{{count}} Std",
+      "daysAgo": "{{count}} Tg",
+      "weeksAgo": "{{count}} Wo",
+      "monthsAgo": "{{count}} Mo",
+      "yearsAgo": "{{count}} Jr"
+    }
+  },
+  "renderError": {
+    "title": "Render-Fehler",
+    "rootNotFound": "Stammelement nicht gefunden"
+  },
+  "importProgress": {
+    "title": "Import abgeschlossen!",
+    "importing": "Importiere Chrome-Lesezeichen...",
+    "hint": "Bitte warten, KI analysiert jeden Lesezeichen"
+  },
+  "folderSelector": {
+    "newBadge": "Neu",
+    "existingFolders": "Vorhandene Ordner",
+    "createNew": "Neuen Ordner erstellen: {{name}}"
+  },
+  "floatingChat": {
+    "operationComplete": "Vorgang abgeschlossen! Bitte überprüfen Sie die Lesezeichenliste auf Änderungen.",
+    "errorOccurred": "Entschuldigung, ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+    "clearChatConfirm": "Sind Sie sicher, dass Sie den gesamten Gesprächsverlauf löschen möchten? Dies kann nicht rückgängig gemacht werden.",
+    "saveFailed": "Lesezeichen konnte nicht gespeichert werden, bitte erneut versuchen",
+    "saveCancelled": "Speichern abgebrochen",
+    "saveSuccess": "✅ 《{{title}}》 erfolgreich gespeichert\n\n📁 Ort: {{folderPath}}\n🏷️ Tags: {{tags}}",
+    "placeholder": "Nachricht eingeben... (Enter zum Senden)",
+    "actions": {
+      "saveCurrentPage": "Aktuelle Seite speichern",
+      "collectAI": "Alle KI-bezogenen Lesezeichen in Ordner sammeln",
+      "organize": "Lesezeichen intelligent organisieren"
+    }
+  },
+  "saveConfirm": {
+    "title": "KI-Analyse abgeschlossen",
+    "confidence": "Vertrauen {{value}}%",
+    "cancel": "Abbrechen",
+    "pageTitlePlaceholder": "Seitentitel",
+    "folderPathPlaceholder": "/Ordnerpfad",
+    "addTagPlaceholder": "Tag hinzufügen...",
+    "summaryPlaceholder": "Inhaltszusammenfassung...",
+    "cancelEdit": "Bearbeitung abbrechen",
+    "saveBookmark": "Lesezeichen speichern",
+    "edit": "Bearbeiten",
+    "confirmSave": "Speichern bestätigen",
+    "aiCategory": "KI-Kategorie",
+    "location": "Speicherort",
+    "smartTags": "Smart Tags",
+    "contentSummary": "Zusammenfassung"
+  },
+  "chatArchive": {
+    "title": "Chat-Archiv",
+    "new": "Neu",
+    "newChat": "Neuer Chat",
+    "loading": "Lädt...",
+    "empty": "Keine Archive",
+    "emptyDesc": "Gespräche werden hier automatisch gespeichert",
+    "messages": "{{count}} Nachrichten",
+    "deleteConfirm": "Möchten Sie dieses Chat-Archiv wirklich löschen?",
+    "editTitle": "Titel Bearbeiten",
+    "restoreChat": "Chat Wiederherstellen",
+    "delete": "Löschen",
+    "storage": "Speicher: {{used}} / {{total}}",
+    "yesterday": "Gestern",
+    "daysAgo": "Vor {{count}} Tagen"
+  },
+  "notification": {
+    "saveSuccessTitle": "✅ Lesezeichen Gespeichert",
+    "saveSuccessMessage": "Gespeichert: {{title}}",
+    "saveFailTitle": "❌ Speichern Fehlgeschlagen",
+    "saveFailMessage": "Lesezeichen konnte nicht gespeichert werden, bitte erneut versuchen",
+    "toastSaved": "✅ Lesezeichen gespeichert"
+  },
+  "folder": {
+    "work": "Arbeit",
+    "personal": "Persönlich",
+    "learning": "Lernen",
+    "uncategorized": "Ohne Kategorie",
+    "bookmarks": "Lesezeichen",
+    "development": "Entwicklung"
+  },
+  "progressIndicator": {
+    "thinking": "Denken",
+    "toolCalling": "Werkzeuge Vorbereiten",
+    "toolExecuting": "Ausführen",
+    "responding": "Antwort Generieren",
+    "processing": "Verarbeitung"
+  },
+  "quickAction": {
+    "search": "Suchen",
+    "organize": "Organisieren",
+    "discover": "Entdecken",
+    "recommend": "Empfehlen",
+    "chat": "Chat",
+    "searchDesc": "Lesezeichen durchsuchen",
+    "organizeDesc": "Lesezeichen organisieren",
+    "discoverDesc": "Web-Ressourcen entdecken",
+    "recommendDesc": "Ähnliche Inhalte empfehlen",
+    "chatDesc": "Freie Unterhaltung"
+  },
+  "messageBubble": {
+    "copied": "Kopiert",
+    "copy": "Kopieren",
+    "regenerate": "Neu generieren",
+    "helpful": "Hilfreich",
+    "notHelpful": "Nicht hilfreich"
+  },
+  "resizableDivider": {
+    "doubleClickExpand": "Doppelklick zum Erweitern",
+    "dragResize": "Ziehen zum Größenänderung",
+    "dragResizeCollapse": "Ziehen zum Größenänderung | Doppelklick zum Reduzieren",
+    "expandPanel": "Panel erweitern",
+    "collapsePanel": "Panel reduzieren"
+  },
+  "thinkingCard": {
+    "thinkingProcess": "Denkprozess",
+    "thinking": "Denken..."
+  },
+  "conflict": {
+    "title": "{{count}} Konflikte gefunden",
+    "batchActions": "Stapelaktionen",
+    "batch": {
+      "useAllPlugin": "Alle Plugin-Version",
+      "useAllChrome": "Alle Chrome-Version",
+      "useAllNewer": "Alle neuere Version",
+      "keepAllBoth": "Alle beide behalten"
+    },
+    "pluginVersion": "Plugin-Version",
+    "chromeVersion": "Chrome-Version",
+    "newer": "Neuer",
+    "field": {
+      "title": "Titel",
+      "path": "Pfad",
+      "time": "Geändert"
+    },
+    "option": {
+      "usePlugin": "Plugin verwenden",
+      "useChrome": "Chrome verwenden",
+      "keepBoth": "Beide behalten"
+    },
+    "type": {
+      "title": "Titel unterschiedlich",
+      "path": "Pfad unterschiedlich",
+      "both": "Beide unterschiedlich"
+    },
+    "summary": {
+      "usePlugin": "{{count}} auf Plugin-Version aktualisieren",
+      "useChrome": "{{count}} auf Chrome-Version aktualisieren",
+      "keepBoth": "{{count}} Duplikate erstellen",
+      "unresolved": "{{count}} ungelöst",
+      "none": "Keine Änderungen"
+    },
+    "apply": "Änderungen anwenden",
+    "applying": "Wird angewendet",
+    "noConflicts": "Keine Konflikte gefunden",
+    "unresolvedWarning": "Bitte lösen Sie alle {{count}} Konflikte vor dem Anwenden",
+    "result": {
+      "success": "{{count}} Konflikte erfolgreich gelöst",
+      "partial": "{{resolved}} gelöst, {{failed}} fehlgeschlagen"
+    }
+  },
+  "sync": {
+    "status": {
+      "synced": "Synchronisiert",
+      "syncing": "Synchronisiere",
+      "hasConflicts": "Konflikte",
+      "error": "Fehler",
+      "disabled": "Deaktiviert"
+    },
+    "tooltip": {
+      "synced": "Alle Lesezeichen sind synchronisiert",
+      "syncing": "Lesezeichen werden synchronisiert...",
+      "hasConflicts": "{{count}} Konflikte müssen gelöst werden",
+      "error": "Synchronisierungsfehler aufgetreten",
+      "disabled": "Chrome-Synchronisierung ist deaktiviert"
+    }
+  }
+}

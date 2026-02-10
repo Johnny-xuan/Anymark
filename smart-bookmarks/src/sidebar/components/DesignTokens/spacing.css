@@ -1,0 +1,168 @@
+/**
+ * 设计系统 - 间距系统
+ * 基于 4px 网格，建立一致的视觉韵律
+ *
+ * 间距倍数：
+ * - 4px: 最小间距 (xs)
+ * - 8px: 小间距 (sm)
+ * - 12px: 中小间距 (md)
+ * - 16px: 中等间距 (lg)
+ * - 20px: 中大间距 (xl)
+ * - 24px: 大间距 (2xl)
+ * - 32px: 超大间距 (3xl)
+ * - 40px: 特大间距 (4xl)
+ */
+
+:root {
+  /* 间距变量 */
+  --spacing-xs: 4px;   /* 0.25rem */
+  --spacing-sm: 8px;   /* 0.5rem */
+  --spacing-md: 12px;  /* 0.75rem */
+  --spacing-lg: 16px;  /* 1rem */
+  --spacing-xl: 20px;  /* 1.25rem */
+  --spacing-2xl: 24px; /* 1.5rem */
+  --spacing-3xl: 32px; /* 2rem */
+  --spacing-4xl: 40px; /* 2.5rem */
+
+  /* 组件内边距 */
+  --padding-input: 10px 14px;
+  --padding-button: 10px 14px;
+  --padding-card: 16px;
+  --padding-message: 16px 20px;
+
+  /* 组件间距 */
+  --gap-message-actions: 8px;
+  --gap-header-actions: 4px;
+  --gap-input: 8px;
+  --gap-thinking: 6px;
+}
+
+/* ========== 消息气泡间距修复 ========== */
+.message-bubble {
+  padding: var(--padding-message); /* 统一 padding */
+}
+
+.message-bubble.user {
+  background: #2f2f2f;
+  border-radius: 12px;
+  margin: var(--spacing-sm) 0; /* 8px 上下间距 */
+}
+
+.message-bubble.assistant {
+  background: transparent;
+  padding: var(--spacing-lg) var(--spacing-2xl); /* 16px 24px */
+}
+
+/* ========== 消息操作按钮间距 ========== */
+.message-actions {
+  display: flex;
+  gap: var(--gap-message-actions); /* 8px */
+  margin-top: var(--spacing-sm); /* 8px */
+  opacity: 0.3;
+  transition: opacity 0.2s ease;
+}
+
+.message-bubble:hover .message-actions,
+.message-actions:focus-within {
+  opacity: 1;
+}
+
+/* ========== AI 聊天面板间距统一 ========== */
+.ai-chat-header {
+  padding: var(--spacing-md) var(--spacing-lg); /* 12px 16px */
+}
+
+.ai-chat-input {
+  padding: var(--spacing-lg); /* 16px */
+  gap: var(--gap-input); /* 8px */
+}
+
+.history-header {
+  padding: var(--spacing-md); /* 12px */
+  gap: var(--spacing-sm); /* 8px */
+}
+
+.history-item {
+  padding: 10px var(--spacing-md); /* 10px 12px */
+  margin-bottom: var(--spacing-xs); /* 4px */
+}
+
+/* ========== 快捷操作按钮间距 ========== */
+.quick-actions button {
+  padding: 11px var(--spacing-lg); /* 11px 16px */
+  margin-bottom: var(--spacing-sm); /* 8px */
+}
+
+/* ========== 输入框标签 ========== */
+.input-tag {
+  padding: 4px 10px;
+}
+
+/* ========== 模式切换按钮 ========== */
+.mode-toggle-btn {
+  width: 36px;
+  height: 36px;
+}
+
+/* ========== 按钮尺寸统一 ========== */
+.ai-chat-action-btn,
+.chat-action-btn {
+  padding: 6px;
+  min-width: 36px;
+  min-height: 36px;
+}
+
+/* ========== 思考组件间距 ========== */
+.thinking-header {
+  padding: var(--spacing-sm) var(--spacing-md); /* 8px 12px */
+  gap: var(--spacing-sm); /* 6px */
+}
+
+.thinking-body {
+  padding: 10px var(--spacing-md); /* 10px 12px */
+}
+
+.thinking-line {
+  margin-bottom: var(--spacing-sm); /* 8px */
+  gap: 6px;
+}
+
+/* ========== 终端路径栏间距 ========== */
+.terminal-path-bar {
+  padding: 6px var(--spacing-md); /* 6px 12px */
+  gap: var(--spacing-sm); /* 8px */
+}
+
+/* ========== 头部按钮间距统一 ========== */
+.ai-chat-header-actions {
+  gap: var(--gap-header-actions); /* 4px */
+}
+
+/* ========== 欢迎界面间距 ========== */
+.ai-chat-welcome {
+  padding: var(--spacing-2xl) var(--spacing-lg); /* 32px 16px */
+  gap: var(--spacing-lg); /* 16px */
+}
+
+.welcome-icon {
+  margin-bottom: var(--spacing-lg); /* 16px */
+}
+
+/* ========== 等待状态间距 ========== */
+.agent-waiting {
+  padding: var(--spacing-lg) var(--spacing-xl); /* 16px 20px */
+  gap: 12px;
+  margin: var(--spacing-sm) var(--spacing-lg); /* 8px 16px */
+}
+
+/* ========== 响应式调整 ========== */
+@media (max-width: 768px) {
+  :root {
+    --padding-message: 12px 16px;
+    --spacing-2xl: 20px;
+  }
+
+  .message-bubble {
+    padding: var(--padding-message);
+  }
+}

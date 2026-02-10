@@ -1,0 +1,1028 @@
+{
+  "onboarding": {
+    "hero": {
+      "title": "AnyMark",
+      "subtitle": "Votre Assistant de Favoris Propulsé par l'IA",
+      "description": "Agent IA Conversationnel · Sauvegarde Intelligente · Multi-Fournisseur · Gratuit et Open Source",
+      "badge": "Open Source · Gratuit",
+      "explore": "Explorer les Fonctionnalités",
+      "scroll": "Défiler vers le bas"
+    },
+    "features": {
+      "heading": "Fonctionnalités Principales",
+      "subtitle": "Tout ce dont vous avez besoin pour gérer vos favoris intelligemment",
+      "agent": {
+        "title": "Agent IA",
+        "desc": "Discutez avec vos favoris en langage naturel. Recherchez, organisez et découvrez — le tout par conversation."
+      },
+      "smartSave": {
+        "title": "Sauvegarde Intelligente",
+        "desc": "Sauvegardez en un clic. L'IA ajoute les tags, catégorise et suggère des dossiers automatiquement."
+      },
+      "multiProvider": {
+        "title": "Multi-Fournisseur",
+        "desc": "Utilisez votre propre clé API. Compatible avec OpenAI, Google Gemini, DeepSeek et plus."
+      }
+    },
+    "buddies": {
+      "heading": "Découvrez vos Pixel Buddies",
+      "subtitle": "Cinq personnages uniques — choisissez votre préféré dans les Paramètres",
+      "koda": { "name": "Koda", "role": "Érudit", "quote": "Dans le vaste océan de liens, je suis votre ancre la plus fiable." },
+      "vex": { "name": "Vex", "role": "Chasseur Cyber", "quote": "Filtrer le bruit, je ne capture que les signaux les plus précieux." },
+      "sprout": { "name": "Sprout", "role": "Jardinier du Savoir", "quote": "Chaque favori est une graine d'inspiration prête à germer." },
+      "flare": { "name": "Zing", "role": "Explorateur d'Inspiration", "quote": "La vie ne se résume pas à collectionner — allez découvrir, allez briller !" },
+      "null": { "name": "Null", "role": "Majordome Binaire", "quote": "Éliminer la redondance, revenir à la logique originale de l'information." }
+    },
+    "agent": {
+      "heading": "Agent IA Conversationnel",
+      "subtitle": "Gérez vos favoris en langage naturel — aussi simple que discuter avec un ami",
+      "search": { "title": "Recherche Intelligente", "desc": "Trouvez n'importe quel favori instantanément avec /find et le langage naturel" },
+      "discover": { "title": "Navigation Type Système de Fichiers", "desc": "Parcourez vos favoris comme des dossiers avec /ls, /tree et /cd" },
+      "trending": { "title": "Statistiques et Aperçus", "desc": "Consultez les statistiques, éléments favoris et tendances avec /stats" },
+      "organize": { "title": "Organisation IA", "desc": "L'IA analyse vos favoris et suggère de meilleures structures de dossiers" },
+      "chat": { "title": "Conversation Naturelle", "desc": "Décrivez simplement ce dont vous avez besoin — l'agent comprend le contexte" }
+    },
+    "shortcuts": {
+      "heading": "Raccourcis Clavier",
+      "subtitle": "Naviguez et gérez vos favoris à la vitesse de la pensée",
+      "navigation": "Navigation",
+      "updown": "Naviguer haut/bas",
+      "vimNav": "Navigation style Vim",
+      "open": "Ouvrir le favori",
+      "actions": "Actions",
+      "star": "Ajouter/Retirer étoile",
+      "delete": "Supprimer le favori",
+      "copy": "Copier l'URL",
+      "global": "Global",
+      "sidebar": "Basculer la barre latérale",
+      "save": "Sauvegarde rapide",
+      "note": "Appuyez sur H à tout moment pour voir tous les raccourcis"
+    },
+    "appName": "ANYMARK",
+    "agentDemo": {
+      "heading": "Agent IA Conversationnel",
+      "subtitle": "Gérez vos favoris en langage naturel, aussi simple que discuter avec un ami",
+      "welcome": "Tapez / dans le champ ci-dessous pour voir les commandes disponibles !",
+      "online": "En ligne",
+      "placeholder": "Tapez / pour voir les commandes...",
+      "agentName": "AnyMark Agent",
+      "commands": "Commandes",
+      "navigate": "Naviguer",
+      "select": "Sélectionner",
+      "cmd": {
+        "find": { "label": "Chercher", "desc": "Rechercher favoris et dossiers" },
+        "ls": { "label": "Lister", "desc": "Voir le contenu du répertoire" },
+        "tree": { "label": "Arbre", "desc": "Afficher l'arborescence" },
+        "stats": { "label": "Stats", "desc": "Statistiques des favoris" }
+      },
+      "demo1": {
+        "user": "find ressources React",
+        "assistant": "8 favoris React trouvés : Docs React, Tutoriel Hooks, Guide Redux... Lequel ouvrir ?"
+      },
+      "demo2": {
+        "user": "ls",
+        "assistant": "📁 Frontend (12)\n📁 Backend (8)\n📁 DevOps (5)\n📁 Design (3)\n⭐ React Docs\n⭐ GitHub"
+      },
+      "demo3": {
+        "user": "tree",
+        "assistant": "📂 Favoris\n├── 📁 Frontend (12)\n│   ├── React Docs\n│   └── Vue Guide\n├── 📁 Backend (8)\n└── 📁 DevOps (5)"
+      },
+      "demo4": {
+        "user": "stats",
+        "assistant": "📊 Total : 128 favoris, 15 dossiers\n⭐ Favoris : 12 | 🏷️ Tagués : 89\n🔥 Plus visités : GitHub, Stack Overflow"
+      }
+    },
+    "videoQuickStart": {
+      "heading": "Démarrage Rapide",
+      "videoPlaceholder": "Vidéo Démo Bientôt Disponible",
+      "step1": {
+        "title": "Installer l'Extension",
+        "desc": "Ajoutez AnyMark à Chrome depuis le Web Store ou chargez-la comme extension non empaquetée."
+      },
+      "step2": {
+        "title": "Configurer Votre Clé API",
+        "desc": "Ouvrez les Paramètres et entrez votre clé API. Compatible avec OpenAI, Gemini, DeepSeek et plus."
+      },
+      "step3": {
+        "title": "Commencer à Discuter",
+        "desc": "Ouvrez la barre latérale et parlez à votre agent IA. Recherchez, organisez et découvrez vos favoris naturellement."
+      }
+    },
+    "cta": {
+      "heading": "Prêt à Commencer ?",
+      "text": "Découvrez la gestion intelligente de favoris propulsée par l'IA — 100% gratuit et open source.",
+      "button": "Ouvrir AnyMark",
+      "hint": "Ouvre la barre latérale pour commencer immédiatement",
+      "openSource": "Open Source",
+      "license": "Licence MIT"
+    },
+    "dotsNavigation": {
+      "goToSection": "Aller à la section {{section}}"
+    },
+    "language": {
+      "english": "English",
+      "chinese": "简体中文",
+      "japanese": "日本語",
+      "german": "Deutsch",
+      "spanish": "Español",
+      "french": "Français"
+    }
+  },
+  "sidebar": {
+    "header": {
+      "title": "AnyMark",
+      "settings": "Paramètres",
+      "expand": "Développer",
+      "close": "Fermer",
+      "theme": "Changer Thème",
+      "aiAnalyze": "Analyse IA"
+    },
+    "tabs": {
+      "bookmarks": "Signets",
+      "chat": "Assistant IA"
+    },
+    "search": {
+      "placeholder": "Rechercher favoris...",
+      "noResults": "Aucun favori trouvé",
+      "searching": "Recherche..."
+    },
+    "filters": {
+      "all": "Tous",
+      "uncategorized": "Catégories IA",
+      "favorites": "Favoris",
+      "recent": "Récents",
+      "popular": "Populaires",
+      "longTail": "Longue Traîne",
+      "trash": "Corbeille",
+      "descriptions": {
+        "chrome": "Tous les favoris",
+        "uncategorized": "Favoris catégorisés par IA",
+        "favorites": "Favoris avec étoile",
+        "recent": "30 derniers jours",
+        "popular": "Plus visités (Top 20)",
+        "longTail": "Longue traîne - moins visités",
+        "trash": "Favoris supprimés"
+      }
+    },
+    "bookmarks": {
+      "loading": "Chargement des favoris...",
+      "empty": "Pas encore de favoris",
+      "emptyHint": "Ajoutez votre premier favori pour commencer",
+      "count": "{{count}} favoris",
+      "selected": "Sélectionné",
+      "delete": "Supprimer",
+      "restore": "Restaurer",
+      "favorite": "Ajouter aux Favoris",
+      "unfavorite": "Retirer des Favoris",
+      "edit": "Modifier",
+      "open": "Ouvrir",
+      "copyUrl": "Copier l'URL",
+      "moveToFolder": "Déplacer vers Dossier"
+    },
+    "bookmarkList": {
+      "empty": {
+        "noBookmarks": "Aucun favori trouvé",
+        "adjustFilters": "Essayez d'ajuster vos filtres ou recherche",
+        "noCategories": "Pas de favoris catégorisés",
+        "useAiAnalysis": "Utilisez l'analyse IA pour catégoriser"
+      },
+      "item": {
+        "visits": "{{count}} visites",
+        "items": "{{count}} éléments",
+        "folders": "{{count}} dossiers",
+        "analyzing": "Analyse IA...",
+        "analyze": "Analyse IA intelligente",
+        "expandLabel": "Développer",
+        "collapseLabel": "Réduire"
+      },
+      "actions": {
+        "reanalyze": "Déjà analysé. Réanalyser?",
+        "startAnalyzing": "Démarrage analyse IA...",
+        "analyzeComplete": "Analyse IA terminée!",
+        "analyzeFailed": "Échec analyse: {{error}}",
+        "analyzeEmpty": "Résultat vide",
+        "noSummary": "Impossible de générer résumé"
+      },
+      "edit": {
+        "renaming": "Renommage dossier (ESC annuler, Entrée valider)",
+        "editing": "Mode édition (ESC annuler, Entrée valider)",
+        "cancelled": "Édition annulée",
+        "emptyTitle": "Titre requis",
+        "folderRenamed": "Dossier renommé",
+        "bookmarkUpdated": "Favori mis à jour"
+      },
+      "delete": {
+        "confirmFolder": "Supprimer dossier \"{{title}}\"?\n\nTous les favoris seront supprimés!",
+        "folderDeleted": "Dossier \"{{title}}\" supprimé",
+        "confirmPermanent": "Supprimer définitivement \"{{title}}\"?\n\n⚠️ Action irréversible!",
+        "permanentlyDeleted": "Suppression définitive",
+        "confirmDelete": "Supprimer \"{{title}}\"?\n\nRestauration possible depuis corbeille",
+        "movedToTrash": "Déplacé vers corbeille",
+        "restored": "Favori restauré"
+      },
+      "drag": {
+        "cannotMoveToSelf": "Impossible de déplacer vers soi-même",
+        "movedToFolder": "Déplacé vers: {{title}}",
+        "folderMoved": "Dossier déplacé vers: {{title}}",
+        "folderReordered": "Dossier réordonné",
+        "bookmarkReordered": "Favori réordonné"
+      },
+      "star": {
+        "added": "Ajouté aux favoris",
+        "removed": "Retiré des favoris",
+        "pinned": "Favori épinglé",
+        "unpinned": "Dégagement épinglé"
+      },
+      "copy": {
+        "success": "URL copiée",
+        "failed": "Erreur copie URL"
+      },
+      "open": {
+        "failed": "Impossible d'ouvrir",
+        "apiUnavailable": "API navigateur indisponible"
+      }
+    },
+    "preview": {
+      "title": "Aperçu",
+      "noSelection": "Sélectionnez un favori",
+      "selectHint": "Utilisez ↑↓ pour naviguer",
+      "url": "URL",
+      "tags": "Tags",
+      "category": "Catégorie",
+      "summary": "Résumé",
+      "confidence": "Confiance",
+      "createdAt": "Créé",
+      "updatedAt": "Mis à jour",
+      "actions": {
+        "open": "Ouvrir",
+        "edit": "Modifier",
+        "star": "Favori",
+        "unstar": "Retirer",
+        "copyUrl": "Copier URL",
+        "delete": "Supprimer",
+        "restore": "Restaurer"
+      },
+      "sections": {
+        "aiAnalysis": "Analyse IA",
+        "statistics": "Statistiques",
+        "tags": "Tags",
+        "notes": "Notes"
+      },
+      "stats": {
+        "visits": "Visites",
+        "visitsTimes": "{{count}} fois",
+        "lastVisit": "Dernière visite",
+        "created": "Créé",
+        "importance": "Importance",
+        "never": "Jamais"
+      },
+      "ai": {
+        "reanalyze": "Réanalyser",
+        "analyzing": "Analyse...",
+        "analyzeNow": "Analyser",
+        "noAnalysis": "Pas encore d'analyse",
+        "category": "Catégorie:",
+        "startAnalyzing": "Démarrage analyse...",
+        "analyzeComplete": "Analyse terminée!",
+        "analyzeFailed": "Échec: {{error}}",
+        "analyzeEmpty": "Résultat vide"
+      },
+      "time": {
+        "justNow": "Maintenant",
+        "minutesAgo": "{{count}} min",
+        "hoursAgo": "{{count}} h",
+        "daysAgo": "{{count}} j"
+      },
+      "shortcuts": {
+        "open": "Ouvrir",
+        "newTab": "Nouvel Onglet",
+        "edit": "Modifier",
+        "copyUrl": "Copier URL",
+        "star": "Favori",
+        "unstar": "Retirer",
+        "delete": "Supprimer",
+        "restore": "Restaurer"
+      },
+      "messages": {
+        "updated": "Favori mis à jour",
+        "urlCopied": "URL copiée",
+        "starred": "Ajouté aux favoris",
+        "unstarred": "Retiré des favoris",
+        "restored": "Favori restauré",
+        "deleted": "Vers corbeille",
+        "confirmDelete": "Supprimer \"{{title}}\"?\n\nRestauration possible",
+        "confirmRestore": "Choisir action:\n\nOK = Restaurer\nAnnuler = Retour"
+      },
+      "breadcrumb": {
+        "root": "Racine"
+      }
+    },
+    "welcome": {
+      "title": "Bienvenue sur AnyMark!",
+      "subtitle": "Votre Gestionnaire de Favoris Intelligent",
+      "feature1": "💡 Conseil Rapide",
+      "feature1Desc": "Glissez le bord gauche pour ajuster à 40-50%",
+      "feature2": "✨ Chrome Mémorise",
+      "feature2Desc": "Largeur sauvegardée automatiquement",
+      "close": "Commencer →",
+      "dontShowAgain": "Ne plus afficher"
+    },
+    "analysis": {
+      "analyzing": "Analyse...",
+      "progress": "Progression: {{percent}}%",
+      "status": "📖 Analyse des favoris...",
+      "complete": "✅ Terminé! {{count}} favoris analysés",
+      "failed": "❌ Échec: {{error}}",
+      "noBookmarks": "Aucun favori à analyser",
+      "addFirst": "Ajoutez ou importez des favoris"
+    },
+    "toast": {
+      "bookmarkAdded": "Favori ajouté",
+      "bookmarkDeleted": "Favori supprimé",
+      "bookmarkRestored": "Favori restauré",
+      "bookmarkUpdated": "Favori mis à jour",
+      "importSuccess": "{{count}} favoris Chrome importés!",
+      "importFailed": "Échec importation",
+      "copySuccess": "URL copiée",
+      "copyFailed": "Erreur copie",
+      "deleteConfirm": "Supprimer définitivement \"{{title}}\"? Irréversible!",
+      "permanentlyDeleted": "Suppression définitive",
+      "analysisComplete": "✅ Analyse en arrière-plan terminée! Succès: {{completed}}, Échecs: {{failed}}",
+      "analysisStarted": "🚀 L'analyse va traiter {{count}} favoris en arrière-plan. Le analyse continue même si vous fermez le panneau.",
+      "analysisFailed": "❌ Échec du lancement: {{error}}",
+      "analyzing": "Analyse... {{progress}}%",
+      "deleteConfirmTitle": "Voulez-vous vraiment supprimer \"{{title}}\"?"
+    },
+    "errors": {
+      "loadBookmarks": "Erreur chargement favoris"
+    },
+    "editDialog": {
+      "title": "Modifier Favori",
+      "fields": {
+        "title": "Titre",
+        "titlePlaceholder": "Titre du favori",
+        "url": "URL",
+        "urlPlaceholder": "https://...",
+        "folder": "Dossier",
+        "folderPlaceholder": "/Catégorie/Sous-catégorie",
+        "tags": "Tags",
+        "tagsPlaceholder": "Ajouter tag...",
+        "notes": "Notes",
+        "notesPlaceholder": "Ajouter notes..."
+      },
+      "badges": {
+        "aiGenerated": "Généré par IA"
+      },
+      "buttons": {
+        "add": "Ajouter",
+        "cancel": "Annuler",
+        "save": "Sauvegarder"
+      },
+      "hints": {
+        "aiSummary": "Résumé IA affiché, modifiable",
+        "userNotes": "Vous pouvez modifier vos notes"
+      },
+      "shortcuts": {
+        "cancel": "Annuler",
+        "save": "Sauvegarder"
+      }
+    },
+    "contextMenu": {
+      "openNewTab": "Ouvrir dans Nouvel Onglet",
+      "copyLink": "Copier Lien",
+      "edit": "Modifier",
+      "rename": "Renommer",
+      "star": "Favori",
+      "unstar": "Retirer",
+      "moveTo": "Déplacer vers...",
+      "archive": "Archiver",
+      "delete": "Supprimer",
+      "deleteFolder": "Supprimer Dossier"
+    },
+    "aiChat": {
+      "title": "Assistant Favoris IA",
+      "archive": "Archives Chat",
+      "newChat": "Nouveau Chat",
+      "clearChat": "Effacer Chat",
+      "close": "Fermer",
+      "welcome": {
+        "greeting": "👋 Bonjour! Assistant Favoris IA",
+        "tryAsking": "Essayez de me demander:",
+        "examples": {
+          "searchBookmarks": "Trouver mes favoris React",
+          "organizeBookmarks": "Organiser mes favoris en dossiers",
+          "browseAll": "Afficher tous mes favoris",
+          "cleanupDuplicates": "Trouver et nettoyer les doublons"
+        }
+      },
+      "input": {
+        "placeholder": "Message... (Entrée envoyer, ↑↓ historique)",
+        "placeholderWithAction": "{{description}}...",
+        "send": "Envoyer"
+      },
+      "messages": {
+        "error": "❌ Service IA temporairement indisponible",
+        "regenerate": "Régénérer",
+        "feedback": "Feedback"
+      },
+      "confirm": {
+        "clearChat": "Effacer conversation?"
+      },
+      "status": {
+        "thinking": "Réflexion...",
+        "processing": "Traitement...",
+        "autoSaved": "Sauvegarde auto",
+        "archived": "Archivé à la fermeture"
+      }
+    },
+    "footer": {
+      "shortcuts": {
+        "newTab": "Nouvel Onglet",
+        "star": "Favori",
+        "more": "Plus"
+      }
+    },
+    "keyboard": {
+      "title": "Raccourcis Clavier",
+      "navigation": "Navigation",
+      "actions": "Actions",
+      "panels": "Panneaux",
+      "filterTabs": "Filtres",
+      "close": "Fermer",
+      "shortcuts": {
+        "up": "Monter",
+        "down": "Descendre",
+        "jk": "Navigation Vim",
+        "jumpFirst": "Aller au premier",
+        "jumpLast": "Aller au dernier",
+        "pageUp": "Page précédente",
+        "pageDown": "Page suivante",
+        "enter": "Ouvrir favori",
+        "openNewTab": "Nouvel onglet",
+        "star": "Favori/Retirer",
+        "space": "Basculer aperçu",
+        "slash": "Focus recherche",
+        "focusSearch": "Focus recherche",
+        "openFirst": "Ouvrir première",
+        "escape": "Fermer / Focus",
+        "h": "Aide",
+        "altA": "Chat IA",
+        "r": "Restaurer (corbeille)",
+        "d": "Supprimer (corbeille)",
+        "chrome": "Chrome",
+        "recent": "Récents",
+        "popular": "Populaires",
+        "longTail": "Longue traîne"
+      }
+    },
+    "keyboardHelp": {
+      "title": "⌨️ Raccourcis Clavier",
+      "closeHint": "Appuyez sur H ou Esc pour fermer",
+      "or": "ou",
+      "categories": {
+        "navigation": "Navigation",
+        "bookmarkActions": "Actions Favoris",
+        "filters": "Filtres",
+        "search": "Recherche",
+        "trash": "Corbeille",
+        "other": "Autres"
+      },
+      "items": {
+        "prevItem": "Élément précédent",
+        "nextItem": "Élément suivant",
+        "openBookmark": "Ouvrir favori",
+        "jumpTop": "Aller au début",
+        "jumpBottom": "Aller à la fin",
+        "pageUp": "Page précédente",
+        "pageDown": "Page suivante",
+        "openNewTab": "Nouvel onglet",
+        "copyUrl": "Copier URL",
+        "toggleStar": "Favori/Retirer",
+        "editBookmark": "Modifier favori",
+        "deleteToTrash": "Vers corbeille",
+        "filterAll": "Tous favoris",
+        "filterCategories": "Par catégorie",
+        "filterStarred": "Favoris",
+        "filterRecent": "Récents",
+        "filterPopular": "Populaires",
+        "filterTrash": "Corbeille",
+        "focusSearch": "Focus recherche",
+        "openFirstMatch": "Ouvrir première",
+        "clearSearch": "Effacer recherche",
+        "restoreBookmark": "Restaurer favori",
+        "permanentDelete": "Supprimer définit.",
+        "togglePreview": "Basculer aperçu",
+        "showHideHelp": "Afficher aide"
+      }
+    },
+    "settings": {
+      "title": "Paramètres",
+      "tabs": {
+        "ai": "🤖 Paramètres IA",
+        "sync": "☁️ Synchronisation",
+        "ui": "🎨 Interface",
+        "data": "💾 Données"
+      },
+      "ai": {
+        "title": "🤖 Configuration Modèle IA",
+        "description": "Supporte tous les modèles compatibles OpenAI API.",
+        "provider": "Fournisseur",
+        "apiUrl": "URL API",
+        "apiUrlPlaceholder": "https://api.openai.com/v1/chat/completions",
+        "apiUrlDesc": "Adresse complète",
+        "modelId": "ID Modèle",
+        "modelIdPlaceholder": "gpt-3.5-turbo",
+        "modelIdDesc": "Ex: gpt-4, deepseek-chat",
+        "currentConfig": "Configuration",
+        "currentConfigUrl": "URL:",
+        "currentConfigModel": "Modèle:",
+        "defaultAddress": "Défaut",
+        "defaultModel": "Modèle défaut",
+        "keyManagement": "Gestion Clés API",
+        "keyCount": "Clés Configurées",
+        "keyCountValue": "{{count}} Clés",
+        "keyCountNone": "Aucune clé",
+        "keyCountOne": "Recommandé: clés multiples",
+        "keyCountMultiple": "Rotation activée",
+        "manageKeys": "Gérer Clés",
+        "noKeysAlert": "Pas de clé, IA indisponible",
+        "keyNumber": "🔑 Clé #{{number}}",
+        "addNewKey": "Ajouter Clé",
+        "addKeyPlaceholder": "Coller clé API",
+        "addButton": "Ajouter",
+        "keySecurityNote": "🔒 Clés chiffrées localement",
+        "connectionTest": "Test Connexion",
+        "testButton": "Tester",
+        "testing": "Test...",
+        "testSuccess": "✅",
+        "testFailed": "❌",
+        "testDesc": "Vérifier configuration",
+        "autoAnalyze": "Auto analyser nouveaux",
+        "autoAnalyzeDesc": "Analyse automatique"
+      },
+      "sync": {
+        "chromeSync": "🔗 Synchronisation Chrome",
+        "chromeSyncDesc": "Synchronisé avec favoris Chrome natifs",
+        "syncStatus": "État",
+        "enabled": "Activé",
+        "disabled": "Désactivé",
+        "statusEnabled": "✅ Synchronisé",
+        "statusDisabled": "❌ Indépendant",
+        "enableSync": "Synchroniser Chrome",
+        "enableSyncDesc": "Activé: temps réel",
+        "refreshSync": "Rafraîchir",
+        "refreshButton": "Rafraîchir",
+        "syncing": "Sync...",
+        "refreshDesc": "Fusionner, supprimer doublons",
+        "firstInstallAlert": "Premier: importés depuis Chrome",
+        "cloudSync": "☁️ Sync Cloud",
+        "cloudSyncDesc": "Sync entre appareils",
+        "lastSync": "Dernière:",
+        "toggleSync": "Activer/Désactiver",
+        "enableButton": "Activer",
+        "disableButton": "Désactiver",
+        "processing": "Traitement...",
+        "syncContent": "IA, préférences, règles",
+        "manualSync": "Sync Manuelle",
+        "syncNow": "Sync Maintenant",
+        "syncNowDesc": "Sync configuration",
+        "storageQuota": "Quota Stockage",
+        "quotaUsed": "{{used}}KB / {{limit}}KB",
+        "quotaDesc": "Limite 100KB Chrome",
+        "advancedOps": "Avancé",
+        "clearCloud": "Effacer Cloud",
+        "clearCloudDesc": "⚠️ Supprime tout",
+        "syncEnabled": "Sync Chrome activée",
+        "syncDisabled": "Sync Chrome désactivée",
+        "confirmEnableSync": "Activer la synchronisation bidirectionnelle Chrome ?\n\nLorsqu'elle est activée :\n• Les modifications de favoris seront synchronisées avec les favoris natifs de Chrome\n• Les modifications des favoris Chrome seront synchronisées avec cette extension\n• La première synchronisation fusionnera les favoris existants (union)\n\nContinuer ?",
+        "initialSyncComplete": "Synchronisation initiale terminée ! Fusionnés: {{merged}}, Ajoutés à Chrome: {{addedToChrome}}, Ajoutés localement: {{addedToStorage}}",
+        "toggleFailed": "Échec du changement de synchronisation: {{error}}"
+      },
+      "ui": {
+        "language": "🌍 Langue",
+        "languageLabel": "Langue Interface",
+        "languageDesc": "Sélectionner. Immédiat.",
+        "openMode": "Mode Ouverture",
+        "openModeLabel": "Au clic Pixel Buddy",
+        "openModeSidebar": "Mode Barre Latérale",
+        "openModeTab": "Mode Nouvel Onglet",
+        "openModeDesc": "Barre latérale: gestion navigation",
+        "previewPanel": "Afficher panneau aperçu",
+        "previewPanelWidth": "Largeur ({{width}}%)",
+        "pixelBuddy": "Pixel Buddy",
+        "pixelTheme": "Style Thème",
+        "pixelThemeDesc": "Sélectionner et sauvegarder",
+        "saveTheme": "Sauvegarder",
+        "themeSelected": "Sélectionné"
+      },
+      "data": {
+        "aiSyncTitle": "🔄 Sync Catégories IA → Chrome",
+        "aiSyncDesc": "Écrire structure vers Chrome",
+        "aiSyncStatus": "État Sync",
+        "aiSynced": "Sync",
+        "aiNotSynced": "Pas sync",
+        "aiSyncWarning": "⚠️ Irréversible. Sauvegarder d'abord.",
+        "exportBackup": "Export Sauvegarde (HTML)",
+        "exportBackupDesc": "Format Chrome",
+        "syncToChrome": "Sync IA → Chrome",
+        "syncToChromeDesc": "Crée dossier dans Chrome",
+        "aiSyncComplete": "✅ Sync vers Chrome",
+        "importExport": "Import/Export",
+        "exportBookmarks": "Exporter",
+        "exportDesc": "Format JSON",
+        "importBookmarks": "Importer",
+        "importDesc": "Depuis JSON",
+        "cleanup": "Nettoyage",
+        "emptyTrash": "Vider Corbeille",
+        "emptyTrashDesc": "Suppression définitive",
+        "resetSettings": "Réinitialiser Tout",
+        "resetDesc": "Valeurs défaut"
+      },
+      "messages": {
+        "saved": "Sauvegardé",
+        "saveFailed": "Erreur sauvegarde",
+        "saving": "Sauvegarde...",
+        "saveSettings": "Sauvegarder",
+        "keyAdded": "Clé ajoutée",
+        "keyRemoved": "Clé supprimée",
+        "keyExists": "Clé existe",
+        "enterKey": "Entrer clé API",
+        "testSuccess": "Test réussi",
+        "testFailed": "Test échoué",
+        "testError": "Erreur test",
+        "connecting": "Connexion...",
+        "noKeys": "Ajouter clé d'abord",
+        "connectionSuccess": "Succès! Modèle: {{model}}",
+        "connectionFailed": "Échec: {{error}}",
+        "connectionError": "Erreur: {{error}}",
+        "languageChanged": "Langue changée",
+        "themeChanged": "✅ Personnage changé",
+        "themeSaved": "✅ Sauvé et rafraîchi",
+        "themeSaveFailed": "❌ Erreur sauvegarde",
+        "syncEnabled": "Cloud activé",
+        "syncDisabled": "Cloud désactivé",
+        "syncFailed": "Erreur: {{error}}",
+        "syncedToCloud": "Sync cloud",
+        "cloudCleared": "Cloud effacé",
+        "clearFailed": "Erreur: {{error}}",
+        "syncComplete": "Terminé!\nFusion: {{merged}}\nAjouté: {{added}}\nMis à jour: {{updated}}",
+        "refreshFailed": "Erreur: {{error}}",
+        "enableSyncFirst": "Activer sync Chrome",
+        "bookmarksExported": "Exporté",
+        "exportFailed": "Erreur export",
+        "bookmarksImported": "{{count}} importés",
+        "importFailed": "Erreur import",
+        "invalidFile": "Fichier invalide",
+        "trashEmptied": "Corbeille vidée",
+        "emptyFailed": "Erreur vidage",
+        "settingsReset": "Réinitialisé",
+        "resetFailed": "Erreur reset",
+        "confirmEmpty": "Vider corbeille? Irréversible!",
+        "confirmReset": "Tout réinitialiser?",
+        "aiSyncSuccess": "✅ Succès!\nDossiers: {{folders}}\nFavoris: {{bookmarks}}",
+        "aiSyncFailed": "❌ Erreur: {{error}}",
+        "aiSyncConfirm1": "⚠️ Attention!\n\nÉcrit vers Chrome.\n\n• Irréversible\n• Sauvegarder d'abord\n\nContinuer?",
+        "aiSyncConfirm2": "🔒 Confirmation\n\nSauvegardé?\n\nOK = Démarrer",
+        "exportedHtml": "Exporté HTML"
+      },
+      "providers": {
+        "custom": "Personnalisé",
+        "openai": "OpenAI",
+        "azure": "Azure OpenAI",
+        "anthropic": "Claude",
+        "google": "Gemini",
+        "groq": "Groq",
+        "xai": "xAI (Grok)",
+        "doubao": "Doubao",
+        "moonshot": "Kimi",
+        "aliyun": "Tongyi",
+        "yi": "01.AI",
+        "deepseek": "DeepSeek",
+        "siliconflow": "SiliconFlow",
+        "openrouter": "OpenRouter",
+        "ollama": "Ollama (Local)",
+        "huggingface": "HuggingFace"
+      },
+      "pixelThemes": {
+        "switchTo": "Changer pour {{name}}",
+        "classic": {
+          "name": "Pixel Classique",
+          "desc": "Professionnel, aimable",
+          "persona": "Koda · Érudit",
+          "slogan": "Dans l'océan des liens, je suis votre ancre la plus fiable."
+        },
+        "cyber": {
+          "name": "Néon Cyber",
+          "desc": "Futuriste, nuit",
+          "persona": "Vex · Chasseur Cyber",
+          "slogan": "Je filtre le bruit et ne capte que les signaux les plus précieux."
+        },
+        "grow": {
+          "name": "Pousse Naturelle",
+          "desc": "Apaisant, organique",
+          "persona": "Sprout · Jardinier",
+          "slogan": "Chaque favori est une graine d'inspiration attendant de fleurir."
+        },
+        "flare": {
+          "name": "Explorateur Crépuscule",
+          "desc": "Énergétique, découverte",
+          "persona": "Zing · Explorateur",
+          "slogan": "La vie n'est pas que collectionner - découvrez et brillez!"
+        },
+        "noir": {
+          "name": "Terminal Geek",
+          "desc": "Hacker, rétro, minimaliste",
+          "persona": "Null · Majordome Binaire",
+          "slogan": "Éliminez le superflu, retournez à la logique pure de l'information."
+        }
+      }
+    }
+  },
+  "popup": {
+    "title": "AnyMark",
+    "toggleLightMode": "Passer en mode clair",
+    "toggleDarkMode": "Passer en mode sombre",
+    "quickActions": "Actions Rapides",
+    "saveCurrentPage": "Sauvegarder Page",
+    "openSidebar": "Ouvrir Barre Latérale",
+    "searchBookmarks": "Rechercher",
+    "menu": {
+      "saveCurrentTab": "Sauvegarder l'Onglet Actuel",
+      "searchPlaceholder": "Rechercher des favoris...",
+      "noResults": "Aucun résultat trouvé",
+      "openSidebar": "Ouvrir Barre Latérale",
+      "openInTab": "Ouvrir dans un Nouvel Onglet",
+      "settings": "Paramètres"
+    },
+    "stats": {
+      "total": "Total Favoris",
+      "today": "Ajoutés Aujourd'hui",
+      "thisWeek": "Cette Semaine",
+      "categories": "Catégories"
+    },
+    "recentBookmarks": "Favoris Récents",
+    "viewAll": "Voir Tout",
+    "noBookmarks": "Pas encore",
+    "addFirst": "Sauvegardez votre premier favori",
+    "placeholders": {
+      "pageTitle": "Titre page",
+      "pageUrl": "https://...",
+      "tagName": "Nom tag..."
+    },
+    "labels": {
+      "difficulty": "Difficulté",
+      "techStack": "Tech Stack",
+      "removeTag": "Retirer tag",
+      "addTag": "Ajouter tag"
+    },
+    "hints": {
+      "cannotOpenSidebar": "Impossible, clic droit icône"
+    },
+    "aiUnavailable": "Analyse IA non disponible",
+    "folder": {
+      "createNew": "Créer un dossier"
+    },
+    "analysis": {
+      "step1": "Extraction du contenu...",
+      "step2": "Analyse IA...",
+      "step3": "Prêt à sauvegarder"
+    }
+  },
+  "chat": {
+    "title": "Assistant IA",
+    "welcome": "👋 Bonjour! Comment organiser vos favoris?",
+    "inputPlaceholder": "Posez une question...",
+    "send": "Envoyer",
+    "thinking": "Réflexion...",
+    "suggestions": {
+      "title": "Suggestions",
+      "organize": "Organiser favoris",
+      "find": "Chercher sur...",
+      "analyze": "Analyser collection",
+      "cleanup": "Nettoyer doublons"
+    },
+    "tools": {
+      "searching": "🔍 Recherche favoris...",
+      "organizing": "📁 Organisation...",
+      "analyzing": "🤖 Analyse...",
+      "creating": "✨ Création dossiers..."
+    },
+    "errors": {
+      "failed": "Erreur. Réessayer.",
+      "noBookmarks": "Pas encore de favoris.",
+      "networkError": "Erreur réseau."
+    },
+    "clear": "Effacer Chat",
+    "close": "Fermer",
+    "newChat": "Nouveau Chat",
+    "user": "Vous",
+    "assistant": "IA"
+  },
+  "common": {
+    "buttons": {
+      "save": "Sauvegarder",
+      "cancel": "Annuler",
+      "delete": "Supprimer",
+      "edit": "Modifier",
+      "close": "Fermer",
+      "confirm": "Confirmer",
+      "back": "Retour",
+      "next": "Suivant",
+      "finish": "Terminer",
+      "retry": "Réessayer",
+      "refresh": "Rafraîchir"
+    },
+    "messages": {
+      "loading": "Chargement...",
+      "saving": "Sauvegarde...",
+      "success": "Succès!",
+      "error": "Erreur",
+      "warning": "Avertissement",
+      "info": "Info",
+      "confirm": "Êtes-vous sûr?",
+      "noData": "Pas de données",
+      "comingSoon": "Bientôt disponible"
+    },
+    "time": {
+      "justNow": "Maintenant",
+      "minutesAgo": "{{count}} min",
+      "hoursAgo": "{{count}} h",
+      "daysAgo": "{{count}} j",
+      "weeksAgo": "{{count}} sem",
+      "monthsAgo": "{{count}} mo",
+      "yearsAgo": "{{count}} a"
+    }
+  },
+  "renderError": {
+    "title": "Échec du Rendu",
+    "rootNotFound": "Élément racine non trouvé"
+  },
+  "importProgress": {
+    "title": "Importation Terminée!",
+    "importing": "Importation des favoris Chrome...",
+    "hint": "Veuillez patienter, l'IA analyse chaque favori"
+  },
+  "folderSelector": {
+    "newBadge": "Nouveau",
+    "existingFolders": "Dossiers Existants",
+    "createNew": "Créer nouveau dossier: {{name}}"
+  },
+  "floatingChat": {
+    "operationComplete": "Opération terminée! Veuillez vérifier la liste des favoris pour les changements.",
+    "errorOccurred": "Désolé, une erreur s'est produite. Veuillez réessayer.",
+    "clearChatConfirm": "Êtes-vous sûr de vouloir effacer tout l'historique de conversation? Cette action est irréversible.",
+    "saveFailed": "Échec de l'enregistrement du favori, veuillez réessayer",
+    "saveCancelled": "Enregistrement annulé",
+    "saveSuccess": "✅ 《{{title}}》 enregistré avec succès\n\n📁 Emplacement: {{folderPath}}\n🏷️ Tags: {{tags}}",
+    "placeholder": "Tapez un message... (Entrée pour envoyer)",
+    "actions": {
+      "saveCurrentPage": "Enregistrer la page actuelle",
+      "collectAI": "Collecter tous les favoris liés à l'IA dans un dossier",
+      "organize": "Organiser les favoris intelligemment"
+    }
+  },
+  "saveConfirm": {
+    "title": "Analyse IA Terminée",
+    "confidence": "Confiance {{value}}%",
+    "cancel": "Annuler",
+    "pageTitlePlaceholder": "Titre de la page",
+    "folderPathPlaceholder": "/Chemin du dossier",
+    "addTagPlaceholder": "Ajouter un tag...",
+    "summaryPlaceholder": "Résumé du contenu...",
+    "cancelEdit": "Annuler Édition",
+    "saveBookmark": "Enregistrer Favori",
+    "edit": "Modifier",
+    "confirmSave": "Confirmer",
+    "aiCategory": "Catégorie IA",
+    "location": "Emplacement",
+    "smartTags": "Tags Intelligents",
+    "contentSummary": "Résumé du Contenu"
+  },
+  "chatArchive": {
+    "title": "Archives Chat",
+    "new": "Nouveau",
+    "newChat": "Nouvelle Conversation",
+    "loading": "Chargement...",
+    "empty": "Aucune archive",
+    "emptyDesc": "Les conversations sont sauvegardées ici",
+    "messages": "{{count}} messages",
+    "deleteConfirm": "Êtes-vous sûr de vouloir supprimer cette archive de chat ?",
+    "editTitle": "Modifier le Titre",
+    "restoreChat": "Restaurer le Chat",
+    "delete": "Supprimer",
+    "storage": "Stockage: {{used}} / {{total}}",
+    "yesterday": "Hier",
+    "daysAgo": "Il y a {{count}} jours"
+  },
+  "notification": {
+    "saveSuccessTitle": "✅ Favori Enregistré",
+    "saveSuccessMessage": "Enregistré: {{title}}",
+    "saveFailTitle": "❌ Échec de l'Enregistrement",
+    "saveFailMessage": "Échec de l'enregistrement du favori, veuillez réessayer",
+    "toastSaved": "✅ Favori enregistré"
+  },
+  "folder": {
+    "work": "Travail",
+    "personal": "Personnel",
+    "learning": "Apprentissage",
+    "uncategorized": "Non Catégorisé",
+    "bookmarks": "Favoris",
+    "development": "Développement"
+  },
+  "progressIndicator": {
+    "thinking": "Réflexion",
+    "toolCalling": "Préparation des Outils",
+    "toolExecuting": "Exécution",
+    "responding": "Génération de la Réponse",
+    "processing": "Traitement"
+  },
+  "quickAction": {
+    "search": "Rechercher",
+    "organize": "Organiser",
+    "discover": "Découvrir",
+    "recommend": "Recommander",
+    "chat": "Chat",
+    "searchDesc": "Rechercher mes favoris",
+    "organizeDesc": "Organiser les favoris",
+    "discoverDesc": "Découvrir des ressources web",
+    "recommendDesc": "Recommander du contenu connexe",
+    "chatDesc": "Conversation libre"
+  },
+  "messageBubble": {
+    "copied": "Copié",
+    "copy": "Copier",
+    "regenerate": "Régénérer",
+    "helpful": "Utile",
+    "notHelpful": "Pas utile"
+  },
+  "resizableDivider": {
+    "doubleClickExpand": "Double-cliquer pour développer",
+    "dragResize": "Glisser pour redimensionner",
+    "dragResizeCollapse": "Glisser pour redimensionner | Double-cliquer pour réduire",
+    "expandPanel": "Développer le panneau",
+    "collapsePanel": "Réduire le panneau"
+  },
+  "thinkingCard": {
+    "thinkingProcess": "Processus de Réflexion",
+    "thinking": "Réflexion..."
+  },
+  "conflict": {
+    "title": "{{count}} conflits trouvés",
+    "batchActions": "Actions groupées",
+    "batch": {
+      "useAllPlugin": "Utiliser tous du plugin",
+      "useAllChrome": "Utiliser tous de Chrome",
+      "useAllNewer": "Utiliser tous les plus récents",
+      "keepAllBoth": "Garder tous les deux"
+    },
+    "pluginVersion": "Version du plugin",
+    "chromeVersion": "Version Chrome",
+    "newer": "Plus récent",
+    "field": {
+      "title": "Titre",
+      "path": "Chemin",
+      "time": "Modifié"
+    },
+    "option": {
+      "usePlugin": "Utiliser plugin",
+      "useChrome": "Utiliser Chrome",
+      "keepBoth": "Garder les deux"
+    },
+    "type": {
+      "title": "Titre différent",
+      "path": "Chemin différent",
+      "both": "Les deux différents"
+    },
+    "summary": {
+      "usePlugin": "Mettre à jour {{count}} vers la version du plugin",
+      "useChrome": "Mettre à jour {{count}} vers la version Chrome",
+      "keepBoth": "Créer {{count}} doublons",
+      "unresolved": "{{count}} non résolus",
+      "none": "Aucun changement"
+    },
+    "apply": "Appliquer les modifications",
+    "applying": "Application en cours",
+    "noConflicts": "Aucun conflit trouvé",
+    "unresolvedWarning": "Veuillez résoudre tous les {{count}} conflits avant d'appliquer",
+    "result": {
+      "success": "{{count}} conflits résolus avec succès",
+      "partial": "{{resolved}} résolus, {{failed}} échoués"
+    }
+  },
+  "sync": {
+    "status": {
+      "synced": "Synchronisé",
+      "syncing": "Synchronisation",
+      "hasConflicts": "Conflits",
+      "error": "Erreur",
+      "disabled": "Désactivé"
+    },
+    "tooltip": {
+      "synced": "Tous les favoris sont synchronisés",
+      "syncing": "Synchronisation des favoris...",
+      "hasConflicts": "{{count}} conflits à résoudre",
+      "error": "Erreur de synchronisation",
+      "disabled": "La synchronisation Chrome est désactivée"
+    }
+  }
+}
