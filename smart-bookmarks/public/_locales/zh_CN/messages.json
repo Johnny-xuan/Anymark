@@ -1,0 +1,14 @@
+{
+  "extensionName": {
+    "message": "AnyMark - 智能书签管理器",
+    "description": "扩展程序名称"
+  },
+  "extensionDescription": {
+    "message": "AI 驱动的智能书签管理器，支持对话式 Agent、Vim 导航和自定义 API。免费开源。",
+    "description": "扩展程序描述"
+  },
+  "actionTitle": {
+    "message": "打开 AnyMark",
+    "description": "浏览器操作按钮标题"
+  }
+}

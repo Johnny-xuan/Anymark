@@ -1,0 +1,171 @@
+/**
+ * 导入进度样式
+ */
+
+.import-progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.import-progress-card {
+  background: var(--bg-primary, #1e1e1e);
+  border-radius: 16px;
+  padding: 40px;
+  min-width: 400px;
+  max-width: 500px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.import-loading-icon {
+  color: #3b82f6;
+  margin-bottom: 20px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.download-icon {
+  animation: bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.import-success-icon {
+  color: #10b981;
+  margin-bottom: 20px;
+  animation: scaleIn 0.5s ease;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.import-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  color: var(--text-primary, #ffffff);
+}
+
+.import-subtitle {
+  font-size: 16px;
+  color: var(--text-secondary, #a0a0a0);
+  margin: 0 0 24px 0;
+}
+
+.import-subtitle strong {
+  color: var(--text-primary, #ffffff);
+  font-weight: 600;
+}
+
+.import-progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--bg-secondary, #2a2a2a);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.import-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #10b981);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+  animation: shimmer 2s ease-in-out infinite;
+  background-size: 200% 100%;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.import-hint {
+  font-size: 14px;
+  color: var(--text-tertiary, #666666);
+  margin: 0;
+  font-style: italic;
+}
+
+/* 浅色主题 */
+[data-theme='light'] .import-progress-card {
+  background: #ffffff;
+}
+
+[data-theme='light'] .import-title {
+  color: #1a1a1a;
+}
+
+[data-theme='light'] .import-subtitle {
+  color: #666666;
+}
+
+[data-theme='light'] .import-subtitle strong {
+  color: #1a1a1a;
+}
+
+[data-theme='light'] .import-progress-bar {
+  background: #e5e5e5;
+}
+
+[data-theme='light'] .import-hint {
+  color: #999999;
+}

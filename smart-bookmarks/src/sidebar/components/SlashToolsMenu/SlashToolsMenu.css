@@ -1,0 +1,158 @@
+/**
+ * Slash Tools Menu Styles
+ */
+
+.slash-tools-menu {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  margin-bottom: 8px;
+  background: var(--bg-primary, #1a1a2e);
+  border: 1px solid var(--border-color, #2d2d44);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  z-index: 100;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.slash-tools-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary, #888);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--border-color, #2d2d44);
+  background: var(--bg-secondary, #16162a);
+}
+
+.slash-tools-count {
+  font-size: 10px;
+  background: var(--bg-tertiary, #252540);
+  padding: 2px 6px;
+  border-radius: 10px;
+  color: var(--text-secondary, #888);
+}
+
+.slash-tools-list {
+  padding: 4px;
+}
+
+.slash-tool-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.slash-tool-item:hover,
+.slash-tool-item.selected {
+  background: var(--bg-hover, #2d2d44);
+}
+
+.slash-tool-item.selected {
+  background: var(--accent-bg, rgba(14, 165, 233, 0.15));
+}
+
+.tool-icon {
+  font-size: 18px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-tertiary, #252540);
+  border-radius: 6px;
+}
+
+.tool-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.tool-command {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary, #fff);
+  font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
+.tool-description {
+  font-size: 11px;
+  color: var(--text-secondary, #888);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 滚动条 */
+.slash-tools-menu::-webkit-scrollbar {
+  width: 4px;
+}
+
+.slash-tools-menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.slash-tools-menu::-webkit-scrollbar-thumb {
+  background: var(--border-color, #2d2d44);
+  border-radius: 2px;
+}
+
+/* 选中指示器 */
+.selection-indicator {
+  position: absolute;
+  right: 8px;
+  color: var(--accent-primary, #0ea5e9);
+  font-size: 16px;
+  animation: selection-pulse 1s ease-in-out infinite;
+}
+
+@keyframes selection-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* 底部快捷键提示 */
+.slash-tools-footer {
+  padding: 6px 12px;
+  border-top: 1px solid var(--border-color, #2d2d44);
+  background: var(--bg-secondary, #16162a);
+}
+
+.keyboard-hint {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  color: var(--text-tertiary, #666);
+}
+
+.keyboard-hint kbd {
+  display: inline-block;
+  padding: 2px 6px;
+  font-size: 9px;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  background: var(--bg-tertiary, #252540);
+  border: 1px solid var(--border-color, #2d2d44);
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.slash-tool-item:focus-visible {
+  outline: 2px solid var(--accent-primary, #0ea5e9);
+  outline-offset: -2px;
+}
