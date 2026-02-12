@@ -1,6 +1,6 @@
 /**
- * Onboarding 样式 - v1.0 Launch
- * 现代简洁设计，统一渐变色系
+ * AnyMark Onboarding v2.0 - The Living Workspace
+ * 核心理念：流动光影、胶片质感、叙事性交互
  */
 
 :root {
@@ -14,10 +14,13 @@
   --primary: #3b82f6;
   --primary-glow: rgba(59, 130, 246, 0.25);
   
-  /* 统一的渐变色系 - 蓝紫色调 */
-  --gradient-blue: rgba(59, 130, 246, 0.08);
-  --gradient-purple: rgba(139, 92, 246, 0.06);
-  --gradient-cyan: rgba(34, 211, 238, 0.05);
+  /* v2.0 扩展色板 - 增强色彩深度 */
+  --mesh-1: #0c0c1e;
+  --mesh-2: #160d2a;
+  --mesh-3: #09090b;
+  --accent-glow: rgba(139, 92, 246, 0.15);
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -30,13 +33,25 @@ body, html {
   color: var(--text);
 }
 
+/* 全局胶片噪点层 - 赋予数字页面物理质感 */
+.onboarding-wrapper::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.04;
+  z-index: 50;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
 .onboarding-wrapper {
   width: 100vw;
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-  scrollbar-width: none;
   background: var(--bg);
 }
 .onboarding-wrapper::-webkit-scrollbar { display: none; }
@@ -62,7 +77,7 @@ body, html {
 
 .section-title {
   font-size: 42px;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--text);
   margin-bottom: 12px;
   letter-spacing: -0.5px;
@@ -77,11 +92,12 @@ body, html {
   margin-right: auto;
 }
 
-/* Hero Section - 主视觉焦点，渐变最强 */
+/* Hero Section - 升级为动态网格渐变感 */
 .hero-section {
   background: 
-    radial-gradient(ellipse 120% 80% at 50% 0%, rgba(59, 130, 246, 0.12), transparent 60%),
-    radial-gradient(ellipse 80% 60% at 100% 100%, rgba(139, 92, 246, 0.08), transparent 50%);
+    radial-gradient(at 0% 0%, var(--mesh-1) 0%, transparent 50%),
+    radial-gradient(at 100% 0%, var(--mesh-2) 0%, transparent 50%),
+    radial-gradient(at 50% 100%, var(--accent-glow) 0%, transparent 70%);
 }
 
 /* Top-left Logo */
@@ -111,10 +127,10 @@ body, html {
 .hero-title {
   font-size: 72px;
   font-weight: 800;
-  letter-spacing: -2px;
+  letter-spacing: -0.04em;
   margin-bottom: 16px;
-  background: linear-gradient(180deg, #fff 0%, rgba(255,255,255,0.75) 100%);
-  -webkit-background-clip: text;
+  background: linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0.5));
+  -webkit-background-clip: text; 
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
@@ -137,20 +153,75 @@ body, html {
 }
 
 .btn-primary {
-  padding: 14px 32px;
+  padding: 16px 48px;
   font-size: 16px;
   font-weight: 600;
-  color: white;
-  background: var(--primary);
-  border: none;
-  border-radius: 12px;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 980px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  animation: btn-breathe 4s ease-in-out infinite;
+}
+
+/* 光带扫过效果 */
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.12) 45%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.12) 55%,
+    transparent 60%
+  );
+  animation: btn-shimmer 5s ease-in-out infinite;
+  pointer-events: none;
 }
 
 .btn-primary:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.15);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px var(--primary-glow);
+  animation: none;
+}
+
+.btn-primary:hover::after {
+  animation: none;
+  opacity: 0;
+}
+
+/* 呼吸光晕 - 边框和阴影微妙脉动 */
+@keyframes btn-breathe {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.18);
+  }
+  50% {
+    box-shadow: 0 0 28px rgba(255, 255, 255, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+}
+
+/* 光带从左到右扫过 */
+@keyframes btn-shimmer {
+  0%, 100% { left: -75%; opacity: 0; }
+  10% { opacity: 1; }
+  40% { left: 125%; opacity: 1; }
+  50%, 100% { left: 125%; opacity: 0; }
 }
 
 .scroll-indicator {
@@ -195,10 +266,11 @@ body, html {
 }
 
 .buddy-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(8px);
   border-radius: 20px;
-  padding: 28px 16px;
+  padding: 32px 20px;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -218,7 +290,7 @@ body, html {
 .buddy-card:hover {
   transform: translateY(-6px);
   border-color: var(--border-hover);
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .buddy-card:hover::before {
@@ -261,11 +333,15 @@ body, html {
 @keyframes buddy-float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-6px); }
+  0%, 100% { transform: translateY(0px); animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1); }
+  50% { transform: translateY(-10px); animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1); }
 }
 
 @keyframes buddy-blink {
   0%, 90%, 100% { transform: scaleY(1); }
   95% { transform: scaleY(0.1); }
+  0%, 45%, 55%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(0.1); }
 }
 
 @keyframes buddy-wiggle {
@@ -274,29 +350,46 @@ body, html {
   75% { transform: rotate(5deg); }
 }
 
-@keyframes buddy-wave-arm-left {
-  0%, 100% { transform: rotate(0deg); }
-  50% { transform: rotate(-20deg); }
-}
-
-@keyframes buddy-wave-arm-right {
-  0%, 100% { transform: rotate(0deg); }
-  50% { transform: rotate(20deg); }
-}
-
 @keyframes buddy-sparkle {
   0%, 100% { opacity: 0.4; transform: scale(0.8); }
   50% { opacity: 1; transform: scale(1.2); }
 }
 
-@keyframes buddy-leaf-sway {
-  0%, 100% { transform: rotate(0deg) scale(1); }
-  50% { transform: rotate(6deg) scale(1.05); }
+/* Vex 专属：赛博色散与高频侦察 */
+@keyframes vex-cyber-glitch {
+  0%, 100% { 
+    transform: translateY(0) skew(0deg);
+    filter: drop-shadow(2px 0 0 rgba(255,0,255,0.2)) drop-shadow(-2px 0 0 rgba(0,255,255,0.2));
+  }
+  20% { transform: translateY(-2px) skew(1deg); }
+  40% { filter: drop-shadow(-3px 0 0 rgba(255,0,255,0.3)) drop-shadow(3px 0 0 rgba(0,255,255,0.3)); }
+  60% { transform: translateY(-1px) skew(-1deg); }
+  80% { transform: translateY(-3px); }
 }
 
-@keyframes buddy-neon-pulse {
-  0%, 100% { filter: drop-shadow(0 0 5px #8b5cf6) brightness(1); }
-  50% { filter: drop-shadow(0 0 15px #ec4899) brightness(1.2); }
+/* Sprout 专属：有机生长与柔和摇摆 */
+@keyframes sprout-organic-grow {
+  0%, 100% { 
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 5px rgba(16, 185, 129, 0.2));
+  }
+  50% { 
+    transform: translateY(-8px) scale(1.05);
+    filter: drop-shadow(0 0 15px rgba(16, 185, 129, 0.4));
+  }
+}
+
+@keyframes sprout-leaf-sway {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(8deg); }
+}
+
+/* Null 专属：二进制阶梯位移 (无曲线) */
+@keyframes null-binary-step {
+  0%, 100% { transform: translateY(0); }
+  25% { transform: translateY(-4px); }
+  50% { transform: translateY(-2px); }
+  75% { transform: translateY(-6px); }
 }
 
 @keyframes buddy-soft-breath {
@@ -324,6 +417,7 @@ body, html {
 /* 基础浮动动画 */
 .buddy-svg.animated {
   animation: buddy-float 3s ease-in-out infinite;
+  animation: buddy-float 4s infinite;
 }
 
 /* 眼睛眨眼动画 */
@@ -341,31 +435,33 @@ body, html {
   animation-delay: 0.5s;
 }
 
-/* 叶子摇摆动画 - grow 主题 */
+/* Vex (Cyber Hunter) - 移除通用浮动，改为色散侦察 */
+.buddy-svg.animated.theme-cyber {
+  animation: vex-cyber-glitch 3s steps(10) infinite;
+}
+
+/* Sprout (Knowledge Gardener) - 更加柔和的有机生长感 */
+.buddy-svg.animated.theme-grow {
+  animation: sprout-organic-grow 5s ease-in-out infinite;
+}
 .buddy-svg.animated.theme-grow .buddy-leafs {
-  animation: buddy-leaf-sway 3s ease-in-out infinite;
-  transform-origin: center;
+  animation: sprout-leaf-sway 4s ease-in-out infinite;
+  transform-origin: bottom center;
 }
 
-/* 赛博霓虹动画 - cyber 主题 */
-.buddy-svg.animated.theme-cyber .buddy-body {
-  animation: buddy-neon-pulse 2s ease-in-out infinite;
+/* Null (Binary Butler) - 阶梯式位移，模拟 8-bit 逻辑 */
+.buddy-svg.animated.theme-noir {
+  animation: null-binary-step 2s steps(4) infinite;
 }
-
-/* 森系呼吸动画 - grow 主题 */
-.buddy-svg.animated.theme-grow .buddy-body {
-  animation: buddy-soft-breath 4s ease-in-out infinite;
-  transform-origin: center bottom;
-}
-
-/* 极客扫描线动画 - noir 主题 */
 .buddy-svg.animated.theme-noir .buddy-body {
-  animation: buddy-scanline 0.1s steps(2) infinite;
+  animation: buddy-scanline 0.2s steps(2) infinite;
+  opacity: 0.9;
 }
 
 /* Hover 时的交互动画 */
 .buddy-card:hover .buddy-svg {
   animation: buddy-wiggle 0.5s ease-in-out;
+  animation: buddy-wiggle 0.6s cubic-bezier(0.36, 0, 0.66, -0.56);
 }
 
 .buddy-card:hover .buddy-svg .arm-left {
@@ -460,10 +556,11 @@ body, html {
 
 /* 右侧聊天窗口 */
 .agent-chat-window {
-  background: rgba(20, 20, 25, 0.9);
-  border: 1px solid var(--border);
+  background: rgba(9, 9, 11, 0.6);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(20px);
   border-radius: 20px;
-  overflow: hidden;
+  position: relative;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
@@ -471,8 +568,8 @@ body, html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 20px;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(139, 92, 246, 0.1));
+  padding: 14px 20px;
+  background: rgba(255, 255, 255, 0.03);
   border-bottom: 1px solid var(--border);
 }
 
@@ -584,7 +681,7 @@ body, html {
 }
 
 .demo-message.assistant .message-content {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
   color: var(--text);
   border-bottom-left-radius: 4px;
 }
@@ -740,7 +837,7 @@ body, html {
   display: flex;
   gap: 10px;
   padding: 16px 20px;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--glass-border);
   background: rgba(0, 0, 0, 0.2);
 }
 
@@ -832,10 +929,11 @@ body, html {
 }
 
 .shortcut-group {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(4px);
   border-radius: 20px;
-  padding: 28px;
+  padding: 32px;
 }
 
 .shortcut-group h4 {
@@ -942,21 +1040,25 @@ kbd {
 }
 
 .btn-start {
-  padding: 18px 48px;
-  font-size: 18px;
-  font-weight: 600;
-  color: white;
-  background: linear-gradient(135deg, var(--primary), #60a5fa);
-  border: none;
-  border-radius: 14px;
+  padding: 16px 44px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 980px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
   margin-bottom: 20px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .btn-start:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 32px var(--primary-glow);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
 }
 
 .cta-hint {
