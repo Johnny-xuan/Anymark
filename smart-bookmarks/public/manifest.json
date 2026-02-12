@@ -37,10 +37,7 @@
   ],
   "host_permissions": [
     "<all_urls>",
-    "https://search.j-o-x.tech/*",
-    "https://v1.j-o-x.tech/*",
-    "https://api.github.com/*",
-    "http://localhost:11434/*"
+    "https://api.github.com/*"
   ],
   "side_panel": {
     "default_path": "sidebar.html"
@@ -58,7 +55,7 @@
     }
   ],
   "content_security_policy": {
-    "extension_pages": "script-src 'self'; connect-src 'self' http://localhost:11434 https://api.openai.com https://api.anthropic.com https://generativelanguage.googleapis.com https://api.x.ai https://api.groq.com https://ark.cn-beijing.volces.com https://api.moonshot.cn https://dashscope.aliyuncs.com https://api.yi.01.ai https://api.deepseek.com https://api.siliconflow.cn https://open.bigmodel.cn https://api.minimax.io https://api.minimaxi.com https://openrouter.ai https://api-inference.huggingface.co https://search.j-o-x.tech https://html.duckduckgo.com https://api.github.com https://api.ossinsight.io; object-src 'self'",
-    "content_scripts": "script-src 'self' https://* http://*; connect-src 'self' https://* http://*; object-src 'self'"
+    "extension_pages": "script-src 'self'; connect-src 'self' https://api.openai.com https://api.anthropic.com https://generativelanguage.googleapis.com https://api.x.ai https://api.groq.com https://ark.cn-beijing.volces.com https://api.moonshot.cn https://dashscope.aliyuncs.com https://dashscope-intl.aliyuncs.com https://api.yi.01.ai https://api.deepseek.com https://api.siliconflow.cn https://open.bigmodel.cn https://api.z.ai https://api.minimax.io https://api.minimaxi.com https://openrouter.ai https://api-inference.huggingface.co https://html.duckduckgo.com https://api.github.com https://api.ossinsight.io; object-src 'self'",
+    "content_scripts": "script-src 'self' https://*; connect-src 'self' https://*; object-src 'self'"
   }
 }

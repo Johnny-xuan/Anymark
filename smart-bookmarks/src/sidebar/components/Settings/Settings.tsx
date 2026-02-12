@@ -173,29 +173,31 @@ const Settings: React.FC<SettingsProps> = ({ isOpen, onClose }) => {
     ];
 
   // 预设配置 - 支持主流兼容 OpenAI API 格式的厂商
-  // 模型名称来源于各厂商官方文档 (2025年12月)
+  // 模型名称来源于各厂商官方文档 (2026年2月)
   const AI_PROVIDERS = [
     // 国际大厂
-    { id: 'openai', name: t('sidebar.settings.providers.openai'), url: 'https://api.openai.com/v1/chat/completions', model: 'gpt-4o' },
+    { id: 'openai', name: t('sidebar.settings.providers.openai'), url: 'https://api.openai.com/v1/chat/completions', model: 'gpt-5.2' },
     { id: 'azure', name: 'Azure OpenAI', url: '', model: 'gpt-4o' },
-    { id: 'anthropic', name: 'Anthropic Claude', url: 'https://api.anthropic.com/v1/chat/completions', model: 'claude-sonnet-4-5' },
-    { id: 'google', name: 'Google Gemini', url: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent', model: 'gemini-2.5-pro' },
+    { id: 'anthropic', name: 'Anthropic Claude', url: 'https://api.anthropic.com/v1/messages', model: 'claude-opus-4-6' },
+    { id: 'google', name: 'Google Gemini', url: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-preview:generateContent', model: 'gemini-3-pro-preview' },
     { id: 'groq', name: 'Groq', url: 'https://api.groq.com/openai/v1/chat/completions', model: 'llama-3.3-70b-versatile' },
-    { id: 'xai', name: 'xAI (Grok)', url: 'https://api.x.ai/v1/chat/completions', model: 'grok-4-1-fast' },
+    { id: 'xai', name: 'xAI (Grok)', url: 'https://api.x.ai/v1/chat/completions', model: 'grok-4' },
 
     // 国内主流
-    { id: 'doubao', name: t('sidebar.settings.providers.doubao'), url: 'https://ark.cn-beijing.volces.com/api/v3/chat/completions', model: 'doubao-pro-32k' },
+    { id: 'doubao', name: t('sidebar.settings.providers.doubao'), url: 'https://ark.cn-beijing.volces.com/api/v3/chat/completions', model: 'doubao-seed-1.8' },
     { id: 'moonshot', name: t('sidebar.settings.providers.moonshot'), url: 'https://api.moonshot.cn/v1/chat/completions', model: 'moonshot-v1-8k' },
-    { id: 'aliyun', name: t('sidebar.settings.providers.aliyun'), url: 'https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions', model: 'qwen-turbo' },
-    { id: 'yi', name: t('sidebar.settings.providers.yi'), url: 'https://api.yi.01.ai/v1/chat/completions', model: 'yi-light' },
+    { id: 'aliyun', name: t('sidebar.settings.providers.aliyun'), url: 'https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions', model: 'qwen3-max' },
+    { id: 'yi', name: t('sidebar.settings.providers.yi'), url: 'https://api.yi.01.ai/v1/chat/completions', model: 'Yi-34B-Chat' },
     { id: 'deepseek', name: t('sidebar.settings.providers.deepseek'), url: 'https://api.deepseek.com/v1/chat/completions', model: 'deepseek-chat' },
-    { id: 'siliconflow', name: t('sidebar.settings.providers.siliconflow'), url: 'https://api.siliconflow.cn/v1/chat/completions', model: 'deepseek-ai/DeepSeek-V3' },
-    { id: 'zhipu', name: t('sidebar.settings.providers.zhipu'), url: 'https://open.bigmodel.cn/api/coding/paas/v4/chat/completions', model: 'glm-4.7' },
+    { id: 'siliconflow', name: t('sidebar.settings.providers.siliconflow'), url: 'https://api.siliconflow.cn/v1/chat/completions', model: 'deepseek-ai/DeepSeek-V3.2' },
+    { id: 'zhipu', name: t('sidebar.settings.providers.zhipu'), url: 'https://open.bigmodel.cn/api/paas/v4/chat/completions', model: 'glm-4.7' },
     { id: 'minimax', name: t('sidebar.settings.providers.minimax'), url: 'https://api.minimaxi.com/v1/chat/completions', model: 'MiniMax-M2.1' },
     { id: 'minimax-intl', name: t('sidebar.settings.providers.minimaxIntl'), url: 'https://api.minimax.io/v1/chat/completions', model: 'MiniMax-M2.1' },
+    { id: 'aliyun-intl', name: t('sidebar.settings.providers.aliyunIntl'), url: 'https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions', model: 'qwen-plus' },
+    { id: 'zhipu-intl', name: t('sidebar.settings.providers.zhipuIntl'), url: 'https://api.z.ai/api/paas/v4/chat/completions', model: 'glm-4.7' },
 
     // 聚合平台
-    { id: 'openrouter', name: 'OpenRouter', url: 'https://openrouter.ai/api/v1/chat/completions', model: 'anthropic/claude-sonnet-4-5' },
+    { id: 'openrouter', name: 'OpenRouter', url: 'https://openrouter.ai/api/v1/chat/completions', model: 'openai/gpt-5.2' },
 
     // 本地/其他
     { id: 'ollama', name: t('sidebar.settings.providers.ollama'), url: 'http://localhost:11434/v1/chat/completions', model: 'llama3.2' },

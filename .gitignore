@@ -41,3 +41,13 @@ web-ext-artifacts/
 .kiro/
 .claude/
 .roo/
+
+# Test coverage
+coverage/
+*.lcov
+.nyc_output/
+
+# Screenshots and temp assets
+screenshot-*.png
+*-screenshot.png
+temp-*/

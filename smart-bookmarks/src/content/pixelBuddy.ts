@@ -62,6 +62,16 @@ const PIXEL_BUDDY_SVG = `
   <g class="buddy-eyes">
     <circle class="eye-left" cx="26" cy="36" r="3" fill="#2d3748"/>
     <circle class="eye-right" cx="38" cy="36" r="3" fill="#2d3748"/>
+    <!-- Vex 赛博义眼 (cyber 主题时替换右眼) -->
+    <rect class="cyber-eye" x="35" y="33" width="6" height="6" fill="#00ff41" opacity="0.9" style="display:none"/>
+    <!-- Null 像素墨镜 (noir 主题时替换双眼) -->
+    <g class="noir-sunglasses" style="display:none">
+      <rect x="18" y="32" width="12" height="8" fill="#00ff41" opacity="0.9" rx="2"/>
+      <rect x="34" y="32" width="12" height="8" fill="#00ff41" opacity="0.9" rx="2"/>
+      <rect x="30" y="34" width="4" height="2" fill="#00ff41" opacity="0.9"/>
+      <rect x="20" y="34" width="4" height="2" fill="white" opacity="0.6"/>
+      <rect x="36" y="34" width="4" height="2" fill="white" opacity="0.6"/>
+    </g>
     <circle class="eye-shine-left" cx="27" cy="35" r="1" fill="white"/>
     <circle class="eye-shine-right" cx="39" cy="35" r="1" fill="white"/>
   </g>
@@ -80,9 +90,9 @@ const PIXEL_BUDDY_SVG = `
     <!-- cyber: Vex 赛博猎人 - 斜嘴/酷，不对称的自信笑 -->
     <path class="buddy-mouth mouth-cyber" d="M 28 45 Q 31 44 36 42"
           stroke="#fdf2ff" stroke-width="2" fill="none" stroke-linecap="round" style="display:none"/>
-    <!-- grow: Sprout 知识园丁 - 开心微笑弧线 -->
-    <path class="buddy-mouth mouth-grow" d="M 28 44 Q 32 48 36 44"
-          stroke="#065f46" stroke-width="2" fill="none" stroke-linecap="round" style="display:none"/>
+    <!-- grow: Sprout 知识园丁 - 兴奋的张嘴笑 (Blooming Joy) -->
+    <path class="buddy-mouth mouth-grow" d="M 28 44 Q 32 48 36 44 Z"
+          fill="#065f46" opacity="0.8" stroke="none" style="display:none"/>
     <!-- flare: Flare 灵感探险家 - 大一点的开心微笑 -->
     <path class="buddy-mouth mouth-flare" d="M 27 44 Q 32 49 37 44"
           stroke="#78350f" stroke-width="2" fill="none" stroke-linecap="round" style="display:none"/>
@@ -97,15 +107,35 @@ const PIXEL_BUDDY_SVG = `
     <rect class="arm-right" x="48" y="32" width="8" height="4" rx="2"/>
   </g>
 
-  <!-- 星星装饰 -->
+  <!-- 星星装饰 - classic/flare/noir -->
   <g class="buddy-stars">
     <circle class="star" cx="10" cy="16" r="2" opacity="0.8"/>
     <circle class="star" cx="54" cy="16" r="1.5" opacity="0.6"/>
     <circle class="star" cx="14" cy="58" r="1.5" opacity="0.7"/>
+  </g>
 
-    <path class="leaf leaf-1" d="M8 15 C6 16 6 19 9 20 C12 19 12 16 8 15 Z"/>
-    <path class="leaf leaf-2" d="M52 15 C50 16 50 19 53 19.8 C56 19 56 16 52 15 Z"/>
-    <path class="leaf leaf-3" d="M12 57 C10 58 10 61 13 61.5 C16 61 16 58 12 57 Z"/>
+  <!-- 故障方块 - cyber 专属 -->
+  <g class="buddy-glitch" style="display:none">
+    <rect x="8" y="14" width="4" height="4" opacity="0.8"/>
+    <rect x="52" y="18" width="3" height="3" opacity="0.6"/>
+    <rect x="48" y="10" width="2" height="2" opacity="0.4"/>
+  </g>
+
+  <!-- 二进制装饰 - noir 专属 -->
+  <g class="buddy-matrix" style="display:none">
+    <text x="8" y="20" font-size="16" fill="#00ff41" opacity="0.6" style="font-family:monospace">1</text>
+    <text x="52" y="16" font-size="12" fill="#00ff41" opacity="0.4" style="font-family:monospace">0</text>
+    <text x="10" y="50" font-size="12" fill="#00ff41" opacity="0.3" style="font-family:monospace">0</text>
+  </g>
+
+  <!-- 头顶嫩芽 - grow 专属 (呆萌豆芽) -->
+  <g class="buddy-sprout" style="display:none">
+    <!-- 茎 - 笔直简约 -->
+    <path class="sprout-stem" d="M32 18 L 32 12" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.9"/>
+    <!-- 左叶 - 可爱椭圆 -->
+    <ellipse class="sprout-leaf" cx="27" cy="11" rx="5" ry="3" fill="#6ee7b7" transform="rotate(-20 27 11)" opacity="0.9"/>
+    <!-- 右叶 - 可爱椭圆 -->
+    <ellipse class="sprout-leaf" cx="37" cy="11" rx="5" ry="3" fill="#6ee7b7" transform="rotate(20 37 11)" opacity="0.9"/>
   </g>
 </svg>
 `;
@@ -358,36 +388,64 @@ const BUDDY_STYLES = `
     opacity: 1;
   }
 
-  /* 赛博霓虹 */
+  /* 赛博霓虹 - Vex */
   #pixel-buddy-container.cyber .buddy-body {
     animation: neon-pulse 2s ease-in-out infinite;
+  }
+
+  /* 赛博义眼：隐藏普通右眼，显示方块义眼 */
+  #pixel-buddy-container.cyber .eye-right,
+  #pixel-buddy-container.cyber .eye-shine-right {
+    display: none;
+  }
+
+  #pixel-buddy-container.cyber .cyber-eye {
+    display: block !important;
+  }
+
+  /* 赛博：隐藏星星，显示故障方块 */
+  #pixel-buddy-container.cyber .buddy-stars {
+    display: none;
+  }
+
+  #pixel-buddy-container.cyber .buddy-glitch {
+    display: block !important;
+  }
+
+  #pixel-buddy-container.cyber .buddy-glitch rect {
+    fill: var(--buddy-stars);
   }
 
   #pixel-buddy-container.cyber #buddy-tooltip {
     border: 1px solid rgba(255, 121, 198, 0.4);
   }
 
-  /* 森系萌芽 */
+  /* 森系萌芽 - Sprout */
   #pixel-buddy-container.grow .buddy-body {
     animation: soft-breath 4s ease-in-out infinite;
     transform-origin: center bottom;
   }
 
-  #pixel-buddy-container.grow .buddy-stars circle {
+  /* 森系：隐藏星星，显示头顶嫩芽 */
+  #pixel-buddy-container.grow .buddy-stars {
     display: none;
   }
 
-  #pixel-buddy-container.grow .buddy-stars .leaf {
-    display: block;
-    animation: leaf-sway 3s ease-in-out infinite;
+  #pixel-buddy-container.grow .buddy-sprout {
+    display: block !important;
   }
 
-  #pixel-buddy-container.grow .buddy-stars .leaf-2 {
-    animation-delay: 0.4s;
+  #pixel-buddy-container.grow .buddy-sprout .sprout-stem {
+    stroke: var(--buddy-leaf);
   }
 
-  #pixel-buddy-container.grow .buddy-stars .leaf-3 {
-    animation-delay: 0.8s;
+  #pixel-buddy-container.grow .buddy-sprout .sprout-leaf {
+    fill: var(--buddy-leaf);
+  }
+
+  #pixel-buddy-container.grow .buddy-sprout {
+    animation: leaf-sway 4s ease-in-out infinite;
+    transform-origin: 32px 18px;
   }
 
   /* 余晖探索 */
@@ -395,13 +453,34 @@ const BUDDY_STYLES = `
     animation: coin-flip 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  /* 极客终端 */
+  /* 极客终端 - Null */
   #pixel-buddy-container.noir {
     filter: sepia(0) contrast(1.2) !important;
   }
 
   #pixel-buddy-container.noir .buddy-body {
     animation: scanline 0.1s steps(2) infinite;
+  }
+
+  /* Null 墨镜：隐藏普通双眼，显示墨镜 */
+  #pixel-buddy-container.noir .eye-left,
+  #pixel-buddy-container.noir .eye-right,
+  #pixel-buddy-container.noir .eye-shine-left,
+  #pixel-buddy-container.noir .eye-shine-right {
+    display: none;
+  }
+
+  #pixel-buddy-container.noir .noir-sunglasses {
+    display: block !important;
+  }
+
+  /* Null：隐藏星星，显示二进制装饰 */
+  #pixel-buddy-container.noir .buddy-stars {
+    display: none;
+  }
+
+  #pixel-buddy-container.noir .buddy-matrix {
+    display: block !important;
   }
 
   #pixel-buddy-container.noir #buddy-tooltip {
@@ -589,6 +668,33 @@ function applyTheme(theme: PixelBuddyTheme) {
       el.style.display = 'none';
     }
   });
+
+  // 切换赛博义眼 - cyber 主题隐藏普通右眼，显示方块义眼
+  const eyeLeft = buddy.querySelector('.eye-left') as HTMLElement | null;
+  const eyeRight = buddy.querySelector('.eye-right') as HTMLElement | null;
+  const eyeShineLeft = buddy.querySelector('.eye-shine-left') as HTMLElement | null;
+  const eyeShineRight = buddy.querySelector('.eye-shine-right') as HTMLElement | null;
+  const cyberEye = buddy.querySelector('.cyber-eye') as HTMLElement | null;
+  const noirSunglasses = buddy.querySelector('.noir-sunglasses') as HTMLElement | null;
+
+  // cyber: 隐藏右眼显示义眼; noir: 隐藏双眼显示墨镜; 其他: 正常
+  if (eyeLeft) eyeLeft.style.display = theme === 'noir' ? 'none' : '';
+  if (eyeRight) eyeRight.style.display = (theme === 'cyber' || theme === 'noir') ? 'none' : '';
+  if (eyeShineLeft) eyeShineLeft.style.display = theme === 'noir' ? 'none' : '';
+  if (eyeShineRight) eyeShineRight.style.display = (theme === 'cyber' || theme === 'noir') ? 'none' : '';
+  if (cyberEye) cyberEye.style.display = theme === 'cyber' ? 'block' : 'none';
+  if (noirSunglasses) noirSunglasses.style.display = theme === 'noir' ? 'block' : 'none';
+
+  // 切换装饰：星星 / 故障方块 / 二进制 / 嫩芽
+  const stars = buddy.querySelector('.buddy-stars') as HTMLElement | null;
+  const glitch = buddy.querySelector('.buddy-glitch') as HTMLElement | null;
+  const matrix = buddy.querySelector('.buddy-matrix') as HTMLElement | null;
+  const sprout = buddy.querySelector('.buddy-sprout') as HTMLElement | null;
+
+  if (stars) stars.style.display = (theme === 'cyber' || theme === 'grow' || theme === 'noir') ? 'none' : '';
+  if (glitch) glitch.style.display = theme === 'cyber' ? 'block' : 'none';
+  if (matrix) matrix.style.display = theme === 'noir' ? 'block' : 'none';
+  if (sprout) sprout.style.display = theme === 'grow' ? 'block' : 'none';
 }
 
 function registerThemeListener() {

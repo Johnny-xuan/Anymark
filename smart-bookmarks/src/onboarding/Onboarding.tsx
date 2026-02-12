@@ -51,7 +51,7 @@ const THEME_COLORS: Record<PixelBuddyTheme, ThemeColors> = {
     outline: '#065f46',
     eye: '#065f46',
     cheek: '#6ee7b7',
-    leaf: '#6ee7b7',
+    leaf: '#10b981', // Emerald 500 - More visible green
   },
   flare: {
     body: '#f59e0b',
@@ -88,12 +88,42 @@ const BuddySVG: React.FC<BuddySVGProps> = ({ theme, size = 64, animated = true }
   const isNoir = theme === 'noir';
 
   return (
-    <svg 
-      width={size} 
-      height={size} 
-      viewBox="0 0 32 32" 
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 32 32"
       className={`buddy-svg ${animated ? 'animated' : ''} theme-${theme}`}
     >
+      <style>
+        {`
+          @keyframes leaf-sway {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+          }
+          @keyframes breeze-flow {
+            0%, 100% { transform: translate(-1px, 1px) rotate(-3deg); }
+            50% { transform: translate(1px, -1px) rotate(3deg); }
+          }
+          @keyframes breeze-back {
+            0%, 100% { transform: translate(1px, -1px) rotate(2deg); }
+            50% { transform: translate(-1px, 1px) rotate(-2deg); }
+          }
+        `}
+      </style>
+      {/* 3D 后景叶子 (Back Layer Leaves) - 围绕 (Surround) */}
+      {showLeafs && (
+        <g className="buddy-leafs-back">
+          {/* 左后衬叶 */}
+          <g style={animated ? { animation: 'breeze-back 6s ease-in-out infinite' } : {}}>
+            <path d="M2 12 Q 0 10 4 8 Q 6 11 2 12 Z" fill={colors.outline} opacity="0.4" />
+          </g>
+          {/* 右后衬叶 */}
+          <g style={animated ? { animation: 'breeze-back 7s ease-in-out infinite', animationDelay: '1s' } : {}}>
+            <path d="M30 20 Q 32 18 28 16 Q 26 19 30 20 Z" fill={colors.outline} opacity="0.4" />
+          </g>
+        </g>
+      )}
+
       {/* 书本身体 */}
       <g className="buddy-body">
         {/* 书本底色 */}
@@ -114,17 +144,50 @@ const BuddySVG: React.FC<BuddySVGProps> = ({ theme, size = 64, animated = true }
 
       {/* 眼睛 */}
       <g className="buddy-eyes">
-        <circle cx="12" cy="17" r="1.5" fill={colors.eye} />
-        <circle cx="18" cy="17" r="1.5" fill={colors.eye} />
-        {/* 眼睛高光 */}
-        <circle cx="12.5" cy="16.5" r="0.5" fill="white" />
-        <circle cx="18.5" cy="16.5" r="0.5" fill="white" />
+        {theme === 'cyber' ? (
+          <>
+            {/* Vex: 左眼正常，右眼是义眼/故障方块 */}
+            <circle cx="12" cy="17" r="1.5" fill={colors.eye} />
+            <rect x="16.5" y="15.5" width="3" height="3" fill="#00ff41" opacity="0.9" />
+            <circle cx="12.5" cy="16.5" r="0.5" fill="white" />
+          </>
+        ) : theme === 'noir' ? (
+          <>
+            {/* Null: 像素墨镜 (Cool Sunglasses) */}
+            {/* 镜片 */}
+            <rect x="9" y="15" width="6" height="4" fill="#00ff41" opacity="0.9" rx="1" />
+            <rect x="17" y="15" width="6" height="4" fill="#00ff41" opacity="0.9" rx="1" />
+            {/* 鼻梁架 */}
+            <rect x="15" y="16" width="2" height="1" fill="#00ff41" opacity="0.9" />
+            {/* 高光 */}
+            <rect x="10" y="16" width="2" height="1" fill="white" opacity="0.6" />
+            <rect x="18" y="16" width="2" height="1" fill="white" opacity="0.6" />
+          </>
+        ) : theme === 'grow' ? (
+          <>
+            {/* Sprout: 可爱圆眼 (无睫毛) */}
+            <circle cx="12" cy="17" r="1.5" fill={colors.eye} />
+            <circle cx="18" cy="17" r="1.5" fill={colors.eye} />
+
+            {/* 眼睛高光 */}
+            <circle cx="12.5" cy="16.5" r="0.5" fill="white" />
+            <circle cx="18.5" cy="16.5" r="0.5" fill="white" />
+          </>
+        ) : (
+          <>
+            <circle cx="12" cy="17" r="1.5" fill={colors.eye} />
+            <circle cx="18" cy="17" r="1.5" fill={colors.eye} />
+            {/* 眼睛高光 */}
+            <circle cx="12.5" cy="16.5" r="0.5" fill="white" />
+            <circle cx="18.5" cy="16.5" r="0.5" fill="white" />
+          </>
+        )}
       </g>
 
       {/* 脸颊 */}
       <g className="buddy-cheeks">
-        <circle cx="10" cy="20" r="1" fill={colors.cheek} opacity="0.35" />
-        <circle cx="20" cy="20" r="1" fill={colors.cheek} opacity="0.35" />
+        <circle cx="10" cy="20" r="1" fill={colors.cheek} opacity={theme === 'grow' ? 0.8 : 0.35} />
+        <circle cx="20" cy="20" r="1" fill={colors.cheek} opacity={theme === 'grow' ? 0.8 : 0.35} />
       </g>
 
       {/* 嘴巴 - 根据角色性格定制表情 */}
@@ -137,16 +200,16 @@ const BuddySVG: React.FC<BuddySVGProps> = ({ theme, size = 64, animated = true }
         <path d="M 13 22.5 Q 14.5 22 17 21" stroke={colors.eye} strokeWidth="0.8" fill="none" strokeLinecap="round" />
       )}
       {theme === 'grow' && (
-        // Sprout 知识园丁 - 开心微笑弧线
-        <path d="M 13 22 Q 15 24 17 22" stroke={colors.eye} strokeWidth="0.8" fill="none" strokeLinecap="round" />
+        // Sprout 知识园丁 - 可爱少女笑 (Girl Smile)
+        <path d="M 13.5 22 Q 15 23.5 16.5 22 Z" fill={colors.eye} opacity="0.8" />
       )}
       {theme === 'flare' && (
         // Flare 灵感探险家 - 大一点的开心微笑
         <path d="M 12.5 22 Q 15 24.5 17.5 22" stroke={colors.eye} strokeWidth="0.8" fill="none" strokeLinecap="round" />
       )}
       {theme === 'noir' && (
-        // Null 二进制管家 - 直线，冷静中性
-        <path d="M 13 22 L 17 22" stroke={colors.eye} strokeWidth="0.8" fill="none" strokeLinecap="round" />
+        // Null - 佩戴墨镜，极简的酷嘴
+        <path d="M 14 23 L 18 23" stroke={colors.eye} strokeWidth="0.8" fill="none" strokeLinecap="round" />
       )}
 
       {/* 手臂 */}
@@ -155,19 +218,47 @@ const BuddySVG: React.FC<BuddySVGProps> = ({ theme, size = 64, animated = true }
         <rect className="arm-right" x="22" y="16" width="4" height="2" rx="1" fill={colors.body} />
       </g>
 
-      {/* 星星装饰 - classic/cyber/flare/noir */}
-      {!showLeafs && (
+      {/* 星星装饰 - classic/flare (只有这些主题显示星星) */}
+      {!showLeafs && theme !== 'cyber' && theme !== 'noir' && (
         <g className="buddy-stars">
           <circle cx="5" cy="8" r="1" fill={colors.stars} opacity="0.8" />
           <circle cx="25" cy="8" r="0.8" fill={colors.stars} opacity="0.6" />
         </g>
       )}
 
-      {/* 叶子装饰 - grow */}
+      {/* 故障装饰 - cyber (方块) */}
+      {theme === 'cyber' && (
+        <g className="buddy-glitch" style={animated ? { animation: 'float 2s ease-in-out infinite reverse' } : {}}>
+          <rect x="4" y="7" width="2" height="2" fill={colors.stars} opacity="0.8" />
+          <rect x="26" y="9" width="1.5" height="1.5" fill={colors.stars} opacity="0.6" />
+          <rect x="24" y="5" width="1" height="1" fill={colors.stars} opacity="0.4" />
+        </g>
+      )}
+
+      {/* 二进制装饰 - noir (0/1 流) */}
+      {theme === 'noir' && (
+        <g className="buddy-matrix" style={animated ? { animation: 'float 3s linear infinite' } : {}}>
+          <text x="4" y="10" fontSize="8" fill={colors.stars} opacity="0.6" style={{ fontFamily: 'monospace' }}>1</text>
+          <text x="26" y="8" fontSize="6" fill={colors.stars} opacity="0.4" style={{ fontFamily: 'monospace' }}>0</text>
+          <text x="5" y="25" fontSize="6" fill={colors.stars} opacity="0.3" style={{ fontFamily: 'monospace' }}>0</text>
+        </g>
+      )}
+
+      {/* 3D 前景叶子 (Front Layer Leaves) - 拂袖 (Breeze Sleeve) */}
+      {/* 3D 前景装饰 (Front Decorations) - 花饰 (Flower Accessory) */}
       {showLeafs && (
-        <g className="buddy-leafs">
-          <path d="M4 8 C3 9 3 11 5 11.5 C7 11 7 8 4 8 Z" fill={colors.leaf} />
-          <path d="M26 8 C25 9 25 11 27 11.5 C29 11 29 8 26 8 Z" fill={colors.leaf} />
+        <g className="buddy-flower-accessory" style={animated ? { animation: 'leaf-sway 4s ease-in-out infinite', transformOrigin: '24px 12px' } : {}}>
+          {/* 花朵主体 - 侧边发卡 (Hair Clip Style) */}
+          <g transform="translate(23, 11) scale(0.8)">
+            {/* 花瓣 (白色/粉色) */}
+            <circle cx="0" cy="-2" r="2" fill="#FCE7F3" /> {/* Top */}
+            <circle cx="2" cy="0" r="2" fill="#FCE7F3" />  {/* Right */}
+            <circle cx="0" cy="2" r="2" fill="#FCE7F3" />  {/* Bottom */}
+            <circle cx="-2" cy="0" r="2" fill="#FCE7F3" /> {/* Left */}
+
+            {/* 花蕊 (黄色) */}
+            <circle cx="0" cy="0" r="1.5" fill="#FCD34D" />
+          </g>
         </g>
       )}
     </svg>
@@ -425,7 +516,7 @@ const AgentDemo: React.FC = () => {
             />
             <button onClick={handleSend} disabled={!inputValue.trim() || isTyping}>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
               </svg>
             </button>
           </div>
@@ -515,16 +606,16 @@ const Onboarding: React.FC = () => {
   }, [currentSection, scrollToSection]);
 
   // Pixel Buddy 角色数据 - 使用项目中的主题名
-  const buddies: Array<{ 
-    theme: PixelBuddyTheme; 
+  const buddies: Array<{
+    theme: PixelBuddyTheme;
     nameKey: string;
   }> = [
-    { theme: 'classic', nameKey: 'koda' },
-    { theme: 'cyber', nameKey: 'vex' },
-    { theme: 'grow', nameKey: 'sprout' },
-    { theme: 'flare', nameKey: 'flare' },
-    { theme: 'noir', nameKey: 'null' },
-  ];
+      { theme: 'classic', nameKey: 'koda' },
+      { theme: 'cyber', nameKey: 'vex' },
+      { theme: 'grow', nameKey: 'sprout' },
+      { theme: 'flare', nameKey: 'flare' },
+      { theme: 'noir', nameKey: 'null' },
+    ];
 
   return (
     <div className="onboarding-wrapper">
@@ -625,20 +716,20 @@ const Onboarding: React.FC = () => {
                 <kbd>d</kbd>
                 <span>{t('onboarding.shortcuts.delete')}</span>
               </div>
-              <div className="shortcut-item">
-                <kbd>y</kbd>
-                <span>{t('onboarding.shortcuts.copy')}</span>
-              </div>
             </div>
             <div className="shortcut-group">
               <h4>{t('onboarding.shortcuts.global')}</h4>
               <div className="shortcut-item">
-                <kbd>⌘</kbd><kbd>J</kbd>
-                <span>{t('onboarding.shortcuts.sidebar')}</span>
+                <kbd>H</kbd>
+                <span>{t('onboarding.shortcuts.help')}</span>
               </div>
               <div className="shortcut-item">
-                <kbd>⌘</kbd><kbd>K</kbd>
-                <span>{t('onboarding.shortcuts.save')}</span>
+                <kbd>Space</kbd>
+                <span>{t('onboarding.shortcuts.preview')}</span>
+              </div>
+              <div className="shortcut-item">
+                <kbd>Esc</kbd>
+                <span>{t('onboarding.shortcuts.escape')}</span>
               </div>
             </div>
           </div>
@@ -668,9 +759,9 @@ const Onboarding: React.FC = () => {
       {/* Navigation Dots */}
       <div className="dots-navigation">
         {Array.from({ length: totalSections }).map((_, i) => (
-          <button 
-            key={i} 
-            className={`dot ${currentSection === i ? 'active' : ''}`} 
+          <button
+            key={i}
+            className={`dot ${currentSection === i ? 'active' : ''}`}
             onClick={() => scrollToSection(i)}
             aria-label={`Go to section ${i + 1}`}
           />

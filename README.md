@@ -1,103 +1,345 @@
 # AnyMark 🔖
 
-**你的第一个书签 AI 助手**
+<div align="center">
 
-> 不只是 AI 加持，而是一个真正帮你干活的 Agent。
+**Your AI-Powered Bookmark Assistant**
 
----
+[![Chrome Web Store](https://img.shields.io/badge/Chrome-Web_Store-green?logo=google-chrome)](https://chromewebstore.google.com/)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/Johnny-xuan/Anymark?style=social)](https://github.com/Johnny-xuan/Anymark)
 
-## 这是什么？
+Not just AI-enhanced — a true Agent that gets work done through conversation.
 
-AnyMark 是一个 Chrome 书签管理扩展，但它不只是帮你存链接——它有一个 AI Agent，能听懂你说的话，然后自己去执行。
+[Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Development](#-development) • [Contributing](#-contributing)
 
-比如你可以说：
-- "帮我找 React 相关的书签" → 它会搜索你的收藏
-- "整理一下我的开发资源" → 它会分析并重新分类
-- "最近有什么热门项目？" → 它会去 GitHub 帮你找
-- "清理一下很久没用的书签" → 它会找出来让你确认
-
-**不用点来点去，直接说就行。**
+</div>
 
 ---
 
-## 主要功能
+## ✨ What is AnyMark?
 
-### 💬 对话式管理
-跟 AI 聊天就能管理书签，不用学习复杂的操作界面。
+AnyMark is a Chrome bookmark manager that revolutionizes how you organize, search, and discover web content. Unlike traditional bookmark managers that require endless clicking through nested folders, AnyMark features a conversational AI Agent that understands natural language and autonomously executes complex bookmark management tasks.
 
-### 🧠 智能分析
-每个书签都会自动生成摘要和标签，方便以后找。
+### Key Difference
 
-### 📊 活跃度追踪
-书签会根据你的使用频率自动标记状态：
-- 🟢 常用（7天内访问过）
-- 🟡 偶尔用（30天内）
-- 🔵 很少用（90天内）
-- ❄️ 吃灰了（超过90天没碰）
-
-### ⌨️ 键盘党友好
-支持 Vim 风格快捷键：`j/k` 上下移动，`s` 加星标，`d` 删除，`/` 搜索...
-
-### 🌐 发现新资源
-不只是管理已有书签，还能帮你在网上找新的学习资源和热门项目。
-
----
-
-## 安装
-
-```bash
-git clone https://github.com/user/anymark.git
-cd anymark/smart-bookmarks
-npm install
-npm run build
+**Traditional Bookmark Manager:**
+```
+Click folder → Click subfolder → Search → Scroll → Click bookmark
 ```
 
-然后在 Chrome 扩展页面加载 `smart-bookmarks/dist/` 文件夹。
+**AnyMark:**
+```
+Type: "Find my React tutorials" → Done ✅
+```
 
 ---
 
-## AI 配置
+## 🚀 Features
 
-AnyMark 支持多种 AI 服务商，你可以用自己的 API Key：
-- OpenAI (GPT-4/3.5)
-- Anthropic (Claude)
-- Google (Gemini)
-- DeepSeek
-- 本地模型 (Ollama)
+### 💬 Conversational AI Agent
 
-在扩展设置里配置就行。
+Interact with your bookmarks using natural language. The Agent understands context and intent:
+
+- "Find my React learning materials" → Instantly locates all React-related bookmarks
+- "Organize my development resources" → Analyzes and categorizes automatically
+- "What are my most visited sites?" → Shows usage statistics
+- "Clean up unused bookmarks" → Identifies stale bookmarks for review
+
+### 🧠 Smart Save with One Click
+
+Saving a page is magical — just click save, and AI automatically:
+- Extracts page content and main sections
+- Generates a concise summary for quick reference
+- Creates relevant tags based on content
+- Suggests appropriate folder locations
+- Assigns a frecency score for intelligent ranking
+
+### 📊 Frecency-Based Activity Tracking
+
+Bookmarks are automatically tagged based on your usage patterns:
+- 🟢 **Active** — Visited within 7 days
+- 🟡 **Cooling** — Visited within 30 days
+- 🔵 **Cold** — Visited within 90 days
+- ❄️ **Frozen** — Not visited in over 90 days
+
+### ⌨️ Keyboard-First Navigation
+
+Navigate at lightning speed without touching your mouse:
+- `j` / `k` — Vim-style up/down navigation
+- `Enter` — Open bookmark
+- `Space` — Toggle preview panel
+- `s` — Star/unstar
+- `d` — Delete
+- `/` — Focus search
+- `H` — Show help
+- `Ctrl+J` — Toggle sidebar
+- `Ctrl+K` / `Cmd+D` — Quick save
+
+### 🎨 Pixel Buddies: Your AI Companions
+
+Choose from 5 adorable characters that personalize your experience:
+- **Koda** (Scholar) — Professional blue, your reliable knowledge anchor
+- **Vex** (Cyber Hunter) — Futuristic neon, filters signal from noise
+- **Sprout** (Knowledge Gardener) — Organic growth, where ideas bloom
+- **Zing** (Inspiration Explorer) — Golden energy for discovery
+- **Null** (Binary Butler) — Minimalist terminal, pure efficiency
+
+### 🔐 Privacy First, Always
+
+Your bookmarks stay on your device. Period.
+- 100% local storage in your browser — no cloud servers
+- Zero analytics, zero tracking, zero telemetry
+- Open-source MIT license — audit the code yourself
+- API keys encrypted and stored locally
+- AI requests go directly from your browser to your chosen provider
+
+### 🌐 Multi-Provider AI Support
+
+Bring your own API key — AnyMark supports 20+ AI providers including:
+
+**International:** OpenAI, Anthropic Claude, Google Gemini, xAI (Grok), Groq, Azure OpenAI
+
+**Chinese:** DeepSeek, Doubao, Kimi/Moonshot, Tongyi Qianwen, 01.AI, SiliconFlow, Zhipu, MiniMax
+
+**Self-Hosted:** Ollama, OpenRouter, HuggingFace
+
+Switch anytime, rotate multiple keys to avoid rate limits — AnyMark automatically switches when one key hits its limit.
+
+### 🌍 Multi-Language Interface
+
+Available in English, 中文, 日本語, Deutsch, Español, and Français.
 
 ---
 
-## 快捷键
+## 📦 Installation
 
-| 按键 | 功能 |
-|------|------|
-| `Alt+Shift+B` | 打开书签管理器 |
-| `Alt+Shift+S` | 快速保存当前页 |
-| `/` | 搜索 |
-| `j` / `k` | 上下移动 |
-| `s` | 加星标 |
-| `d` | 删除 |
-| `Enter` | 打开书签 |
-| `H` | 显示所有快捷键 |
+### From Chrome Web Store (Coming Soon)
+
+1. Visit the Chrome Web Store
+2. Click "Add to Chrome"
+3. Pin the extension to your toolbar
+4. Click the extension icon to start exploring
+
+### From Source (Development)
+
+```bash
+# Clone the repository
+git clone https://github.com/Johnny-xuan/Anymark.git
+cd Anymark/smart-bookmarks
+
+# Install dependencies
+npm install
+
+# Build for production
+npm run build
+
+# Load in Chrome
+# 1. Open chrome://extensions/
+# 2. Enable "Developer mode"
+# 3. Click "Load unpacked"
+# 4. Select the smart-bookmarks/dist/ directory
+```
+
+### Development Mode
+
+```bash
+cd smart-bookmarks
+npm run dev
+```
+
+Then load the `dist/` directory in Chrome and enable auto-reload.
 
 ---
 
-## 技术栈
+## 🎯 Usage
 
-React 18 + TypeScript + Vite + Zustand + Chrome Extension Manifest V3
+### Quick Start
 
-支持 IndexedDB 存储，书签多了也不卡。
+1. **Open the Sidebar** — Click the extension icon or press `Ctrl+J`
+2. **Import Bookmarks** — Click "Import Chrome Bookmarks" to bring your existing collection
+3. **Chat with Your Bookmarks** — Type commands in the chat input:
+   - `/find` — Search bookmarks
+   - `/ls` — List current directory
+   - `/stats` — View statistics
+   - `/tree` — Show directory tree
+4. **Save a Page** — Press `Cmd+D` (Mac) or `Ctrl+D` (Windows) while browsing
+
+### Example Conversations
+
+```
+You: Find my React hooks tutorials
+
+Agent: Found 8 React-related bookmarks:
+     • React Hooks Documentation
+     • Complete Guide to useEffect
+     • Building Custom Hooks Tutorial
+
+     Which one would you like to open?
+```
+
+```
+You: Move all frontend stuff to Frontend folder
+
+Agent: I found 12 frontend-related bookmarks.
+     Moving them to "Frontend" folder... ✅ Done!
+
+     12 bookmarks moved successfully.
+```
 
 ---
 
-## License
+## 🛠️ Technology Stack
 
-MIT - 随便用。
+- **Frontend** — React 19, TypeScript, Vite
+- **State Management** — Zustand
+- **Styling** — CSS Modules, CSS-in-JS
+- **Build Tool** — Vite 7
+- **Testing** — Vitest, React Testing Library
+- **Linting** — ESLint, TypeScript Compiler
+- **Chrome API** — Manifest V3, Side Panel, Native Bookmarks
 
 ---
 
-<p align="center">
-  Made with ❤️
-</p>
+## 📁 Project Structure
+
+```
+smart-bookmarks/
+├── src/
+│   ├── agent-v3/              # AI Agent architecture (V3/V4)
+│   │   ├── Agent.ts           # Main Agent class
+│   │   ├── aiService.ts       # AI provider abstraction
+│   │   ├── FunctionCallingLoop.ts  # Native function calling
+│   │   ├── ReActLoop.ts       # ReAct reasoning loop
+│   │   └── prompts/           # System prompts (multi-language)
+│   ├── background/            # Service Worker
+│   ├── components/            # Shared React components
+│   ├── content/               # Content scripts (injected into pages)
+│   ├── i18n/                  # Internationalization (6 languages)
+│   ├── onboarding/            # First-run experience
+│   ├── popup/                 # Quick popup menu
+│   ├── services/              # Business logic services
+│   ├── sidebar/               # Main sidebar UI
+│   │   ├── store/             # Zustand state management
+│   │   └── components/        # UI components (30+)
+│   ├── styles/                # Global styles
+│   ├── types/                 # TypeScript definitions
+│   └── utils/                 # Utility functions
+├── public/                    # Static assets & Chrome manifest
+├── dist/                      # Build output (load in Chrome)
+└── package.json               # Dependencies & scripts
+```
+
+---
+
+## 🔧 Development
+
+### Available Scripts
+
+```bash
+# Build
+npm run build          # Production build to dist/
+npm run dev            # Dev server with HMR
+
+# Quality
+npm run type-check     # TypeScript type checking
+npm run lint           # ESLint
+
+# Testing
+npm run test           # Run tests
+npm run test:watch     # Watch mode
+npm run test:coverage  # Coverage report
+
+# I18n
+npm run i18n-audit     # Run i18n audit
+```
+
+### Agent Architecture
+
+AnyMark uses a **tool-based Agent architecture** with function calling:
+
+```
+User Message
+    ↓
+BookmarkAIAgent.chat()
+    ↓
+AIService (LLM with Function Calling)
+    ↓
+ToolRegistry.execute() → 6 Core Tools
+    ↓
+Results → LLM → User Response
+```
+
+**6 Core Tools:**
+| Tool | Purpose |
+|------|---------|
+| `context` | Get overview/folders/stats/filters (read-only) |
+| `bookmark` | CRUD, star, restore, move, batch operations |
+| `organize` | AI analysis, suggestions, find duplicates (analysis only) |
+| `folder` | Create/rename/delete/move folders |
+| `search` | Internal bookmark search with filters |
+| `discover` | External search (web/GitHub/trending/content extraction) |
+
+### Key Design Patterns
+
+1. **Chrome Native as Single Source of Truth** — All bookmarks stored in Chrome Native API
+2. **Metadata Separation** — Extended metadata stored separately via chrome.storage
+3. **Optimistic UI Updates** — UI updates immediately, syncs to Chrome in background
+4. **Debounced Refresh** — Prevents excessive full-refresh operations
+5. **Frecency Algorithm** — Combines visit frequency and recency for importance scoring
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Here's how you can help:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Make your changes
+4. Run tests and linting (`npm run test && npm run lint`)
+5. Commit your changes (`git commit -m 'Add amazing feature'`)
+6. Push to the branch (`git push origin feature/amazing-feature`)
+7. Open a Pull Request
+
+### Development Guidelines
+
+- Follow the existing code style (TypeScript, ESLint)
+- Write tests for new features
+- Update documentation as needed
+- Keep commits atomic and well-described
+- Respect the existing project structure
+
+---
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 📧 Contact
+
+- **Website:** https://anymark.j-o-x.tech
+- **GitHub:** https://github.com/Johnny-xuan/Anymark
+- **Email:** anymark2025@163.com
+- **X (Twitter):** [@JohnXuann](https://x.com/JohnXuann)
+
+---
+
+## 🙏 Acknowledgments
+
+Thanks to all open-source projects that make AnyMark possible:
+- React and the React community
+- Chrome Extension documentation
+- All AI providers who make their APIs available
+- The open-source community
+
+---
+
+<div align="center">
+
+**Made with ❤️ by [Johnny Xuan](https://github.com/Johnny-xuan)**
+
+⭐ Star this repo if it helped you!
+
+</div>
