@@ -22,6 +22,7 @@
     "README.md",
     "README.en.md",
     "CHANGELOG.md",
+    "SECURITY.md",
     "LICENSE"
   ],
   "type": "module",
