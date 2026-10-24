@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fafbfd" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0c0f14" media="(prefers-color-scheme: dark)">
+  <title>AnyMark · 书签工作台</title>
+  <link rel="icon" type="image/png" href="../extension/icons/32.png">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./transfer.css">
+  <link rel="stylesheet" href="./graph.css">
+  <link rel="stylesheet" href="./settings.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#workspace">跳到书签列表</a>
+  <div class="app-shell" id="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="书签导航">
+      <div class="brand"><span class="icon brand-icon" data-icon="mark"></span><span>AnyMark<span class="brand-sub" data-i18n="brand.sub">本地书签工作台</span></span><button class="icon-button mobile-only" id="close-nav" aria-label="关闭导航"><span class="icon" data-icon="close"></span></button></div>
+      <nav id="collections" aria-label="收藏集合"></nav>
+      <p class="nav-label" data-i18n="nav.chromeFolders">CHROME 文件夹</p>
+      <nav id="roots" aria-label="Chrome 顶层文件夹"></nav>
+      <div class="sidebar-transfer">
+        <button id="open-transfer" class="nav-item"><span class="icon" data-icon="download"></span><span data-i18n="nav.transfer">导入与导出</span></button>
+        <button id="open-settings" class="nav-item"><span class="icon" data-icon="settings"></span><span data-i18n="nav.settings">设置</span></button>
+      </div>
+      <div class="sidebar-footer"><span class="local-dot"></span><span><span data-i18n="footer.line1">书签来自 Chrome</span><br><span class="muted" data-i18n="footer.line2">备注仅保存在此 Profile</span></span></div>
+    </aside>
+    <button class="nav-scrim" id="nav-scrim" aria-label="关闭导航" hidden></button>
+    <main class="workspace" id="workspace" tabindex="-1">
+      <header class="workspace-header">
+        <div class="heading-row"><button class="icon-button mobile-only" id="open-nav" aria-label="打开书签导航" aria-expanded="false" aria-controls="sidebar"><span class="icon" data-icon="menu"></span></button><button class="back-button" id="nav-back" type="button" aria-label="返回上一级" title="返回上一级" hidden><span class="icon" data-icon="back"></span><span data-i18n="header.back">返回</span></button><div class="heading-copy"><h1 id="scope-title" tabindex="-1">Inbox</h1></div><button class="subtle-button agent-pill" id="toggle-agent-hub" type="button" aria-expanded="true" aria-controls="agent-hub" title="展开或收起 Agent Relay 指令卡"><span class="icon" data-icon="terminal"></span><span data-i18n="header.relay">Relay 指令</span><span class="agent-dot" id="agent-dot"></span></button><button class="icon-button" id="theme-toggle" type="button" aria-label="切换主题" title="切换深浅主题"><span class="icon" data-icon="moon"></span></button><button class="icon-button" id="refresh" aria-label="刷新书签" title="刷新书签" data-i18n-title="header.refresh"><span class="icon" data-icon="refresh"></span></button><button class="icon-button desktop-only" id="toggle-inspector" aria-label="展开详情面板" title="展开详情面板" aria-controls="inspector" aria-expanded="false"><span class="icon" data-icon="workspace"></span></button></div>
+        <nav class="breadcrumbs" id="breadcrumbs" aria-label="上级文件夹" hidden></nav>
+        <details id="scope-note" class="scope-note" hidden><summary data-i18n="scope.viewNote">查看备注</summary><p id="scope-description" class="scope-description"></p></details>
+        <div class="toolbar"><label class="search-field"><span class="icon" data-icon="search"></span><input type="search" id="search" aria-label="搜索当前范围内的标题、网址和备注" placeholder="搜索书签与备注…" data-i18n-placeholder="search.placeholder" autocomplete="off"><button type="button" class="clear-search" id="clear-search" aria-label="清除搜索" title="清除搜索 (Esc)" data-i18n-title="search.clear" hidden><span class="icon" data-icon="close"></span></button><kbd id="search-kbd">/</kbd></label><div class="filter-group" id="type-filter" role="group" aria-label="筛选条目类型"><button type="button" class="filter-chip active" data-filter="all" aria-pressed="true" data-i18n="filter.all">全部</button><button type="button" class="filter-chip" data-filter="directory" aria-pressed="false" data-i18n="filter.directory">目录</button><button type="button" class="filter-chip" data-filter="file" aria-pressed="false" data-i18n="filter.file">书签</button></div><button id="add-link" class="primary"><span class="icon" data-icon="plus"></span><span data-i18n="action.addLink">添加链接</span></button><button id="add-folder" class="icon-button" aria-label="新建文件夹" title="新建文件夹" data-i18n-title="action.addFolder"><span class="icon" data-icon="folder-plus"></span></button></div>
+      </header>
+      <section class="agent-hub" id="agent-hub" aria-label="Agent 技能与快捷指令">
+        <div class="agent-hub-header">
+          <div class="agent-hub-copy">
+            <strong id="agent-status-title" data-i18n="agent.hubTitle">Agent Relay 指令台</strong>
+            <span class="agent-status-meta" id="agent-status-meta" data-i18n="agent.hubMeta">点击复制带当前目录上下文的指令，粘贴到 Claude Code / Codex / Gemini 终端执行</span>
+          </div>
+          <div class="agent-hub-actions">
+            <button type="button" class="agent-cli-chip" id="copy-profile-cmd" title="点击复制 Profile 绑定命令">
+              <code id="agent-profile-code">anymark status</code>
+              <span class="icon" data-icon="copy"></span>
+            </button>
+          </div>
+        </div>
+        <div class="skill-cards" id="skill-cards">
+          <button type="button" class="skill-card" data-skill="inbox-triage">
+            <div class="skill-card-top"><code class="skill-cmd">anymark inbox</code><span class="icon skill-copy-icon" data-icon="copy"></span></div>
+            <strong data-i18n="agent.card.inbox.title">归档 Inbox 待办</strong>
+            <p data-i18n="agent.card.inbox.desc">读取 Inbox 与目录树，自动归类到对应文件夹并补齐检索备注</p>
+          </button>
+          <button type="button" class="skill-card" data-skill="dedupe-audit">
+            <div class="skill-card-top"><code class="skill-cmd" data-scope-badge>全部书签</code><span class="icon skill-copy-icon" data-icon="copy"></span></div>
+            <strong data-i18n="agent.card.dedupe.title">重复书签与结构体检</strong>
+            <p data-i18n="agent.card.dedupe.desc">先自动导出 HTML 备份，再扫描当前范围的重复 URL、空目录与碎片分类</p>
+          </button>
+          <button type="button" class="skill-card" data-skill="enrich-notes">
+            <div class="skill-card-top"><code class="skill-cmd" data-scope-badge>全部书签</code><span class="icon skill-copy-icon" data-icon="copy"></span></div>
+            <strong data-i18n="agent.card.notes.title">批量补充本地备注</strong>
+            <p data-i18n="agent.card.notes.desc">扫描当前目录内无备注的书签，按标题与域名语境生成关键词备注供搜索</p>
+          </button>
+          <button type="button" class="skill-card" data-skill="skill-setup">
+            <div class="skill-card-top"><code class="skill-cmd">SKILL.md</code><span class="icon skill-copy-icon" data-icon="copy"></span></div>
+            <strong data-i18n="agent.card.skill.title">复制 Skill 操作规范</strong>
+            <p data-i18n="agent.card.skill.desc">复制 CLI / MCP 速查手册与 SKILL.md 路径，让任意 Agent 秒懂操作规范</p>
+          </button>
+        </div>
+      </section>
+      <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+      <div class="list-heading"><div class="list-heading-left"><span id="list-count" role="status" aria-live="polite" data-i18n="list.loading">正在读取…</span><span id="list-context" hidden></span></div><div class="list-heading-right"><span class="kb-hint desktop-only" data-i18n="list.kbHint">↑↓ 选择 · ← 返回 · →/Enter 打开 · 空格 详情</span><button type="button" class="subtle-button select-all-button" id="select-all-rows" data-i18n="list.selectAll" hidden>全选</button></div></div>
+      <section class="bookmark-list" id="bookmark-list" aria-label="书签与文件夹" aria-busy="true"></section>
+      <div class="batch-bar" id="batch-bar" role="region" aria-label="批量操作" hidden>
+        <span class="batch-count" id="batch-count">已选 0 项</span>
+        <div class="batch-actions">
+          <button type="button" id="batch-copy-ai" class="batch-btn" title="复制已选条目的 ID 与指令交给 AI 处理"><span class="icon" data-icon="terminal"></span><span data-i18n="batch.copyAi">复制给 AI 处理</span></button>
+          <button type="button" id="batch-move" class="batch-btn primary"><span class="icon" data-icon="folder"></span><span data-i18n="batch.move">移动到…</span></button>
+          <button type="button" id="batch-delete" class="batch-btn danger"><span class="icon" data-icon="trash"></span><span data-i18n="batch.delete">删除</span></button>
+          <button type="button" id="batch-clear" class="batch-btn subtle" aria-label="取消选择" data-i18n="batch.cancel">取消</button>
+        </div>
+      </div>
+      <section id="graph-view" aria-label="二维书签关系图" hidden></section>
+    </main>
+    <aside class="inspector" id="inspector" aria-label="条目详情" inert>
+      <div class="inspector-empty" id="inspector-empty" tabindex="-1"><span class="icon" data-icon="note"></span><h2 data-i18n="inspector.emptyTitle">选择一项，查看详情</h2><p data-i18n="inspector.emptyDesc">标题、网址与备注会显示在这里。</p></div>
+      <div id="detail" hidden>
+        <header class="detail-header"><span id="detail-kind" class="entry-kind"></span><button class="icon-button detail-close" id="close-detail" type="button" aria-label="收起详情面板" title="收起详情面板"><span class="icon" data-icon="close"></span></button></header>
+        <form id="edit-form" class="detail-form" aria-labelledby="detail-heading">
+          <h2 id="detail-heading" class="visually-hidden">详情</h2>
+          <div class="detail-title-row"><span class="detail-emblem" id="detail-emblem"></span><div class="detail-title-copy"><label for="edit-title" data-i18n="inspector.title">标题</label><input id="edit-title" name="title" class="detail-title-input" autocomplete="off" placeholder="未命名" data-i18n-placeholder="list.unnamed"></div></div>
+          <p class="protection-note" id="protection-note" data-i18n="inspector.protectionNote" hidden>此条目的 Chrome 属性只读；你仍可编辑本地备注。</p>
+          <div id="edit-url-field" class="detail-url-field"><div class="detail-field-heading"><label for="edit-url" data-i18n="inspector.url">网址</label><a id="open-link" class="open-link" target="_blank" rel="noopener noreferrer" aria-label="在新标签页打开网页"><span data-i18n="inspector.openLink">打开</span><span class="icon" data-icon="external"></span></a></div><input id="edit-url" name="url" type="url" autocomplete="off" spellcheck="false"><p id="unsafe-link" class="field-hint" data-i18n="inspector.unsafeUrl" hidden>此协议请在 Chrome 书签中打开。</p></div>
+          <section class="detail-note" aria-labelledby="note-label"><div class="note-label"><label for="edit-note" id="note-label" data-i18n="inspector.note">备注</label><span data-i18n="inspector.onlyProfile">仅此 Profile</span></div><textarea id="edit-note" name="note" rows="5" placeholder="记录收藏原因，或下次要用到的线索。" data-i18n-placeholder="inspector.notePlaceholder" aria-describedby="note-privacy"></textarea><details class="note-privacy" id="note-privacy"><summary data-i18n="inspector.privacySummary">关于备注存储</summary><p data-i18n="inspector.privacyBody">保存在此 Profile，不随 Chrome 书签同步。AnyMark 不会主动发送备注；获准的本机 Agent 可通过接口读取。</p></details></section>
+          <p class="form-error" id="edit-error" role="alert" hidden></p>
+        </form>
+        <div class="detail-actions"><button id="browse-folder" class="browse-folder" hidden><span class="icon" data-icon="folder"></span><span data-i18n="inspector.enterFolder">进入文件夹</span><span class="icon" data-icon="arrow"></span></button><div class="action-pair"><button id="move-entry" data-i18n="inspector.moveTo">移动到…</button><button id="copy-entry" data-i18n="inspector.copyTo">复制到…</button></div></div>
+        <details class="entry-meta-panel"><summary data-i18n="inspector.metaSummary">位置与标识</summary><dl class="entry-meta"><dt data-i18n="inspector.location">位置</dt><dd id="entry-path"></dd><dt>Chrome ID</dt><dd id="entry-id"></dd></dl></details>
+        <div class="detail-danger"><button id="delete-entry" class="danger text-button"><span class="icon" data-icon="trash"></span><span data-i18n="inspector.delete">永久删除</span></button></div>
+        <div class="save-row"><span id="save-state" role="status" aria-live="polite" data-i18n="inspector.saved">未修改</span><button type="submit" form="edit-form" id="save-detail" class="primary" disabled data-i18n="inspector.saveBtn">保存修改</button></div>
+      </div>
+    </aside>
+  </div>
+  <dialog id="create-dialog" aria-labelledby="create-heading">
+    <form id="create-form" class="dialog-content">
+      <div class="dialog-heading"><h2 id="create-heading" data-i18n="create.addLink">添加链接</h2><button type="button" class="icon-button" id="close-create" aria-label="关闭"><span class="icon" data-icon="close"></span></button></div>
+      <label for="create-title" data-i18n="inspector.title">标题</label><input id="create-title" required autocomplete="off">
+      <div id="create-url-field"><label for="create-url" data-i18n="inspector.url">网址</label><input id="create-url" type="url" placeholder="https://" autocomplete="off"></div>
+      <label for="create-note"><span data-i18n="inspector.note">备注</span> <span class="muted" data-i18n="create.noteOptional">（可选）</span></label><textarea id="create-note" rows="4" placeholder="记录这次收藏的原因" data-i18n-placeholder="create.notePlaceholder"></textarea>
+      <label data-i18n="create.destination">保存位置</label><button type="button" class="destination-button" id="create-destination"><span class="icon" data-icon="folder"></span><span id="create-destination-name">Inbox</span><span class="icon" data-icon="arrow"></span></button>
+      <p id="create-hint" class="field-hint"></p><p class="form-error" id="create-error" role="alert" hidden></p>
+      <div class="dialog-footer"><button type="button" id="cancel-create" data-i18n="create.cancel">取消</button><button type="submit" id="submit-create" class="primary" data-i18n="create.saveLink">保存链接</button></div>
+    </form>
+  </dialog>
+  <dialog id="chooser-dialog" aria-labelledby="chooser-heading">
+    <div class="dialog-content"><div class="dialog-heading"><h2 id="chooser-heading" data-i18n="chooser.selectTitle">选择文件夹</h2><button class="icon-button" id="close-chooser" aria-label="关闭文件夹选择"><span class="icon" data-icon="close"></span></button></div><p class="field-hint" id="chooser-intro" data-i18n="chooser.introDefault">进入文件夹，再选择当前位置。</p><div class="chooser-location"><button class="icon-button" id="chooser-up" aria-label="上一级"><span class="icon" data-icon="back"></span></button><span id="chooser-location"></span></div><div id="chooser-list" class="chooser-list" aria-busy="false"></div><p id="chooser-error" class="form-error" role="alert" hidden></p><p id="chooser-hint" class="field-hint"></p><div class="dialog-footer"><button id="cancel-chooser" data-i18n="create.cancel">取消</button><button id="choose-folder" class="primary" disabled data-i18n="chooser.chooseBtn">选择此文件夹</button></div></div>
+  </dialog>
+  <dialog id="confirm-dialog" aria-labelledby="confirm-heading" aria-describedby="confirm-description"><div class="dialog-content"><h2 id="confirm-heading"></h2><p id="confirm-description" class="confirm-description"></p><p id="confirm-error" class="form-error" role="alert" hidden></p><div class="dialog-footer"><button id="confirm-cancel" data-i18n="confirm.cancel">取消</button><button id="confirm-accept" class="primary" data-i18n="confirm.accept">确认</button></div></div></dialog>
+  <dialog id="transfer-dialog" class="transfer-dialog" aria-labelledby="transfer-heading">
+    <div class="dialog-content">
+      <div class="dialog-heading"><h2 id="transfer-heading" data-i18n="transfer.title">导入与导出</h2><button id="transfer-close" type="button" class="icon-button" aria-label="关闭导入与导出"><span class="icon" data-icon="close"></span></button></div>
+      <div class="transfer-tabs" role="tablist" aria-label="传输方式">
+        <button id="transfer-import-tab" type="button" role="tab" aria-selected="true" aria-controls="transfer-import-panel" data-i18n="transfer.importTab">导入</button>
+        <button id="transfer-export-tab" type="button" role="tab" aria-selected="false" aria-controls="transfer-export-panel" tabindex="-1" data-i18n="transfer.exportTab">导出</button>
+      </div>
+      <section id="transfer-import-panel" role="tabpanel" aria-labelledby="transfer-import-tab">
+        <p class="transfer-intro" data-i18n="transfer.importIntro">兼容 Chrome 和 AnyMark 导出的 HTML。备注只在 AnyMark 中保存，不写入书签标题或网址。</p>
+        <form id="transfer-import-form">
+          <label for="transfer-file" data-i18n="transfer.fileLabel">书签 HTML 文件</label>
+          <input id="transfer-file" class="transfer-file" type="file" accept=".html,.htm,text/html" required>
+          <p id="transfer-preview" class="transfer-preview" role="status" aria-live="polite" data-i18n="transfer.previewIdle">选择文件后预览内容。此时不会修改书签。</p>
+          <label for="transfer-title" data-i18n="transfer.folderNameLabel">新增文件夹名称</label><input id="transfer-title" value="导入的书签" required autocomplete="off">
+          <label data-i18n="transfer.destLabel">导入位置</label><button id="transfer-destination" type="button" class="destination-button"><span class="icon" data-icon="folder"></span><span id="transfer-destination-name" data-i18n="transfer.pickDest">选择目标文件夹</span><span class="icon" data-icon="arrow"></span></button>
+          <p id="transfer-location" class="field-hint"></p>
+          <p id="transfer-import-hint" class="transfer-note" data-i18n="transfer.importHint">只新增，不合并、不替换、不删除现有书签。</p>
+          <p id="transfer-import-error" class="form-error" role="alert" hidden></p>
+          <button id="transfer-inspect-partial" type="button" class="transfer-partial" hidden data-i18n="transfer.inspectPartial">查看已导入的部分</button>
+          <div class="dialog-footer"><button id="transfer-import-cancel" type="button" data-i18n="create.cancel">取消</button><button id="transfer-submit" type="submit" class="primary" disabled data-i18n="transfer.submitImport">导入为新文件夹</button></div>
+        </form>
+      </section>
+      <section id="transfer-export-panel" role="tabpanel" aria-labelledby="transfer-export-tab" hidden>
+        <p class="transfer-intro" data-i18n="transfer.exportIntro">导出此 Profile 的完整书签结构、书签备注和文件夹备注。Chrome 可导入其中的书签；用 AnyMark 导入还能恢复备注。</p>
+        <p class="transfer-note" data-i18n="transfer.exportNote">文件包含网址与备注，未加密。请妥善保存；迁移前先确认下载完成。</p>
+        <button id="transfer-export" type="button" class="primary transfer-export-action"><span class="icon" data-icon="download"></span><span data-i18n="transfer.exportBtn">导出完整 HTML 备份</span></button>
+        <p id="transfer-export-status" class="transfer-export-status" role="status" aria-live="polite"></p>
+        <p id="transfer-export-error" class="form-error" role="alert" hidden></p>
+        <div class="dialog-footer"><button id="transfer-export-close" type="button" data-i18n="transfer.closeBtn">关闭</button></div>
+      </section>
+    </div>
+  </dialog>
+  <dialog id="settings-dialog" class="settings-dialog" aria-labelledby="settings-heading">
+    <div class="dialog-content">
+      <div class="dialog-heading">
+        <h2 id="settings-heading" data-i18n="settings.title">设置</h2>
+        <button id="settings-close" type="button" class="icon-button" aria-label="关闭设置"><span class="icon" data-icon="close"></span></button>
+      </div>
+      <div class="settings-tabs" role="tablist" aria-label="设置分类">
+        <button type="button" role="tab" data-settings-tab="general" aria-selected="true" data-i18n="settings.tab.general">常规与外观</button>
+        <button type="button" role="tab" data-settings-tab="agent" aria-selected="false" tabindex="-1" data-i18n="settings.tab.agent">Agent 与 MCP</button>
+        <button type="button" role="tab" data-settings-tab="shortcuts" aria-selected="false" tabindex="-1" data-i18n="settings.tab.shortcuts">快捷键与数据</button>
+      </div>
+
+      <section class="settings-section" data-settings-panel="general" role="tabpanel">
+        <div class="settings-row">
+          <div class="settings-copy">
+            <strong data-i18n="settings.lang.label">界面语言</strong>
+            <span data-i18n="settings.lang.desc">切换工作台、弹窗及复制给 AI 的默认指令语言。</span>
+          </div>
+          <div class="settings-segmented" id="settings-lang-group">
+            <button type="button" class="settings-seg-btn" data-lang="zh-CN">简体中文</button>
+            <button type="button" class="settings-seg-btn" data-lang="en">English</button>
+            <button type="button" class="settings-seg-btn" data-lang="zh-TW">繁體中文</button>
+            <button type="button" class="settings-seg-btn" data-lang="ja">日本語</button>
+          </div>
+        </div>
+        <div class="settings-row">
+          <div class="settings-copy">
+            <strong data-i18n="settings.theme.label">外观主题</strong>
+            <span data-i18n="settings.theme.desc">选择浅色、深色或跟随系统外观。</span>
+          </div>
+          <div class="settings-segmented" id="settings-theme-group">
+            <button type="button" class="settings-seg-btn" data-theme-mode="system" data-i18n="settings.theme.system">跟随系统</button>
+            <button type="button" class="settings-seg-btn" data-theme-mode="light" data-i18n="settings.theme.light">浅色模式</button>
+            <button type="button" class="settings-seg-btn" data-theme-mode="dark" data-i18n="settings.theme.dark">深色模式</button>
+          </div>
+        </div>
+        <div class="settings-row">
+          <div class="settings-copy">
+            <strong data-i18n="settings.startup.label">默认启动视图</strong>
+            <span data-i18n="settings.startup.desc">无 URL 锚点打开工作台时默认进入的视图。</span>
+          </div>
+          <div class="settings-segmented" id="settings-startup-group">
+            <button type="button" class="settings-seg-btn" data-startup="inbox" data-i18n="settings.startup.inbox">Inbox 待整理</button>
+            <button type="button" class="settings-seg-btn" data-startup="all" data-i18n="settings.startup.all">全部书签</button>
+            <button type="button" class="settings-seg-btn" data-startup="graph" data-i18n="settings.startup.graph">二维关系图</button>
+          </div>
+        </div>
+        <div class="settings-row">
+          <label class="settings-row-inline" for="settings-show-hub">
+            <span class="settings-copy">
+              <strong data-i18n="settings.hub.label">主页面显示 Relay 指令台</strong>
+              <span data-i18n="settings.hub.desc">在书签列表上方展示一键复制的 AI 技能卡片。</span>
+            </span>
+            <input type="checkbox" id="settings-show-hub" class="settings-switch">
+          </label>
+        </div>
+      </section>
+
+      <section class="settings-section" data-settings-panel="agent" role="tabpanel" hidden>
+        <div class="settings-row">
+          <label class="settings-row-inline" for="settings-agent-enabled">
+            <span class="settings-copy">
+              <strong data-i18n="settings.agent.enableLabel">允许本机 Agent 读写书签</strong>
+              <span data-i18n="settings.agent.enableDesc">开启后，当前系统用户下的 CLI 或 MCP 客户端可通过私有 Unix Socket 读写此 Profile 的书签。</span>
+            </span>
+            <input type="checkbox" id="settings-agent-enabled" class="settings-switch">
+          </label>
+        </div>
+        <div class="settings-row">
+          <div class="settings-status-row">
+            <span class="settings-copy"><strong data-i18n="settings.agent.statusLabel">连接状态</strong></span>
+            <div class="shortcut-keys">
+              <span class="settings-state-badge" id="settings-agent-state" data-state="disabled">已关闭</span>
+              <button type="button" class="subtle-button" id="settings-agent-reconnect" data-i18n="settings.agent.reconnect" hidden>重新连接</button>
+            </div>
+          </div>
+        </div>
+        <div class="settings-row">
+          <label class="settings-copy" for="settings-profile-id"><strong data-i18n="settings.agent.profileLabel">当前 Profile ID</strong></label>
+          <input type="text" id="settings-profile-id" readonly spellcheck="false">
+        </div>
+        <div class="settings-row">
+          <div class="settings-copy"><strong data-i18n="settings.agent.cliLabel">CLI 终端快速绑定</strong></div>
+          <div class="settings-code-box">
+            <code id="settings-cli-code">anymark use PROFILE_ID</code>
+            <button type="button" class="subtle-button" id="settings-copy-cli"><span class="icon" data-icon="copy"></span></button>
+          </div>
+        </div>
+        <div class="settings-row">
+          <div class="settings-row-inline">
+            <span class="settings-copy"><strong data-i18n="settings.agent.mcpLabel">MCP Server 配置 (Claude / Cursor / Codex)</strong></span>
+            <button type="button" class="subtle-button" id="settings-copy-mcp"><span class="icon" data-icon="copy"></span><span data-i18n="settings.agent.copyMcp">复制 MCP JSON</span></button>
+          </div>
+          <pre class="settings-pre"><code id="settings-mcp-code"></code></pre>
+        </div>
+      </section>
+
+      <section class="settings-section" data-settings-panel="shortcuts" role="tabpanel" hidden>
+        <div class="settings-row">
+          <div class="settings-copy"><strong data-i18n="settings.shortcuts.title">键盘导航快捷键</strong></div>
+          <div class="shortcut-list">
+            <div class="shortcut-item"><span data-i18n="settings.shortcuts.updown">上下移动高亮条目（搜索框内也可直接按 ↓）</span><span class="shortcut-keys"><kbd>↑</kbd><kbd>↓</kbd></span></div>
+            <div class="shortcut-item"><span data-i18n="settings.shortcuts.right">进入高亮文件夹，或打开书签网址</span><span class="shortcut-keys"><kbd>→</kbd><kbd>Enter</kbd></span></div>
+            <div class="shortcut-item"><span data-i18n="settings.shortcuts.left">返回上一级目录（并自动定位到刚退出的目录）</span><span class="shortcut-keys"><kbd>←</kbd></span></div>
+            <div class="shortcut-item"><span data-i18n="settings.shortcuts.space">展开或收起右侧详情面板</span><span class="shortcut-keys"><kbd>Space</kbd></span></div>
+            <div class="shortcut-item"><span data-i18n="settings.shortcuts.search">聚焦搜索框</span><span class="shortcut-keys"><kbd>/</kbd></span></div>
+            <div class="shortcut-item"><span data-i18n="settings.shortcuts.shift">按住 Shift 点击勾选框进行区间连选</span><span class="shortcut-keys"><kbd>Shift</kbd></span></div>
+          </div>
+        </div>
+        <div class="settings-row">
+          <div class="settings-row-inline">
+            <span class="settings-copy">
+              <strong data-i18n="settings.data.label">HTML 备份与迁移</strong>
+              <span data-i18n="settings.data.desc">导出兼容 Chrome 的完整书签 HTML（含本地备注），或从备份恢复。</span>
+            </span>
+            <button type="button" class="subtle-button" id="settings-open-transfer"><span class="icon" data-icon="download"></span><span data-i18n="settings.data.openTransfer">打开导入与导出…</span></button>
+          </div>
+        </div>
+      </section>
+
+      <div class="dialog-footer">
+        <button type="button" id="settings-done" class="primary" data-i18n="settings.close">完成</button>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>

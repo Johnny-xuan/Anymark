@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "AnyMark — Bookmark Filesystem",
+  "version": "2.0.0",
+  "description": "Expose Chrome bookmarks as a local filesystem interface for your agents.",
+  "minimum_chrome_version": "134",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtrqTJvpDiTnAkslD7LuevVi2fgBbO8MSLkx4mpvs9ldFhilZbCxNfLs4FPH45xRmdt/Ef/x6J/K07VebKQqHVMaDdoZ34nmdpd5R7gnID17n/KJEVjglbvMl7SyhsgGhFGT8Z1JfwYN49dxek7lZ3MN3DfIVP25st42tQQk1BWqcv+YZFgj1xmQJz0hrBCcrfH6pYpSyvTUPfx53UO2YWQIo/L5Artc8+9MBnviK9WFU/uNBi4bSveGyzbstlaGwaMldjHuepSxDYWbd4OvRZH0Oh2y/iXmirxvwqjlBOmn3OVqOx2V6ydMmhuqmWv+lIOZ09H4J77QhaI1cfnDLWQIDAQAB",
+  "permissions": ["bookmarks", "storage", "nativeMessaging", "activeTab", "favicon"],
+  "background": { "service_worker": "extension/background.js", "type": "module" },
+  "icons": { "16": "extension/icons/16.png", "32": "extension/icons/32.png", "48": "extension/icons/48.png", "128": "extension/icons/128.png" },
+  "action": { "default_popup": "extension/popup.html", "default_title": "AnyMark Inbox", "default_icon": { "16": "extension/icons/16.png", "32": "extension/icons/32.png" } },
+  "options_page": "web/index.html"
+}

@@ -1,0 +1,300 @@
+.bookmark-graph {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  padding: 0;
+  color: var(--text);
+  background: transparent;
+}
+
+.bookmark-graph [hidden] { display: none !important; }
+.bookmark-graph ::selection { color: #fff; background: var(--accent); }
+
+.bookmark-graph button:focus-visible,
+.bookmark-graph a:focus-visible,
+.bookmark-graph summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.bookmark-graph .graph-stage {
+  position: relative;
+  isolation: isolate;
+  flex: 1 1 0;
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  background: var(--surface);
+}
+
+.bookmark-graph .graph-toolbar {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: var(--canvas-glass);
+  backdrop-filter: blur(14px) saturate(180%);
+  box-shadow: var(--shadow-card);
+}
+
+.bookmark-graph .graph-button {
+  min-height: 32px;
+  padding: 6px 9px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  border-radius: 7px;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.bookmark-graph .graph-button:hover:not(:disabled) {
+  background: var(--surface-hover);
+  border-color: var(--line);
+}
+
+.bookmark-graph .graph-button .icon {
+  width: 16px;
+  height: 16px;
+}
+
+.bookmark-graph .graph-icon-button {
+  width: 32px;
+  min-width: 32px;
+  padding: 6px;
+}
+
+.bookmark-graph .graph-icon-button > span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.bookmark-graph .graph-button[aria-pressed="true"] {
+  border-color: rgba(2, 132, 199, 0.28);
+  background: var(--selection);
+  color: var(--accent);
+}
+
+.bookmark-graph .graph-status {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  z-index: 2;
+  margin: 0;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--canvas-glass);
+  backdrop-filter: blur(12px) saturate(180%);
+  box-shadow: var(--shadow-xs);
+  font-size: 11.5px;
+  font-weight: 550;
+  line-height: 1.4;
+  color: var(--muted);
+  pointer-events: none;
+  font-variant-numeric: tabular-nums;
+}
+
+.bookmark-graph .graph-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  cursor: grab;
+}
+
+.bookmark-graph .graph-canvas:active {
+  cursor: grabbing;
+}
+
+.bookmark-graph .graph-canvas:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -3px;
+}
+
+.bookmark-graph .graph-labels {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bookmark-graph .graph-node-label {
+  position: absolute;
+  inset: 0 auto auto 0;
+  padding: 2px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  color: var(--text);
+  background: var(--canvas-glass);
+  backdrop-filter: blur(8px);
+  box-shadow: var(--shadow-xs);
+  font-size: 11.5px;
+  font-weight: 550;
+  line-height: 18px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  pointer-events: auto;
+  cursor: pointer;
+  user-select: none;
+  transition: border-color 120ms ease, color 120ms ease, background-color 120ms ease;
+}
+
+.bookmark-graph .graph-node-label:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  z-index: 2;
+}
+
+.bookmark-graph .graph-node-label-detail {
+  color: var(--accent);
+  background: var(--selection);
+  border-color: rgba(2, 132, 199, 0.35);
+  z-index: 1;
+}
+
+.bookmark-graph .graph-message {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  padding: 32px 24px;
+  text-align: center;
+  background: var(--surface);
+}
+
+.bookmark-graph .graph-message strong {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.bookmark-graph .graph-message p {
+  max-width: 48ch;
+  color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+
+.bookmark-graph .graph-message .graph-button {
+  margin-top: 4px;
+  border-color: var(--strong-line);
+  background: var(--surface-subtle);
+}
+
+.bookmark-graph .graph-current {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 3;
+  max-width: min(380px, calc(100% - 32px));
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: 11px;
+  background: var(--canvas-glass);
+  backdrop-filter: blur(14px) saturate(180%);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-card);
+}
+
+.bookmark-graph .graph-current-copy {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.bookmark-graph .graph-current-kind {
+  color: var(--accent);
+  font-size: 10.5px;
+  font-weight: 650;
+}
+
+.bookmark-graph .graph-current-copy strong {
+  font-size: 12.5px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bookmark-graph .graph-open-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border-radius: 7px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.bookmark-graph .graph-open-link:hover {
+  filter: brightness(0.95);
+}
+
+.bookmark-graph .graph-open-link .icon {
+  width: 14px;
+  height: 14px;
+}
+
+.bookmark-graph .graph-results {
+  padding: 12px 24px;
+  min-width: 0;
+}
+
+.bookmark-graph .graph-palette { display: none; }
+.bookmark-graph .graph-color-canvas { color: var(--surface); }
+.bookmark-graph .graph-color-text { color: var(--text); }
+.bookmark-graph .graph-color-muted { color: var(--muted); }
+.bookmark-graph .graph-color-line { color: var(--line); }
+.bookmark-graph .graph-color-accent { color: var(--accent); }
+.bookmark-graph .graph-color-strong-line { color: var(--strong-line); }
+.bookmark-graph .graph-color-selection { color: var(--selection); }
+
+@media (max-width: 899px) {
+  .bookmark-graph .graph-button { min-height: 36px; }
+  .bookmark-graph .graph-icon-button { width: 36px; min-width: 36px; }
+}
+
+@media (max-width: 480px) {
+  .bookmark-graph .graph-toolbar { top: 12px; left: 12px; gap: 3px; }
+  .bookmark-graph .graph-status { left: 12px; bottom: 12px; }
+  .bookmark-graph .graph-current { right: 12px; bottom: 52px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bookmark-graph *, .bookmark-graph *::before, .bookmark-graph *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}

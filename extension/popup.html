@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AnyMark Inbox</title>
+  <link rel="stylesheet" href="popup.css">
+  <script type="module" src="popup.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="brand-lockup"><span data-icon="mark" class="icon brand-mark"></span><h1>AnyMark</h1></div>
+      <div class="header-actions">
+        <button id="theme-toggle" class="icon-button" type="button" aria-label="切换主题" title="切换深浅主题" data-i18n-title="header.theme">
+          <span data-icon="moon" class="icon"></span>
+        </button>
+        <button id="open-web" class="icon-button" type="button" aria-label="打开 AnyMark Web 工作台" title="打开 Web 工作台" data-i18n-title="popup.openWeb">
+          <span data-icon="globe" class="icon"></span>
+        </button>
+      </div>
+    </header>
+    <section id="page-state" class="page-state" aria-live="polite" aria-busy="true">
+      <span data-icon="globe" class="icon"></span>
+      <div><h2 id="page-state-heading" data-i18n="popup.loadingHeading">正在读取当前网页…</h2><p id="page-reason" data-i18n="popup.loadingReason">准备收藏内容。</p></div>
+    </section>
+    <form id="capture-form" class="capture" aria-labelledby="inbox-heading" hidden>
+      <h2 id="inbox-heading" class="section-heading" data-i18n="popup.currentWebpage">当前网页</h2>
+      <div class="page-preview"><span id="page-emblem" class="page-emblem"></span><div class="page-copy"><p id="page-title" class="page-title"></p><input id="page-url" type="text" readonly aria-label="当前网页链接，只读" spellcheck="false"></div></div>
+      <label class="note-label" for="note"><span data-i18n="popup.noteLabel">备注</span> <span data-i18n="popup.noteHint">可选 · ⌘/Ctrl + Enter 保存</span></label>
+      <textarea id="note" rows="3" placeholder="为什么收藏？之后怎么用？" data-i18n-placeholder="popup.notePlaceholder" disabled></textarea>
+      <button id="save-inbox" class="primary" type="submit" title="保存到 Inbox（⌘ / Ctrl + Enter）" disabled data-i18n="popup.saveInbox">添加到 Inbox</button>
+    </form>
+    <p id="capture-status" class="capture-status" role="status" aria-live="polite"></p>
+    <details id="connection" class="connection">
+      <summary><span data-icon="arrow" class="icon connection-chevron"></span><span data-i18n="popup.agentConn">Agent 连接</span><span id="status" role="status" aria-live="polite" data-i18n="popup.state.connecting">读取状态中</span></summary>
+      <div class="access">
+        <label class="permission"><span data-i18n="popup.allowAgent">允许本机 Agent 读写书签</span><input id="enabled" type="checkbox" disabled></label>
+        <p class="notice"><span data-i18n="popup.noticeText">当前系统用户下的本机程序均可修改书签。</span> <strong data-i18n="popup.noticeStrong">删除不可撤销。</strong></p>
+        <p id="error" role="alert" hidden></p>
+        <button id="reconnect" type="button" disabled hidden data-i18n="popup.reconnect">重新连接</button>
+      </div>
+      <section aria-labelledby="profile-heading">
+        <h2 id="profile-heading" data-i18n="popup.targetHeading">连接目标</h2>
+        <label for="profile">Profile ID</label>
+        <input id="profile" type="text" readonly spellcheck="false">
+        <div class="command-header">
+          <p class="command-label" data-i18n="popup.bindLabel">在终端绑定此 Profile</p>
+          <button id="copy-command" class="copy-button" type="button" title="复制终端命令"><span data-icon="copy" class="icon"></span><span id="copy-command-text" data-i18n="popup.copy">复制</span></button>
+        </div>
+        <code id="command"></code>
+      </section>
+      <details id="setup" class="setup">
+        <summary data-i18n="popup.setupSummary">安装与连接帮助</summary>
+        <p data-i18n="popup.setupBody">先运行 anymark install 安装本地连接器，再启用本机访问。已启用但未连接时，可点击“重新连接”。</p>
+      </details>
+    </details>
+  </main>
+</body>
+</html>

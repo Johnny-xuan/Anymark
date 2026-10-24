@@ -1,0 +1,53 @@
+{
+  "name": "anymark",
+  "version": "2.0.0",
+  "private": true,
+  "description": "A local bookmark filesystem bridge for agents",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Johnny-xuan/Anymark.git"
+  },
+  "files": [
+    "bin",
+    "src",
+    "extension",
+    "web",
+    "skills",
+    "test",
+    "scripts",
+    "docs/architecture.md",
+    "docs/assets",
+    ".github/workflows/ci.yml",
+    "README.md",
+    "README.en.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "type": "module",
+  "bin": {
+    "anymark": "bin/anymark.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "release:pack": "node scripts/release.mjs",
+    "build:icons": "node scripts/build-icons.mjs",
+    "test": "node --test test/*.test.js",
+    "smoke": "node scripts/chrome-smoke.mjs",
+    "smoke:workspace": "node scripts/workspace-smoke.mjs",
+    "smoke:features": "node scripts/transfer-graph-smoke.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "d3-force": "^3.0.0",
+    "parse5": "^8.0.1",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "playwright-core": "^1.64.1"
+  }
+}
