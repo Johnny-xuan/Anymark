@@ -91,8 +91,8 @@
 
 ## 发布包与升级
 
-- `anymark-v2.0.0-chrome-extension.zip` 仅包含构建后的扩展。解压后在 `chrome://extensions` 加载含 `manifest.json` 的目录，即可使用 Popup／Web；默认不开启 Agent 访问。
-- `anymark-v2.0.0-agent-connector-source.zip` 是可选 CLI／MCP 连接器的源码包，不是二进制安装程序。需要 Node.js 22+，在源码目录安装生产依赖并注册 Native host；不需要再次构建扩展。
+- `anymark-v2.0.1-chrome-extension.zip` 仅包含构建后的扩展。解压后在 `chrome://extensions` 加载含 `manifest.json` 的目录，即可使用 Popup／Web；默认不开启 Agent 访问。
+- `anymark-v2.0.1-agent-connector-source.zip` 是可选 CLI／MCP 连接器的源码包，不是二进制安装程序。需要 Node.js 22+，在源码目录安装生产依赖并注册 Native host；不需要再次构建扩展。
 - Native host 注册记录 Node 和连接器入口的绝对路径。源码目录需长期保留；移动目录或更换 Node 路径后需要重新安装注册。可选的 `npm link` 只提供全局 CLI 命令，也可直接通过 Node 运行入口。
 - 完整仓库可构建 `dist/extension`，也可直接运行同一份连接器源码。安装、Profile 绑定及 MCP 配置步骤见[中文 README](../README.md#快速开始)或 [English README](../README.en.md#quick-start)。
 - v1 的旧扩展目录不能替代 v2 构建目录。升级时保留 Chrome 原生书签并加载新版扩展；不承诺迁移旧版内置 AI 应用数据。内部备注键格式版本与产品版本相互独立。

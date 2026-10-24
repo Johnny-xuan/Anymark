@@ -1,4 +1,4 @@
-export const VERSION = '2.0.0';
+export const VERSION = '2.0.1';
 export const PROTOCOL_VERSION = 1;
 export const HOST_NAME = 'tech.jox.anymark';
 export const EXTENSION_ID = 'mclghccgkbcplflclphcnkcajngcklck';

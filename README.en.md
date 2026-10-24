@@ -42,7 +42,7 @@ AnyMark 2.0 removes the extension's built-in chat and model configuration. The r
 
 ### 1. Download and load the extension
 
-Download **`anymark-v2.0.0-chrome-extension.zip`** from the [v2.0.0 release](https://github.com/Johnny-xuan/Anymark/releases/tag/v2.0.0). This ZIP contains only the built extension; no dependency installation or build is needed.
+Download **`anymark-v2.0.1-chrome-extension.zip`** from the [v2.0.1 release](https://github.com/Johnny-xuan/Anymark/releases/tag/v2.0.1). This ZIP contains only the built extension; no dependency installation or build is needed.
 
 1. Extract the ZIP into a directory you intend to keep.
 2. Open `chrome://extensions` and enable **Developer mode**.
@@ -53,7 +53,7 @@ You can now manage bookmarks through Popup and Web without enabling agent access
 
 ### 2. Optional: install the CLI/MCP connector
 
-For terminal agent access, also download **`anymark-v2.0.0-agent-connector-source.zip`** from the same release. This is connector source code, not a standalone executable or a Chrome extension. It needs an internet connection to install npm dependencies, but does not require an extension build.
+For terminal agent access, also download **`anymark-v2.0.1-agent-connector-source.zip`** from the same release. This is connector source code, not a standalone executable or a Chrome extension. It needs an internet connection to install npm dependencies, but does not require an extension build.
 
 Extract the connector source into a directory you intend to keep. From the directory containing `package.json`, run:
 
@@ -86,7 +86,7 @@ To build the extension yourself, clone the repository and run:
 ```bash
 git clone https://github.com/Johnny-xuan/Anymark.git
 cd Anymark
-git checkout v2.0.0
+git checkout v2.0.1
 npm ci
 npm run build
 ```

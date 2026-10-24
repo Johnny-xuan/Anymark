@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { mkdtemp, mkdir, rm } from 'node:fs/promises';
+import { mkdtemp, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { resolve, join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -9,12 +9,13 @@ import { Client } from '@modelcontextprotocol/sdk/client/index.js';
 import { StdioClientTransport } from '@modelcontextprotocol/sdk/client/stdio.js';
 import { installHost } from '../src/install.js';
 import { EXTENSION_ID } from '../src/protocol.js';
+import { ensurePrivateDirectory } from '../src/paths.js';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const temporary = await mkdtemp('/tmp/am-');
 const home = join(temporary, 'state');
 const userDataDir = join(temporary, 'chrome');
-const evidence = process.env.ANYMARK_EVIDENCE_DIR || join(tmpdir(), 'anymark-evidence');
+const evidence = process.env.ANYMARK_EVIDENCE_DIR ? resolve(process.env.ANYMARK_EVIDENCE_DIR) : await mkdtemp(join(tmpdir(), 'anymark-evidence-'));
 const checks = [];
 let context;
 let page;
@@ -48,7 +49,7 @@ async function connected() {
 }
 
 try {
-  await mkdir(evidence, { recursive: true, mode: 0o700 });
+  await ensurePrivateDirectory(evidence);
   await installHost({ home, userDataDir, browser: 'chrome-for-testing' });
   context = await chromium.launchPersistentContext(userDataDir, {
     executablePath: process.env.ANYMARK_CHROME || chromium.executablePath(),

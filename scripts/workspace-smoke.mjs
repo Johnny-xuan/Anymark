@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
 import { createServer } from 'node:http';
-import { mkdtemp, mkdir, rename, rm, writeFile } from 'node:fs/promises';
+import { mkdtemp, rename, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -12,12 +12,13 @@ import { installHost } from '../src/install.js';
 import { request } from '../src/client.js';
 import { NOTE_PREFIX } from '../src/metadata.js';
 import { EXTENSION_ID } from '../src/protocol.js';
+import { ensurePrivateDirectory } from '../src/paths.js';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const temporary = await mkdtemp('/tmp/am-web-');
 const home = join(temporary, 'state');
 const userDataDir = join(temporary, 'chrome');
-const evidence = process.env.ANYMARK_EVIDENCE_DIR || join(tmpdir(), 'anymark-workspace-evidence');
+const evidence = process.env.ANYMARK_EVIDENCE_DIR ? resolve(process.env.ANYMARK_EVIDENCE_DIR) : await mkdtemp(join(tmpdir(), 'anymark-workspace-evidence-'));
 const webURL = `chrome-extension://${EXTENSION_ID}/web/index.html`;
 const checks = [], screenshots = [], layouts = [], errors = [];
 const pending = new Map();
@@ -178,7 +179,7 @@ async function create(page, type, title, { url, note = '', destination } = {}) {
 }
 
 try {
-  await mkdir(evidence, { recursive: true, mode: 0o700 });
+  await ensurePrivateDirectory(evidence);
   const installed = await installHost({ home, userDataDir, browser: 'chrome-for-testing' });
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   const captureURL = `http://127.0.0.1:${server.address().port}/field-notes`;

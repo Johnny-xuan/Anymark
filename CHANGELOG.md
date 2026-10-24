@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.0.1
+
+### Security
+
+- Validate every intermediate component in ancestor symlink routes, including relative parent traversal and trailing directory separators, before accepting a connector home or registration directory.
+- If you use custom symlinked connector directories, reinstall the connector from a stable private path after upgrading.
+- Browser smoke tools now use unique private evidence directories and reject unsafe existing output directories before writing screenshots or backups.
+- Added a bilingual security policy and private vulnerability reporting guidance.
+
 ## 2.0.0
 
 AnyMark becomes a local bookmark workspace and an agent-agnostic filesystem bridge. The extension no longer embeds a chat assistant or model configuration.

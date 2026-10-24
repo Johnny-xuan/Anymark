@@ -40,7 +40,7 @@ AnyMark 2.0 去掉了扩展内置的聊天窗口与模型配置，回归更直�
 
 ### 1. 下载并加载扩展
 
-从 [v2.0.0 Release](https://github.com/Johnny-xuan/Anymark/releases/tag/v2.0.0) 下载 **`anymark-v2.0.0-chrome-extension.zip`**。这是仅包含已构建扩展的 ZIP，无需安装依赖或运行构建。
+从 [v2.0.1 Release](https://github.com/Johnny-xuan/Anymark/releases/tag/v2.0.1) 下载 **`anymark-v2.0.1-chrome-extension.zip`**。这是仅包含已构建扩展的 ZIP，无需安装依赖或运行构建。
 
 1. 将 ZIP 解压到准备长期保留的目录。
 2. 打开 `chrome://extensions`，开启右上角**开发者模式**。
@@ -51,7 +51,7 @@ AnyMark 2.0 去掉了扩展内置的聊天窗口与模型配置，回归更直�
 
 ### 2. 可选：安装 CLI／MCP 本地连接器
 
-需要终端 Agent 访问时，再从同一 Release 下载 **`anymark-v2.0.0-agent-connector-source.zip`**。这是连接器源码包，不是独立可执行程序，也不是 Chrome 扩展；需要联网安装 npm 依赖，但无需构建扩展。
+需要终端 Agent 访问时，再从同一 Release 下载 **`anymark-v2.0.1-agent-connector-source.zip`**。这是连接器源码包，不是独立可执行程序，也不是 Chrome 扩展；需要联网安装 npm 依赖，但无需构建扩展。
 
 将连接器源码解压到准备长期保留的目录，在包含 `package.json` 的目录执行：
 
@@ -84,7 +84,7 @@ anymark ls /
 ```bash
 git clone https://github.com/Johnny-xuan/Anymark.git
 cd Anymark
-git checkout v2.0.0
+git checkout v2.0.1
 npm ci
 npm run build
 ```

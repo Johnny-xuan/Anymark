@@ -3,12 +3,12 @@ import assert from 'node:assert/strict';
 import net from 'node:net';
 import { spawn } from 'node:child_process';
 import { once } from 'node:events';
-import { chmod, lstat, mkdtemp, readFile, rm, symlink, writeFile } from 'node:fs/promises';
+import { chmod, lstat, mkdir, mkdtemp, readFile, rm, symlink, writeFile } from 'node:fs/promises';
 import { endianness } from 'node:os';
 import { join } from 'node:path';
 import { randomUUID } from 'node:crypto';
 import { request, listProfiles, useProfile } from '../src/client.js';
-import { ensureHome, socketPath } from '../src/paths.js';
+import { ensureHome, readConfig, socketPath, writeConfig } from '../src/paths.js';
 import { installHost } from '../src/install.js';
 import { EXTENSION_ID, HOST_NAME, MAX_REQUEST_BYTES, MAX_RESPONSE_BYTES } from '../src/protocol.js';
 
@@ -248,6 +248,49 @@ test('writable ancestors cannot contain the private native host or registration 
   const safeHome = await mkdtemp('/tmp/am-');
   t.after(() => rm(safeHome, { recursive: true, force: true }));
   await assert.rejects(installHost({ home: safeHome, userDataDir: join(home, 'browser') }), { code: 'EACCES' });
+});
+
+test('installer rejects unsafe intermediate symlink routes hidden by parent traversal', async t => {
+  const { home } = await fixture(t);
+  const safe = join(home, 'safe');
+  await mkdir(join(safe, 'child'), { recursive: true, mode: 0o700 });
+  await mkdir(join(safe, 'state'), { mode: 0o700 });
+  const shared = join(home, 'shared');
+  await mkdir(shared, { mode: 0o700 });
+  await chmod(shared, 0o777);
+  await symlink(join(safe, 'child'), join(shared, 'relay'));
+  await symlink(join(shared, 'relay'), join(home, 'trusted-hop'));
+  await symlink('trusted-hop/../state', join(home, 'selected'));
+  const userDataDir = join(home, 'browser');
+  await assert.rejects(installHost({ home: join(home, 'selected', '.anymark'), userDataDir }), { code: 'EACCES' });
+  await assert.rejects(lstat(join(userDataDir, 'NativeMessagingHosts', `${HOST_NAME}.json`)), { code: 'ENOENT' });
+});
+
+test('installer inspects symlink targets that end with a directory separator', async t => {
+  const { home } = await fixture(t);
+  const safe = join(home, 'safe');
+  const shared = join(home, 'shared');
+  await mkdir(safe, { mode: 0o700 });
+  await mkdir(shared, { mode: 0o700 });
+  await chmod(shared, 0o777);
+  await symlink(safe, join(shared, 'relay'));
+  await symlink(join(shared, 'relay'), join(home, 'trusted-hop'));
+  await symlink('trusted-hop/', join(home, 'selected'));
+  await assert.rejects(ensureHome(join(home, 'selected', '.anymark')), { code: 'EACCES' });
+});
+
+test('private relative symlink routes retain configuration access', async t => {
+  const { home } = await fixture(t);
+  const safe = join(home, 'safe');
+  await mkdir(join(safe, 'child'), { recursive: true, mode: 0o700 });
+  await mkdir(join(safe, 'state'), { mode: 0o700 });
+  await symlink('safe/child', join(home, 'trusted-hop'));
+  await symlink('trusted-hop/../state', join(home, 'selected'));
+  const root = await ensureHome(join(home, 'selected', '.anymark'));
+  const config = { defaultProfileId: randomUUID() };
+  await writeConfig(root, config);
+  assert.deepEqual(JSON.parse(await readFile(join(safe, 'state', '.anymark', 'config.json'), 'utf8')), config);
+  assert.deepEqual(await readConfig(root), config);
 });
 
 test('shutdown never removes a replacement at the former public socket path', async t => {

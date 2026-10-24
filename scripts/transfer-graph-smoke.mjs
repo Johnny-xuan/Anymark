@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
-import { mkdtemp, mkdir, readFile, readdir, rm, stat, writeFile } from 'node:fs/promises';
+import { mkdtemp, readFile, readdir, rm, stat, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -13,11 +13,12 @@ import { EXTENSION_ID } from '../src/protocol.js';
 import { parseBookmarkHTML, serializeBookmarkHTML } from '../src/transfer.js';
 import { NOTE_PREFIX, INBOX_KEY } from '../src/metadata.js';
 import { exerciseGraph } from './graph-smoke-scenarios.mjs';
+import { ensurePrivateDirectory } from '../src/paths.js';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const temporary = await mkdtemp('/tmp/am-transfer-');
 const home = join(temporary, 'state');
-const evidence = process.env.ANYMARK_EVIDENCE_DIR || join(tmpdir(), 'anymark-transfer-evidence');
+const evidence = process.env.ANYMARK_EVIDENCE_DIR ? resolve(process.env.ANYMARK_EVIDENCE_DIR) : await mkdtemp(join(tmpdir(), 'anymark-transfer-evidence-'));
 const webURL = `chrome-extension://${EXTENSION_ID}/web/index.html`;
 const checks = [], screenshots = [], errors = [], profiles = [];
 let mcp;
@@ -92,7 +93,7 @@ async function chooseDestination(page, bar) {
 }
 
 try {
-  await mkdir(evidence, { recursive: true, mode: 0o700 });
+  await ensurePrivateDirectory(evidence);
   let source = await launch('source');
   const originalProfileId = source.id;
   const legacy = await source.worker.evaluate(async parentId => {

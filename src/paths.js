@@ -1,6 +1,6 @@
-import { lstat, mkdir, open, readFile, realpath, rename, unlink } from 'node:fs/promises';
+import { lstat, mkdir, open, readFile, readlink, realpath, rename, unlink } from 'node:fs/promises';
 import { homedir } from 'node:os';
-import { dirname, join, resolve } from 'node:path';
+import { dirname, isAbsolute, join, resolve, sep } from 'node:path';
 import { randomUUID } from 'node:crypto';
 import { BridgeError } from './protocol.js';
 
@@ -25,10 +25,11 @@ export function socketPath(home, profileId) {
 }
 
 export async function inspectAncestors(path) {
+  const trimTrailingSeparators = value => value.replace(/\/+$/, '') || sep;
   const pending = [dirname(resolve(path))];
   const seen = new Set();
   while (pending.length) {
-    let current = pending.pop();
+    let current = trimTrailingSeparators(pending.pop());
     while (!seen.has(current)) {
       seen.add(current);
       const stat = await lstat(current);
@@ -36,11 +37,14 @@ export async function inspectAncestors(path) {
         throw new BridgeError('EACCES', `Untrusted path ancestor: ${current}`);
       }
       if (stat.isSymbolicLink()) {
+        const target = await readlink(current);
         pending.push(await realpath(current));
+        // Preserve "..": lexical normalization can hide a replaceable link on the route.
+        pending.push(isAbsolute(target) ? target : `${dirname(current)}${sep}${target}`);
       } else if (!stat.isDirectory() || (stat.mode & 0o022) && !(stat.mode & 0o1000)) {
         throw new BridgeError('EACCES', `A path ancestor can be replaced by another user: ${current}`);
       }
-      const parent = dirname(current);
+      const parent = trimTrailingSeparators(dirname(current));
       if (parent === current) break;
       current = parent;
     }
